@@ -1,12 +1,11 @@
 import Menu from "../../container/Menu";
-import Menu2 from "../../container/Menu2";
 
 
-function Home() {
+function Player() {
   return (
     <div>
       <div>
-        <Menu2 />
+        <Menu />
       </div>
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
         <section >
@@ -32,4 +31,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Player;
