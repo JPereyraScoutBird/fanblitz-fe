@@ -8,6 +8,8 @@ import Stats from './pages/Stats';
 import Team from './pages/Team';
 import Tutorial from './pages/Tutorial';
 import Error from './pages/Error';
+import { Provider } from 'react-redux';
+import store from './store';
 import * as React from "react";
 import {
   createBrowserRouter,
@@ -63,7 +65,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router}/>
+      </Provider>
     </React.StrictMode>
   );
 }
