@@ -6,20 +6,32 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-
+import PATH_LIST from '../../routes/constant';
+import './style.css'
+import { NavLink } from "react-router-dom";
 
 /**
  * Menu Navbar with Bootstrap
  * @param {*} args 
  * @returns 
  */
+
+const renderNavLink = (path, text) => (
+  <NavLink
+    className={({ isActive, isPending }) =>
+      isActive ? "active" : isPending ? "pending" : ""
+    }
+    to={`${path}`}
+  >
+    {text}
+  </NavLink>
+);
 
 function Menu(args) {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,20 +40,34 @@ function Menu(args) {
 
   return (
     <div>
-      <Navbar {...args}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar color="light" light expand="md" className='d-flex justify-content-end'>
+        <NavbarBrand href="/" style={{flexGrow: 1}}>Fanblitz</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
+          <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+                {renderNavLink(`${PATH_LIST.HOME}`, "Home")}
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
+                {renderNavLink(`${PATH_LIST.PLAYER}`, "Player")}
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.TEAM}`, "Team")}
+            </NavItem>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.FORECAST}`, "Forecasts")}
+            </NavItem>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
+            </NavItem>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.STATS}`, "Stats")}
+            </NavItem>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.TUTORIAL}`, "Tutorial")}
+            </NavItem>
+            
+            {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
@@ -51,9 +77,8 @@ function Menu(args) {
                 <DropdownItem divider />
                 <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>

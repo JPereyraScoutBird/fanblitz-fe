@@ -1,0 +1,27 @@
+
+  
+  .nav-item .active {
+    /* background-color: #41b883 !important; */
+    color: #41b883 !important;
+  }
+
+  .nav-item  a {
+    text-decoration: none;
+    text-align: left !important;
+    color: #585c5d !important;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+  }
+/* 
+  .container-fluid {
+    display: flex;
+    justify-content: end;
+  }
+   */

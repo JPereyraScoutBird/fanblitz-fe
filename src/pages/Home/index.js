@@ -1,86 +1,65 @@
 import Menu from "../../container/Menu";
-import Menu2 from "../../container/Menu2";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import {setValue, cleanValue} from '../../reducers/Home'
+import {setValue, cleanValue} from '../../reducers/Home';
+
+import CustomTable from '../../component/Table';
+import { getDate } from "../../utils";
 
 function Home() {
   const dispatch = useDispatch();
   const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
-  console.log("dime")
 
   useEffect(() => {
     const fetchData = async () => {
       if (gameDataStore.length == 0) {
         try {
           const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
-          {
-            // mode:'cors',
-            // headers: {
-            //   'Access-Control-Allow-Origin': '*',
-            //   'Access-Control-Allow-Methods': 'GET, OPTIONS ',
-            //   'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-            //   "Access-Control-Allow-Credentials": true
-            // }
-          }
           );
           const jsonObject = JSON.parse(response.data.body.body)
-          dispatch(setValue(jsonObject))
-          setGameData(jsonObject)
+          const response_formated = jsonObject.map(x => ({...x, "date_et": getDate(x['date_et']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])}))
+          dispatch(setValue(response_formated))
+          setGameData(response_formated)
+
         } catch (error) {
           console.error('Error getting data:', error);
         }
       }
-      // else{
-      //   setGameData(gameDataStore);
-      // }
     };
     
     fetchData();
+    
 
     console.log("gameData", gameData)
     console.log("gameDataStore", gameDataStore)
 
   }, []);
 
+  const header = {
+    "date_et": "Date",
+    "home_team": "Home",
+    "away_team": "Away",
+    "home_spreads_draftkings": "Vegas",
+    "margin_spread_fanblitz": "Fanblitz",
+    "difference": "Difference"
+  };
+
+
   return (
-    <div>
+    <>
       <div>
-         <Menu2 />
-       </div>
-      <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-        <h1>Game data</h1>
-        <h4>gameDataStore {gameDataStore.length}</h4>
-        <h4>gameData {gameData.length}</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Home Team</th>
-              <th>Away Team</th>
-              <th>Spread DraftKings</th>
-              <th>Spread Fanblitz</th>
-            </tr>
-          </thead>
-          {/* <tbody>
-            {gameData.map((fila, index) => (
-              <tr key={index}>
-                <td>{fila.date_et}</td>
-                <td>{fila.home_team}</td>
-                <td>{fila.away_team}</td>
-                <td>{fila.home_spreads_draftkings}</td>
-                <td>{fila.margin_spread_fanblitz}</td>
-              </tr>
-            ))}
-          </tbody> */}
-        </table>
-      </div>
-    </div>
-    
+        <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
+          <h2>MLB Game Schedule</h2>
+          {gameData.length == 0 ? <div></div> :  <CustomTable header={header} data={gameData}/>}
+        </div>
+      </div>    
+    </>    
   );
+
+  
 }
 
 export default Home;
