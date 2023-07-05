@@ -15,9 +15,7 @@ export async function loader({ params }) {
 
 export default function RenderPage() {
   const navigation = useNavigation();
-//   const { ticker } = useLoaderData();
   
-
   return (
     <div id="template">
       <Menu />
