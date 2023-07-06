@@ -1,4 +1,4 @@
 export const getDate = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
-    return date.toLocaleString('en-US');
+    return date.toLocaleString('en-US', { timeZone: 'UTC' });
 }

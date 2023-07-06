@@ -23,7 +23,7 @@ function Home() {
           const response_formated = jsonObject.map(x => ({...x, "date_et": getDate(x['date_et']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])}))
           dispatch(setValue(response_formated))
           setGameData(response_formated)
-
+          console.log("response_formated", response_formated)
         } catch (error) {
           console.error('Error getting data:', error);
         }

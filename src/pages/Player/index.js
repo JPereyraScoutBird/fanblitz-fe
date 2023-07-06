@@ -14,10 +14,10 @@ function Player() {
     const fetchData2 = async () => {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/stats/players');
-        const jsonObject = JSON.parse(response.data.body.body)
-        const response2 = jsonObject.map(x => ({...x, "full_name": x.first_name + ", " + x.last_name, "ops": x.batter_on_base_percentage + x.batter_slugging_percentage}))
-        setPitcherData(response2.filter(x => x['position'] == 'P'))
-        setBatterData(response2.filter(x => x['position'] != 'P'))
+        const jsonObject = JSON.parse(response.data.body)
+        // const response2 = jsonObject.map(x => ({...x, "full_name": x.first_name + ", " + x.last_name, "ops": x.batter_on_base_percentage + x.batter_slugging_percentage}))
+        setPitcherData(jsonObject.filter(x => x['position'] == 'P'))
+        setBatterData(jsonObject.filter(x => x['position'] != 'P'))
         setTeamData(jsonObject);
       } catch (error) {
         console.error('Error al obtener los datos:', error);
@@ -45,13 +45,14 @@ function Player() {
     "earned_run_agerage": "BB",
     "strikeouts_per_9_innings": "SO",
     "stolen_bases": "SB",
-    "balks": "BA"
+    "stolen_bases": "BA",
+    "position": "P"
   }
  
   return (
     <div>
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-        <h2>Team Stats</h2>
+        <h2>Player Stats</h2>
         {teamData.length == 0 ? <div></div> :  <CustomTable header={header} data={batterData}/>}
       </div>
     </div>    
