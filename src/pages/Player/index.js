@@ -51,7 +51,7 @@ function Player() {
   return (
     <div>
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-        <h2>Team Stats</h2>
+        <h2>Player Stats</h2>
         {teamData.length == 0 ? <div></div> :  <CustomTable header={header} data={batterData}/>}
       </div>
     </div>    

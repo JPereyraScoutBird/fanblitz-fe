@@ -8,7 +8,8 @@ import {setValue, cleanValue} from '../../reducers/Home';
 import CustomTable from '../../component/Table';
 import { getDate } from "../../utils";
 
-function Home() {
+function Home({appState}) {
+  // console.log("Appstate: ", appState)
   const dispatch = useDispatch();
   const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
@@ -28,11 +29,14 @@ function Home() {
           console.error('Error getting data:', error);
         }
       }
-    };
-    
+      else {
+        console.log("data: ", gameDataStore)
+        setGameData(gameDataStore.payload)
+      }  
+    }
+
     fetchData();
     
-
     console.log("gameData", gameData)
     console.log("gameDataStore", gameDataStore)
 

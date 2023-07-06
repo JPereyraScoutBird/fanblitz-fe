@@ -1,4 +1,5 @@
 export const getDate = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
-    return date.toLocaleString('en-US');
+    console.log("date: ", date)
+    return date.toLocaleString();
 }
