@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+
+import ErrorPage from './pages/Error';
+import { Provider } from 'react-redux';
+import store from './store';
+import * as React from "react";
+import ROUTES from "./routes"
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Router, 
+  Routes, 
+  Route
+} from "react-router-dom";
+
+import RenderPage, { loader } from "./pages/Template";
+
+// const router = createBrowserRouter([...ROUTES]);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RenderPage />,
+    errorElement: <ErrorPage />,
+    children: ROUTES,
+    loader: loader,
+  },
+]);
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.StrictMode>
+      <Provider store={store}>
+        <RouterProvider router={router}/>
+      </Provider>
+    </React.StrictMode>
   );
 }
 

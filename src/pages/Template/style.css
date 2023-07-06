@@ -1,0 +1,15 @@
+#template {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#template #menu {
+    flex: 1;
+}
+
+#template #footer {
+    flex: 0;
+    margin-top: auto;
+    /* align-self: flex-end; */
+}
