@@ -8,7 +8,11 @@ const route_list = [
     },
     {
       path: PATH_LIST.PLAYER,
-      element: <Pages.Player />,
+      element: <Pages.Player.Players />,
+    },
+    {
+      path: PATH_LIST.PLAYERHISTORY,
+      element: <Pages.Player.Player />,
     },
     {
       path: PATH_LIST.TEAM,

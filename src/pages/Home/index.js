@@ -19,7 +19,7 @@ function Home() {
         try {
           const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
           );
-          const jsonObject = JSON.parse(response.data.body.body)
+          const jsonObject = JSON.parse(response.data.body)
           const response_formated = jsonObject.map(x => ({...x, "date_et": getDate(x['date_et']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])}))
           dispatch(setValue(response_formated))
           setGameData(response_formated)

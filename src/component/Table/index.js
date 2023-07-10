@@ -17,19 +17,25 @@ import { faUpLong, faDownLong } from "@fortawesome/free-solid-svg-icons";
 import useSortableData from "../../hooks/useSortableData";
 import Pagination from "../Pagination";
 
-
+const renderTablaData = (x, val, action) => {
+  if (val === "full_name") {
+    return <td style={{ verticalAlign: "center", cursor: "pointer" }} onClick={() => action(x[val], x['mysportfeeds_abbreviation'])} >{x[val]}</td>;
+  }
+  return <td style={{ verticalAlign: "center" }} >{x[val]}</td>;
+};
 
 const renderData = (
   data,
   page,
   range,
-  header
+  header,
+  action
 ) => {
   const item_list = data.slice((page - 1) * range, page * range);
   return item_list.map((x) => (
     <tr>
       {Object.keys(header).map((val) => (
-        <td style={{ verticalAlign: "center" }}>{x[val]}</td>
+        renderTablaData(x, val, action)
       ))}
     </tr>
   ));
@@ -39,10 +45,10 @@ function CustomTable(props) {
   const {
     data = [],
     header = {},
+    action = undefined,
     pagination = false,
     range = 5,
   } = props;
-
 
   data.map((obj, index) =>
     Object.keys(obj).map((key) =>
@@ -153,7 +159,8 @@ function CustomTable(props) {
             items,
             page,
             itemRange,
-            header
+            header,
+            action
           )}
         </tbody>
       </Table>
