@@ -13,7 +13,7 @@ function Player(route) {
     const [pitcherData, setPitcherData] = useState(location.state.pitcherData);
     const [batterData, setBatterData] = useState(location.state.batterData);
     const [showTable, setShowTable] = useState(location.state.table);
-    console.log("playerName", playerName)
+    console.log("playerInfo.image", playerInfo.image)
     const renderTable = () => {
         if (showTable === "hitters") {
         return teamData.length == 0 ? <div></div> :  <CustomTable header={headerHitting} data={teamData}/>;
@@ -72,7 +72,7 @@ function Player(route) {
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
             <h2>Player Summary</h2>
             <div>
-                <div style={{ width: "2rem", height: "2rem", border: "1px solid white", "margin-right": "1rem"}}>
+                <div style={{ width: "20%", height: "20%", "object-fit": "cover", border: "1px solid white", "margin-right": "1rem"}}>
                     <img src={playerInfo.image} alt="photo" />
                 </div>
                 <div>
