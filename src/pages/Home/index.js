@@ -7,6 +7,7 @@ import {setValue, cleanValue} from '../../reducers/Home';
 
 import CustomTable from '../../component/Table';
 import { getDate } from "../../utils";
+import { Card, CardBody, CardFooter, CardImg } from "reactstrap";
 
 function Home() {
   const dispatch = useDispatch();
@@ -28,6 +29,11 @@ function Home() {
           console.error('Error getting data:', error);
         }
       }
+      else {
+        console.log(gameDataStore)
+        setGameData([...gameDataStore.payload])
+      }
+
     };
     
     fetchData();
@@ -47,13 +53,22 @@ function Home() {
     "difference": "Difference"
   };
 
+  const news = () => {
+    return (
+      <Card>
+        <CardImg></CardImg>
+        <CardBody></CardBody>
+        <CardFooter></CardFooter>
+      </Card>
+    )
+  }
 
   return (
     <>
       <div>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>MLB Game Schedule</h2>
-          {gameData.length == 0 ? <div></div> :  <CustomTable header={header} data={gameData}/>}
+          <CustomTable header={header} data={gameData} loading={gameData.length == 0} />
         </div>
       </div>    
     </>    

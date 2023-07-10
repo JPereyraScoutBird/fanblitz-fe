@@ -49,7 +49,10 @@ function Menu(args) {
                 {renderNavLink(`${PATH_LIST.HOME}`, "Home")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.PLAYER}`, "Player")}
+                {renderNavLink(`${PATH_LIST.PLAYER}`, "Players")}
+            </NavItem>
+            <NavItem>
+                {renderNavLink(`${PATH_LIST.NEWS}`, "News")}
             </NavItem>
             <NavItem>
                 {renderNavLink(`${PATH_LIST.TEAM}`, "Team")}

@@ -4,6 +4,7 @@ import Menu2 from "../../container/Menu2";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import PATH_LIST from "../../routes/constant";
 
 function Players() {
     const [teamData, setTeamData] = useState([]);
@@ -50,17 +51,22 @@ function Players() {
             
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/stats/players?id=${playerId}`);
             const jsonObject2 = JSON.parse(response.data.body)
-            navigate(`/player/summary`, {state:{ name: name, personalInfo: personalInfo, data:jsonObject2, batterData:jsonObject2, pitcherData:[], table:showTable}});
+            // navigate(`${PATH_LIST.PLAYER_DETAIL}/${playerId}`), {state:{ name: name, personalInfo: personalInfo, data:jsonObject2, batterData:jsonObject2, pitcherData:[], table:showTable}});
         } catch (error) {
             console.error(error);
         }
     };
 
+    const onClick = (user) => {
+        console.log("User: ", user.player_id)
+        navigate(`${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
+    }
+
     const renderTable = () => {
         if (showTable === "hitters") {
-        return teamData.length == 0 ? <div></div> :  <CustomTable header={headerHitting} data={batterData} action={handlePlayerNameClic}/>;
+        return <CustomTable loading={teamData.length == 0} header={headerHitting} data={batterData} onClick={(user) => onClick(user)}/>;
         } else if (showTable === "pitchers") {
-        return teamData.length == 0 ? <div></div> :  <CustomTable header={headerPitching} data={pitcherData} action={handlePlayerNameClic}/>;
+        return <CustomTable loading={teamData.length == 0} header={headerPitching} data={pitcherData} onClick={(user) => onClick(user)}/>;
         }
         return null;
     };
