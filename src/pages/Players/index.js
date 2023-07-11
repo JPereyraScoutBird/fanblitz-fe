@@ -1,6 +1,4 @@
 import CustomTable from "../../component/Table";
-import Menu from "../../container/Menu";
-import Menu2 from "../../container/Menu2";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
@@ -38,27 +36,7 @@ function Players() {
         setShowTable("pitchers");
     };
 
-    const handlePlayerNameClic = async (name, team) => {
-        try {
-            const playerStats = teamData.filter(x => (x['full_name'] == name && x['mysportfeeds_abbreviation'] == team))
-            const playerId = playerStats.length > 0 ? playerStats[0].player_id : []
-            const personalInfo = {
-                born: playerStats.length > 0 ? playerStats[0].birth_date : [],
-                height: playerStats.length > 0 ? playerStats[0].height : [],
-                weight: playerStats.length > 0 ? playerStats[0].weight : [],
-                image: playerStats.length > 0 ? playerStats[0].image : []
-            }
-            
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/stats/players?id=${playerId}`);
-            const jsonObject2 = JSON.parse(response.data.body)
-            // navigate(`${PATH_LIST.PLAYER_DETAIL}/${playerId}`), {state:{ name: name, personalInfo: personalInfo, data:jsonObject2, batterData:jsonObject2, pitcherData:[], table:showTable}});
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
     const onClick = (user) => {
-        console.log("User: ", user.player_id)
         navigate(`${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
     }
 

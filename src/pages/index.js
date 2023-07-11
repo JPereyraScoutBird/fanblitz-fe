@@ -7,7 +7,7 @@ import SocialBets  from './SocialBets';
 import Stats  from './Stats';
 import Team  from './Team';
 import Tutorial  from './Tutorial';
-import Player from './Player';
+import Player from './PlayerDetail';
 
 export default {
     Home,

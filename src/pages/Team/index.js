@@ -1,6 +1,4 @@
 import CustomTable from "../../component/Table";
-import Menu from "../../container/Menu";
-import Menu2 from "../../container/Menu2";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 

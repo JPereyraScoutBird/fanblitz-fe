@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useLoaderData } from "react-router-dom";
 import {
   Button,
-  Container,
-  Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
@@ -53,7 +51,6 @@ const renderData = (
     <tr onClick={() => onClick(x)}>
       {Object.keys(header).map((val) => (
         <td>{x[val]}</td>
-        // renderTablaData(x, val, action)
       ))}
     </tr>
   ));

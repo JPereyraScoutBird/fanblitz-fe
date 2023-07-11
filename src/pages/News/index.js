@@ -14,12 +14,9 @@ function News() {
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
     axios.get(`${CONSTANT.URL}&apikey=${CONSTANT.API}`).then((res) => {
-      console.log("ASD")
       setNewsData(res.data.articles)
     })
   }, [])
-
-  console.log(newsData)
 
   return (
     <div id="news">
@@ -44,19 +41,6 @@ function News() {
               }
               
           </Row>
-            {/* Why us */}
-        </section>
-        <section>
-            {/* Business */}
-        </section>
-        <section>
-            {/* Market/Sports */}
-        </section>
-        <section>
-            {/* {plans} */}
-        </section>
-        <section>
-            {/* {contant us} */}
         </section>
       </div>
     </div>
