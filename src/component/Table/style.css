@@ -82,3 +82,10 @@
 #custom_table .pagination .btn {
     border-radius: 100px !important;
 }
+
+.skeleton-wrapper {
+    padding: 10px 15px;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 4px;
+}

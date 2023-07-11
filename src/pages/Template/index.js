@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "reactstrap";
 import Menu from "../../container/Menu";
 import {
-//   useLoaderData,
+  useLoaderData,
   Outlet,
   useNavigation,
 } from "react-router-dom";
@@ -15,6 +15,7 @@ export async function loader({ params }) {
 
 export default function RenderPage() {
   const navigation = useNavigation();
+  const { userId } = useLoaderData();
   
   return (
     <div id="template">

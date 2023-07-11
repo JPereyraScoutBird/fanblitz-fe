@@ -1,5 +1,6 @@
 import PATH_LIST from './constant';
 import Pages from '../pages';
+import { loader as newsLoader,}  from '../pages/PlayerDetail';
 
 const route_list = [
     {
@@ -8,7 +9,12 @@ const route_list = [
     },
     {
       path: PATH_LIST.PLAYER,
+      element: <Pages.Players />,
+    },
+    {
+      path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
       element: <Pages.Player />,
+      loader: newsLoader
     },
     {
       path: PATH_LIST.PLAYER_DETAIL,
