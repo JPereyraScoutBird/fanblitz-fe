@@ -17,7 +17,6 @@ export default function RenderPage() {
   const navigation = useNavigation();
   const { userId } = useLoaderData();
   
-
   return (
     <div id="template">
       <Menu />

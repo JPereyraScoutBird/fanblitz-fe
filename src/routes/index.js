@@ -17,6 +17,10 @@ const route_list = [
       loader: newsLoader
     },
     {
+      path: PATH_LIST.PLAYER_DETAIL,
+      element: <Pages.PlayerDetail />,
+    },
+    {
       path: PATH_LIST.TEAM,
       element: <Pages.Team />,
     },

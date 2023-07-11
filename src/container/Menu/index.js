@@ -5,17 +5,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
+  NavItem
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
 import { NavLink } from "react-router-dom";
-
+import Images from '../../img';
 /**
  * Menu Navbar with Bootstrap
  * @param {*} args 
@@ -41,7 +36,7 @@ function Menu(args) {
   return (
     <div>
       <Navbar color="light" light expand="md" className='d-flex justify-content-end'>
-        <NavbarBrand href="/" style={{flexGrow: 1}}>Fanblitz</NavbarBrand>
+        <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
