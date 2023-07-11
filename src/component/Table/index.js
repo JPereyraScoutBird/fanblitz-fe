@@ -65,7 +65,7 @@ function CustomTable(props) {
     row=5,
     theme='light',
     loading = false,
-    onClick = undefined
+    onClick = () => {}
   } = props;
 
   let data_cp = [...data]

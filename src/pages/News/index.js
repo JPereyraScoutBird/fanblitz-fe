@@ -39,7 +39,6 @@ function News() {
                   </Col>
                 ))
               }
-              
           </Row>
         </section>
       </div>
