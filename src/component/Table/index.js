@@ -74,7 +74,7 @@ function CustomTable(props) {
     Object.keys(obj).map((key) =>
       {
         if( obj[key] == undefined || obj[key] == "" || obj[key] == null) {
-            data_cp[index][key] = "N/A"
+            data_cp[index][key] = 0
         } 
       }
     )
