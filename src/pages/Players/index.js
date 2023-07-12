@@ -16,12 +16,14 @@ function Players() {
             try {
                 const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/stats/players');
                 const jsonObject = JSON.parse(response.data.body)
+                console.log("la data")
+                console.log(jsonObject[1])
                 // const response2 = jsonObject.map(x => ({...x, "full_name": x.first_name + ", " + x.last_name, "ops": x.batter_on_base_percentage + x.batter_slugging_percentage}))
                 setPitcherData(jsonObject.filter(x => x['position'] == 'P'))
                 setBatterData(jsonObject.filter(x => x['position'] != 'P'))
                 setTeamData(jsonObject);
             } catch (error) {
-                console.error('Error al obtener los datos:', error);
+                console.error('Error getting data:', error);
             }
         };
 
@@ -59,8 +61,8 @@ function Players() {
         "at_bats": "AB",
         "runs": "R",
         "hits": "H",
-        "batter_double_plays": "2B",
-        "batter_triple_plays": "3B",
+        "second_based_hits": "2B",
+        "third_base_hits": "3B",
         "homeruns": "HR",
         "runs_batted_in": "RBI",
         "batter_walks": "BB",

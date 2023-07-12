@@ -17,9 +17,7 @@ const getNewsSpecificPlayer = (player_name) => (
   `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado)+NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
 )
 
-
 const renderTable = (position, data) => {
-  console.log("position: ", position)
   if (position !== "P") {
   return <CustomTable loading={data.length == 0} header={constant.headerHitting} data={data.summary}/>;
   } else if (position === "P") {
@@ -29,7 +27,6 @@ const renderTable = (position, data) => {
 };
 
 const renderTable2 = (position, data) => {
-  console.log("position: ", position)
   if (position !== "P") {
   return <CustomTable loading={data.length == 0} header={constant.headerHittingSplit} data={data.split}/>;
   } else if (position === "P") {
@@ -54,7 +51,7 @@ function Player(route) {
                 setplayerDetail(jsonObject)
                 
             } catch (error) {
-                console.error('Error al obtener los datos:', error);
+                console.error('Error getting data:', error);
             }
         };
 
@@ -63,33 +60,16 @@ function Player(route) {
 
     useEffect(() => {
       const fetchData3 = async (playerDetail) => {
-      console.log("player fetchdata3: ", playerDetail)
         try {
-          // if(playerDetail) {
-            console.log("HERE:", playerDetail)
             const response = await axios.get(`${getNewsSpecificPlayer('José Abreu')}&apikey=${constant.API}`);
-            console.log("respos:", playerDetail)
             setNewsData(response.data.articles)
-          // }
         } catch (error) {
-          console.error('Error al obtener los datos:', error);
+          console.error('Error getting data:', error);
         }
       }
       fetchData3()
     }, [])
     
-    
-    // Fetch Data from NewsApi (ComponentDidMount)
-    // useEffect(() => {
-    //   if(playerDetail.length) {
-    //     axios.get(`${getNewsSpecificPlayer(playerDetail.full_name)}&apikey=${constant.API}`).then((res) => {
-    //       setNewsData(res.data.articles)
-    //     })
-    //   }
-    // }, [])
-
-    // console.log("Player Detail: ", playerDetail)
-    console.log("News: ", newsData)
     return (
         <div>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>

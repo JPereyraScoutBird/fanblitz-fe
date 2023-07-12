@@ -8,14 +8,13 @@ const headerHitting = {
     "at_bats": "AB",
     "runs": "R",
     "hits": "H",
-    "batter_double_plays": "2B",
-    "batter_triple_plays": "3B",
+    "second_based_hits": "2B",
+    "third_base_hits": "3B",
     "homeruns": "HR",
     "runs_batted_in": "RBI",
     "batter_walks": "BB",
     "batter_strike_outs": "SO",
-    "stolen_bases": "SB",
-    "position": "P"
+    "stolen_bases": "SB"
 }
 
 const headerHittingSplit = {
