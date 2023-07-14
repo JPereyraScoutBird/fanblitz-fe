@@ -65,16 +65,20 @@ function CustomTable(props) {
     row=5,
     theme='light',
     loading = false,
-    onClick = () => {}
+    onClick = () => {},
+    color=undefined,
+    backgroundColor=undefined,
   } = props;
 
+  console.log("Color: ", color)
+  console.log("BackgroundColor: ", backgroundColor)
   let data_cp = [...data]
 
   data.map((obj, index) =>
     Object.keys(obj).map((key) =>
       {
         if( obj[key] == undefined || obj[key] == "" || obj[key] == null) {
-            data_cp[index][key] = "N/A"
+            // data_cp[index][key] = 0
         } 
       }
     )
@@ -93,21 +97,21 @@ function CustomTable(props) {
       : undefined;
   };
 
-  const renderHeader = ({ key, value }) => (
-        <th>
+  const renderHeader = ({ key, value, backgroundColor, color }) => (
+        <th style={{backgroundColor: backgroundColor}}>
         <Button
             color="link"
             onClick={() => requestSort(key)}
             className={isActive(key)}
-        >
-            <div className="d-flex justify-content-between align-items-center">
+        > 
+            <div style={{color: color}} className="d-flex justify-content-between align-items-center">
             {value}
             <div className="d-flex">
                 <div className="up">
-                <FontAwesomeIcon icon={faUpLong} />
+                <FontAwesomeIcon style={{color: color}} icon={faUpLong} />
                 </div>
                 <div className="down">
-                <FontAwesomeIcon icon={faDownLong} />
+                <FontAwesomeIcon style={{color: color}} icon={faDownLong} />
                 </div>
             </div>
             </div>
@@ -119,7 +123,7 @@ function CustomTable(props) {
   }
 
   const renderTable = () => {
-    const renderHeaderComponent = Object.entries(header).map(([x, y]) => renderHeader({key: x, value: y}))
+    const renderHeaderComponent = Object.entries(header).map(([x, y]) => renderHeader({key: x, value: y, backgroundColor: backgroundColor, color: color}))
     if (loading) {
         return TableSkeletonElements({renderHeaderComponent, row, col: Object.keys(header).length, theme})
       }

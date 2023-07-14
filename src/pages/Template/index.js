@@ -21,6 +21,7 @@ export default function RenderPage() {
     <div id="template">
       <Menu />
       <Container
+        
         // fluid
         className="template"
       >

@@ -14,6 +14,8 @@ import {
 } from "react-router-dom";
 
 import RenderPage, { loader } from "./pages/Template";
+import Pages from './pages';
+import PATH_LIST from './routes/constant';
 
 // const router = createBrowserRouter([...ROUTES]);
 
@@ -24,6 +26,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: ROUTES,
     loader: loader,
+  },
+  {
+    path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.Player/>,
+    // errorElement: <ErrorPage />,
+    // children: ROUTES,
+    loader: ({ params }) => {
+      return (params);
+    },
   },
 ]);
 
