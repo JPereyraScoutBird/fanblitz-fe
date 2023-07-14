@@ -35,10 +35,10 @@ function Menu(args) {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" className='d-flex justify-content-end'>
+      <Navbar id="primary_navbar" color="light" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
             <NavItem>
                 {renderNavLink(`${PATH_LIST.HOME}`, "Home")}

@@ -18,7 +18,7 @@ const headerHitting = {
 }
 
 const headerHittingSplit = {
-    "duration": "Duration",
+    "duration": "Last X days",
     "at_bats": "AB",
     "runs": "R",
     "hits": "H",
@@ -29,11 +29,11 @@ const headerHittingSplit = {
     "batting_average": "AVG",
     "batter_on_base_percentage": "OBP",
     "batter_slugging_percentage": "SLG",
-    "ops": "OPS"
+    "stolen_bases": "OPS"
 }
 
 const headerPitchingSplit = {
-    "duration": "Duration",
+    "duration": "Last X days",
     "wins": "W",
     "losses": "L",
     "runs": "ERA",
@@ -232,8 +232,8 @@ const team_detail = {
     },
     "LAA": {
         "teamColoursHex": [
-            "#003263",
             "#ba0021",
+            "#003263",
             "#862633",
             "#c4ced4",
             "#ffffff"
@@ -247,14 +247,17 @@ const team_detail = {
         "img": "https://www.mlbstatic.com/team-logos/108.svg"
     },
     "LAD": {
-        "teamColoursHex": [],
+        "teamColoursHex": [
+            '#005a9c',
+            '#e71d35'
+        ],
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
                 "value": "Dodgers"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/119.svg"
     },
     "MIA": {
         "teamColoursHex": [
@@ -293,8 +296,8 @@ const team_detail = {
     },
     "NYM": {
         "teamColoursHex": [
+            "#ff5910",
             "#002d72",
-            "#ff5910"
         ],
         "socialMediaAccounts": [
             {
@@ -437,8 +440,8 @@ const team_detail = {
     "TOR": {
         "teamColoursHex": [
             "#134a8e",
+            "#e8291c",
             "#1d2d5c",
-            "#e8291c"
         ],
         "socialMediaAccounts": [
             {
@@ -449,14 +452,17 @@ const team_detail = {
         "img": "https://www.mlbstatic.com/team-logos/141.svg"
     },
     "WAS": {
-        "teamColoursHex": [],
+        "teamColoursHex": [
+            '#ab0003',
+            '#14225A'
+        ],
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
                 "value": "Nationals"
             }
         ],
-        "img": null
+        "img": 'https://www.mlbstatic.com/team-logos/120.svg'
     },
 
 }
@@ -466,5 +472,6 @@ export default {
     headerPitching,
     headerHittingSplit,
     headerPitchingSplit,
+    team_detail,
     API: "10e1aa76ff72457385dd58b55a97a5e6",
 }

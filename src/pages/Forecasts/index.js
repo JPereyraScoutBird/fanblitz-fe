@@ -1,30 +1,50 @@
+import { Col, Row } from "reactstrap";
+import Card from "../../component/Card";
 import Menu from "../../container/Menu";
-
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+// import CONSTANT from './constant';
+import './style.css';
+import { getDate2 } from "../../utils";
+import Image from '../../img';
+import PATH_LIST from "../../routes/constant";
 function Forecasts() {
+
+  const [forecastData, setForecastData] = useState([])
+
+  // Fetch Data from NewsApi (ComponentDidMount)
+  useEffect(() => {
+    axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts`).then((res) => {
+      // JSON.parse(res.data.body).then((resJson) => {
+        setForecastData(JSON.parse(res.data.body))
+      // })
+    })
+  }, [])
+
+  console.log(forecastData[0])
+
   return (
-    <div>
-      <div>
-      Forecasts
+    <div id="forecast">
+      <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
+        <h2>Forecast</h2>
       </div>
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
         <section >
-            {/* What is  */}
-        </section>
-        <section >
-            {/* Why us */}
-        </section>
-        <section>
-            {/* Business */}
-        </section>
-        <section>
-            {/* Market/Sports */}
-        </section>
-        <section>
-            {/* {plans} */}
-        </section>
-        <section>
-            {/* {contant us} */}
+          <Row>
+              {
+                forecastData.map(article => (
+                  <Col xs={6}>
+                    <Card 
+                      style="card-news"
+                      title={`${article.home_team} vs ${article.away_team}`}
+                      imageSrc={Image[article.home_team]}
+                      linkTitle={`${PATH_LIST.FORECAST_DETAIL}/${article.home_team}-${article.away_team}/${getDate2(article.date_et)}`}
+                      footer={getDate2(article.date_et)}
+                    />
+                  </Col>
+                ))
+              }
+          </Row>
         </section>
       </div>
     </div>

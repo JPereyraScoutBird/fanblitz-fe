@@ -11,11 +11,11 @@ const route_list = [
       path: PATH_LIST.PLAYER,
       element: <Pages.Players />,
     },
-    {
-      path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-      element: <Pages.Player />,
-      loader: newsLoader
-    },
+    // {
+    //   path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    //   element: <Pages.Player />,
+    //   loader: newsLoader
+    // },
     {
       path: PATH_LIST.PLAYER_DETAIL,
       element: <Pages.PlayerDetail />,
@@ -31,6 +31,11 @@ const route_list = [
     {
       path: PATH_LIST.FORECAST,
       element: <Pages.Forecasts />,
+    },
+    {
+      path: `${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.ForecastDetail />,
+      loader: newsLoader
     },
     {
       path: PATH_LIST.SOCIAL_BETS,

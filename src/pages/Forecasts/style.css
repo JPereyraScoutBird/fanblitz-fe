@@ -1,0 +1,14 @@
+.card-news .card-img {
+    height: 350px !important;
+    object-fit: cover;
+}
+
+.card-news .card-title {
+    height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-news {
+    margin-top: 2rem;
+}
