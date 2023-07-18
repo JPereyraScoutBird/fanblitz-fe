@@ -497,7 +497,7 @@ const headerHittingRanking = {
     "season": "Season",
     "hits": "H",
     "second_based_hits": "2B",
-    "third_base_hits": "2B",
+    "third_base_hits": "3B",
     "homeruns": "HR",
     "runs": "R",
     "runs_batted_in": "RBI",
@@ -531,8 +531,7 @@ const headerNextGames = {
 
 const headerLeader = {
     "feature": "Stats",
-    "first_name": "Name",
-    "last_name": "LastName",
+    "full_name": "Player",
     "position": "Position",
     "value": "Value"
 }

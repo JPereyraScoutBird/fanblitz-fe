@@ -12,6 +12,8 @@ import Footer from '../../container/Footer';
 import './style.css'
 import SubMenu from '../../container/Menu2';
 import { getDate } from "../../utils";
+import { useNavigate } from "react-router-dom";
+import PATH_LIST from "../../routes/constant";
 // import { Line } from 'react-chartjs-2';
 // import Line from 'react-chart-js-2';
 
@@ -25,13 +27,6 @@ const getNewsSpecificPlayer = (player_name) => (
 
 const renderTableNextGames = (position, data, backgroundColor = undefined, color='#000') => {
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerNextGames} data={data.games}/>;
-};
-
-const renderTableLeaders = (position, data, backgroundColor = undefined, color='#000') => {
-  if (position=='hitters') {
-    return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.hitter}/>;
-  }
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.pitcher}/>;
 };
 
 const renderTableRanking = (position, data, backgroundColor = undefined, color='#000') => {
@@ -104,6 +99,7 @@ function TeamDetail(route) {
     const [newsData, setNewsData] = useState([])
     const [bio, setBio] = useState({})
     const [showTable, setShowTable] = useState("hitters");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -142,11 +138,23 @@ function TeamDetail(route) {
       fetchData3()
     }, [teamDetail])
 
+    const onClick = (user) => {
+      navigate(`${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
+    }
+
+    const renderTableLeaders = (position, data, backgroundColor = undefined, color='#000') => {
+      if (position=='hitters') {
+        return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.hitter} onClick={(user) => onClick(user)}/>;
+      }
+      return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.pitcher} onClick={(user) => onClick(user)}/>;
+    };
+
+
     // useEffect(() => {
       
     //   const fetchData4 = async () => {
     //     try {
-    //         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${teamDetail.full_name}&team=${teamDetail.mysportfeeds_abbreviation}&season=${teamDetail.summary.map(x => x.season).sort().slice(-1)}`);
+    //         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${teamDetail.odds_api}&team=${teamDetail.mysportfeeds_abbreviation}&season=${teamDetail.summary.map(x => x.season).sort().slice(-1)}`);
     //         setBio(response.data.body)
     //     } catch (error) {
     //       console.error('Error getting data:', error);
@@ -162,7 +170,7 @@ function TeamDetail(route) {
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
                   <div style={{ border: `5px solid ${constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
-                    <img src={teamDetail.image}/>
+                    <img src={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img}/>
                   </div>
                   <div>
                       <h2>{teamDetail['odds_api']}</h2>
@@ -211,7 +219,7 @@ function TeamDetail(route) {
             <h3>Leaders</h3>
             {renderTableLeaders(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          {/* <section id="news">
+          <section id="news">
             <h3>News</h3>
             <Row>
               {
@@ -228,7 +236,7 @@ function TeamDetail(route) {
                 ))
               }
           </Row>
-          </section> */}
+          </section>
         </div>    
       );
     }
