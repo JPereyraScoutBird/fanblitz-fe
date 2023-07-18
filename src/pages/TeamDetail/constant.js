@@ -536,6 +536,15 @@ const headerLeader = {
     "value": "Value"
 }
 
+const headerPlayer = {
+    "full_name": "Player",
+    "birth_date": "Birth date",
+    "position": "Position",
+    "weight": "Weight",
+    "height": "Height",
+    "image": "Image"
+}
+
 
 
 export default {
@@ -550,5 +559,6 @@ export default {
     headerHittingRanking,
     headerPitchingRanking,
     headerNextGames,
-    headerLeader
+    headerLeader,
+    headerPlayer
 }

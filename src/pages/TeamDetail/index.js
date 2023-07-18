@@ -29,12 +29,15 @@ const renderTableNextGames = (position, data, backgroundColor = undefined, color
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerNextGames} data={data.games}/>;
 };
 
+const renderTablePlayers = (position, data, backgroundColor = undefined, color='#000') => {
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPlayer} data={data.players}/>;
+};
+
 const renderTableRanking = (position, data, backgroundColor = undefined, color='#000') => {
   if (position=='hitters') {
     return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerHittingRanking} data={data.ranking.hitter}/>;
   }
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPitchingRanking} data={data.ranking.pitcher}/>;
-
 };
 
 const renderTableStats = (position, data, backgroundColor = undefined, color='#000') => {
@@ -218,6 +221,10 @@ function TeamDetail(route) {
           <section id="leaders">
             <h3>Leaders</h3>
             {renderTableLeaders(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+          </section>
+          <section id="leaders">
+            <h3>Players</h3>
+            {renderTablePlayers(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="news">
             <h3>News</h3>
