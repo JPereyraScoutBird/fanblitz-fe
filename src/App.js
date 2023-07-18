@@ -36,6 +36,15 @@ const router = createBrowserRouter([
       return (params);
     },
   },
+  {
+    path: `${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.TeamDetail/>,
+    // errorElement: <ErrorPage />,
+    // children: ROUTES,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
 ]);
 
 

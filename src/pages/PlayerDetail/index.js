@@ -11,7 +11,7 @@ import Menu from '../../container/Menu';
 import Footer from '../../container/Footer';
 import './style.css'
 import SubMenu from '../../container/Menu2';
-import { Line } from 'react-chartjs-2';
+// import { Line } from 'react-chartjs-2';
 // import Line from 'react-chart-js-2';
 
 export async function loader({ params }) {
@@ -42,26 +42,28 @@ const renderTable2 = (position, data, backgroundColor=undefined, color='#fff') =
 
 const renderTable3 = (position, data, backgroundColor=undefined, color='#fff') => {
   if (position !== "P") {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerHittingSplit} data={data.last3Games}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerHitting3Games} data={data.last3Games}/>;
   } else if (position === "P") {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPitchingSplit} data={data.last3Games}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPitching3Games} data={data.last3Games}/>;
   }
   return null;
 };
 
 const renderRank = (playerDetail) => {
-  if(playerDetail) {
+  if(playerDetail && playerDetail.ranking.length > 0) {
       if(playerDetail.position == 'P') {
       return (
         <div>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th<br></br>
+          <p>
+            <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th<br></br>
           <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}</p>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}
+          </p>
         </div>
       )
     } 
@@ -126,8 +128,8 @@ function Player(route) {
     }, [playerDetail])
 
     const renderPage = () => {
-      console.log(playerDetail)
-      console.log(constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0],  constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex)
+      console.log("playerDetail", playerDetail)
+      // console.log(constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0],  constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex)
       return (
         <div style={{}}>
           <SubMenu backgroundColor={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img} />
@@ -205,12 +207,8 @@ function Player(route) {
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail[playerDetail.mysportfeeds_abbreviation].img: ""})`}}>
         <Menu />
-        <Container
-          className="template"
-        >
-          <div
-            id="detail"
-          >
+        <Container className="template">
+          <div id="detail">
             {playerDetail ? renderPage() : <></> }
           </div>
         </Container>

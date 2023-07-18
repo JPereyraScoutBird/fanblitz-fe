@@ -1,6 +1,5 @@
-const headerHitting = {
+const headerHittingStats = {
     "season": "Season",
-    "mysportfeeds_abbreviation": "Team",
     "ops": "OPS",
     "batter_slugging_percentage": "SLG",
     "batter_on_base_percentage": "OBP",
@@ -17,75 +16,10 @@ const headerHitting = {
     "stolen_bases": "SB"
 }
 
-const headerHittingSplit = {
-    "duration": "Last X days",
-    "at_bats": "AB",
-    "runs": "R",
-    "hits": "H",
-    "homeruns": "HR",
-    "runs_batted_in": "RBI",
-    "batter_walks": "BB",
-    "batter_strike_outs": "SO",
-    "batting_average": "AVG",
-    "batter_on_base_percentage": "OBP",
-    "batter_slugging_percentage": "SLG",
-    "stolen_bases": "OPS"
-}
-
-const headerPitchingSplit = {
-    "duration": "Last X days",
-    "wins": "W",
-    "losses": "L",
-    "earned_run_agerage": "ERA",
-    "games_started": "G",
-    "games_started": "GS",
-    "saves": "SV",
-    "innings_pitched": "IP",
-    "hits_allowed": "H",
-    "earned_runs_allowed": "ER",
-    "pitcher_walks": "BB",
-    "pitcher_strikeouts": "SO",
-    "strikeouts_to_walks_ratio": "WHIP"
-}
-
-const headerHitting3Games = {
-    "start_time": "Day",
-    "at_bats": "AB",
-    "runs": "R",
-    "hits": "H",
-    "homeruns": "HR",
-    "runs_batted_in": "RBI",
-    "batter_walks": "BB",
-    "batter_strike_outs": "SO",
-    "batting_average": "AVG",
-    "batter_on_base_percentage": "OBP",
-    "batter_slugging_percentage": "SLG",
-    "stolen_bases": "OPS"
-}
-
-const headerPitching3Games = {
-    "duration": "Day",
-    "wins": "W",
-    "losses": "L",
-    "earned_run_agerage": "ERA",
-    "games_started": "G",
-    "games_started": "GS",
-    "saves": "SV",
-    "innings_pitched": "IP",
-    "hits_allowed": "H",
-    "earned_runs_allowed": "ER",
-    "pitcher_walks": "BB",
-    "pitcher_strikeouts": "SO",
-    "strikeouts_to_walks_ratio": "WHIP"
-}
-
-const headerPitching = {
+const headerPitchingStats = {
     "season": "Season",
-    "mysportfeeds_abbreviation": "Team",
-    "games_played": "G",
     "wins": "W",
     "losses": "L",
-    "saves": "S",
     "earned_run_agerage": "ERA",
     "innings_pitched": "IP",
     "hits_allowed": "H",
@@ -104,6 +38,68 @@ const headerPitching = {
     // "hits_allowed_per_9_innings": "H/IP",
     // "strikeouts_to_walks_ratio": "SO/IP"
 }
+
+
+const headerHittingSplit = {
+    "duration": "Last X days",
+    "at_bats": "AB",
+    "runs": "R",
+    "hits": "H",
+    "homeruns": "HR",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "batter_strike_outs": "SO",
+    "stolen_bases": "SB",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG"
+}
+
+const headerPitchingSplit = {
+    "duration": "Last X days",
+    "wins": "W",
+    "losses": "L",
+    "earned_run_agerage": "ERA",
+    "innings_pitched": "IP",
+    "hits_allowed": "H",
+    "earned_runs_allowed": "ER",
+    "homeruns_allowed": "HR",
+    "pitcher_walks": "BB",
+    "pitcher_strikeouts": "SO",
+    "strikeouts_to_walks_ratio": "WHIP",
+    "pitching_average": "AVG"
+}
+
+const headerHitting3Games = {
+    "start_time": "Day",
+    "at_bats": "AB",
+    "runs": "R",
+    "hits": "H",
+    "homeruns": "HR",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "batter_strike_outs": "SO",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG",
+    // "stolen_bases": "OPS"
+}
+
+const headerPitching3Games = {
+    "start_time": "Day",
+    "wins": "W",
+    "losses": "L",
+    "earned_run_agerage": "ERA",
+    "innings_pitched": "IP",
+    "hits_allowed": "H",
+    "earned_runs_allowed": "ER",
+    "pitcher_walks": "BB",
+    "pitcher_strikeouts": "SO",
+    "homeruns_allowed": "HR",
+    "pitching_average": "AVG",
+    'strikeouts_to_walks_ratio': 'WHIP'
+}
+
 
 const team_detail = {
     'ARI': {
@@ -497,13 +493,63 @@ const team_detail = {
 
 }
 
+const headerHittingRanking = {
+    "season": "Season",
+    "hits": "H",
+    "second_based_hits": "2B",
+    "third_base_hits": "2B",
+    "homeruns": "HR",
+    "runs": "R",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "stolen_bases": "SB",
+    "batter_strike_outs": "SO",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG",
+    "ops": "OPS"
+}
+
+const headerPitchingRanking = {
+    "season": "Season",
+    "wins": "W",
+    "earned_run_agerage": "ERA",
+    "homeruns_allowed": "HR",
+    "runs_allowed": "R",
+    "earned_runs_allowed": "ER",
+    "pitching_average": "AVG",
+    "pitcher_strikeouts": "SO",
+}
+
+const headerNextGames = {
+    "date_et": "Date",
+    "home_team": "Home",
+    "away_team": "Away",
+    "home_score": "Home Score",
+    "away_score": "Away Score"
+}
+
+const headerLeader = {
+    "feature": "Stats",
+    "first_name": "Name",
+    "last_name": "LastName",
+    "position": "Position",
+    "value": "Value"
+}
+
+
+
 export default {
-    headerHitting,
-    headerPitching,
+    headerHittingStats,
+    headerPitchingStats,
     headerHittingSplit,
     headerPitchingSplit,
     team_detail,
     headerHitting3Games,
     headerPitching3Games,
     API: "10e1aa76ff72457385dd58b55a97a5e6",
+    headerHittingRanking,
+    headerPitchingRanking,
+    headerNextGames,
+    headerLeader
 }

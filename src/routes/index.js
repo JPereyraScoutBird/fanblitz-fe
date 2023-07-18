@@ -25,6 +25,10 @@ const route_list = [
       element: <Pages.Team />,
     },
     {
+      path: PATH_LIST.TEAM_DETAIL,
+      element: <Pages.TeamDetail />,
+    },
+    {
       path: PATH_LIST.NEWS,
       element: <Pages.News />,
     },
