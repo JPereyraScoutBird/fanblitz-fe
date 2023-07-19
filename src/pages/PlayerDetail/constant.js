@@ -85,6 +85,7 @@ const team_detail = {
             "#30ced8",
             "#ffffff"
         ],
+        "stadium": "Chase Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -93,8 +94,9 @@ const team_detail = {
         ]
     },
     'ATL': {
-        "img": null,
+        "img": "https://global.nba.com/media/img/teams/00/logos/ATL_logo.svg",
         "teamColoursHex": [],
+        "stadium": "Truist Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -104,6 +106,7 @@ const team_detail = {
     },
     "BAL": {
         "img": "https://www.mlbstatic.com/team-logos/110.svg",
+        "stadium": "Oriole Park at Camden Yards",
         "teamColoursHex": [
             "#df4601",
             "#000000"
@@ -117,6 +120,7 @@ const team_detail = {
     },
     "BOS": {
         "img": "https://www.mlbstatic.com/team-logos/111.svg",
+        "stadium": "TD Garden",
         "teamColoursHex": [
             "#bd3039",
             "#0c2340"
@@ -133,6 +137,7 @@ const team_detail = {
             "#0e3386",
             "#cc3433"
         ],
+        "stadium": "Wrigley Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -146,6 +151,7 @@ const team_detail = {
             "#27251f",
             "#c4ced4"
         ],
+        "stadium": "Guaranteed Rate Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -159,6 +165,7 @@ const team_detail = {
             "#c6011f",
             "#000000"
         ],
+        "stadium": "Great American Ball Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -172,6 +179,7 @@ const team_detail = {
             "#0c2340",
             "#e31937"
         ],
+        "stadium": "Rocket Mortgage FieldHouse",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -186,6 +194,7 @@ const team_detail = {
             "#c4ced4",
             "#000000"
         ],
+        "stadium": "Coors Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -199,6 +208,7 @@ const team_detail = {
             "#0c2340",
             "#fa4616"
         ],
+        "stadium": "Little Caesars Arena",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -215,7 +225,8 @@ const team_detail = {
                 "value": "astros"
             }
         ],
-        "img": null
+        "stadium": "Minute Maid Park",
+        "img": "https://www.mlbstatic.com/team-logos/117.svg"
     },
     "KC": {
         "teamColoursHex": [
@@ -228,6 +239,7 @@ const team_detail = {
                 "value": "Royals"
             }
         ],
+        "stadium": "Kauffman Stadium",
         "img": "https://www.mlbstatic.com/team-logos/118.svg"
     },
     "LAA": {
@@ -238,6 +250,7 @@ const team_detail = {
             "#c4ced4",
             "#ffffff"
         ],
+        "stadium": "Angel Stadium",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -257,6 +270,7 @@ const team_detail = {
                 "value": "Dodgers"
             }
         ],
+        "stadium": "Dodger Stadium",
         "img": "https://www.mlbstatic.com/team-logos/119.svg"
     },
     "MIA": {
@@ -266,6 +280,7 @@ const team_detail = {
             "#41748d",
             "#000000"
         ],
+        "stadium": "loanDepot Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -282,7 +297,8 @@ const team_detail = {
                 "value": "Brewers"
             }
         ],
-        "img": null
+        "stadium": "Fiserv Forum",
+        "img": "https://www.mlbstatic.com/team-logos/158.svg"
     },
     "MIN": {
         "teamColoursHex": [],
@@ -292,7 +308,8 @@ const team_detail = {
                 "value": "Twins"
             }
         ],
-        "img": null
+        "stadium": "Target Center",
+        "img": "https://www.mlbstatic.com/team-logos/142.svg"
     },
     "NYM": {
         "teamColoursHex": [
@@ -305,6 +322,7 @@ const team_detail = {
                 "value": "Mets"
             }
         ],
+        "stadium": "Citi Field",
         "img": "https://www.mlbstatic.com/team-logos/121.svg"
     },
     "NYY": {
@@ -313,6 +331,7 @@ const team_detail = {
             "#e4002c",
             "#0c2340"
         ],
+        "stadium": "Yankee Stadium",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -329,7 +348,8 @@ const team_detail = {
                 "value": "Athletics"
             }
         ],
-        "img": null
+        "stadium": "Oakland-Alameda County Coliseum",
+        "img": "https://www.mlbstatic.com/team-logos/133.svg"
     },
     "PHI": {
         "teamColoursHex": [
@@ -342,6 +362,7 @@ const team_detail = {
                 "value": "Phillies"
             }
         ],
+        "stadium": "Wells Fargo Center",
         "img": "https://www.mlbstatic.com/team-logos/143.svg"
     },
     "PIT": {
@@ -355,6 +376,7 @@ const team_detail = {
                 "value": "Pirates"
             }
         ],
+        "stadium": "PNC Park",
         "img": "https://www.mlbstatic.com/team-logos/134.svg"
     },
     "SD": {
@@ -368,6 +390,7 @@ const team_detail = {
                 "value": "Padres"
             }
         ],
+        "stadium": "Petco Park",
         "img": "https://www.mlbstatic.com/team-logos/135.svg"
     },
     "SF": {
@@ -383,6 +406,7 @@ const team_detail = {
                 "value": "SFGiants"
             }
         ],
+        "stadium": "AT&T Park",
         "img": "https://www.mlbstatic.com/team-logos/137.svg"
     },
     "SEA": {
@@ -398,6 +422,7 @@ const team_detail = {
                 "value": "Mariners"
             }
         ],
+        "stadium": "T-Mobile Park",
         "img": "https://www.mlbstatic.com/team-logos/136.svg"
     },
     "STL": {
@@ -408,7 +433,8 @@ const team_detail = {
                 "value": "Cardinals"
             }
         ],
-        "img": null
+        "stadium": "Busch Stadium",
+        "img": "https://www.mlbstatic.com/team-logos/138.svg"
     },
     "TB": {
         "teamColoursHex": [
@@ -422,6 +448,7 @@ const team_detail = {
                 "value": "RaysBaseball"
             }
         ],
+        "stadium": "Tropicana Field",
         "img": "https://www.mlbstatic.com/team-logos/139.svg"
     },
     "TEX": {
@@ -435,6 +462,7 @@ const team_detail = {
                 "value": "Rangers"
             }
         ],
+        "stadium": "Globe Life Field",
         "img": "https://www.mlbstatic.com/team-logos/140.svg"
     },
     "TOR": {
@@ -449,6 +477,7 @@ const team_detail = {
                 "value": "BlueJays"
             }
         ],
+        "stadium": "Rogers Centre",
         "img": "https://www.mlbstatic.com/team-logos/141.svg"
     },
     "WAS": {
@@ -462,6 +491,7 @@ const team_detail = {
                 "value": "Nationals"
             }
         ],
+        "stadium": "Capital One Arena",
         "img": 'https://www.mlbstatic.com/team-logos/120.svg'
     },
 

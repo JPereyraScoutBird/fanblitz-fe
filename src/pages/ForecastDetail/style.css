@@ -1,14 +1,37 @@
-.card-news .card-img {
+/* .card-news .card-img {
     height: 200px;
     object-fit: cover;
+} */
+
+
+#forecast_detail .section-image {
+    height: 300px;
+    object-fit: cover !important;
+    object-position: top !important;
 }
 
-.card-news .card-title {
-    height: 4.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
+#forecast_detail .profile-picture { 
+    width: 100%;
+    border-radius: 50%;
 }
 
-.card-news {
-    margin-top: 2rem;
+#forecast_detail .icon {
+    margin-right: 0.5rem;
+    font-size: 14px;
+}
+
+.border-dash {
+    border-right: 1px dashed #ccc;
+    height: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#forecast_detail .profile-container { 
+    width: 100%;
+    border-radius: 50%;
+}
+
+#forecast_detail h3 {
+    line-height: 3.0;
 }
