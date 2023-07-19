@@ -29,6 +29,7 @@ import TB from './TB.jpg';
 import TEX from './TEX.jpg';
 import TOR from './TOR.jpg';
 import WAS from './WAS.jpg';
+import BLITZBOT_PROFILE from './blitzbot_profile.png'
 
 export default {
     Logo,
@@ -62,4 +63,5 @@ export default {
     TEX,
     TOR,
     WAS,
+    BLITZBOT_PROFILE
 }
