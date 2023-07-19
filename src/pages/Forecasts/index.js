@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 // import CONSTANT from './constant';
 import './style.css';
-import { getDate2 } from "../../utils";
+import { getDate2, getDateString } from "../../utils";
 import Image from '../../img';
 import PATH_LIST from "../../routes/constant";
 function Forecasts() {
@@ -16,12 +16,14 @@ function Forecasts() {
   useEffect(() => {
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts`).then((res) => {
       // JSON.parse(res.data.body).then((resJson) => {
-        setForecastData(JSON.parse(res.data.body))
+        setForecastData(res.data)
+        // console.log(res.data.body)
+        // setForecastData(JSON.parse(res.data.body))
       // })
     })
   }, [])
 
-  console.log(forecastData[0])
+  // console.log(forecastData[0])
 
   return (
     <div id="forecast">
@@ -37,9 +39,9 @@ function Forecasts() {
                     <Card 
                       style="card-news"
                       title={`${article.home_team} vs ${article.away_team}`}
-                      imageSrc={Image[article.home_team]}
-                      linkTitle={`${PATH_LIST.FORECAST_DETAIL}/${article.home_team}-${article.away_team}/${getDate2(article.date_et)}`}
-                      footer={getDate2(article.date_et)}
+                      imageSrc={Image[article.home_team_abb]}
+                      linkTitle={`${PATH_LIST.FORECAST_DETAIL}/${article.home_team_abb}-${article.away_team_abb}/${getDate2(article.date_et)}`}
+                      footer={getDateString(article.date_et)}
                     />
                   </Col>
                 ))
