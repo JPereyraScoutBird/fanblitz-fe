@@ -60,7 +60,7 @@ function Home() {
       <div>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>MLB Game Schedule</h2>
-          {gameData && gameData.length > 0 ? <CustomTable header={header} data={gameData} loading={gameData.length == 0}/> : <>No Game Today</>}
+          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData} loading={gameData.length == 0}/> : <>No Game Today</>}
         </div>
       </div>    
     </>    

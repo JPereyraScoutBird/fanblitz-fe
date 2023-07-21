@@ -44,9 +44,9 @@ function Players() {
 
     const renderTable = () => {
         if (showTable === "hitters") {
-        return <CustomTable loading={teamData.length == 0} header={headerHitting} data={batterData} onClick={(user) => onClick(user)}/>;
+        return <CustomTable loading={teamData.length == 0} pagination={true} range={15} header={headerHitting} data={batterData} onClick={(user) => onClick(user)}/>;
         } else if (showTable === "pitchers") {
-        return <CustomTable loading={teamData.length == 0} header={headerPitching} data={pitcherData} onClick={(user) => onClick(user)}/>;
+        return <CustomTable loading={teamData.length == 0} pagination={true} range={15} header={headerPitching} data={pitcherData} onClick={(user) => onClick(user)}/>;
         }
         return null;
     };

@@ -22,3 +22,8 @@
     background-attachment: fixed;
     /* padding-right: 20px; */
 }
+
+.ranking-summary p {
+    margin-right: 1rem;
+    margin-bottom: 0px
+}

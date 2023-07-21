@@ -537,12 +537,12 @@ const headerLeader = {
 }
 
 const headerPlayer = {
+    "image": "Image",
     "full_name": "Player",
     "birth_date": "Birth date",
     "position": "Position",
     "weight": "Weight",
     "height": "Height",
-    "image": "Image"
 }
 
 

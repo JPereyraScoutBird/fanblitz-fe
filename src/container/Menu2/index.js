@@ -20,7 +20,7 @@ import Images from '../../img';
 
 
 function SubMenu(props) {
-  const {backgroundColor, color, logo=undefined} = props
+  const {backgroundColor="#000", color="#fff", logo=undefined, wins="", losses=""} = props
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -41,7 +41,8 @@ function SubMenu(props) {
   return (
     <div>
       <Navbar id="secondary_navbar" style={{backgroundImage: `linear-gradient(90deg, ${color} 0%, ${backgroundColor} 50%)` }}  expand="md" className='d-flex justify-content-end'>
-        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}><img src={logo} height="50px" /></NavbarBrand>
+        <div className='container d-flex justify-content-end'>
+        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}><div className='d-flex align-items-center'><img src={logo} height="50px" /><p className='nav-title'>{(wins && losses) ? `W ${wins} L ${losses}` : null}</p></div></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
@@ -59,6 +60,7 @@ function SubMenu(props) {
             </NavItem>
           </Nav>
         </Collapse>
+        </div>
       </Navbar>
     </div>
   );

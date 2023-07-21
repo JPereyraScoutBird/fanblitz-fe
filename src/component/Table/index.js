@@ -16,6 +16,7 @@ import useSortableData from "../../hooks/useSortableData";
 import Pagination from "../Pagination";
 import SkeletonElements from "../Skeleton";
 import Shimmer from "../Skeleton/shimmer";
+import IMAGE from '../../img';
 
 
 const TableSkeletonElements = ({renderHeaderComponent, row=5, col=5, theme}) => {
@@ -44,9 +45,21 @@ const renderData = (
   page,
   range,
   header,
-  onClick
+  onClick,
+  playeImage=false,
+  // backgroundColor="#000",
 ) => {
   const item_list = data.slice((page - 1) * range, page * range);
+  if(playeImage) {
+    return item_list.map((x) => (
+      <tr onClick={() => onClick(x)}>
+        <td><img style={{border: `2px solid #041e42`, borderRadius: "50%", width: "45px", height: "45px", objectFit: "cover"}} src={x['image'] || IMAGE.PROFILE}/></td>
+        {Object.keys(header).slice(1).map((val) => (
+          <td>{x[val]}</td>
+        ))}
+      </tr>
+    ));
+  }
   return item_list.map((x) => (
     <tr onClick={() => onClick(x)}>
       {Object.keys(header).map((val) => (
@@ -61,13 +74,15 @@ function CustomTable(props) {
     data = [],
     header = {},
     pagination = false,
+    noRange = false,
     range = 5,
     row=5,
     theme='light',
     loading = false,
     onClick = () => {},
-    color=undefined,
-    backgroundColor=undefined,
+    color="#fff",
+    playeImage=false,
+    backgroundColor="#000",
   } = props;
 
   console.log("Color: ", color)
@@ -108,10 +123,10 @@ function CustomTable(props) {
             {value}
             <div className="d-flex">
                 <div className="up">
-                <FontAwesomeIcon style={{color: color}} icon={faUpLong} />
+                  <FontAwesomeIcon icon={faUpLong} />
                 </div>
                 <div className="down">
-                <FontAwesomeIcon style={{color: color}} icon={faDownLong} />
+                  <FontAwesomeIcon icon={faDownLong} />
                 </div>
             </div>
             </div>
@@ -140,7 +155,8 @@ function CustomTable(props) {
                 page,
                 itemRange,
                 header,
-                onClick
+                onClick,
+                playeImage
               )}
             </tbody>
         </Table>
@@ -149,55 +165,57 @@ function CustomTable(props) {
   
   return (
     <div id="custom_table">
-      <div className="d-flex mb-2">
-        <p>Show</p>
-        <UncontrolledDropdown>
-          <DropdownToggle
-            nav
-            caret
-            className="mr-2 ml-2"
-            style={{ width: "60px !important" }}
-          >
-            {itemRange}
-          </DropdownToggle>
-          <DropdownMenu>
-            <DropdownItem
-              onClick={() => {
-                setItemRange(5);
-                setPage(1);
-              }}
+      {!noRange ? <div className="d-flex mb-2">
+          <p>Show</p>
+          <UncontrolledDropdown>
+            <DropdownToggle
+              nav
+              caret
+              className="mr-2 ml-2"
+              style={{ width: "60px !important" }}
             >
-              5
-            </DropdownItem>
-            <DropdownItem
-              onClick={() => {
-                setItemRange(10);
-                setPage(1);
-              }}
-            >
-              10
-            </DropdownItem>
-            <DropdownItem
-              onClick={() => {
-                setItemRange(25);
-                setPage(1);
-              }}
-            >
-              25
-            </DropdownItem>
-            <DropdownItem
-              onClick={() => {
-                setItemRange(50);
-                setPage(1);
-              }}
-            >
-              50
-            </DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>
-        <p>Entries</p>
-      </div>
+              {itemRange}
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem
+                onClick={() => {
+                  setItemRange(5);
+                  setPage(1);
+                }}
+              >
+                5
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setItemRange(10);
+                  setPage(1);
+                }}
+              >
+                10
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setItemRange(25);
+                  setPage(1);
+                }}
+              >
+                25
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setItemRange(50);
+                  setPage(1);
+                }}
+              >
+                50
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <p>Entries</p>
+        </div>
+      : null}
       {renderTable()}
+      {pagination ? 
       <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between pb-4 pt-4">
         {/* <div> */}
         <p className="text-center text-lg-left">
@@ -206,7 +224,7 @@ function CustomTable(props) {
           {items.length} entries
         </p>
         {/* </div> */}
-        {pagination ? (
+        
           <Pagination
             className="pagination-bar"
             currentPage={page}
@@ -215,8 +233,8 @@ function CustomTable(props) {
             onPageChange={(page) => setPage(page)}
             siblingCount={1}
           />
-        ) : null}
       </div>
+      : null}
     </div>
   );
 }

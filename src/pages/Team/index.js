@@ -30,7 +30,7 @@ function Team() {
   }
   
   const renderTable = () => {
-    return <CustomTable header={constant.header} row={30} data={teamData} loading={teamData.length == 0} onClick={(user) => onClick(user)}/>;
+    return <CustomTable header={constant.header} noRange={true} range={30} row={30} data={teamData} loading={teamData.length == 0} onClick={(user) => onClick(user)}/>;
   };
 
 
