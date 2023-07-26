@@ -4,17 +4,8 @@ import { loader as newsLoader,}  from '../pages/PlayerDetail';
 
 const route_list = [
     {
-      path: PATH_LIST.HOME,
-      element: <Pages.Home />,
-    },
-    {
       path: PATH_LIST.PLAYER,
       element: <Pages.Players />,
-    },
-    {
-      path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-      element: <Pages.Player />,
-      loader: newsLoader
     },
     {
       path: PATH_LIST.PLAYER_DETAIL,
@@ -25,12 +16,21 @@ const route_list = [
       element: <Pages.Team />,
     },
     {
+      path: PATH_LIST.TEAM_DETAIL,
+      element: <Pages.TeamDetail />,
+    },
+    {
       path: PATH_LIST.NEWS,
       element: <Pages.News />,
     },
     {
       path: PATH_LIST.FORECAST,
       element: <Pages.Forecasts />,
+    },
+    {
+      path: `${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.ForecastDetail />,
+      loader: newsLoader
     },
     {
       path: PATH_LIST.SOCIAL_BETS,

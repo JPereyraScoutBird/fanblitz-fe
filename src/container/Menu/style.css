@@ -1,21 +1,22 @@
 
   
-  .nav-item .active {
+  #primary_navbar .nav-item .active {
     /* background-color: #41b883 !important; */
-    color: #41b883 !important;
+    color: #fff !important;
+    font-weight: bold;
   }
 
-  .nav-item  a {
+  #primary_navbar .nav-item  a {
     text-decoration: none;
     text-align: left !important;
-    color: #585c5d !important;
+    color: #ccc !important;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     font-family: 'Lato', sans-serif;
     width: 100%;
   }
 
-  .nav-item {
+  #primary_navbar .nav-item {
     margin-left: 1rem;
     /* margin-right: 1rem; */
   }

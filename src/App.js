@@ -14,16 +14,39 @@ import {
 } from "react-router-dom";
 
 import RenderPage, { loader } from "./pages/Template";
+import Pages from './pages';
+import PATH_LIST from './routes/constant';
 
 // const router = createBrowserRouter([...ROUTES]);
 
 const router = createBrowserRouter([
+  {
+    path: `${PATH_LIST.HOME}`,
+    element: <Pages.Home/>,
+    errorElement: <ErrorPage />,
+  },
   {
     path: "/",
     element: <RenderPage />,
     errorElement: <ErrorPage />,
     children: ROUTES,
     loader: loader,
+  },
+  {
+    path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.Player/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.TeamDetail/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
   },
 ]);
 

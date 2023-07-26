@@ -1,0 +1,35 @@
+
+  
+  #secondary_navbar .nav-item .active {
+    /* background-color: #41b883 !important; */
+    /* color: #41b883 !important; */
+  }
+
+  #secondary_navbar .nav-item  a {
+    text-decoration: none;
+    text-align: left !important;
+    /* color: #585c5d !important; */
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+  }
+
+  #secondary_navbar .nav-item {
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
+  }
+
+  #secondary_navbar .nav-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 0px;
+  }
+/* 
+  .container-fluid {
+    display: flex;
+    justify-content: end;
+  }
+   */

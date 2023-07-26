@@ -1,0 +1,68 @@
+/* Style for the Custom Card Component */
+
+/* body {
+    font-size: 40px;
+} */
+
+/* .card-link {
+    text-decoration: none;
+    border: none
+} */
+
+.card-link:hover {
+    text-decoration: none;
+    border: 2px solid #041e42
+}
+
+.card_team_component .team-img {
+    margin: 0 2rem;
+}
+
+.card_team_component .team-img p {
+    font-weight: bold;
+}
+
+.card_team_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+}
+
+.vs p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card_team_component .card-footer {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card_team_component .card-title {
+    height: 1.5rem;
+    overflow-y: auto;
+    width: 100;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card_team_component .card-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    object-fit: cover;
+    border: 3px solid #041e42;
+}
+
+
+.card-body {
+    padding: 0px;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
