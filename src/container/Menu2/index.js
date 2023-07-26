@@ -5,11 +5,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  NavLink
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Images from '../../img';
 /**
  * Menu Navbar with Bootstrap
@@ -20,7 +21,7 @@ import Images from '../../img';
 
 
 function SubMenu(props) {
-  const {backgroundColor, color, logo=undefined} = props
+  const {backgroundColor="#000", color="#fff", logo=undefined, links, wins="", losses=""} = props
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -30,7 +31,7 @@ function SubMenu(props) {
       // className={({ isActive, isPending }) =>
       //   isActive ? "active" : isPending ? "pending" : ""
       // }
-      to={`${path}`}
+      href={`${path}`}
       style={{color: "#fff", fontWeight: 'bold', fontSize: '1.2rem'}}
       color={color}
     >
@@ -41,11 +42,13 @@ function SubMenu(props) {
   return (
     <div>
       <Navbar id="secondary_navbar" style={{backgroundImage: `linear-gradient(90deg, ${color} 0%, ${backgroundColor} 50%)` }}  expand="md" className='d-flex justify-content-end'>
-        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}><img src={logo} height="50px" /></NavbarBrand>
+        <div className='container d-flex justify-content-end'>
+        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}><div className='d-flex align-items-center'><img src={logo} height="50px" /><p className='nav-title'>{(wins && losses) ? `W ${wins} L ${losses}` : null}</p></div></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            {links.map(x => renderNavLink(x.id, x.label))}
+            {/* <NavItem>
                 {renderNavLink(`#bio`, "Bio")}
             </NavItem>
             <NavItem>
@@ -56,9 +59,10 @@ function SubMenu(props) {
             </NavItem>
             <NavItem>
                 {renderNavLink(`#news`, "News")}
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
+        </div>
       </Navbar>
     </div>
   );
