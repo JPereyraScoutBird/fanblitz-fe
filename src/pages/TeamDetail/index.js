@@ -18,10 +18,7 @@ import CardProfileComponent from '../../component/CardProfile';
 import CardTeamComponent from '../../component/CardTeam';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from "@fortawesome/free-regular-svg-icons";
-// import Image from '../../img';
-
-// import { Line } from 'react-chartjs-2';
-// import Line from 'react-chart-js-2';
+import Image from '../../img';
 
 export async function loader({ params }) {
     return params;
@@ -52,7 +49,7 @@ const renderTableNextGames = (position, data, backgroundColor = "#000", color='#
 };
 
 const renderTablePastGames =  (position, data, backgroundColor = "#000", color='#fff') => {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerNextGames} data={data.games}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLastGames} data={data.last_games.map(x => ({...x, date_et: getDateString(x['date_et'])}))}/>;
 }
 
 const renderTablePlayers = (position, data, backgroundColor = "#000", color='#fff') => {
@@ -98,11 +95,7 @@ const renderTableRanking = (position, data, backgroundColor = "#000", color='#ff
       </div>
     </div>
   </div>
-  // if (position=='hitters') {
-  //   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerHittingRanking} data={data.ranking.hitter}/>;
-  // }
-  // return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPitchingRanking} data={data.ranking.pitcher}/>;
-);
+ );
 
 const renderTableStats = (position, data, backgroundColor = "#000", color='#fff') => {
   if (position=='hitters') {
@@ -127,37 +120,6 @@ const renderTable3Games = (position, data, backgroundColor="#000", color='#fff')
   return <CustomTable backgroundColor={backgroundColor} color={color}  noRange={true} loading={data.length == 0} header={constant.headerPitching3Games} data={data.last3Games.pitcher}/>;
 
 };
-
-// const renderRank = (teamDetail) => {
-//   if(teamDetail && teamDetail.ranking.length > 0) {
-//       if(teamDetail.position == 'P') {
-//       return (
-//         <div>
-//           <p>
-//             <span style={{fontWeight: "bold"}}>Era: </span>{teamDetail.ranking[0].runs} th<br></br>
-//           <span style={{fontWeight: "bold"}}>G: </span>{teamDetail.ranking[0].hits} th<br></br>
-//           <span style={{fontWeight: "bold"}}>SV: </span>{teamDetail.ranking[0].homeruns} th<br></br>
-//           <span style={{fontWeight: "bold"}}>IP: </span>{teamDetail.ranking[0].runs_batted_in} th<br></br>
-//           <span style={{fontWeight: "bold"}}>H: </span>{teamDetail.ranking[0].batter_walks} th<br></br>
-//           <span style={{fontWeight: "bold"}}>ER: </span>{teamDetail.ranking[0].batter_strike_outs} th<br></br>
-//           <span style={{fontWeight: "bold"}}>SO: </span>{teamDetail.ranking[0].batter_on_base_percentage} th<br></br>
-//           <span style={{fontWeight: "bold"}}>WHIP: </span>{teamDetail.ranking[0].batter_slugging_percentage}
-//           </p>
-//         </div>
-//       )
-//     } 
-//     return (
-//       <div>
-//         <p><span style={{fontWeight: "bold"}}>SLG: </span>{teamDetail.ranking[0].batter_slugging_percentage} th<br></br>
-//         <span style={{fontWeight: "bold"}}>OBP: </span>{teamDetail.ranking[0].batter_on_base_percentage} th<br></br>
-//         <span style={{fontWeight: "bold"}}>AVG: </span>{teamDetail.ranking[0].batting_average} th<br></br>
-//         <span style={{fontWeight: "bold"}}>H: </span>{teamDetail.ranking[0].hits} th<br></br>
-//         <span style={{fontWeight: "bold"}}>HR: </span>{teamDetail.ranking[0].homeruns}</p>
-//       </div>
-//     )
-//   }
-//   return <></>
-//   }
 
 function TeamDetail(route) {
     const location = useLocation();
@@ -185,12 +147,6 @@ function TeamDetail(route) {
 
         fetchData2()
     }, []);
-
-    useEffect(() => {
-      axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts`).then((res) => {
-          setForecastData(res.data)
-      })
-    }, [])
 
     const handleButtonHitting = () => {
       setShowTable("hitters");
@@ -232,7 +188,7 @@ function TeamDetail(route) {
           return (
             <Row className='d-flex justify-content-between'>
             {data.leaders.hitter.map(x => (
-            <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={'http://mlb.mlb.com/mlb/images/players/head_shot/621439.jpg'}/>
+            <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] || Image.PROFILE}/>
             ))}
           </Row>
           )
@@ -241,35 +197,13 @@ function TeamDetail(route) {
           return (
             <Row className='d-flex justify-content-between'>
             {data.leaders.pitcher.map(x => (
-              <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={'http://mlb.mlb.com/mlb/images/players/head_shot/621439.jpg'}/>
+              <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] ||  Image.PROFILE}/>
             ))}
           </Row>
           )
         }
-      //   return data.leaders.pitcher.map(x => (
-      //     <CardProfileComponent title={x['full_name']} body={`Position: , ${x['position']}`} imageSrc={x['	http://mlb.mlb.com/mlb/images/players/head_shot/621439.jpg']}/>
-      //  ))
       }
-      // if (position=='hitters') {
-
-      //   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.hitter} onClick={(user) => onClick(user)}/>;
-      // }
-      // return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLeader} data={data.leaders.pitcher} onClick={(user) => onClick(user)}/>;
     };
-
-
-    // useEffect(() => {
-      
-    //   const fetchData4 = async () => {
-    //     try {
-    //         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${teamDetail.odds_api}&team=${teamDetail.mysportfeeds_abbreviation}&season=${teamDetail.summary.map(x => x.season).sort().slice(-1)}`);
-    //         setBio(response.data.body)
-    //     } catch (error) {
-    //       console.error('Error getting data:', error);
-    //     }
-    //   }
-    //   // fetchData4()
-    // }, [teamDetail])
 
     const renderPage = () => {
       return (
@@ -283,15 +217,8 @@ function TeamDetail(route) {
                   <div className='w-100'>
                       <h2>{teamDetail['odds_api']}</h2>
                       <div className='d-flex justify-content-between'>
-                        {/* <div>
-                          <p><span style={{fontWeight: "bold"}}>Wins: </span>{teamDetail.wins}<br></br>
-                          <span style={{fontWeight: "bold"}}>Losses: </span>{teamDetail.losses}
-                          </p>
-                        </div> */}
                         <div>
                           {renderTableRanking(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
-                        {/* <h3>Rank</h3>
-                        {renderRank(teamDetail)} */}
                         </div>
                         <div>
                           {renderTableNextGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
@@ -314,7 +241,7 @@ function TeamDetail(route) {
             <h3>Leaders</h3>
             {renderTableLeaders(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          <section>
+          <section id="lastGames">
             <h3>Last 3 Games</h3>
             <br></br>
             {renderTable3Games(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
@@ -331,11 +258,11 @@ function TeamDetail(route) {
             <h3>Next games</h3>
             {renderTableNextGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section> */}
-          <section id="leaders">
+          <section id="players">
             <h3>Players</h3>
             {renderTablePlayers(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          <section id="leaders">
+          <section id="pastGames">
             <h3>Past Predictions</h3>
             {renderTablePastGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
@@ -344,7 +271,6 @@ function TeamDetail(route) {
             <Row>
               {
                 newsData.map(article => (
-                  // <Col xs={3}>
                     <CardComponent 
                       style="card-news"
                       className="col-3"
@@ -353,7 +279,6 @@ function TeamDetail(route) {
                       linkTitle={article.url}
                       footer={getDateString(article.publishedAt)}
                     />
-                  // </Col>
                 ))
               }
           </Row>
@@ -361,12 +286,14 @@ function TeamDetail(route) {
         </div>    
       );
     }
+    
+    console.log(teamDetail)
 
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${teamDetail ? constant.team_detail[teamDetail.mysportfeeds_abbreviation].img: ""})`}}>
       {/* <div id="template"> */}
         <Menu />
-        { teamDetail ? <SubMenu wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
+        { teamDetail ? <SubMenu home={`${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
         <Container className="template">
           <div id="detail">
             {teamDetail ? renderPage() : <></> }

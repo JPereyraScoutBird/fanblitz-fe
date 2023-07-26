@@ -144,8 +144,8 @@ const team_detail = {
     "BOS": {
         "img": "https://www.mlbstatic.com/team-logos/111.svg",
         "teamColoursHex": [
+            "#0c2340",
             "#bd3039",
-            "#0c2340"
         ],
         "socialMediaAccounts": [
             {
@@ -322,8 +322,8 @@ const team_detail = {
     },
     "NYM": {
         "teamColoursHex": [
-            "#ff5910",
             "#002d72",
+            "#ff5910",
         ],
         "socialMediaAccounts": [
             {
@@ -398,8 +398,8 @@ const team_detail = {
     },
     "SF": {
         "teamColoursHex": [
-            "#fd5a1e",
             "#27251f",
+            "#fd5a1e",
             "#efd19f",
             "#ae8f6f"
         ],
@@ -529,6 +529,16 @@ const headerNextGames = {
     "away_score": "Away Score"
 }
 
+const headerLastGames = {
+    "date_et": "Date",
+    "home_team": "Home",
+    "away_team": "Away",
+    "home_score": "Home Score",
+    "away_score": "Away Score",
+    "home_spreads_draftkings": "Vegas",
+    "margin_spread_fanblitz": "BlizBot",
+}
+
 const headerLeader = {
     "feature": "Stats",
     "full_name": "Player",
@@ -545,7 +555,32 @@ const headerPlayer = {
     "height": "Height",
 }
 
-
+const links = [
+    {
+      label: "Last 3 Games",
+      id: "#lastGames"
+    },
+    {
+      label: "Splits",
+      id: "#splits"
+    },
+    {
+      label: "Stats",
+      id: "#stats"
+    },
+    {
+        label: "Players",
+        id: "#players"
+    },
+    {
+        label: "Past Predictions",
+        id: "#pastGames"
+    },
+    {
+        label: "News",
+        id: "#news"
+    }
+  ]
 
 export default {
     headerHittingStats,
@@ -560,5 +595,7 @@ export default {
     headerPitchingRanking,
     headerNextGames,
     headerLeader,
-    headerPlayer
+    headerPlayer,
+    headerLastGames,
+    links
 }

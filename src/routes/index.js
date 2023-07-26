@@ -4,18 +4,9 @@ import { loader as newsLoader,}  from '../pages/PlayerDetail';
 
 const route_list = [
     {
-      path: PATH_LIST.HOME,
-      element: <Pages.Home />,
-    },
-    {
       path: PATH_LIST.PLAYER,
       element: <Pages.Players />,
     },
-    // {
-    //   path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    //   element: <Pages.Player />,
-    //   loader: newsLoader
-    // },
     {
       path: PATH_LIST.PLAYER_DETAIL,
       element: <Pages.PlayerDetail />,

@@ -152,8 +152,8 @@ const team_detail = {
         "img": "https://www.mlbstatic.com/team-logos/111.svg",
         "stadium": "TD Garden",
         "teamColoursHex": [
+            "#0c2340",
             "#bd3039",
-            "#0c2340"
         ],
         "socialMediaAccounts": [
             {
@@ -343,8 +343,8 @@ const team_detail = {
     },
     "NYM": {
         "teamColoursHex": [
-            "#ff5910",
             "#002d72",
+            "#ff5910",
         ],
         "socialMediaAccounts": [
             {
@@ -425,8 +425,8 @@ const team_detail = {
     },
     "SF": {
         "teamColoursHex": [
-            "#fd5a1e",
             "#27251f",
+            "#fd5a1e",
             "#efd19f",
             "#ae8f6f"
         ],
@@ -527,6 +527,29 @@ const team_detail = {
 
 }
 
+const links = [
+    {
+      label: "Bio",
+      id: "#bio"
+    },
+    {
+      label: "Last games",
+      id: "#lastGames",
+    },
+    {
+      label: "Splits",
+      id: "#splits"
+    },
+    {
+      label: "Stats",
+      id: "#stats"
+    },
+    {
+      label: "News",
+      id: "#news"
+    }
+  ]
+
 export default {
     headerHitting,
     headerPitching,
@@ -536,4 +559,5 @@ export default {
     headerHitting3Games,
     headerPitching3Games,
     API: "10e1aa76ff72457385dd58b55a97a5e6",
+    links
 }

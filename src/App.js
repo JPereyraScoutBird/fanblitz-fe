@@ -21,6 +21,11 @@ import PATH_LIST from './routes/constant';
 
 const router = createBrowserRouter([
   {
+    path: `${PATH_LIST.HOME}`,
+    element: <Pages.Home/>,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <RenderPage />,
     errorElement: <ErrorPage />,
@@ -30,8 +35,7 @@ const router = createBrowserRouter([
   {
     path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.Player/>,
-    // errorElement: <ErrorPage />,
-    // children: ROUTES,
+    errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
@@ -39,8 +43,7 @@ const router = createBrowserRouter([
   {
     path: `${PATH_LIST.TEAM_DETAIL}/:teamId`,
     element: <Pages.TeamDetail/>,
-    // errorElement: <ErrorPage />,
-    // children: ROUTES,
+    errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },

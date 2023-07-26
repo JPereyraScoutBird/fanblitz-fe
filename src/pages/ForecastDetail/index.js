@@ -1,11 +1,8 @@
 import { Col, Row } from "reactstrap";
-import Card from "../../component/Card";
-import Menu from "../../container/Menu";
 import {Link, useLocation} from 'react-router-dom';
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import CONSTANT from './constant';
 import './style.css';
 import { getDate, getDateString } from "../../utils";
 import parse from 'html-react-parser'; 
@@ -28,40 +25,40 @@ function ForecastDetail() {
     const [home, away] = teams.split('-');
     console.log("home", home, "away", away)
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts?home=${home}&away=${away}&date=${date}`).then((res) => {
-      // JSON.parse(res.data.body).then((resJson) => {
-        console.log(res.data)
-        setForecastData(res.data[0])
-      // })
+      setForecastData(JSON.parse(res.data.forecast)[0])
     })
   }, [])
 
-  // console.log("params: ", forecastData.open_ai_explanation)
 
   const renderPage = () => {
-    console.log("asd", constant.team_detail[forecastData.home_team_abb])
     return (
       <div>      
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-          <div className="d-flex align-items-center">
-            <img style={{marginRight: "0.5rem"}} src={constant.team_detail[forecastData.home_team_abb].img} height={"24px"} />
-            <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_team} vs </h2>
-            <img style={{marginRight: "0.5rem"}} src={constant.team_detail[forecastData.away_team_abb].img} height={"24px"} />
-            <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {forecastData.away_team}</h2>
+          <div className="d-flex flex-md-row flex-column align-items-center">
+            <div className="d-flex align-items-center">
+              <img style={{marginRight: "0.5rem"}} src={constant.team_detail[forecastData.home_team_abb].img} height={"24px"} />
+            <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_team} </h2>
+            </div>
+            <h2> vs </h2>
+            <div className="d-flex align-items-center">
+              <img style={{marginRight: "0.5rem"}} src={constant.team_detail[forecastData.away_team_abb].img} height={"24px"} />
+              <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {forecastData.away_team}</h2>
+            </div>
           </div>
           <div className="d-flex align-items-center">
-            <FontAwesomeIcon className="icon" icon={faCalendar} color="#ccc"/> {getDate(forecastData.date_z)}
+            <FontAwesomeIcon className="icon" icon={faCalendar} color="#ccc"/> <p className="footer-card">{getDate(forecastData.date_z)}</p>
             <div className="border-dash"></div>
-            <FontAwesomeIcon className="icon" icon={faUser} color="#ccc" /> BlitzBot
+            <FontAwesomeIcon className="icon" icon={faUser} color="#ccc" /><p className="footer-card">BlitzBot</p> 
           </div>
         </div>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <section >
             <Row>
-              <Col xs={9}>
+              <Col xs={12} md={9}>
                 <img width="100%" height={"300px"} className="section-image" src={Image[forecastData.home_team_abb]}/>
                 {parse(forecastData.open_ai_explanation || '')}
-                <Row className="profile-container shadow-sm mt-5 p-3 mb-5 bg-body rounded">
-                  <Col xs={1}>
+                <Row className="profile-container shadow-sm mt-5 p-3 mb-5 bg-body rounded d-flex flex-xs-column flex-md-row justify-content-center">
+                  <Col xs={6} md={1}>
                     <img src={Image.BLITZBOT_PROFILE} className="profile-picture"/>
                   </Col>
                   <Col xs={11}>

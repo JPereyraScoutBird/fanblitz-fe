@@ -11,8 +11,6 @@ import Menu from '../../container/Menu';
 import Footer from '../../container/Footer';
 import './style.css'
 import SubMenu from '../../container/Menu2';
-// import { Line } from 'react-chartjs-2';
-// import Line from 'react-chart-js-2';
 
 export async function loader({ params }) {
     return params;
@@ -86,6 +84,7 @@ function Player(route) {
     const [playerDetail, setplayerDetail] = useState(undefined)
     const [newsData, setNewsData] = useState([])
     const [bio, setBio] = useState({})
+    const [imageShow, setImageShow] = useState(false)
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -127,16 +126,17 @@ function Player(route) {
       // fetchData4()
     }, [playerDetail])
 
+    
+
     const renderPage = () => {
       console.log("playerDetail", playerDetail)
       // console.log(constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0],  constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex)
       return (
         <div style={{}}>
-          <SubMenu backgroundColor={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img} />
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
                   <div style={{ border: `5px solid ${constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
-                    <img src={playerDetail.image}/>
+                    <img hidden={imageShow} src={playerDetail.image} onError={() => setImageShow(true)}/>
                   </div>
                   <div>
                       <h2>{playerDetail['full_name']}</h2>
@@ -166,7 +166,7 @@ function Player(route) {
             <h4>Facts</h4>
             <p>{bio ? bio.facts : ""}</p>
           </section> */}
-          <section>
+          <section id="lastGames">
             <h3>Last 3 Games</h3>
             {renderTable3(playerDetail.position, playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
@@ -207,6 +207,7 @@ function Player(route) {
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail[playerDetail.mysportfeeds_abbreviation].img: ""})`}}>
         <Menu />
+        {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
           <div id="detail">
             {playerDetail ? renderPage() : <></> }
