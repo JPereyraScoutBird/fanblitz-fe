@@ -4,6 +4,14 @@
 } */
 
 
+/* #forecast_detail p {
+    text-align: left;
+} */
+
+#forecast_detail p {
+    text-align: justify;
+}
+
 #forecast_detail .section-image {
     height: 300px;
     object-fit: cover !important;
@@ -32,6 +40,21 @@
     border-radius: 50%;
 }
 
+#forecast_detail .footer-card {
+   margin-bottom: 0px;
+   font-size: 14px; 
+}
+
 #forecast_detail h3 {
     line-height: 3.0;
 }
+
+@media (min-width: 576px) { 
+    #forecast_detail p {
+        text-align: left;
+    }
+    #forecast_detail .footer-card {
+        margin-bottom: 0px;
+        font-size: 1rem; 
+     }
+} 

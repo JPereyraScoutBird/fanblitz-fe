@@ -19,6 +19,14 @@
     margin-left: 1rem;
     /* margin-right: 1rem; */
   }
+
+  #secondary_navbar .nav-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 0px;
+  }
 /* 
   .container-fluid {
     display: flex;

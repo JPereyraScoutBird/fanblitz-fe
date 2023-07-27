@@ -4,7 +4,7 @@ const PATH_LIST = {
     PLAYER: "/player",
     PLAYER_DETAIL: "/player/detail",
     TEAM: "/teams",
-    TEAM_DETAIL: "/team",
+    TEAM_DETAIL: "/team/detail",
     FORECAST: "/forecasts",
     SOCIAL_BETS: "/socialbets",
     STATS: "/stats",

@@ -41,21 +41,21 @@
 
 #custom_table .up, #custom_table .down  {
     font-size: 13px;
-    color: #cecece;
+    color: #ccc;
 }
 
 #custom_table .ascending .down  {
-    color: #06273a !important;
+    color: #fff !important;
 }
 
 #custom_table .descending .up {
-    color: #06273a !important;
+    color: #fff !important;
 }
 
 #custom_table th .btn-link {
     text-decoration: none;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12.5px;
     padding: 0.75rem !important;
     font-family: 'Lato', sans-serif !important;
     color: #06273a;

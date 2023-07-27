@@ -3,6 +3,9 @@ const blogs = [
     "title": "Intelligent Betting: Our 8 Golden Rules",
     "author": "admin",
     "date": "May 2 8:42 AM ET",
+    "highlight": true,
+    "index": "Intelligent Betting",
+    "indexSubtitle": "Our 8 Golden Rules",
     "subtitle": "Let’s explore eight essential rules of smart, responsible betting.",
     "body":
         [
@@ -44,6 +47,8 @@ const blogs = [
         "title": "Funds Management",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "index": "Funds Management",
+        "indexSubtitle": "Lesson 1",
         "subtitle": "Managing your bankroll when it comes to sports betting is a critical component of responsible gambling. It requires discipline, a clear understanding of your financial goals, and a strong commitment to sticking to your budget. A well-planned bankroll management strategy can help you avoid common pitfalls and increase your chances of success in the long run.",
         "body":
             [
@@ -69,6 +74,8 @@ const blogs = [
         "title": "Ten Crucial Tips",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "index": "Ten Crucial Tips",
+        "indexSubtitle": "Lesson 2",
         "subtitle": "For many people, sports betting can be an enjoyable and thrilling activity. However, it's important to remember that responsible sports betting involves more than just picking the right team or player to win. In fact, it requires discipline, strategy, and a commitment to responsible gambling practices. To help ensure that you're betting responsibly, here are 10 tips that you should keep in mind.",
         "body":
             [
@@ -122,50 +129,51 @@ const blogs = [
         "title": "Understanding Risks",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "body": [],
+        "index": "Understanding Risks",
+        "indexSubtitle": "Lesson 3",
         "subtitle": `
         Sports betting can be a fun and exciting way to enjoy your favorite sports, but it's important to understand the risks involved. One of the biggest risks in sports betting is losing money. No matter how good you are at picking winners, there will always be a risk of losing money on bets.
-
-        Another risk in sports betting is problem gambling. Some people may become addicted to gambling and may struggle to control their betting behavior. This can lead to financial problems, relationship issues, and other negative consequences.
-
-        It's also important to be aware of the potential for fraud or scams in the sports betting industry. Some unscrupulous operators may offer "sure things" or other guarantees that are too good to be true. It's important to do your research and only place bets with reputable sportsbooks or bookmakers.`
+        \nAnother risk in sports betting is problem gambling. Some people may become addicted to gambling and may struggle to control their betting behavior. This can lead to financial problems, relationship issues, and other negative consequences.
+        \nIt's also important to be aware of the potential for fraud or scams in the sports betting industry. Some unscrupulous operators may offer "sure things" or other guarantees that are too good to be true. It's important to do your research and only place bets with reputable sportsbooks or bookmakers.`        
     },
     {
         "title": "Avoiding Problems",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "body": [],
+        "index": "Avoiding Problems",
+        "indexSubtitle": "Lesson 4",
         "subtitle": `
         Problem gambling is a serious issue that can affect anyone who engages in sports betting. If you find that you're struggling to control your betting behavior, it's important to take steps to address the problem. One of the best ways to avoid problem gambling is to set limits on your betting activity. This could include setting a limit on how much money you're willing to spend, or setting a limit on the amount of time you spend betting each week.
-
-        It's also important to be aware of the signs of problem gambling. These can include betting more than you can afford to lose, neglecting other responsibilities or activities in order to gamble, or experiencing negative emotions like anxiety or depression as a result of your gambling activity.
-
-        If you're struggling with problem gambling, it's important to seek help. There are a number of resources available, including support groups, counseling services, and online resources.
+        \nIt's also important to be aware of the signs of problem gambling. These can include betting more than you can afford to lose, neglecting other responsibilities or activities in order to gamble, or experiencing negative emotions like anxiety or depression as a result of your gambling activity.
+        \nf you're struggling with problem gambling, it's important to seek help. There are a number of resources available, including support groups, counseling services, and online resources.
         `
     },
     {
         "title": "Create a Budget",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
-        "subtitle": `
-        Creating a sports betting budget is a crucial aspect of responsible gambling. Your betting budget should be an amount of money that you can afford to lose without impacting your financial stability or other responsibilities. Once you've determined your betting budget, it's important to divide that amount into smaller units. This will allow you to spread your betting activity out over a longer period of time, and to minimize your risk of losing everything at once.
-
-        When creating your sports betting budget, it's also important to set realistic goals. You're unlikely to win every bet, so it's important to be realistic about how much money you can expect to make from your betting activity. You should also consider setting a limit on the amount of money you're willing to bet on any given event or game.
-
-        Overall, creating a sports betting budget is an essential part of responsible gambling. By setting a budget, dividing your bankroll into smaller units, and setting realistic goals, you can enjoy the excitement of sports betting while minimizing your risks and ensuring that you're betting responsibly.
-        `
+        "index": "Create a Budget",
+        "indexSubtitle": "Lesson 5",
+        "body": [],
+        "subtitle": `Creating a sports betting budget is a crucial aspect of responsible gambling. Your betting budget should be an amount of money that you can afford to lose without impacting your financial stability or other responsibilities. Once you've determined your betting budget, it's important to divide that amount into smaller units. This will allow you to spread your betting activity out over a longer period of time, and to minimize your risk of losing everything at once.
+        \nWhen creating your sports betting budget, it's also important to set realistic goals. You're unlikely to win every bet, so it's important to be realistic about how much money you can expect to make from your betting activity. You should also consider setting a limit on the amount of money you're willing to bet on any given event or game.
+        \nOverall, creating a sports betting budget is an essential part of responsible gambling. By setting a budget, dividing your bankroll into smaller units, and setting realistic goals, you can enjoy the excitement of sports betting while minimizing your risks and ensuring that you're betting responsibly.`
     },
     {
         "title": "Ethical Betting",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "index": "Ethical Betting",
+        "indexSubtitle": "Lesson 6",
         "body": [
             {
             "title": "The Ethics of Sports Betting",
             "description": `
             When it comes to sports betting, it's important to consider the ethical implications of your activity. One of the key ethical concerns in sports betting is fairness. It's important to ensure that all parties involved in a bet have a fair and equal chance of winning. This means avoiding any activity that could be seen as cheating or manipulating the outcome of a bet.
-
-            Another ethical concern in sports betting is the potential harm to athletes or teams. Betting on sports events can create incentives for athletes or teams to perform poorly or to engage in unethical behavior. It's important to be aware of these potential harms and to ensure that your betting activity is not contributing to them.
-
-            Finally, it's important to consider the potential for addiction and other negative consequences of sports betting. If you find that your betting activity is impacting your mental health, your relationships, or your financial stability, it's important to seek help and to take steps to address the problem.
+            \nAnother ethical concern in sports betting is the potential harm to athletes or teams. Betting on sports events can create incentives for athletes or teams to perform poorly or to engage in unethical behavior. It's important to be aware of these potential harms and to ensure that your betting activity is not contributing to them.
+            \nFinally, it's important to consider the potential for addiction and other negative consequences of sports betting. If you find that your betting activity is impacting your mental health, your relationships, or your financial stability, it's important to seek help and to take steps to address the problem.
             `
             }
         ]
@@ -173,13 +181,18 @@ const blogs = [
     {
         "title": "Betting Responsibly",
         "author": "admin",
+        "index": "Betting Responsibly",
+        "indexSubtitle": "Lesson 7",
         "subtitle": "Responsible sports betting is an important aspect of enjoying your favorite sports while minimizing your risks and ensuring that you're betting ethically. Here are some key tips for responsible sports betting:",
         "date": "May 2 8:42 AM ET",
+        "body": [],
     },
     {
         "title": "Self-Exclusion",
         "author": "admin",
         "date": "May 2 8:42 AM ET",
+        "index": "Self-Exclusion",
+        "indexSubtitle": "Lesson 8",
         "subtitle": "Managing your bankroll when it comes to sports betting is a critical component of responsible gambling. It requires discipline, a clear understanding of your financial goals, and a strong commitment to sticking to your budget. A well-planned bankroll management strategy can help you avoid common pitfalls and increase your chances of success in the long run.",
         "body": [
             {

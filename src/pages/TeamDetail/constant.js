@@ -1,6 +1,5 @@
-const headerHitting = {
+const headerHittingStats = {
     "season": "Season",
-    "mysportfeeds_abbreviation": "Team",
     "ops": "OPS",
     "batter_slugging_percentage": "SLG",
     "batter_on_base_percentage": "OBP",
@@ -17,75 +16,10 @@ const headerHitting = {
     "stolen_bases": "SB"
 }
 
-const headerHittingSplit = {
-    "duration": "Last X days",
-    "at_bats": "AB",
-    "runs": "R",
-    "hits": "H",
-    "homeruns": "HR",
-    "runs_batted_in": "RBI",
-    "batter_walks": "BB",
-    "batter_strike_outs": "SO",
-    "batting_average": "AVG",
-    "batter_on_base_percentage": "OBP",
-    "batter_slugging_percentage": "SLG",
-    "stolen_bases": "OPS"
-}
-
-const headerPitchingSplit = {
-    "duration": "Last X days",
-    "wins": "W",
-    "losses": "L",
-    "earned_run_agerage": "ERA",
-    "games_started": "G",
-    "games_started": "GS",
-    "saves": "SV",
-    "innings_pitched": "IP",
-    "hits_allowed": "H",
-    "earned_runs_allowed": "ER",
-    "pitcher_walks": "BB",
-    "pitcher_strikeouts": "SO",
-    "strikeouts_to_walks_ratio": "WHIP"
-}
-
-const headerHitting3Games = {
-    "start_time": "Day",
-    "at_bats": "AB",
-    "runs": "R",
-    "hits": "H",
-    "homeruns": "HR",
-    "runs_batted_in": "RBI",
-    "batter_walks": "BB",
-    "batter_strike_outs": "SO",
-    "batting_average": "AVG",
-    "batter_on_base_percentage": "OBP",
-    "batter_slugging_percentage": "SLG",
-    "stolen_bases": "OPS"
-}
-
-const headerPitching3Games = {
-    "duration": "Day",
-    "wins": "W",
-    "losses": "L",
-    "earned_run_agerage": "ERA",
-    "games_started": "G",
-    "games_started": "GS",
-    "saves": "SV",
-    "innings_pitched": "IP",
-    "hits_allowed": "H",
-    "earned_runs_allowed": "ER",
-    "pitcher_walks": "BB",
-    "pitcher_strikeouts": "SO",
-    "strikeouts_to_walks_ratio": "WHIP"
-}
-
-const headerPitching = {
+const headerPitchingStats = {
     "season": "Season",
-    "mysportfeeds_abbreviation": "Team",
-    "games_played": "G",
     "wins": "W",
     "losses": "L",
-    "saves": "S",
     "earned_run_agerage": "ERA",
     "innings_pitched": "IP",
     "hits_allowed": "H",
@@ -105,6 +39,68 @@ const headerPitching = {
     // "strikeouts_to_walks_ratio": "SO/IP"
 }
 
+
+const headerHittingSplit = {
+    "duration": "Last X days",
+    "at_bats": "AB",
+    "runs": "R",
+    "hits": "H",
+    "homeruns": "HR",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "batter_strike_outs": "SO",
+    "stolen_bases": "SB",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG"
+}
+
+const headerPitchingSplit = {
+    "duration": "Last X days",
+    "wins": "W",
+    "losses": "L",
+    "earned_run_agerage": "ERA",
+    "innings_pitched": "IP",
+    "hits_allowed": "H",
+    "earned_runs_allowed": "ER",
+    "homeruns_allowed": "HR",
+    "pitcher_walks": "BB",
+    "pitcher_strikeouts": "SO",
+    "strikeouts_to_walks_ratio": "WHIP",
+    "pitching_average": "AVG"
+}
+
+const headerHitting3Games = {
+    "start_time": "Day",
+    "at_bats": "AB",
+    "runs": "R",
+    "hits": "H",
+    "homeruns": "HR",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "batter_strike_outs": "SO",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG",
+    // "stolen_bases": "OPS"
+}
+
+const headerPitching3Games = {
+    "start_time": "Day",
+    "wins": "W",
+    "losses": "L",
+    "earned_run_agerage": "ERA",
+    "innings_pitched": "IP",
+    "hits_allowed": "H",
+    "earned_runs_allowed": "ER",
+    "pitcher_walks": "BB",
+    "pitcher_strikeouts": "SO",
+    "homeruns_allowed": "HR",
+    "pitching_average": "AVG",
+    'strikeouts_to_walks_ratio': 'WHIP'
+}
+
+
 const team_detail = {
     'ARI': {
         "img": "https://www.mlbstatic.com/team-logos/109.svg",
@@ -115,7 +111,6 @@ const team_detail = {
             "#30ced8",
             "#ffffff"
         ],
-        "stadium": "Chase Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -124,9 +119,8 @@ const team_detail = {
         ]
     },
     'ATL': {
-        "img": "https://global.nba.com/media/img/teams/00/logos/ATL_logo.svg",
+        "img": null,
         "teamColoursHex": [],
-        "stadium": "Truist Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -136,7 +130,6 @@ const team_detail = {
     },
     "BAL": {
         "img": "https://www.mlbstatic.com/team-logos/110.svg",
-        "stadium": "Oriole Park at Camden Yards",
         "teamColoursHex": [
             "#df4601",
             "#000000"
@@ -150,7 +143,6 @@ const team_detail = {
     },
     "BOS": {
         "img": "https://www.mlbstatic.com/team-logos/111.svg",
-        "stadium": "TD Garden",
         "teamColoursHex": [
             "#0c2340",
             "#bd3039",
@@ -167,7 +159,6 @@ const team_detail = {
             "#0e3386",
             "#cc3433"
         ],
-        "stadium": "Wrigley Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -181,7 +172,6 @@ const team_detail = {
             "#27251f",
             "#c4ced4"
         ],
-        "stadium": "Guaranteed Rate Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -195,7 +185,6 @@ const team_detail = {
             "#c6011f",
             "#000000"
         ],
-        "stadium": "Great American Ball Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -209,7 +198,6 @@ const team_detail = {
             "#0c2340",
             "#e31937"
         ],
-        "stadium": "Rocket Mortgage FieldHouse",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -224,7 +212,6 @@ const team_detail = {
             "#c4ced4",
             "#000000"
         ],
-        "stadium": "Coors Field",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -238,7 +225,6 @@ const team_detail = {
             "#0c2340",
             "#fa4616"
         ],
-        "stadium": "Little Caesars Arena",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -255,8 +241,7 @@ const team_detail = {
                 "value": "astros"
             }
         ],
-        "stadium": "Minute Maid Park",
-        "img": "https://www.mlbstatic.com/team-logos/117.svg"
+        "img": null
     },
     "KC": {
         "teamColoursHex": [
@@ -269,7 +254,6 @@ const team_detail = {
                 "value": "Royals"
             }
         ],
-        "stadium": "Kauffman Stadium",
         "img": "https://www.mlbstatic.com/team-logos/118.svg"
     },
     "LAA": {
@@ -280,7 +264,6 @@ const team_detail = {
             "#c4ced4",
             "#ffffff"
         ],
-        "stadium": "Angel Stadium",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -300,7 +283,6 @@ const team_detail = {
                 "value": "Dodgers"
             }
         ],
-        "stadium": "Dodger Stadium",
         "img": "https://www.mlbstatic.com/team-logos/119.svg"
     },
     "MIA": {
@@ -310,7 +292,6 @@ const team_detail = {
             "#41748d",
             "#000000"
         ],
-        "stadium": "loanDepot Park",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -327,8 +308,7 @@ const team_detail = {
                 "value": "Brewers"
             }
         ],
-        "stadium": "Fiserv Forum",
-        "img": "https://www.mlbstatic.com/team-logos/158.svg"
+        "img": null
     },
     "MIN": {
         "teamColoursHex": [],
@@ -338,8 +318,7 @@ const team_detail = {
                 "value": "Twins"
             }
         ],
-        "stadium": "Target Center",
-        "img": "https://www.mlbstatic.com/team-logos/142.svg"
+        "img": null
     },
     "NYM": {
         "teamColoursHex": [
@@ -352,7 +331,6 @@ const team_detail = {
                 "value": "Mets"
             }
         ],
-        "stadium": "Citi Field",
         "img": "https://www.mlbstatic.com/team-logos/121.svg"
     },
     "NYY": {
@@ -361,7 +339,6 @@ const team_detail = {
             "#e4002c",
             "#0c2340"
         ],
-        "stadium": "Yankee Stadium",
         "socialMediaAccounts": [
             {
                 "mediaType": "TWITTER",
@@ -378,8 +355,7 @@ const team_detail = {
                 "value": "Athletics"
             }
         ],
-        "stadium": "Oakland-Alameda County Coliseum",
-        "img": "https://www.mlbstatic.com/team-logos/133.svg"
+        "img": null
     },
     "PHI": {
         "teamColoursHex": [
@@ -392,7 +368,6 @@ const team_detail = {
                 "value": "Phillies"
             }
         ],
-        "stadium": "Wells Fargo Center",
         "img": "https://www.mlbstatic.com/team-logos/143.svg"
     },
     "PIT": {
@@ -406,7 +381,6 @@ const team_detail = {
                 "value": "Pirates"
             }
         ],
-        "stadium": "PNC Park",
         "img": "https://www.mlbstatic.com/team-logos/134.svg"
     },
     "SD": {
@@ -420,7 +394,6 @@ const team_detail = {
                 "value": "Padres"
             }
         ],
-        "stadium": "Petco Park",
         "img": "https://www.mlbstatic.com/team-logos/135.svg"
     },
     "SF": {
@@ -436,7 +409,6 @@ const team_detail = {
                 "value": "SFGiants"
             }
         ],
-        "stadium": "AT&T Park",
         "img": "https://www.mlbstatic.com/team-logos/137.svg"
     },
     "SEA": {
@@ -452,7 +424,6 @@ const team_detail = {
                 "value": "Mariners"
             }
         ],
-        "stadium": "T-Mobile Park",
         "img": "https://www.mlbstatic.com/team-logos/136.svg"
     },
     "STL": {
@@ -463,8 +434,7 @@ const team_detail = {
                 "value": "Cardinals"
             }
         ],
-        "stadium": "Busch Stadium",
-        "img": "https://www.mlbstatic.com/team-logos/138.svg"
+        "img": null
     },
     "TB": {
         "teamColoursHex": [
@@ -478,7 +448,6 @@ const team_detail = {
                 "value": "RaysBaseball"
             }
         ],
-        "stadium": "Tropicana Field",
         "img": "https://www.mlbstatic.com/team-logos/139.svg"
     },
     "TEX": {
@@ -492,7 +461,6 @@ const team_detail = {
                 "value": "Rangers"
             }
         ],
-        "stadium": "Globe Life Field",
         "img": "https://www.mlbstatic.com/team-logos/140.svg"
     },
     "TOR": {
@@ -507,7 +475,6 @@ const team_detail = {
                 "value": "BlueJays"
             }
         ],
-        "stadium": "Rogers Centre",
         "img": "https://www.mlbstatic.com/team-logos/141.svg"
     },
     "WAS": {
@@ -521,20 +488,77 @@ const team_detail = {
                 "value": "Nationals"
             }
         ],
-        "stadium": "Capital One Arena",
         "img": 'https://www.mlbstatic.com/team-logos/120.svg'
     },
 
 }
 
+const headerHittingRanking = {
+    "season": "Season",
+    "hits": "H",
+    "second_based_hits": "2B",
+    "third_base_hits": "3B",
+    "homeruns": "HR",
+    "runs": "R",
+    "runs_batted_in": "RBI",
+    "batter_walks": "BB",
+    "stolen_bases": "SB",
+    "batter_strike_outs": "SO",
+    "batting_average": "AVG",
+    "batter_on_base_percentage": "OBP",
+    "batter_slugging_percentage": "SLG",
+    "ops": "OPS"
+}
+
+const headerPitchingRanking = {
+    "season": "Season",
+    "wins": "W",
+    "earned_run_agerage": "ERA",
+    "homeruns_allowed": "HR",
+    "runs_allowed": "R",
+    "earned_runs_allowed": "ER",
+    "pitching_average": "AVG",
+    "pitcher_strikeouts": "SO",
+}
+
+const headerNextGames = {
+    "date_et": "Date",
+    "home_team": "Home",
+    "away_team": "Away",
+    "home_score": "Home Score",
+    "away_score": "Away Score"
+}
+
+const headerLastGames = {
+    "date_et": "Date",
+    "home_team": "Home",
+    "away_team": "Away",
+    "home_score": "Home Score",
+    "away_score": "Away Score",
+    "home_spreads_draftkings": "Vegas",
+    "margin_spread_fanblitz": "BlizBot",
+}
+
+const headerLeader = {
+    "feature": "Stats",
+    "full_name": "Player",
+    "position": "Position",
+    "value": "Value"
+}
+
+const headerPlayer = {
+    "image": "Image",
+    "full_name": "Player",
+    "birth_date": "Birth date",
+    "position": "Position",
+    "weight": "Weight",
+    "height": "Height",
+}
+
 const links = [
     {
-      label: "Bio",
-      id: "#bio"
-    },
-    {
-      label: "Last games",
-      id: "#lastGames",
+      label: "Last 3 Games",
+      id: "#lastGames"
     },
     {
       label: "Splits",
@@ -545,19 +569,33 @@ const links = [
       id: "#stats"
     },
     {
-      label: "News",
-      id: "#news"
+        label: "Players",
+        id: "#players"
+    },
+    {
+        label: "Past Predictions",
+        id: "#pastGames"
+    },
+    {
+        label: "News",
+        id: "#news"
     }
   ]
 
 export default {
-    headerHitting,
-    headerPitching,
+    headerHittingStats,
+    headerPitchingStats,
     headerHittingSplit,
     headerPitchingSplit,
     team_detail,
     headerHitting3Games,
     headerPitching3Games,
     API: "10e1aa76ff72457385dd58b55a97a5e6",
+    headerHittingRanking,
+    headerPitchingRanking,
+    headerNextGames,
+    headerLeader,
+    headerPlayer,
+    headerLastGames,
     links
 }

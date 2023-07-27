@@ -35,7 +35,7 @@ function Menu(args) {
 
   return (
     <div>
-      <Navbar id="primary_navbar" color="light" light expand="md" className='d-flex justify-content-end'>
+      <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
@@ -58,9 +58,9 @@ function Menu(args) {
             <NavItem>
                 {renderNavLink(`${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                 {renderNavLink(`${PATH_LIST.STATS}`, "Stats")}
-            </NavItem>
+            </NavItem> */}
             <NavItem>
                 {renderNavLink(`${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
