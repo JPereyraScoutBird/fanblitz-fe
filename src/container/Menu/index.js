@@ -58,9 +58,9 @@ function Menu(args) {
             <NavItem>
                 {renderNavLink(`${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                 {renderNavLink(`${PATH_LIST.STATS}`, "Stats")}
-            </NavItem>
+            </NavItem> */}
             <NavItem>
                 {renderNavLink(`${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
