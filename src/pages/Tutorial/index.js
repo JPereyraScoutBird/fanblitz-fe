@@ -1,11 +1,7 @@
 import { Col, Row } from "reactstrap";
-import Card from "../../component/Card";
-import Menu from "../../container/Menu";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import CONSTANT from './constant';
 import './style.css';
-import { getDateString } from "../../utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faUser, faComments } from "@fortawesome/free-regular-svg-icons";
 
