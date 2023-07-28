@@ -17,7 +17,7 @@ function Forecasts() {
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts`).then((res) => {
-      setForecastData((res.data))
+      setForecastData((JSON.parse(res.data.body)))
     })
   }, [])
 

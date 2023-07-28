@@ -25,7 +25,11 @@ function ForecastDetail() {
     const [home, away] = teams.split('-');
     console.log("home", home, "away", away)
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts?home=${home}&away=${away}&date=${date}`).then((res) => {
-      setForecastData(JSON.parse(res.data.forecast)[0])
+      const jsonObject = JSON.parse(res.data.body)
+      if (jsonObject.hasOwnProperty('forecast')){
+        setForecastData(JSON.parse(jsonObject.forecast)[0])
+      }
+      
     })
   }, [])
 
