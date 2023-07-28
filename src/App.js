@@ -26,6 +26,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: `${PATH_LIST.HOMETENNIS}`,
+    element: <Pages.HomeTennis/>,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <RenderPage />,
     errorElement: <ErrorPage />,
@@ -35,6 +40,14 @@ const router = createBrowserRouter([
   {
     path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.Player/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `${PATH_LIST.PLAYER_DETAIL_TENNIS}/:playerId`,
+    element: <Pages.PlayerTennis/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);

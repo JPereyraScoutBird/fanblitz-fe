@@ -8,6 +8,10 @@ const route_list = [
       element: <Pages.Players />,
     },
     {
+      path: PATH_LIST.PLAYERTENNIS,
+      element: <Pages.PlayersTennis />,
+    },
+    {
       path: PATH_LIST.PLAYER_DETAIL,
       element: <Pages.PlayerDetail />,
     },
