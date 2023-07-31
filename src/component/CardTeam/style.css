@@ -4,10 +4,10 @@
     font-size: 40px;
 } */
 
-/* .card-link {
+.card-link {
     text-decoration: none;
     border: none
-} */
+}
 
 .card-link:hover {
     text-decoration: none;
