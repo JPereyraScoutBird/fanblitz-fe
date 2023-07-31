@@ -8,11 +8,12 @@ import {setValue, cleanValue} from '../../reducers/Home';
 import CustomTable from '../../component/Table';
 import { getDate, getDate2, getTodayItems } from "../../utils";
 import CardForecastComponent from "../../component/CardForecast";
-import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
+import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal } from "reactstrap";
 import { Link } from "react-router-dom";
 import PATH_LIST from "../../routes/constant";
 import IMAGE from '../../img';
 import constant from "../PlayerDetail/constant";
+import Chatbot from "../../container/ChatBot";
 
 function Home() {
   const dispatch = useDispatch();
@@ -119,7 +120,7 @@ function Home() {
       return null
     }
   }
-
+  
   return (
     <>
       <Menu />
