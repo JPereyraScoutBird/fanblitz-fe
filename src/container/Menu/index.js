@@ -5,12 +5,15 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  Button,
+  Modal
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
 import { NavLink } from "react-router-dom";
 import Images from '../../img';
+import Chatbot from '../ChatBot';
 /**
  * Menu Navbar with Bootstrap
  * @param {*} args 
@@ -32,6 +35,10 @@ function Menu(args) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const [modal, setModal] = useState(false);
+
+  const toggle2 = () => setModal(!modal);
 
   return (
     <div>
@@ -58,15 +65,18 @@ function Menu(args) {
             <NavItem>
                 {renderNavLink(`${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
-            {/* <NavItem>
-                {renderNavLink(`${PATH_LIST.STATS}`, "Stats")}
-            </NavItem> */}
+            <NavItem>
+              <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
+            </NavItem>
             <NavItem>
                 {renderNavLink(`${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
+      <Modal isOpen={modal} toggle={toggle2}>
+        <Chatbot />
+      </Modal>
     </div>
   );
 }

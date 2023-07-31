@@ -6,6 +6,10 @@
     font-weight: bold;
   }
 
+  #primary_navbar .pointer:hover {
+    cursor: pointer;
+  }
+
   #primary_navbar .nav-item  a {
     text-decoration: none;
     text-align: left !important;

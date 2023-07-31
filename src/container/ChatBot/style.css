@@ -1,0 +1,34 @@
+#chatbot .chatbot-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#chatbot .chatbot-header {
+    background-color: #000000;
+    padding: 0.75rem;
+}
+
+#chatbot .chatbot-header img{
+    width: 40%;
+}
+
+#chatbot .chatbot-message {
+    height: 50vh;
+    border: 2px solid #ccc;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#chatbot .chatbot-textinput form {
+    display: flex;
+    flex-direction: row;
+}
+
+#chatbot .chatbot-message .user {
+    text-align: right;
+}
+
+#chatbot .chatbot-message .assistant {
+    font-weight: bold;
+}
