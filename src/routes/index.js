@@ -32,8 +32,17 @@ const route_list = [
       element: <Pages.Forecasts />,
     },
     {
+      path: PATH_LIST.FORECASTTENNIS,
+      element: <Pages.ForecastsTennis />,
+    },
+    {
       path: `${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
       element: <Pages.ForecastDetail />,
+      loader: newsLoader
+    },
+    {
+      path: `${PATH_LIST.FORECAST_DETAIL_TENNIS}/:teams/:date`,
+      element: <Pages.ForecastDetailTennis />,
       loader: newsLoader
     },
     {

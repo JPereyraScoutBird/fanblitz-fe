@@ -1,0 +1,60 @@
+/* .card-news .card-img {
+    height: 200px;
+    object-fit: cover;
+} */
+
+
+/* #forecast_detail p {
+    text-align: left;
+} */
+
+#forecast_detail p {
+    text-align: justify;
+}
+
+#forecast_detail .section-image {
+    height: 300px;
+    object-fit: cover !important;
+    object-position: top !important;
+}
+
+#forecast_detail .profile-picture { 
+    width: 100%;
+    border-radius: 50%;
+}
+
+#forecast_detail .icon {
+    margin-right: 0.5rem;
+    font-size: 14px;
+}
+
+.border-dash {
+    border-right: 1px dashed #ccc;
+    height: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#forecast_detail .profile-container { 
+    width: 100%;
+    border-radius: 50%;
+}
+
+#forecast_detail .footer-card {
+   margin-bottom: 0px;
+   font-size: 14px; 
+}
+
+#forecast_detail h3 {
+    line-height: 3.0;
+}
+
+@media (min-width: 576px) { 
+    #forecast_detail p {
+        text-align: left;
+    }
+    #forecast_detail .footer-card {
+        margin-bottom: 0px;
+        font-size: 1rem; 
+     }
+} 

@@ -2,6 +2,7 @@ import Home from './Home';
 import HomeTennis from './HomeTennis';
 import Error  from './Error';
 import Forecasts  from './Forecasts';
+import ForecastsTennis  from './ForecastsTennis';
 import News  from './News';
 import Players from './Players';
 import PlayersTennis from './PlayersTennis';
@@ -13,12 +14,14 @@ import Tutorial  from './Tutorial';
 import Player from './PlayerDetail';
 import PlayerTennis from './PlayerDetailTennis';
 import ForecastDetail from './ForecastDetail'
+import ForecastDetailTennis from './ForecastDetailTennis'
 
 export default {
     Home,
     HomeTennis,
     Error,
     Forecasts,
+    ForecastsTennis,
     News,
     Player,
     PlayerTennis,
@@ -29,5 +32,6 @@ export default {
     Tutorial,
     Players,
     ForecastDetail,
+    ForecastDetailTennis,
     TeamDetail
 }
