@@ -7,13 +7,15 @@ import {
   Nav,
   NavItem,
   Button,
-  Modal
+  Modal,
+  Col
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
 import { NavLink } from "react-router-dom";
 import Images from '../../img';
 import Chatbot from '../ChatBot';
+import SearchComponent from '../../component/Search';
 /**
  * Menu Navbar with Bootstrap
  * @param {*} args 
@@ -45,6 +47,9 @@ function Menu(args) {
       <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
+        <Col xs={12} md={3}>
+          <SearchComponent/>
+        </Col>
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
             <NavItem>

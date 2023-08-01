@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import PATH_LIST from "../../routes/constant";
 import IMAGE from '../../img';
 import constant from "../PlayerDetail/constant";
-import Chatbot from "../../container/ChatBot";
+import './style.css';
 
 function Home() {
   const dispatch = useDispatch();
@@ -101,7 +101,7 @@ function Home() {
       while(today_games.length) newArr.push(today_games.splice(0,2))
       console.log("today games: ", newArr)
       return (
-      <Carousel activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
+      <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
         <CarouselIndicators items={newArr} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
         {newArr.map(x => x.length > 1 ? 
         <CarouselItem>
@@ -112,8 +112,8 @@ function Home() {
         <CarouselItem>
         <Row>{renderForecastComponent(x[0])}</Row>  
         </CarouselItem>)}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={() => prev()} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
+        <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev()} />
+        <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
       </Carousel>
       )
     } else {
@@ -122,7 +122,7 @@ function Home() {
   }
   
   return (
-    <>
+    <div id="home">
       <Menu />
         {
           renderCards()
@@ -133,7 +133,7 @@ function Home() {
           {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => getTodayItems(x.date_z))} loading={gameData.length == 0}/> : <>No Game Today</>}
         </div>
       </Container>    
-    </>    
+    </div>    
   );
 
   

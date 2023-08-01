@@ -1,4 +1,7 @@
-
+  
+  #primary_navbar {
+    z-index: 5;
+  }
   
   #primary_navbar .nav-item .active {
     /* background-color: #41b883 !important; */
