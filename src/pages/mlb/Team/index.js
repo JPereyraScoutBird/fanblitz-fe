@@ -26,7 +26,7 @@ function Team() {
 
   const onClick = (user) => {
     console.log("klok", user)
-    navigate(`${PATH_LIST.TEAM_DETAIL}/${user.team_id}`);
+    navigate(`/mlb${PATH_LIST.TEAM_DETAIL}/${user.team_id}`);
   }
   
   const renderTable = () => {

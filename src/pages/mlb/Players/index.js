@@ -37,7 +37,7 @@ function Players() {
     };
 
     const onClick = (user) => {
-        navigate(`${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
+        navigate(`/mlb${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
     }
 
     const renderTable = () => {

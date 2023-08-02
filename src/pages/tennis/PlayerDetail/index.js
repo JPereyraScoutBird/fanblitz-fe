@@ -7,7 +7,7 @@ import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
 import { Col, Container, Row } from 'reactstrap';
 import { getDateString } from '../../../utils';
-import Menu from '../../../container/Menu';
+import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
 import './style.css'
 import SubMenu from '../../../container/Menu2';
@@ -157,7 +157,7 @@ function PlayerTennis(route) {
 
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail['DEFAULT'].img: ""})`}}>
-        <Menu />
+        <Menu sport_default={"tennis"}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail['DEFAULT'].teamColoursHex[0]} color={constant.team_detail['DEFAULT'].teamColoursHex[1]} logo={constant.team_detail['DEFAULT'].img}/> : null}
         <Container className="template">
           <div id="detail">

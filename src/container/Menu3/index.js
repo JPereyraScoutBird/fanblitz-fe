@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import {
   setSport,
@@ -26,6 +27,7 @@ function Menu3(props) {
   const dispatch = useDispatch();
   const {sport_default = "mlb"} = props
   const [sport, setSportData] = useState(sport_default);
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   const fetchData2 = async () => {
@@ -43,16 +45,18 @@ function Menu3(props) {
   const onClick = (newSport) => {
     setSportData(newSport)
     dispatch(setSport(newSport))
-}
+    navigate(`/${newSport}`)
+    }
 
   return (
     <div>    
         <Navbar style={{backgroundColor: "#666666"}}>
-        <Nav className="mr-auto d-flex flex-row" navbar>
-          <Button outline className='btn btn-primary-outline' onClick={() => onClick("mlb")}>
+        <Nav className="mr-auto d-flex flex-row align-items-center" navbar>
+          <Button outline className='btn btn-link' onClick={() => onClick("mlb")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
               MLB
           </Button>
-          <Button outline className='btn btn-primary-outline' onClick={() => onClick("tennis")}>
+          <div className="border-dash" style={{margin: "0px 0.5rem"}}></div>
+          <Button outline className='btn btn-link' onClick={() => onClick("tennis")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
               Tennis
           </Button>
         </Nav>

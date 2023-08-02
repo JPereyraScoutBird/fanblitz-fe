@@ -7,7 +7,7 @@ import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
 import { Col, Container, Row } from 'reactstrap';
 import { getDate2, getDateString, getTime } from '../../../utils';
-import Menu from '../../../container/Menu';
+import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
 import './style.css'
 import SubMenu from '../../../container/Menu2';
@@ -169,7 +169,7 @@ function TeamDetail(route) {
     }, [teamDetail])
 
     const onClick = (user) => {
-      navigate(`${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
+      navigate(`/mlb${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
     }
 
     const renderFooter = (article) => (
@@ -187,7 +187,7 @@ function TeamDetail(route) {
           return (
             <Row className='d-flex justify-content-between'>
             {data.leaders.hitter.map(x => (
-            <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] || Image.PROFILE}/>
+            <CardProfileComponent link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] || Image.PROFILE}/>
             ))}
           </Row>
           )
@@ -196,7 +196,7 @@ function TeamDetail(route) {
           return (
             <Row className='d-flex justify-content-between'>
             {data.leaders.pitcher.map(x => (
-              <CardProfileComponent link={`${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] ||  Image.PROFILE}/>
+              <CardProfileComponent link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] ||  Image.PROFILE}/>
             ))}
           </Row>
           )
@@ -291,8 +291,8 @@ function TeamDetail(route) {
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${teamDetail ? constant.team_detail[teamDetail.mysportfeeds_abbreviation].img: ""})`}}>
       {/* <div id="template"> */}
-        <Menu />
-        { teamDetail ? <SubMenu home={`${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
+        <Menu sport_default={"mlb"}/>
+        { teamDetail ? <SubMenu home={`/mlb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
         <Container className="template">
           <div id="detail">
             {teamDetail ? renderPage() : <></> }

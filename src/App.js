@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     loader: loader,
   },
   {
-    path: `mlb/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    path: `/mlb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.mlb.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
@@ -65,29 +65,29 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: `${PATH_LIST.PLAYER_DETAIL_TENNIS}/:playerId`,
-    element: <Pages.PlayerTennis/>,
+    path: `/mlb${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.mlb.TeamDetail/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
   {
-    path: `tennis/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.tennis.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
-  {
-    path: `tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.tennis.TeamDetail/>,
-    errorElement: <ErrorPage />,
-    loader: ({ params }) => {
-      return (params);
-    },
-  },
+  // {
+  //   path: `/tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
+  //   element: <Pages.tennis.TeamDetail/>,
+  //   errorElement: <ErrorPage />,
+  //   loader: ({ params }) => {
+  //     return (params);
+  //   },
+  // },
 ]);
 
 

@@ -7,7 +7,7 @@ import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
 import { Col, Container, Row } from 'reactstrap';
 import { getDateString } from '../../../utils';
-import Menu from '../../../container/Menu';
+import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
 import './style.css'
 import SubMenu from '../../../container/Menu2';
@@ -129,8 +129,6 @@ function Player(route) {
     
 
     const renderPage = () => {
-      // console.log("playerDetail", playerDetail)
-      // console.log(constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0],  constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex)
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
@@ -206,7 +204,7 @@ function Player(route) {
 
     return (
       <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail[playerDetail.mysportfeeds_abbreviation].img: ""})`}}>
-        <Menu />
+         <Menu sport_default={"mlb"}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
           <div id="detail">

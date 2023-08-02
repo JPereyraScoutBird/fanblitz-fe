@@ -17,11 +17,9 @@ function SearchComponent (props) {
         // the string searched and for the second the results.
         if(string.length == 1 && prompt != string) {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/search?q=${string}`);
-            // console.log("res: ", response.data)
             setItems(response.data.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img}) : x.type == "game" ? ({...x, "img": Image[x.img]}) : x))
             setPrompt(string)
         }
-        // console.log("string", string, "result", results)
       }
     
       const handleOnHover = (result) => {
@@ -44,7 +42,7 @@ function SearchComponent (props) {
       const formatResult = (item) => {
         return (
           <div className="d-flex align-items-center" key={item.id} style={{zIndex: "100"}}>
-            <img src={item.img} style={{width: "50px", height: "50px", objectFit: "cover", borderRadius: "50%", border: "2px solid #000"}}/>
+            <img src={item.img || Image.PROFILE} style={{width: "50px", height: "50px", objectFit: "cover", borderRadius: "50%", border: "2px solid #000"}}/>
             <span style={{ display: 'block', textAlign: 'left', marginLeft: '1rem'}}>{item.keys}</span>
           </div>
         )

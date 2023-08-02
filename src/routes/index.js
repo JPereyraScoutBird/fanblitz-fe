@@ -8,10 +8,6 @@ const routeList = (sport) => [
       element: <Pages.mlb.Players />,
     },
     {
-      path: `/${sport}${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-      element: <Pages.mlb.PlayerDetail />,
-    },
-    {
       path: `/${sport}${PATH_LIST.TEAM}`,
       element: <Pages.mlb.Team />,
     },
@@ -47,10 +43,6 @@ const routeList = (sport) => [
     {
       path: `/${sport}${PATH_LIST.PLAYER}`,
       element: <Pages.tennis.Players />,
-    },
-    {
-      path: `/${sport}${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-      element: <Pages.tennis.PlayerDetail />,
     },
     {
       path: `/${sport}${PATH_LIST.NEWS}`,
