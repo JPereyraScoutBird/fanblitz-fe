@@ -15,6 +15,7 @@ import constant from "../PlayerDetail/constant";
 import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
+import uuid from 'react-uuid';
 
 function Home() {
   const dispatch = useDispatch();
@@ -37,10 +38,7 @@ function Home() {
       } catch (error) {
         console.error('Error getting data:', error);
       }
-    // }
-    // else {
-    //   // setGameData([...gameDataStore.payload])
-    // }
+
 
   };
 
@@ -65,7 +63,8 @@ function Home() {
   };
 
   const renderForecastComponent = (game) => (
-    <CardForecastComponent 
+    <CardForecastComponent
+        key={uuid()} 
         className="col-12 col-md-6"
         title={`${game.home_team} vs. ${game.away_team}`}
         imageSrc={IMAGE[game.home_team_abbr]}
@@ -76,12 +75,12 @@ function Home() {
             Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p>
           </div>
         }
-        footer={<Link to={`${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
   const next = (items) => {
-    if(items.length > indexCarousel) {
+    if(items.length - 1 > indexCarousel) {
       setIndexCarousel(indexCarousel + 1)
     } else {
       setIndexCarousel(0)

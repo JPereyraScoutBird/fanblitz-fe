@@ -17,6 +17,7 @@ import Pagination from "../Pagination";
 import SkeletonElements from "../Skeleton";
 import Shimmer from "../Skeleton/shimmer";
 import IMAGE from '../../img';
+import uuid from 'react-uuid';
 
 
 const TableSkeletonElements = ({renderHeaderComponent, row=5, col=5, theme}) => {
@@ -52,18 +53,19 @@ const renderData = (
   const item_list = data.slice((page - 1) * range, page * range);
   if(playeImage) {
     return item_list.map((x) => (
-      <tr onClick={() => onClick(x)}>
+      
+      <tr key={uuid()} style={{cursor: 'pointer'}} onClick={() => onClick(x)}>
         <td><img style={{border: `2px solid #041e42`, borderRadius: "50%", width: "45px", height: "45px", objectFit: "cover"}} src={x['image'] || IMAGE.PROFILE}/></td>
         {Object.keys(header).slice(1).map((val) => (
-          <td>{x[val]}</td>
+          <td style={{cursor: 'pointer', userSelect: 'none'}}>{x[val]}</td>
         ))}
       </tr>
     ));
   }
   return item_list.map((x) => (
-    <tr onClick={() => onClick(x)}>
+    <tr key={uuid()} style={onClick ? {cursor: 'pointer'} : {}} onClick={() => onClick(x)}>
       {Object.keys(header).map((val) => (
-        <td>{x[val]}</td>
+        <td style={{userSelect: 'none'}}>{x[val]}</td>
       ))}
     </tr>
   ));

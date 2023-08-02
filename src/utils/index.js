@@ -43,11 +43,20 @@ const getDateString = (dateTimeStamp) => {
     return date.toDateString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone });
 }
 
+const sortListArticles = (date1, date2) => {
+    const date1Aux = new Date(date1.publishedAt);
+    const date2Aux = new Date(date2.publishedAt);
+  
+    return date2Aux - date1Aux;
+  
+  };
+
 export {
     getDate,
     getDate2,
     getDateString,
     getTime,
     getTodayItems,
-    filterByDate
+    filterByDate,
+    sortListArticles
 }

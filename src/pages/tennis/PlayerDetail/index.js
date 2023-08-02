@@ -16,9 +16,15 @@ export async function loader({ params }) {
     return params;
 }
 
-const getNewsSpecificPlayer = (player_name) => (
-  `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado)+NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
-)
+const getNewsSpecificPlayer = async (player_name) => {
+  const newURL = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis&subject=${player_name}`);
+  // const aux =  `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado) +NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
+  return newURL.data.URL
+}
+
+// const getNewsSpecificPlayer = (player_name) => (
+//   `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado)+NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
+// )
 
 const renderTable = (position, data, backgroundColor = undefined, color='#fff') => {
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerStats} data={data.summary}/>;
@@ -77,7 +83,7 @@ function PlayerTennis(route) {
           console.error('Error getting data:', error);
         }
       }
-      // fetchData3()
+      fetchData3()
     }, [playerDetail])
 
     useEffect(() => {
