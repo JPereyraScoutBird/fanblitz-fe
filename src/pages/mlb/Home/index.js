@@ -81,16 +81,16 @@ function Home() {
   )
 
   const next = (items) => {
-    if(items.length < indexCarousel) {
+    if(items.length > indexCarousel) {
       setIndexCarousel(indexCarousel + 1)
     } else {
       setIndexCarousel(0)
     }
   }
 
-  const prev = () => {
+  const prev = (items) => {
     if(indexCarousel == 0) {
-      setIndexCarousel(0)
+      setIndexCarousel(items.length - 1)
     } else {
       setIndexCarousel(indexCarousel - 1)
     }
@@ -115,7 +115,7 @@ function Home() {
         <CarouselItem>
         <Row>{renderForecastComponent(x[0])}</Row>  
         </CarouselItem>)}
-        <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev()} />
+        <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev(newArr)} />
         <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
       </Carousel>
       )

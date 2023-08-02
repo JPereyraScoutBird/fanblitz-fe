@@ -4,4 +4,16 @@
 
 #home .carousel-indicators {
     z-index: 5;
+    bottom: -1rem;
+}
+
+
+#home .carousel-control-prev{
+    display: flex;
+    justify-content: left;
+}
+
+#home .carousel-control-next {
+    display: flex;
+    justify-content: right;
 }
