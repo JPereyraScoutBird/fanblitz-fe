@@ -1,0 +1,16 @@
+#date-pagination .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+#date-pagination p {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0px;
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff
+}

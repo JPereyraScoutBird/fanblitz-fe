@@ -22,40 +22,67 @@ import PATH_LIST from './routes/constant';
 const router = createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.Home/>,
+    element: <Pages.mlb.Home/>,
     errorElement: <ErrorPage />,
   },
   {
-    path: `${PATH_LIST.HOMETENNIS}`,
-    element: <Pages.HomeTennis/>,
+    path: `mlb/${PATH_LIST.HOME}`,
+    element: <Pages.mlb.Home/>,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/",
+    path: `tennis/${PATH_LIST.HOME}`,
+    element: <Pages.tennis.Home/>,
+    errorElement: <ErrorPage />,
+  },
+  // {
+  //   path: "/",
+  //   element: <RenderPage />,
+  //   errorElement: <ErrorPage />,
+  //   children: ROUTES.MLB,
+  //   loader: loader,
+  // },
+  {
+    path: "/mlb/",
     element: <RenderPage />,
     errorElement: <ErrorPage />,
-    children: ROUTES,
+    children: ROUTES.MLB,
     loader: loader,
   },
   {
-    path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.Player/>,
+    path: "/tennis/",
+    element: <RenderPage />,
+    errorElement: <ErrorPage />,
+    children: ROUTES.TENNIS,
+    loader: loader,
+  },
+  {
+    path: `mlb/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.mlb.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
   {
-    path: `${PATH_LIST.PLAYER_DETAIL_TENNIS}/:playerId`,
-    element: <Pages.PlayerTennis/>,
+    path: `mlb/${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.mlb.TeamDetail/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
   {
-    path: `${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.TeamDetail/>,
+    path: `tennis/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.tennis.Player/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.tennis.TeamDetail/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);

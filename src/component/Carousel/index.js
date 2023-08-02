@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -24,6 +24,15 @@ const items = [
     caption: 'Slide 3'
   }
 ];
+
+
+const CarouselComponent (props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    
+    const onExisting = () => {
+        
+    }
+}
 
 class Example extends Component {
   constructor(props) {
