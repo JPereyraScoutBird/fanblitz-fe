@@ -3,7 +3,7 @@ import './style.css'
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import { useNavigate } from 'react-router-dom';
 import Image from "../../img";
-import constant from '../../pages/PlayerDetail/constant';
+import constant from '../../pages/mlb/PlayerDetail/constant';
 import axios from "axios";
 
 function SearchComponent (props) {
@@ -17,11 +17,11 @@ function SearchComponent (props) {
         // the string searched and for the second the results.
         if(string.length == 1 && prompt != string) {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/search?q=${string}`);
-            console.log("res: ", response.data)
+            // console.log("res: ", response.data)
             setItems(response.data.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img}) : x.type == "game" ? ({...x, "img": Image[x.img]}) : x))
             setPrompt(string)
         }
-        console.log("string", string, "result", results)
+        // console.log("string", string, "result", results)
       }
     
       const handleOnHover = (result) => {

@@ -1,9 +1,7 @@
-import homeReducer from "./Home"
-import teamReducer from "./Team"
+import sportReducer from "./sportSlide"
 
 const rootReducer = {
-    homeReducer,
-    teamReducer
+    sportReducer,
 }
 
 export default rootReducer;

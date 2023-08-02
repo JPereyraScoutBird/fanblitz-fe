@@ -33,9 +33,8 @@ const renderNavLink = (path, text) => (
   </NavLink>
 );
 
-function Menu(args) {
+function Menu(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const [sport, setSport] = useState('mlb');
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -43,20 +42,12 @@ function Menu(args) {
 
   const toggle2 = () => setModal(!modal);
 
+  const {sport} = props
+
   return (
     <div>
-      <Navbar>
-        <Nav className="mr-auto d-flex flex-row" navbar>
-              <Button className='btn btn-primary' onClick={() => setSport("mlb")}>
-                  MLB
-              </Button>
-              <Button className='btn btn-primary' onClick={() => setSport("tennis")}>
-                  Tennis
-              </Button>
-        </Nav>
-      </Navbar>
       <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
-        <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
+        <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Col xs={12} md={3}>
           <SearchComponent/>
@@ -72,9 +63,16 @@ function Menu(args) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.NEWS}`, "News")}
             </NavItem>
+            {sport == "mlb" ? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.TEAM}`, "Team")}
             </NavItem>
+            ): null}
+            {sport == "tennis" ? (
+            <NavItem>
+                {renderNavLink(`/${sport}${PATH_LIST.STANDING_TENNIS}`, "Standing")}
+            </NavItem>
+            ): null}
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.FORECAST}`, "Forecasts")}
             </NavItem>

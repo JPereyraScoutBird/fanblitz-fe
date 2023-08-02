@@ -1,113 +1,85 @@
 import PATH_LIST from './constant';
 import Pages from '../pages';
-import { loader as newsLoader,}  from '../pages/PlayerDetail';
+import { loader as newsLoader,}  from '../pages/mlb/PlayerDetail';
 
 const routeList = (sport) => [
     {
-      path: `${sport}${PATH_LIST.PLAYER}`,
-      element: <Pages.Players />,
+      path: `/${sport}${PATH_LIST.PLAYER}`,
+      element: <Pages.mlb.Players />,
     },
     {
-      path: `${sport}${PATH_LIST.PLAYER_DETAIL}`,
-      element: <Pages.PlayerDetail />,
+      path: `/${sport}${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+      element: <Pages.mlb.PlayerDetail />,
     },
     {
-      path: `${sport}${PATH_LIST.TEAM}`,
-      element: <Pages.Team />,
+      path: `/${sport}${PATH_LIST.TEAM}`,
+      element: <Pages.mlb.Team />,
     },
     {
-      path: `${sport}${PATH_LIST.TEAM_DETAIL}`,
-      element: <Pages.TeamDetail />,
+      path: `/${sport}${PATH_LIST.TEAM_DETAIL}`,
+      element: <Pages.mlb.TeamDetail />,
     },
     {
-      path: `${sport}${PATH_LIST.NEWS}`,
-      element: <Pages.News />,
+      path: `/${sport}${PATH_LIST.NEWS}`,
+      element: <Pages.mlb.News />,
     },
     {
-      path: `${sport}${PATH_LIST.FORECAST}`,
-      element: <Pages.Forecasts />,
+      path: `/${sport}${PATH_LIST.FORECAST}`,
+      element: <Pages.mlb.Forecasts />,
     },
     {
-      path: `${sport}${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
-      element: <Pages.ForecastDetail />,
+      path: `/${sport}${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.mlb.ForecastDetail />,
       loader: newsLoader
     },
     {
-      path: `${sport}${PATH_LIST.SOCIAL_BETS}`,
-      element: <Pages.SocialBets />,
+      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+      element: <Pages.mlb.SocialBets />,
     },
     {
-      path: `${sport}${PATH_LIST.STATS}`,
-      element: <Pages.Stats />,
-    },
-    {
-      path: `${sport}${PATH_LIST.TUTORIAL}`,
-      element: <Pages.Tutorial />,
+      path: `/${sport}${PATH_LIST.TUTORIAL}`,
+      element: <Pages.mlb.Tutorial />,
     },
   ]
 
-const routeListTennis = [
+
+  const routeListTennis = (sport) => [
     {
-      path: PATH_LIST.PLAYER,
-      element: <Pages.Players />,
+      path: `/${sport}${PATH_LIST.PLAYER}`,
+      element: <Pages.tennis.Players />,
     },
     {
-      path: PATH_LIST.PLAYERTENNIS,
-      element: <Pages.PlayersTennis />,
+      path: `/${sport}${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+      element: <Pages.tennis.PlayerDetail />,
     },
     {
-      path: PATH_LIST.PLAYER_DETAIL,
-      element: <Pages.PlayerDetail />,
+      path: `/${sport}${PATH_LIST.NEWS}`,
+      element: <Pages.tennis.News />,
     },
     {
-      path: PATH_LIST.TEAM,
-      element: <Pages.Team />,
+      path: `/${sport}${PATH_LIST.FORECAST}`,
+      element: <Pages.tennis.Forecasts />,
     },
     {
-      path: PATH_LIST.TEAM_DETAIL,
-      element: <Pages.TeamDetail />,
-    },
-    {
-      path: PATH_LIST.NEWS,
-      element: <Pages.News />,
-    },
-    {
-      path: PATH_LIST.FORECAST,
-      element: <Pages.Forecasts />,
-    },
-    {
-      path: PATH_LIST.FORECASTTENNIS,
-      element: <Pages.ForecastsTennis />,
-    },
-    {
-      path: `${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
-      element: <Pages.ForecastDetail />,
+      path: `/${sport}${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.tennis.ForecastDetail />,
       loader: newsLoader
     },
     {
-      path: `${PATH_LIST.FORECAST_DETAIL_TENNIS}/:teams/:date`,
-      element: <Pages.ForecastDetailTennis />,
-      loader: newsLoader
+      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+      element: <Pages.tennis.SocialBets />,
     },
     {
-      path: PATH_LIST.SOCIAL_BETS,
-      element: <Pages.SocialBets />,
+      path: `/${sport}${PATH_LIST.TUTORIAL}`,
+      element: <Pages.tennis.Tutorial />,
     },
     {
-      path: PATH_LIST.STATS,
-      element: <Pages.Stats />,
-    },
-    {
-      path: PATH_LIST.TUTORIAL,
-      element: <Pages.Tutorial />,
-    },
-    {
-      path: PATH_LIST.STANDING_TENNIS,
-      element: <Pages.StandingTennis />,
+      path: `/${sport}${PATH_LIST.STANDING_TENNIS}`,
+      element: <Pages.tennis.StandingTennis />,
     },
   ]
 
 export default {
   MLB: routeList('mlb'),
-  TENNIS: routeList('tennis')
+  TENNIS: routeListTennis('tennis')
 }
