@@ -1,13 +1,8 @@
-import {
-    configureStore
-} from "@reduxjs/toolkit";
-import rootReducer from './reducers';
-// import homeReducer from './reducers/Home';
+import { configureStore } from '@reduxjs/toolkit';
+import reducers from './reducers';
 
-const store = configureStore({
-    reducer: {
-        gameData: rootReducer.homeReducer
-    }
+export default configureStore({
+  reducer: {
+    sport: reducers.sportReducer,
+  },
 });
-
-export default store;

@@ -1,0 +1,28 @@
+#forecast .card-news .card-img {
+    height: 350px !important;
+    object-fit: cover;
+    width: 100%;
+}
+
+#forecast .card-news .card-title {
+    height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#forecast .card-news {
+    margin-top: 2rem;
+}
+
+#forecast .card-news .card-title {
+    height: 1.2rem ;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.border-dash {
+    border-right: 1px dashed #ccc;
+    height: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

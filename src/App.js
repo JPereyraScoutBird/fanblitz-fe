@@ -17,22 +17,22 @@ import RenderPage, { loader } from "./pages/Template";
 import Pages from './pages';
 import PATH_LIST from './routes/constant';
 
-// const router = createBrowserRouter([...ROUTES]);
+// const router = createBrowserRouter([...ROUTES[count]]);
 
 const router = createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.Home/>,
+    element: <Pages.mlb.Home/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `mlb/${PATH_LIST.HOME}`,
-    element: <Pages.Home/>,
+    element: <Pages.mlb.Home/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `tennis/${PATH_LIST.HOME}`,
-    element: <Pages.Home/>,
+    element: <Pages.tennis.Home/>,
     errorElement: <ErrorPage />,
   },
   {
@@ -57,37 +57,37 @@ const router = createBrowserRouter([
     loader: loader,
   },
   {
-    path: `mlb/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.Player/>,
+    path: `/mlb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.mlb.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
   {
-    path: `mlb/${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.TeamDetail/>,
+    path: `/mlb${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.mlb.TeamDetail/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
   {
-    path: `tennis/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.Player/>,
+    path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.tennis.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
     },
   },
-  {
-    path: `tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.TeamDetail/>,
-    errorElement: <ErrorPage />,
-    loader: ({ params }) => {
-      return (params);
-    },
-  },
+  // {
+  //   path: `/tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
+  //   element: <Pages.tennis.TeamDetail/>,
+  //   errorElement: <ErrorPage />,
+  //   loader: ({ params }) => {
+  //     return (params);
+  //   },
+  // },
 ]);
 
 

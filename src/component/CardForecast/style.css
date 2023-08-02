@@ -18,6 +18,7 @@
 
 .card_component_forecast .card-body {
     padding: 0px;
+    padding-left: 2rem;
     flex: none;
 }
 
@@ -30,6 +31,8 @@
     /* color: #000000; */
     font-size: 1.5rem;
     font-weight: 600;
+    padding-left: 2rem;
+
 }
 
 
@@ -50,6 +53,8 @@
     border-top: 0;
     padding-left: 0px;
     padding-bottom: 1rem !important;
+    padding-left: 2rem;
+
  }
  
  .card_component_forecast {

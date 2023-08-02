@@ -31,6 +31,7 @@ import TOR from './TOR.jpg';
 import WAS from './WAS.jpg';
 import BLITZBOT_PROFILE from './blitzbot_profile.png'
 import PROFILE from './PROFILE.svg'
+import TENNIS from './tennis'
 
 export default {
     Logo,
@@ -65,5 +66,6 @@ export default {
     TOR,
     WAS,
     BLITZBOT_PROFILE,
-    PROFILE
+    PROFILE,
+    TENNIS
 }
