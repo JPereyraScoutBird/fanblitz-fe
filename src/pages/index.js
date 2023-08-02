@@ -15,6 +15,7 @@ import Player from './PlayerDetail';
 import PlayerTennis from './PlayerDetailTennis';
 import ForecastDetail from './ForecastDetail'
 import ForecastDetailTennis from './ForecastDetailTennis'
+import StandingTennis from './StandingTennis'
 
 export default {
     Home,
@@ -33,5 +34,6 @@ export default {
     Players,
     ForecastDetail,
     ForecastDetailTennis,
-    TeamDetail
+    TeamDetail,
+    StandingTennis
 }
