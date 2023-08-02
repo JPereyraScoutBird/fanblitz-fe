@@ -26,7 +26,7 @@ function CardTeamComponent (props) {
     } = props
 
     if (error != true) {
-        console.log("url: ", homeImg)
+        // console.log("url: ", homeImg)
         return (
             <Link to={link} className={`${className} card-link shadow mb-5 p-2 bg-white rounded`}>
                 <Card className={`card_team_component ${style}`}>

@@ -85,8 +85,8 @@ function CustomTable(props) {
     backgroundColor="#000",
   } = props;
 
-  console.log("Color: ", color)
-  console.log("BackgroundColor: ", backgroundColor)
+  // console.log("Color: ", color)
+  // console.log("BackgroundColor: ", backgroundColor)
   let data_cp = [...data]
 
   data.map((obj, index) =>
