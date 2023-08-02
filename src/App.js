@@ -26,14 +26,38 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: `mlb/${PATH_LIST.HOME}`,
+    element: <Pages.Home/>,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: `tennis/${PATH_LIST.HOME}`,
+    element: <Pages.Home/>,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <RenderPage />,
     errorElement: <ErrorPage />,
-    children: ROUTES,
+    children: ROUTES.MLB,
     loader: loader,
   },
   {
-    path: `${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    path: "/mlb/",
+    element: <RenderPage />,
+    errorElement: <ErrorPage />,
+    children: ROUTES.MLB,
+    loader: loader,
+  },
+  {
+    path: "/tennis/",
+    element: <RenderPage />,
+    errorElement: <ErrorPage />,
+    children: ROUTES.TENNIS,
+    loader: loader,
+  },
+  {
+    path: `mlb/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.Player/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
@@ -41,7 +65,23 @@ const router = createBrowserRouter([
     },
   },
   {
-    path: `${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    path: `mlb/${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.TeamDetail/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `tennis/${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.Player/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
     element: <Pages.TeamDetail/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {

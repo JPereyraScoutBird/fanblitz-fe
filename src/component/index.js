@@ -4,6 +4,7 @@ import Card from './Card';
 import CardTeamComponent from './CardTeam';
 import CardProfileComponent from './CardProfile';
 import CardForecast from './CardForecast';
+import DatePagination from './DatePagination';
 
 export default {
     Table,
@@ -11,5 +12,6 @@ export default {
     Card,
     CardTeamComponent,
     CardProfileComponent,
-    CardForecast
+    CardForecast,
+    DatePagination
 }
