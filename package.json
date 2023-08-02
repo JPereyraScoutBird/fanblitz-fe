@@ -27,9 +27,11 @@
     "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
     "react-search-autocomplete": "^8.5.2",
+    "react-uuid": "^2.0.0",
     "reactstrap": "^9.2.0",
     "redux": "^4.2.1",
     "sort-by": "^1.2.0",
+    "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
