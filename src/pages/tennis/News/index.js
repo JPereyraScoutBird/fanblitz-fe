@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CONSTANT from './constant';
 import './style.css';
-import { getDateString } from "../../../utils";
+import { getDateString, sortListArticles } from "../../../utils";
 
 function News() {
 
@@ -13,9 +13,24 @@ function News() {
 
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
-    axios.get(`${CONSTANT.URL}&apikey=${CONSTANT.API}`).then((res) => {
-      setNewsData(res.data.articles)
+
+    axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis`).then((resURL) => {
+      console.log("resURL", resURL)
+      console.log("resURL.data.URL", resURL.data.URL)
+      console.log("CONSTANT.URL", CONSTANT.URL)
+      if (resURL.status == 200){
+        axios.get(`${resURL.data.URL}&apikey=${resURL.data.API}`).then((res) => {
+          console.log("res.data.articles", res.data.articles)
+          const sortedListArticles = res.data.articles.sort(sortListArticles);
+          setNewsData(sortedListArticles)
+        })
+      }
+      
     })
+
+    // axios.get(`${CONSTANT.URL}&apikey=${CONSTANT.API}`).then((res) => {
+    //   setNewsData(res.data.articles)
+    // })
   }, [])
 
   return (
