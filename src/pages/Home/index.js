@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {setValue, cleanValue} from '../../reducers/Home';
 
 import CustomTable from '../../component/Table';
-import { getDate, getDate2, getTodayItems } from "../../utils";
+import { filterByDate, getDate, getDate2, getTodayItems } from "../../utils";
 import CardForecastComponent from "../../component/CardForecast";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -14,12 +14,16 @@ import PATH_LIST from "../../routes/constant";
 import IMAGE from '../../img';
 import constant from "../PlayerDetail/constant";
 import './style.css';
+import DatePagination from "../../component/DatePagination";
+import moment from 'moment'
 
 function Home() {
   const dispatch = useDispatch();
   const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState(undefined);
-  const [indexCarousel, setIndexCarousel] = useState(0)
+  const [indexCarousel, setIndexCarousel] = useState(0);
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+
 
   const fetchData = async () => {
     if (gameDataStore.length == 0) {
@@ -120,6 +124,8 @@ function Home() {
       return null
     }
   }
+
+  console.log(date.toDate().setHours)
   
   return (
     <div id="home">
@@ -130,7 +136,10 @@ function Home() {
       <Container>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>MLB Game Schedule</h2>
-          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => getTodayItems(x.date_z))} loading={gameData.length == 0}/> : <>No Game Today</>}
+          <div className="mb-4">
+            <DatePagination date={date} onClick={(date) => setDate(date)}/>
+          </div>
+          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/> : <>No Game Today</>}
         </div>
       </Container>    
     </div>    

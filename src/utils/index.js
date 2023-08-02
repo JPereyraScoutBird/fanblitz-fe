@@ -11,8 +11,17 @@ const getTodayItems = (dateTimeStamp) => {
     today.setHours(0,0,0,0);
     const tomorrow = new Date(today)
     tomorrow.setDate(today.getDate() + 1)
-    console.log(`today: ${today}, tomorrow: ${tomorrow}`)
+    console.log(`Date: ${today}, tomorrow: ${tomorrow}`)
     return dateTimeStamp >= getDate(today) && dateTimeStamp < getDate(tomorrow)
+}
+
+const filterByDate = (dateTimeStamp, date) => {
+    let filterDate = date
+    filterDate.setHours(0,0,0,0);
+    const tomorrow = new Date(filterDate)
+    tomorrow.setDate(filterDate.getDate() + 1)
+    console.log(`today: ${filterDate}, tomorrow: ${tomorrow}`)
+    return dateTimeStamp >= getDate(filterDate) && dateTimeStamp < getDate(tomorrow)
 }
 
 const getTime = (dateTimeStamp) => {
@@ -39,5 +48,6 @@ export {
     getDate2,
     getDateString,
     getTime,
-    getTodayItems
+    getTodayItems,
+    filterByDate
 }

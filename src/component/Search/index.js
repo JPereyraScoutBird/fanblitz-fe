@@ -17,11 +17,11 @@ function SearchComponent (props) {
         // the string searched and for the second the results.
         if(string.length == 1 && prompt != string) {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/search?q=${string}`);
-            console.log("res: ", response)
+            console.log("res: ", response.data)
             setItems(response.data.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img}) : x.type == "game" ? ({...x, "img": Image[x.img]}) : x))
             setPrompt(string)
         }
-        console.log(results)
+        console.log("string", string, "result", results)
       }
     
       const handleOnHover = (result) => {

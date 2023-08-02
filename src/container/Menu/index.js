@@ -35,6 +35,7 @@ const renderNavLink = (path, text) => (
 
 function Menu(args) {
   const [isOpen, setIsOpen] = useState(false);
+  const [sport, setSport] = useState('mlb');
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -44,6 +45,16 @@ function Menu(args) {
 
   return (
     <div>
+      <Navbar>
+        <Nav className="mr-auto d-flex flex-row" navbar>
+              <Button className='btn btn-primary' onClick={() => setSport("mlb")}>
+                  MLB
+              </Button>
+              <Button className='btn btn-primary' onClick={() => setSport("tennis")}>
+                  Tennis
+              </Button>
+        </Nav>
+      </Navbar>
       <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href="/" style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -53,28 +64,28 @@ function Menu(args) {
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.HOME}`, "Home")}
+                {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.PLAYER}`, "Players")}
+                {renderNavLink(`/${sport}${PATH_LIST.PLAYER}`, "Players")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.NEWS}`, "News")}
+                {renderNavLink(`/${sport}${PATH_LIST.NEWS}`, "News")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.TEAM}`, "Team")}
+                {renderNavLink(`/${sport}${PATH_LIST.TEAM}`, "Team")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.FORECAST}`, "Forecasts")}
+                {renderNavLink(`/${sport}${PATH_LIST.FORECAST}`, "Forecasts")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
+                {renderNavLink(`/${sport}${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
             <NavItem>
               <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
             </NavItem>
             <NavItem>
-                {renderNavLink(`${PATH_LIST.TUTORIAL}`, "Tutorial")}
+                {renderNavLink(`/${sport}${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
           </Nav>
         </Collapse>
