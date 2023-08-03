@@ -15,15 +15,19 @@ function News() {
   useEffect(() => {
 
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis`).then((resURL) => {
-      console.log("resURL", resURL)
-      console.log("resURL.data.URL", resURL.data.URL)
-      console.log("CONSTANT.URL", CONSTANT.URL)
+      // console.log("resURL", resURL)
+      // console.log("resURL.data.URL", resURL.data.URL)
+      // console.log("CONSTANT.URL", CONSTANT.URL)
+      // if (resURL.status == 200){
+      //   axios.get(`${resURL.data.URL}&apikey=${resURL.data.API}`).then((res) => {
+      //     console.log("res.data.articles", res.data.articles)
+      //     const sortedListArticles = res.data.articles.sort(sortListArticles);
+      //     setNewsData(sortedListArticles)
+      //   })
+      // }
       if (resURL.status == 200){
-        axios.get(`${resURL.data.URL}&apikey=${resURL.data.API}`).then((res) => {
-          console.log("res.data.articles", res.data.articles)
-          const sortedListArticles = res.data.articles.sort(sortListArticles);
-          setNewsData(sortedListArticles)
-        })
+        const sortedListArticles = resURL.data.content.sort(sortListArticles);
+        setNewsData(sortedListArticles)
       }
       
     })

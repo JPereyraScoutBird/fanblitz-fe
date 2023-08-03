@@ -77,8 +77,10 @@ function PlayerTennis(route) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`${getNewsSpecificPlayer(playerDetail['name'])}&apikey=${constant.API}`);
-            setNewsData(response.data.articles)
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis&subject=${playerDetail['name']}`);
+
+            // await axios.get(`${getNewsSpecificPlayer(playerDetail['name'])}&apikey=${constant.API}`);
+            setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
         }
