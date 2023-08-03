@@ -159,8 +159,8 @@ function TeamDetail(route) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`${getNewsSpecificPlayer(teamDetail['odds_api'])}&apikey=${constant.API}`);
-            setNewsData(response.data.articles)
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${teamDetail['odds_api']}`);
+            setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
         }
@@ -265,23 +265,27 @@ function TeamDetail(route) {
             <h3>Past Predictions</h3>
             {renderTablePastGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          <section id="news">
-            <h3>News</h3>
-            <Row>
-              {
-                newsData.map(article => (
-                    <CardComponent 
-                      style="card-news"
-                      className="col-3"
-                      title={article.title}
-                      imageSrc={article.urlToImage}
-                      linkTitle={article.url}
-                      footer={getDateString(article.publishedAt)}
-                    />
-                ))
-              }
-          </Row>
-          </section>
+          {
+            newsData.length ?
+            <section id="news">
+              <h3>News</h3>
+              <Row>
+                {
+                  newsData.map(article => (
+                      <CardComponent 
+                        style="card-news"
+                        className="col-3"
+                        title={article.title}
+                        imageSrc={article.urlToImage}
+                        linkTitle={article.url}
+                        footer={getDateString(article.publishedAt)}
+                      />
+                  ))
+                }
+            </Row>
+            </section>
+            : null
+          } 
         </div>    
       );
     }

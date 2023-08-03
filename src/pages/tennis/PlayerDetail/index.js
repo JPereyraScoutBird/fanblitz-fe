@@ -141,24 +141,29 @@ function PlayerTennis(route) {
             <h3>Stats</h3>
             {renderTable(playerDetail, constant.team_detail['DEFAULT'].teamColoursHex[0])}
           </section>
-          <section id="news">
-            <h3>News</h3>
-            <Row>
-              {
-                newsData.map(article => (
-                  <Col xs={3}>
-                    <CardComponent 
-                      style="card-news"
-                      title={article.title}
-                      imageSrc={article.urlToImage}
-                      linkTitle={article.url}
-                      footer={getDateString(article.publishedAt)}
-                    />
-                  </Col>
-                ))
-              }
-          </Row>
-          </section>
+          {
+            newsData.length ?
+            <section id="news">
+              <h3>News</h3>
+              <Row>
+                {
+                  newsData.map(article => (
+                    <Col xs={3}>
+                      <CardComponent 
+                        style="card-news"
+                        title={article.title}
+                        imageSrc={article.urlToImage}
+                        linkTitle={article.url}
+                        footer={getDateString(article.publishedAt)}
+                      />
+                    </Col>
+                  ))
+                }
+            </Row>
+            </section>
+            : null
+          }
+
         </div>    
     );
     }

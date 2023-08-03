@@ -108,7 +108,7 @@ function Player(route) {
         try {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${playerDetail['full_name']}`);
             // const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
-            setNewsData(response.data.articles)
+            setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
         }
@@ -179,28 +179,32 @@ function Player(route) {
             <h3>Stats</h3>
             {renderTable(playerDetail.position, playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          <section id="charts">
-            <h3>Charts</h3>
+          {/* <section id="charts"> */}
+            {/* <h3>Charts</h3> */}
             {/* {playerDetail ? <Line height="70vh" options={playerDetail.summary} data={playerDetail.summary} /> : {}}; */}
-          </section>
-          <section id="news">
-            <h3>News</h3>
-            <Row>
-              {
-                newsData.map(article => (
-                  <Col xs={3}>
-                    <CardComponent 
-                      style="card-news"
-                      title={article.title}
-                      imageSrc={article.urlToImage}
-                      linkTitle={article.url}
-                      footer={getDateString(article.publishedAt)}
-                    />
-                  </Col>
-                ))
-              }
-          </Row>
-          </section>
+          {/* </section> */}
+          {
+            newsData.length ? 
+            <section id="news">
+                <h3>News</h3>
+                <Row>
+                  {
+                    newsData.map(article => (
+                      <Col xs={3}>
+                        <CardComponent 
+                          style="card-news"
+                          title={article.title}
+                          imageSrc={article.urlToImage}
+                          linkTitle={article.url}
+                          footer={getDateString(article.publishedAt)}
+                        />
+                      </Col>
+                    ))
+                  }
+              </Row>
+            </section>
+          : null
+          }
         </div>    
     );
     }

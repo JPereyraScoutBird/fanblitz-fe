@@ -31,7 +31,7 @@ function Chatbot(args) {
       "role": "user",
       "content": prompt
     })]
-    // setMessageList(newMessage); 
+    setMessageList(newMessage); 
     setPrompt('')
     axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
       setMessageList([...newMessage, res.data.response])
