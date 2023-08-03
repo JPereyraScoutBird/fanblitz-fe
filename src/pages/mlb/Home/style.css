@@ -11,9 +11,11 @@
 #home .carousel-control-prev{
     display: flex;
     justify-content: left;
+    width: 2rem;
 }
 
 #home .carousel-control-next {
     display: flex;
     justify-content: right;
+    width: 2rem;
 }

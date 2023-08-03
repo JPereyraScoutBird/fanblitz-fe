@@ -80,14 +80,6 @@ const router = createBrowserRouter([
       return (params);
     },
   },
-  // {
-  //   path: `/tennis/${PATH_LIST.TEAM_DETAIL}/:teamId`,
-  //   element: <Pages.tennis.TeamDetail/>,
-  //   errorElement: <ErrorPage />,
-  //   loader: ({ params }) => {
-  //     return (params);
-  //   },
-  // },
 ]);
 
 
