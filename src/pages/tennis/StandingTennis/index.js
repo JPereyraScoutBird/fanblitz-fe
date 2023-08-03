@@ -11,14 +11,14 @@ import IMAGE from '../../../img';
 
 function StandingTennis() {
   const dispatch = useDispatch();
-  const gameDataStore = useSelector((state) => state.gameData.value);
+  // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState(undefined);
   const [gameATP, setATPData] = useState(undefined);
   const [gameWTA, setWATData] = useState(undefined);
   const [indexCarousel, setIndexCarousel] = useState(0)
 
   const fetchData = async () => {
-    if (gameDataStore.length == 0) {
+    // if (gameDataStore.length == 0) {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/tennis/standing',
         );
@@ -33,10 +33,10 @@ function StandingTennis() {
       } catch (error) {
         console.error('Error getting data:', error);
       }
-    }
-    else {
-      // setGameData([...gameDataStore.payload])
-    }
+    // }
+    // else {
+    //   // setGameData([...gameDataStore.payload])
+    // }
 
   };
 
