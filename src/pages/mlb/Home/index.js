@@ -20,7 +20,7 @@ import uuid from 'react-uuid';
 function Home() {
   const dispatch = useDispatch();
   // const gameDataStore = useSelector((state) => state.gameData.value);
-  const [gameData, setGameData] = useState(undefined);
+  const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
 
@@ -75,7 +75,7 @@ function Home() {
             Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p>
           </div>
         }
-        footer={<Link to={`mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
@@ -137,7 +137,7 @@ function Home() {
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
-          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/> : <>No Game Today</>}
+          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/>
         </div>
       </Container>    
     </div>    

@@ -20,7 +20,7 @@ const filterByDate = (dateTimeStamp, date) => {
     filterDate.setHours(0,0,0,0);
     const tomorrow = new Date(filterDate)
     tomorrow.setDate(filterDate.getDate() + 1)
-    // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}`)
+    // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}, ${getDate(filterDate)}, ${dateTimeStamp}`)
     return dateTimeStamp >= getDate(filterDate) && dateTimeStamp < getDate(tomorrow)
 }
 
@@ -35,7 +35,7 @@ const getTime = (dateTimeStamp) => {
 const getDate2 = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
     // console.log("date: ", date)
-    return `${date.getFullYear()}${date.getMonth() < 10 ? '0'+(date.getMonth() + 1) : date.getMonth()}${date.getDate()}`
+    return `${date.getFullYear()}${date.getMonth() < 10 ? '0'+(date.getMonth() + 1) : date.getMonth()}${date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()}`
 }
 
 const getDateString = (dateTimeStamp) => {

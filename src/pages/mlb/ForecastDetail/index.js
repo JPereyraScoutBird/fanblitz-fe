@@ -11,6 +11,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faUser } from "@fortawesome/free-regular-svg-icons";
 import constant from "../../mlb/PlayerDetail/constant";
 import PATH_LIST from "../../../routes/constant";
+import ChartDataLabels from "chartjs-plugin-datalabels";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar, Line } from "react-chartjs-2";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ChartDataLabels
+);
 
 export async function loader({ params }) {
   return params;
@@ -20,6 +42,7 @@ function ForecastDetail() {
 
   const [forecastData, setForecastData] = useState({})
   const {teams, date} = useLoaderData();
+  const [stat, setStat] = useState({})
 
   useEffect(() => {
     const [home, away] = teams.split('-');
@@ -28,11 +51,43 @@ function ForecastDetail() {
       const jsonObject = JSON.parse(res.data.body)
       if (jsonObject.hasOwnProperty('forecast')){
         setForecastData(JSON.parse(jsonObject.forecast)[0])
+        // console.log("asd", jsonObject.home_team)
+        setStat({"home_team": jsonObject.home_team, "away_team": jsonObject.away_team})
       }
       
     })
   }, [])
 
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          // boxWidth: 0,
+          boxHeight: 0,
+        }
+      },
+      datalabels: {
+        display: true,
+        color: '#000'
+     },
+      title: {
+        display: true,
+        text: 'Chart.js Bar Chart',
+      },
+    },
+    scales: {
+      // to remove the labels
+      x: {
+        ticks: {
+          display: false,
+        },
+      }
+    }
+  };
+  
 
   const renderPage = () => {
     return (
@@ -73,6 +128,14 @@ function ForecastDetail() {
                 </Row>
               </Col>
               <Col xs={3}>
+                {stat ? 
+                <div style={{padding: "0 2rem"}}>
+                  {Object.keys(stat.home_team[0]).map(x => 
+                    <Bar height="175px" options={{...options, plugins: {...options.plugins, title: {display: true, text: x.toUpperCase()}}}} data={{labels: [x], datasets: [{label: forecastData.home_team_abb, data: [stat.home_team[0][x]], backgroundColor: 'rgba(255, 99, 132, 0.5)',}, {label: forecastData.away_team_abb, data: [stat.away_team[0][x]], backgroundColor: 'rgba(53, 162, 235, 0.5)'}]}} /> 
+                  )}
+                {/* <Bar height="175px" options={options} data={{labels: ['test'], datasets: [{label: "1", data: [9], backgroundColor: 'rgba(255, 99, 132, 0.5)',}, {label: "2", data: [10], backgroundColor: 'rgba(53, 162, 235, 0.5)',}]}} /> : {}} */}
+                </div>
+                : {}}
               </Col>
             </Row>
           </section>
