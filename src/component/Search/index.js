@@ -6,8 +6,14 @@ import Image from "../../img";
 import constant from '../../pages/mlb/PlayerDetail/constant';
 import axios from "axios";
 import uuid from 'react-uuid';
+import {
+  setSport,
+  selectSport,
+} from '../../reducers/sportSlide';
+import { useSelector, useDispatch } from 'react-redux';
 
 function SearchComponent (props) {
+    const sportReducer = useSelector(selectSport);
     const [prompt, setPrompt] = useState('')
     const [searchResponse, setSearchResponse] = useState([])
     const [items, setItems] = useState([])
@@ -17,9 +23,13 @@ function SearchComponent (props) {
     const handleOnSearch = async (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
+        console.log("klok manin1")
         if(string.length == 1 && prompt != string) {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/search?q=${string}`);
-            setItems(response.data.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img, id: uuid()}) : x.type == "game" ? ({...x, "img": Image[x.img], id: uuid()}) : {...x, id: uuid()}))
+            console.log("klok manin2")
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/search?q=${string}&sport=${sportReducer}`);
+            const response2 = JSON.parse(response.data.body)
+            console.log("response search", response2)
+            setItems(response2.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img, id: uuid()}) : x.type == "game" ? ({...x, "img": Image[x.img], id: uuid()}) : {...x, id: uuid()}))
             setPrompt(string)
         }
         console.log("items: ", items)
