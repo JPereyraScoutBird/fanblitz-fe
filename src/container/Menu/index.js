@@ -50,7 +50,7 @@ function Menu(props) {
         <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Col xs={12} md={3}>
-          <SearchComponent/>
+          <SearchComponent sport={sport}/>
         </Col>
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>

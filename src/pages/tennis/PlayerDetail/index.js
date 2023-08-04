@@ -112,20 +112,21 @@ function PlayerTennis(route) {
                   <div style={{ border: `5px solid ${constant.team_detail['DEFAULT'].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.logo} onError={() => setImageShow(true)}/>
                   </div>
-                  <div>
-                      <h2>{playerDetail['name']}</h2>
+                  <div className='d-flex'>
                       <div>
+                        <h2>{playerDetail['name']}</h2>
                         <div>
-                          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
-                          <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
-                        </div>
-                        <div>
+                          <div>
+                            <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
+                            <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{getDateString(playerDetail.birth_date)}</p>
+                          </div>
+                          </div>
+                      </div>
+                      <div style={{marginLeft: '4rem'}}>
                         <h3>Rank</h3>
                         {renderRank(playerDetail)}
                         </div>
                       </div>
-                      
-                  </div>
               </div>
               <br></br>
           </div>

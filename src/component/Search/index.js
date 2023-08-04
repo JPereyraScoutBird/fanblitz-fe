@@ -13,13 +13,17 @@ function SearchComponent (props) {
     const [items, setItems] = useState([])
     const navigate = useNavigate();
 
+    const {sport} = props
+
 
     const handleOnSearch = async (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
         if(string.length == 1 && prompt != string) {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/search?q=${string}`);
-            setItems(response.data.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img, id: uuid()}) : x.type == "game" ? ({...x, "img": Image[x.img], id: uuid()}) : {...x, id: uuid()}))
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/search?sport=${sport}&q=${string}`);
+            const resjson = await JSON.parse(response.data.body)
+            console.log(resjson)
+            setItems(resjson.map(x => x.type == "team" ? ({...x, "img": constant.team_detail[x.img].img, id: uuid()}) : x.type == "game" ? ({...x, "img": Image[x.img], id: uuid()}) : {...x, id: uuid()}))
             setPrompt(string)
         }
         console.log("items: ", items)
