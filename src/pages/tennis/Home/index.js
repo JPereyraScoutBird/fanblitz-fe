@@ -5,19 +5,25 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomTable from '../../../component/Table';
-import { getDate, getDate2, getTodayItems } from "../../../utils";
+import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
 import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
 import constant from "../PlayerDetail/constant";
+import './style.css';
+import DatePagination from "../../../component/DatePagination";
+import moment from 'moment'
+import uuid from 'react-uuid';
 
 function HomeTennis() {
   const dispatch = useDispatch();
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState(undefined);
   const [indexCarousel, setIndexCarousel] = useState(0)
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+
 
   const fetchData = async () => {
     // if (gameDataStore.length == 0) {
@@ -25,7 +31,7 @@ function HomeTennis() {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/tennis/games',
         );
         const jsonObject = JSON.parse(response.data.body)
-        // console.log(jsonObject)
+        console.log("tennis games", jsonObject)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z'])})) : []
         setGameData(response_formated)
         // dispatch(setValue(response_formated))
@@ -61,6 +67,7 @@ function HomeTennis() {
 
   const renderForecastComponent = (game, img) => (
     <CardForecastComponent 
+        key={uuid()} 
         className="col-12 col-md-6"
         title={`${game.home_player} vs. ${game.away_player}`}
         imageSrc={IMAGE.TENNIS[img]}
@@ -73,7 +80,7 @@ function HomeTennis() {
             </p>
           </div>
         }
-        footer={<Link to={`${PATH_LIST.FORECAST_DETAIL}/${game.home_player}-${game.away_player}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${game.home_player}-${game.away_player}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
@@ -94,7 +101,7 @@ function HomeTennis() {
   }
 
   const renderCards = () => {
-    // console.log(gameData)
+    console.log("rendercard", gameData)
     if (gameData != undefined && gameData.length > 0) {
       const today_games = gameData.filter(x => getTodayItems(x.date_z))
       const newArr = []
@@ -124,12 +131,15 @@ function HomeTennis() {
     <>
       <Menu sport_default={"tennis"}/>
         {
-          renderCards()
+          // renderCards()
         }
       <Container>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>Tennis Game Schedule</h2>
-          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => getTodayItems(x.date_z))} loading={gameData.length == 0}/> : <>No Game Today</>}
+          <div className="mb-4">
+            <DatePagination date={date} onClick={(date) => setDate(date)}/>
+          </div>
+          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/> : <>No Game Today</>}
         </div>
       </Container>    
     </>    
