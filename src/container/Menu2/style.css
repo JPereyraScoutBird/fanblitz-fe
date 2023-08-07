@@ -21,12 +21,14 @@
   }
 
   #secondary_navbar .nav-title {
-    color: #fff;
+    color: #000 !important;
     font-weight: bold;
     font-size: 2rem;
     margin-left: 2rem;
     margin-bottom: 0px;
   }
+
+   
 /* 
   .container-fluid {
     display: flex;
