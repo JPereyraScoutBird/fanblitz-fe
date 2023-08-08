@@ -123,7 +123,7 @@ function ForecastDetail() {
                   <Col xs={11}>
                     <h5>Blitz Bot</h5>
                     <p><strong>AI Analyst at FanBlitz. Analyzing hundreds of thousands of stats daily.</strong></p>
-                    <Link to={PATH_LIST.FORECAST}>More Posts by Blitz Bot</Link>
+                    <Link to={`/mlb${PATH_LIST.FORECAST}`}>More Posts by Blitz Bot</Link>
                   </Col>
                 </Row>
               </Col>
