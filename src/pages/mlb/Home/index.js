@@ -16,6 +16,8 @@ import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
 import uuid from 'react-uuid';
+  // Declare a new state variable with the "useState" Hook
+
 
 function Home() {
   const dispatch = useDispatch();
@@ -23,7 +25,8 @@ function Home() {
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
-
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 620;
 
   const fetchData = async () => {
     // if (gameDataStore.length == 0) {
@@ -49,6 +52,15 @@ function Home() {
     return () => clearInterval(interval)
   }, []);
     
+  React.useEffect(() => {
+    /* Inside of a "useEffect" hook add an event listener that updates
+       the "width" state variable when the window size changes */
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+
+    /* passing an empty array as the dependencies of the effect will cause this
+       effect to only run when the component mounts, and not each time it updates.
+       We only want the listener to be added once */
+  }, []);
   // console.log("Game stored:", gameData)
 
   // }, []);
@@ -99,24 +111,43 @@ function Home() {
     // console.log(gameData)
     if (gameData != undefined && gameData.length > 0) {
       const today_games = gameData.filter(x => getTodayItems(x.date_z))
+      const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
       // console.log("today games: ", newArr)
+      if (width > breakpoint ) {
+        return (
+        <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
+          <CarouselIndicators items={newArr} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
+          {newArr.map(x => x.length > 1 ? 
+          <CarouselItem>
+            <Row>
+              {renderForecastComponent(x[0])}
+              {renderForecastComponent(x[1])}
+            </Row>
+          </CarouselItem> :
+          <CarouselItem>
+          <Row>{renderForecastComponent(x[0])}</Row>  
+          </CarouselItem>)}
+          <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev(newArr)} />
+          <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
+        </Carousel>
+        )
+      }
+      console.log("width < breakpoint ?: ", today_games)
       return (
-      <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
-        <CarouselIndicators items={newArr} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
-        {newArr.map(x => x.length > 1 ? 
-        <CarouselItem>
-          <Row>{renderForecastComponent(x[0])}
-          {renderForecastComponent(x[1])}
-        </Row>
-        </CarouselItem> :
-        <CarouselItem>
-        <Row>{renderForecastComponent(x[0])}</Row>  
-        </CarouselItem>)}
-        <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev(newArr)} />
-        <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
-      </Carousel>
+        <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(today_games2)} previous={() => prev()}>
+          <CarouselIndicators items={today_games2} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
+          {today_games2.map(x => (
+          <CarouselItem>
+            <Row>
+              {renderForecastComponent(x)}
+            </Row>
+          </CarouselItem>
+          ))}
+          <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev(newArr)} />
+          <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />
+        </Carousel>
       )
     } else {
       return null

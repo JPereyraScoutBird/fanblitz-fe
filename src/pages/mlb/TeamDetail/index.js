@@ -182,7 +182,7 @@ function TeamDetail(route) {
     )
 
     const renderTableLeaders = (position, data, backgroundColor = "#000", color='#fff') => {
-      if (data.leaders) {
+      // if (data.leaders) {
         if(position == 'hitters') {
           return (
             <Row className='d-flex justify-content-between'>
@@ -201,7 +201,7 @@ function TeamDetail(route) {
           </Row>
           )
         }
-      }
+      // }
     };
 
     const renderPage = () => {
