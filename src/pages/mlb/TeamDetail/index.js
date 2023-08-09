@@ -274,7 +274,7 @@ function TeamDetail(route) {
                   newsData.map(article => (
                       <CardComponent 
                         style="card-news"
-                        className="col-3"
+                        className={'col-12 col-md-3'}
                         title={article.title}
                         imageSrc={article.urlToImage}
                         linkTitle={article.url}

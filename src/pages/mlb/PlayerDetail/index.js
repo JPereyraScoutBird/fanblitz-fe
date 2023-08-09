@@ -190,15 +190,16 @@ function Player(route) {
                 <Row>
                   {
                     newsData.map(article => (
-                      <Col xs={3}>
+                      // <Col xs={3}>
                         <CardComponent 
+                          className={'col-12 col-md-3'}
                           style="card-news"
                           title={article.title}
-                          imageSrc={article.urlToImage}
+                          imageSrc={article.urlToImage || "https://media.istockphoto.com/id/482805043/photo/baseball-in-the-infield.jpg?s=612x612&w=0&k=20&c=I9ubYdLnf7heRWh7V8I0Zxo5s1OEBGMBgsj6Sg4b9"}
                           linkTitle={article.url}
                           footer={getDateString(article.publishedAt)}
                         />
-                      </Col>
+                      // </Col>
                     ))
                   }
               </Row>

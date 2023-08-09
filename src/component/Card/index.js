@@ -22,7 +22,7 @@ function CardComponent (props) {
         return (
             <div className={className}>
                 <Card className={`card_component ${style}`}>
-                    <CardImg className={classNameImg} onError={() => setError(true)} src={imageSrc}/>
+                    <CardImg className={classNameImg} onError={() => setError(true)} src={imageSrc || false}/>
                     <CardTitle className="mt-3">
                         <a href={linkTitle}>{title}</a>
                     </CardTitle>
