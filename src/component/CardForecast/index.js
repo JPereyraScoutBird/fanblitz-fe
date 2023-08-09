@@ -20,7 +20,7 @@ function CardForecastComponent (props) {
 
     if (error != true) {
         return (
-            <div className={className} style={{backgroundImage: `url(${imageSrc})`, position: "relative", backgroundPosition: "top center", backgroundSize: "cover"}}>
+            <div className={error ? 'error' : className} style={{backgroundImage: `url(${imageSrc})`, position: "relative", backgroundPosition: "top center", backgroundSize: "cover"}}>
                 <div className="bg-overlay" style={{}}></div>
                 <Card className={`card_component_forecast ${style}`}>
                     <CardImg className={classNameImg} onError={() => setError(true)}/>
