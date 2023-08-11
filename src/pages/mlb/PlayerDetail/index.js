@@ -106,8 +106,9 @@ function Player(route) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
-            setNewsData(response.data.articles)
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${playerDetail['full_name']}`);
+            // const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
+            setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
         }
@@ -178,28 +179,33 @@ function Player(route) {
             <h3>Stats</h3>
             {renderTable(playerDetail.position, playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          <section id="charts">
-            <h3>Charts</h3>
+          {/* <section id="charts"> */}
+            {/* <h3>Charts</h3> */}
             {/* {playerDetail ? <Line height="70vh" options={playerDetail.summary} data={playerDetail.summary} /> : {}}; */}
-          </section>
-          <section id="news">
-            <h3>News</h3>
-            <Row>
-              {
-                newsData.map(article => (
-                  <Col xs={3}>
-                    <CardComponent 
-                      style="card-news"
-                      title={article.title}
-                      imageSrc={article.urlToImage}
-                      linkTitle={article.url}
-                      footer={getDateString(article.publishedAt)}
-                    />
-                  </Col>
-                ))
-              }
-          </Row>
-          </section>
+          {/* </section> */}
+          {
+            newsData.length ? 
+            <section id="news">
+                <h3>News</h3>
+                <Row>
+                  {
+                    newsData.map(article => (
+                      // <Col xs={3}>
+                        <CardComponent 
+                          className={'col-12 col-md-3'}
+                          style="card-news"
+                          title={article.title}
+                          imageSrc={article.urlToImage || "https://media.istockphoto.com/id/482805043/photo/baseball-in-the-infield.jpg?s=612x612&w=0&k=20&c=I9ubYdLnf7heRWh7V8I0Zxo5s1OEBGMBgsj6Sg4b9"}
+                          linkTitle={article.url}
+                          footer={getDateString(article.publishedAt)}
+                        />
+                      // </Col>
+                    ))
+                  }
+              </Row>
+            </section>
+          : null
+          }
         </div>    
     );
     }

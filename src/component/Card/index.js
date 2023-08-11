@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardBody, CardFooter, CardImg, CardTitle } from "reactstrap";
 import './style.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,11 +18,11 @@ function CardComponent (props) {
         classNameImg
     } = props
 
-    if (error != true) {
+    if (error != true && imageSrc) {
         return (
             <div className={className}>
                 <Card className={`card_component ${style}`}>
-                    <CardImg className={classNameImg} onError={() => setError(true)} src={imageSrc}/>
+                    <CardImg className={error ? "error" : classNameImg} onError={() => setError(true)} src={imageSrc || false}/>
                     <CardTitle className="mt-3">
                         <a href={linkTitle}>{title}</a>
                     </CardTitle>

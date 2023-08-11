@@ -77,8 +77,10 @@ function PlayerTennis(route) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`${getNewsSpecificPlayer(playerDetail['name'])}&apikey=${constant.API}`);
-            setNewsData(response.data.articles)
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis&subject=${playerDetail['name']}`);
+
+            // await axios.get(`${getNewsSpecificPlayer(playerDetail['name'])}&apikey=${constant.API}`);
+            setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
         }
@@ -110,20 +112,21 @@ function PlayerTennis(route) {
                   <div style={{ border: `5px solid ${constant.team_detail['DEFAULT'].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.logo} onError={() => setImageShow(true)}/>
                   </div>
-                  <div>
-                      <h2>{playerDetail['name']}</h2>
+                  <div className='d-flex'>
                       <div>
+                        <h2>{playerDetail['name']}</h2>
                         <div>
-                          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
-                          <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
-                        </div>
-                        <div>
+                          <div>
+                            <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
+                            <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{getDateString(playerDetail.birth_date)}</p>
+                          </div>
+                          </div>
+                      </div>
+                      <div style={{marginLeft: '4rem'}}>
                         <h3>Rank</h3>
                         {renderRank(playerDetail)}
                         </div>
                       </div>
-                      
-                  </div>
               </div>
               <br></br>
           </div>
@@ -139,24 +142,29 @@ function PlayerTennis(route) {
             <h3>Stats</h3>
             {renderTable(playerDetail, constant.team_detail['DEFAULT'].teamColoursHex[0])}
           </section>
-          <section id="news">
-            <h3>News</h3>
-            <Row>
-              {
-                newsData.map(article => (
-                  <Col xs={3}>
-                    <CardComponent 
-                      style="card-news"
-                      title={article.title}
-                      imageSrc={article.urlToImage}
-                      linkTitle={article.url}
-                      footer={getDateString(article.publishedAt)}
-                    />
-                  </Col>
-                ))
-              }
-          </Row>
-          </section>
+          {
+            newsData.length ?
+            <section id="news">
+              <h3>News</h3>
+              <Row>
+                {
+                  newsData.map(article => (
+                    <Col xs={3}>
+                      <CardComponent 
+                        style="card-news"
+                        title={article.title}
+                        imageSrc={article.urlToImage}
+                        linkTitle={article.url}
+                        footer={getDateString(article.publishedAt)}
+                      />
+                    </Col>
+                  ))
+                }
+            </Row>
+            </section>
+            : null
+          }
+
         </div>    
     );
     }

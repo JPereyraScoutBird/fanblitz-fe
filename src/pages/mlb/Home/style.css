@@ -19,3 +19,8 @@
     justify-content: right;
     width: 2rem;
 }
+
+#home .card-title {
+    text-align: left;
+    /* padding: 2rem */
+}

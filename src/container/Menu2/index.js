@@ -32,7 +32,7 @@ function SubMenu(props) {
       //   isActive ? "active" : isPending ? "pending" : ""
       // }
       href={`${path}`}
-      style={{color: "#fff", fontWeight: 'bold', fontSize: '1.2rem'}}
+      style={{color: "#212529", fontWeight: 'bold', fontSize: '1.2rem'}}
       color={color}
     >
       {text}
@@ -41,9 +41,14 @@ function SubMenu(props) {
 
   return (
     <div>
-      <Navbar id="secondary_navbar" style={{backgroundImage: `linear-gradient(90deg, ${color} 0%, ${backgroundColor} 50%)` }}  expand="md" className='d-flex justify-content-end'>
+      <Navbar id="secondary_navbar" style={{backgroundImage: "#fff" }}  expand="md" className='d-flex justify-content-end'>
         <div className='container d-flex justify-content-end'>
-        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}><div className='d-flex align-items-center'><img src={logo} height="50px" /><p className='nav-title'>{(wins && losses) ? `W ${wins} L ${losses}` : null}</p></div></NavbarBrand>
+        <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}>
+          <div className='d-flex align-items-center'>
+            <img src={logo} height="50px" />
+              <p className='nav-title'>{(wins && losses) ? `W ${wins} L ${losses}` : null}</p>
+          </div>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>

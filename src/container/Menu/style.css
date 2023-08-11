@@ -9,6 +9,10 @@
     font-weight: bold;
   }
 
+  #primary_navbar .navbar-toggler {
+    background-color: #ccc;
+  }
+
   #primary_navbar .pointer:hover {
     cursor: pointer;
   }
