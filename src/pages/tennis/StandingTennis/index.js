@@ -13,8 +13,8 @@ function StandingTennis() {
   const dispatch = useDispatch();
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState(undefined);
-  const [gameATP, setATPData] = useState(undefined);
-  const [gameWTA, setWATData] = useState(undefined);
+  const [gameATP, setATPData] = useState([]);
+  const [gameWTA, setWATData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0)
 
   const fetchData = async () => {
@@ -110,10 +110,11 @@ function StandingTennis() {
           <h2>Tennis Standing</h2>
           <br></br>
           <h3>ATP</h3>
-          {gameATP && gameATP.length > 0 ? <CustomTable pagination={true} range={10} header={header} data={gameATP} loading={gameATP.length == 0}/> : <>No Standing Today</>}
+          <CustomTable pagination={true} range={10} header={header} data={gameATP} loading={gameATP.length == 0}/>
           <br></br>
           <h3>WTA</h3>
-          {gameWTA && gameWTA.length > 0 ? <CustomTable pagination={true} range={10} header={header} data={gameWTA} loading={gameWTA.length == 0}/> : <>No Standing Today</>}
+          <CustomTable pagination={true} range={10} header={header} data={gameWTA} loading={gameWTA.length == 0}/>
+          {/* {gameWTA && gameWTA.length > 0 ? <CustomTable pagination={true} range={10} header={header} data={gameWTA} loading={gameWTA.length == 0}/> : <>No Standing Today</>} */}
         </div>
       </Container>    
     </>    

@@ -5,19 +5,22 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomTable from '../../../component/Table';
-import { getDate, getDate2, getTodayItems } from "../../../utils";
+import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
 import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
 import constant from "../PlayerDetail/constant";
+import DatePagination from "../../../component/DatePagination";
+import moment from 'moment'
 
 function HomeTennis() {
   const dispatch = useDispatch();
-  // const gameDataStore = useSelector((state) => state.gameData.value);
-  const [gameData, setGameData] = useState(undefined);
+  const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0)
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+
 
   const fetchData = async () => {
     // if (gameDataStore.length == 0) {
@@ -129,7 +132,10 @@ function HomeTennis() {
       <Container>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>Tennis Game Schedule</h2>
-          {gameData && gameData.length > 0 ? <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => getTodayItems(x.date_z))} loading={gameData.length == 0}/> : <>No Game Today</>}
+          <div className="mb-4">
+            <DatePagination date={date} onClick={(date) => setDate(date)}/>
+          </div>
+          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/>
         </div>
       </Container>    
     </>    
