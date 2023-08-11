@@ -73,6 +73,14 @@ const router = createBrowserRouter([
     },
   },
   {
+    path: `/mlb${PATH_LIST.GAME_DETAIL}/:gameId`,
+    element: <Pages.mlb.GamePlays/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.tennis.Player/>,
     errorElement: <ErrorPage />,

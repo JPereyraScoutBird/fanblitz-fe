@@ -16,17 +16,29 @@ import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
 import uuid from 'react-uuid';
-  // Declare a new state variable with the "useState" Hook
+// <<<<<<< dev
+import { useNavigate } from "react-router-dom";
+// // .toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})
+// =======
+//   // Declare a new state variable with the "useState" Hook
 
 
+// >>>>>>> main
 function Home() {
   const dispatch = useDispatch();
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+// <<<<<<< dev
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 620;
+// =======
+//   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+//   const [width, setWidth] = useState(window.innerWidth);
+//   const breakpoint = 620;
+// >>>>>>> main
 
   const fetchData = async () => {
     // if (gameDataStore.length == 0) {
@@ -34,8 +46,8 @@ function Home() {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
         );
         const jsonObject = JSON.parse(response.data.body)
-        // console.log(jsonObject)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
+        console.log(response_formated)
         setGameData(response_formated)
         // dispatch(setValue(response_formated))
       } catch (error) {
@@ -52,6 +64,11 @@ function Home() {
     return () => clearInterval(interval)
   }, []);
     
+// <<<<<<< dev
+  const onClick = (user) => {
+    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${user.id}`);
+  }
+// =======
   React.useEffect(() => {
     /* Inside of a "useEffect" hook add an event listener that updates
        the "width" state variable when the window size changes */
@@ -64,6 +81,7 @@ function Home() {
   // console.log("Game stored:", gameData)
 
   // }, []);
+// >>>>>>> main
 
   const header = {
     "date_z": "Date",
@@ -168,7 +186,7 @@ function Home() {
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
-          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/>
+          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0} onClick={(user) => onClick(user)}/>
         </div>
       </Container>    
     </div>    
