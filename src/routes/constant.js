@@ -10,7 +10,8 @@ const PATH_LIST = {
     STATS: "/stats",
     TUTORIAL: "/tutorial",
     FORECAST_DETAIL: "/forecast",
-    STANDING_TENNIS: "/standing"
+    STANDING_TENNIS: "/standing",
+    GAME_DETAIL: "/playbyplay"
 }
 
 export default PATH_LIST

@@ -44,6 +44,9 @@
 #blog .nav-custom {
     position: fixed;
     right: 0;
+    /* top: 300px;
+    bottom: 400px;
+    z-index: 999; */
 }
 
 #blog p {

@@ -34,7 +34,7 @@ function Chatbot(args) {
     // setMessageList(newMessage); 
     setPrompt('')
     axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
-      setMessageList([...newMessage, res.data.response])
+    setMessageList([...newMessage, res.data.response])
     }).catch(err => {
       console.log("Error")
     })
