@@ -21,47 +21,13 @@ function CardProfileComponent (props) {
         classNameImg
     } = props
 
-    useEffect(() => {
-        fetch(imageSrc, {method: 'GET'}).then((response) => {
-            console.log("response", response)
-        }).catch((error) => {
-            console.log("Error: ", error)
-        })
-    })
-    // useEffect(() => {
-    //     // const img = new Image();
-        
-    //     // img.onload = () => {
-    //     //     const finalURL = img.src;
-    //     //     setFinalImageURL(finalURL);
-    //     // };
-        
-    //     // img.src = imageSrc;
-    //     fetch(imageSrc, { method: 'GET' })
-    //     .then(response => {
-    //         console.log("img", response)
-    //         const finalURL = response.url;
-            
-    //         setFinalImageURL(finalURL)
-    //         // fetch(finalURL, { method: 'GET' })
-    //         // .then(response2 => {
-    //         //     console.log("response2:", response2)
-    //         //     setFinalImageURL(response2);
-    //         // }).catch(error => {
-    //         //     console.error('Error:', error);
-    //         // });
-    //     })
-    //     .catch(error => {
-    //         console.error('Error:', error);
-    //     });
-    // }, [imageSrc]);
 
     // if (error != true) {
         return (
             <Link to={link} className={`${className} card-link shadow mb-5 p-2 bg-white rounded`}>
                 <Card className={`card_profile_component ${style}`}>
                     <div>
-                        <CardImg className={classNameImg} onError={() => setError(true)} src="https://img.mlbstatic.com/mlb-photos/image/upload/w_213,d_people:generic:headshot:silo:current.png,q_auto:best,f_auto/v1/people/665489/headshot/67/current"/>
+                        <CardImg className={classNameImg} onError={() => setError(true)} src={error ? Image.PROFILE : imageSrc}/>
                     </div>
                     <div className="w-100">
                         <CardTitle>
