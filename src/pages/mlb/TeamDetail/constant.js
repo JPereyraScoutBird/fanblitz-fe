@@ -119,7 +119,7 @@ const team_detail = {
         ]
     },
     'ATL': {
-        "img": null,
+        "img": "https://www.mlbstatic.com/team-logos/144.svg",
         "teamColoursHex": [],
         "socialMediaAccounts": [
             {
@@ -241,7 +241,7 @@ const team_detail = {
                 "value": "astros"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/117.svg"
     },
     "KC": {
         "teamColoursHex": [
@@ -308,7 +308,7 @@ const team_detail = {
                 "value": "Brewers"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/158.svg"
     },
     "MIN": {
         "teamColoursHex": [],
@@ -318,7 +318,7 @@ const team_detail = {
                 "value": "Twins"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/142.svg"
     },
     "NYM": {
         "teamColoursHex": [
@@ -355,7 +355,7 @@ const team_detail = {
                 "value": "Athletics"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/133.svg"
     },
     "PHI": {
         "teamColoursHex": [
