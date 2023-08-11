@@ -33,6 +33,11 @@ const getTime = (dateTimeStamp) => {
     return date.toLocaleTimeString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 }
 
+const removechars = (word) => {
+    let newWord = word.replace("/", "-");
+    return newWord
+}
+
 const getDate2 = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
     // console.log("date: ", date)
@@ -59,5 +64,6 @@ export {
     getTime,
     getTodayItems,
     filterByDate,
-    sortListArticles
+    sortListArticles,
+    removechars
 }

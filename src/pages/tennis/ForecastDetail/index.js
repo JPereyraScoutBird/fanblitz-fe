@@ -83,7 +83,7 @@ function ForecastDetailTennis() {
  
   return (
     <div id="forecast_detail">
-      {forecastData != {} && forecastData.hasOwnProperty('home_player')  ? renderPage() : 'Forecast Detail'}
+      {forecastData != {} && forecastData != undefined && forecastData.hasOwnProperty('home_player')  ? renderPage() : 'Loading Forecast Detail...'}
     </div>
   );
 }
