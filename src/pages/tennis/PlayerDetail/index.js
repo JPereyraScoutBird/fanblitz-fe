@@ -170,7 +170,7 @@ function PlayerTennis(route) {
     }
 
     return (
-      <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail['DEFAULT'].img: ""})`}}>
+      <div id="template" className="player_detail_container">
         <Menu sport_default={"tennis"}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail['DEFAULT'].teamColoursHex[0]} color={constant.team_detail['DEFAULT'].teamColoursHex[1]} logo={constant.team_detail['DEFAULT'].img}/> : null}
         <Container className="template">
