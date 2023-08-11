@@ -434,7 +434,7 @@ const team_detail = {
                 "value": "Cardinals"
             }
         ],
-        "img": null
+        "img": "https://www.mlbstatic.com/team-logos/138.svg"
     },
     "TB": {
         "teamColoursHex": [
