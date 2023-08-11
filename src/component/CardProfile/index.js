@@ -21,6 +21,13 @@ function CardProfileComponent (props) {
         classNameImg
     } = props
 
+    useEffect(() => {
+        fetch(imageSrc, {method: 'GET'}).then((response) => {
+            console.log("response", response)
+        }).catch((error) => {
+            console.log("Error: ", error)
+        })
+    })
     // useEffect(() => {
     //     // const img = new Image();
         
