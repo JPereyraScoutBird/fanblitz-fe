@@ -293,7 +293,7 @@ function TeamDetail(route) {
     console.log(teamDetail)
 
     return (
-      <div id="template" className="player_detail_container" style={{backgroundImage: `url(${teamDetail ? constant.team_detail[teamDetail.mysportfeeds_abbreviation].img: ""})`}}>
+      <div id="template" className="player_detail_container">
       {/* <div id="template"> */}
         <Menu sport_default={"mlb"}/>
         { teamDetail ? <SubMenu home={`/mlb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}

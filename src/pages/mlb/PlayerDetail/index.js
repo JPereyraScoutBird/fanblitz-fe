@@ -211,7 +211,7 @@ function Player(route) {
     }
 
     return (
-      <div id="template" className="player_detail_container" style={{backgroundImage: `url(${playerDetail ? constant.team_detail[playerDetail.mysportfeeds_abbreviation].img: ""})`}}>
+      <div id="template" className="player_detail_container">
          <Menu sport_default={"mlb"}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
