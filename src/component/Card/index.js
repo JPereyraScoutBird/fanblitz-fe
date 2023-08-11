@@ -7,8 +7,6 @@ import { faCalendar, faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 function CardComponent (props) {
     const [error, setError] = useState(false)
 
-    const [finalImageURL, setFinalImageURL] = useState(null);
-
     const {
         imageSrc,
         title,
@@ -20,31 +18,11 @@ function CardComponent (props) {
         classNameImg
     } = props
 
-
-    useEffect(() => {
-        // const img = new Image();
-        
-        // img.onload = () => {
-        //     const finalURL = img.src;
-        //     setFinalImageURL(finalURL);
-        // };
-        
-        // img.src = imageSrc;
-        fetch(imageSrc, { method: 'HEAD' })
-        .then(response => {
-            const finalURL = response.url;
-            setFinalImageURL(finalURL);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }, [imageSrc]);
-
     if (error != true && imageSrc) {
         return (
             <div className={className}>
                 <Card className={`card_component ${style}`}>
-                    <CardImg className={error ? "error" : classNameImg} onError={() => setError(true)} src={finalImageURL || false}/>
+                    <CardImg className={error ? "error" : classNameImg} onError={() => setError(true)} src={imageSrc || false}/>
                     <CardTitle className="mt-3">
                         <a href={linkTitle}>{title}</a>
                     </CardTitle>
