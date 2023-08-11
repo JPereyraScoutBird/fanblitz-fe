@@ -3,16 +3,19 @@ import Card from "../../../component/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './style.css';
-import { getDate, getDate2, getDateString, getTime } from "../../../utils";
+import { filterByDate, getDate, getDate2, getDateString, getTime } from "../../../utils";
 import Image from '../../../img';
 import PATH_LIST from "../../../routes/constant";
 import constant from "../PlayerDetail/constant";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-regular-svg-icons";
+import DatePagination from "../../../component/DatePagination";
+import moment from 'moment'
 
 function ForecastsTennis() {
 
   const [forecastData, setForecastData] = useState([])
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
 
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
@@ -41,9 +44,13 @@ function ForecastsTennis() {
       </div>
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
         <section >
+          <div className="mb-4">
+            <DatePagination date={date} onClick={(date) => setDate(date)}/>
+          </div>
           <Row>
               {
-                forecastData.length ? forecastData.map(forecast => (
+                // forecastData.length ? forecastData.map(forecast => (
+                  forecastData.length ? forecastData.filter(x => filterByDate(getDate(x.date_z), date.toDate())).map(forecast => (
                   <Col xs={12} md={6}>
                     <Card 
                       style="card-news"
