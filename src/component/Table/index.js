@@ -100,7 +100,7 @@ function CustomTable(props) {
       }
     )
   );
-
+  
   const { items, requestSort, sortConfig } = useSortableData(data_cp);
   const [itemRange, setItemRange] = useState(range);
   const [page, setPage] = useState(1);

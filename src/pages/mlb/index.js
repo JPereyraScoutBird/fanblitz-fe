@@ -8,6 +8,7 @@ import TeamDetail  from './TeamDetail';
 import Tutorial  from './Tutorial';
 import Player from './PlayerDetail';
 import ForecastDetail from './ForecastDetail';
+import GamePlays from './Game';
 
 export default {
     Home,
@@ -19,5 +20,6 @@ export default {
     Tutorial,
     Players,
     ForecastDetail,
-    TeamDetail
+    TeamDetail,
+    GamePlays
 }
