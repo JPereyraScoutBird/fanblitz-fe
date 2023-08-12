@@ -6,6 +6,13 @@ const getDate = (dateTimeStamp) => {
     return date.toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 }
 
+const getPaid = (value) => {
+    if (value == true){
+        return "Yes"
+    }
+    return "No"
+}
+
 const getTodayItems = (dateTimeStamp) => {
     const today = new Date();
     today.setHours(0,0,0,0);
@@ -65,5 +72,6 @@ export {
     getTodayItems,
     filterByDate,
     sortListArticles,
-    removechars
+    removechars,
+    getPaid
 }
