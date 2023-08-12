@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomTable from '../../../component/Table';
-import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
+import { filterByDate, getDate, getDate2, getTodayItems, removechars } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -76,7 +76,7 @@ function HomeTennis() {
             </p>
           </div>
         }
-        footer={<Link to={`${PATH_LIST.FORECAST_DETAIL}/${game.home_player}-${game.away_player}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}-${removechars(game.away_player)}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
