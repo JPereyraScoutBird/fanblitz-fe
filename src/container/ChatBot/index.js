@@ -19,11 +19,27 @@ const renderMessages = (message) => {
   )
 }
 
-function Chatbot(args) {
+function Chatbot(props) {
 
+  const {player = '', pre_prompt = ''} = props
   const [prompt, setPrompt] = useState('')
   const [messageList, setMessageList] = useState([{"role": "assistant", "content": "How can I help you?"}])
 
+  useEffect(() => {
+    if(player != '') {
+      const newMessage = [...messageList, ({
+        "role": "user",
+        "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
+      })]
+      setMessageList(newMessage); 
+      setPrompt(``)
+      axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
+      setMessageList([...newMessage, res.data.response])
+      }).catch(err => {
+        console.log("Error")
+      })
+    }
+  }, [])
 
   const onSend = (e) => {
     e.preventDefault()

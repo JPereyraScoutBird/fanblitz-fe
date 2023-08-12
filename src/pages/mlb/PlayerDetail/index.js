@@ -5,12 +5,13 @@ import { useLoaderData } from "react-router-dom";
 import constant from './constant';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Modal, Row } from 'reactstrap';
 import { getDateString } from '../../../utils';
 import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
 import './style.css'
 import SubMenu from '../../../container/Menu2';
+import Chatbot from '../../../container/ChatBot';
 
 export async function loader({ params }) {
     return params;
@@ -87,6 +88,8 @@ function Player(route) {
     const [newsData, setNewsData] = useState([])
     const [bio, setBio] = useState({})
     const [imageShow, setImageShow] = useState(false)
+    const [modal, setModal] = useState(true);
+    const toggle2 = () => setModal(!modal);
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -94,7 +97,6 @@ function Player(route) {
                 const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/stats/players?id=${playerId}`);
                 const jsonObject = JSON.parse(response.data.body)
                 setplayerDetail(jsonObject)
-                
             } catch (error) {
                 console.error('Error getting data:', error);
             }
@@ -109,6 +111,7 @@ function Player(route) {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${playerDetail['full_name']}`);
             // const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
             setNewsData(response.data.content)
+            // setModal(true)
         } catch (error) {
           console.error('Error getting data:', error);
         }
@@ -116,22 +119,23 @@ function Player(route) {
       fetchData3()
     }, [playerDetail])
 
-    useEffect(() => {
+    // useEffect(() => {
       
-      const fetchData4 = async () => {
-        try {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${playerDetail.full_name}&team=${playerDetail.mysportfeeds_abbreviation}&season=${playerDetail.summary.map(x => x.season).sort().slice(-1)}`);
-            setBio(response.data.body)
-        } catch (error) {
-          console.error('Error getting data:', error);
-        }
-      }
-      // fetchData4()
-    }, [playerDetail])
+    //   const fetchData4 = async () => {
+    //     try {
+    //         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${playerDetail.full_name}&team=${playerDetail.mysportfeeds_abbreviation}&season=${playerDetail.summary.map(x => x.season).sort().slice(-1)}`);
+    //         setBio(response.data.body)
+    //     } catch (error) {
+    //       console.error('Error getting data:', error);
+    //     }
+    //   }
+    //   // fetchData4()
+    // }, [playerDetail])
 
     
 
     const renderPage = () => {
+      console.log("player: ", playerDetail)
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
@@ -206,6 +210,9 @@ function Player(route) {
             </section>
           : null
           }
+          <Modal isOpen={modal} toggle={toggle2}>
+            <Chatbot player={playerDetail['full_name']} />
+          </Modal>
         </div>    
     );
     }
@@ -216,7 +223,7 @@ function Player(route) {
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
           <div id="detail">
-            {playerDetail ? renderPage() : <></> }
+            {playerDetail && playerDetail.hasOwnProperty('full_name') ? renderPage() : <></> }
           </div>
         </Container>
         <Footer />
