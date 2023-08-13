@@ -14,13 +14,14 @@ export async function loader({ params }) {
   return params;
 }
 
-export default function RenderPage() {
+export default function RenderPage(props) {
   const navigation = useNavigation();
   const { userId } = useLoaderData();
+  const {user, signOut} = props;
 
   return (
     <div id="template">
-      <Menu3/>
+      <Menu3 user={user} signOut={signOut}/>
       <Container
         
         // fluid

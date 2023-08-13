@@ -16,49 +16,55 @@ import {
 import RenderPage, { loader } from "./pages/Template";
 import Pages from './pages';
 import PATH_LIST from './routes/constant';
+import { Amplify } from "@aws-amplify/core";
+import awsconfig from "./aws-exports";
+import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+Amplify.configure(awsconfig);
 
 // const router = createBrowserRouter([...ROUTES[count]]);
 
-const router = createBrowserRouter([
+const router = (user, signOut) => createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.mlb.Home/>,
+    element: <Pages.mlb.Home user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `mlb/${PATH_LIST.HOME}`,
-    element: <Pages.mlb.Home/>,
+    element: <Pages.mlb.Home user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `tennis/${PATH_LIST.HOME}`,
-    element: <Pages.tennis.Home/>,
+    element: <Pages.tennis.Home user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: "/",
-    element: <RenderPage />,
+    element: <RenderPage user={user} signOut={signOut} />,
     errorElement: <ErrorPage />,
     children: ROUTES.MLB,
     loader: loader,
   },
   {
     path: "/mlb/",
-    element: <RenderPage />,
+    element: <RenderPage user={user} signOut={signOut} />,
     errorElement: <ErrorPage />,
     children: ROUTES.MLB,
     loader: loader,
   },
   {
     path: "/tennis/",
-    element: <RenderPage />,
+    element: <RenderPage user={user} signOut={signOut} />,
     errorElement: <ErrorPage />,
     children: ROUTES.TENNIS,
     loader: loader,
   },
   {
     path: `/mlb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.mlb.Player/>,
+    element: <Pages.mlb.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -66,7 +72,7 @@ const router = createBrowserRouter([
   },
   {
     path: `/mlb${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.mlb.TeamDetail/>,
+    element: <Pages.mlb.TeamDetail user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -74,7 +80,7 @@ const router = createBrowserRouter([
   },
   {
     path: `/mlb${PATH_LIST.GAME_DETAIL}/:gameId`,
-    element: <Pages.mlb.GamePlays/>,
+    element: <Pages.mlb.GamePlays user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -82,7 +88,7 @@ const router = createBrowserRouter([
   },
   {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.tennis.Player/>,
+    element: <Pages.tennis.Playe user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -91,14 +97,15 @@ const router = createBrowserRouter([
 ]);
 
 
-function App() {
+
+function App({ signOut, user }) {
   return (
     <React.StrictMode>
       <Provider store={store}>
-        <RouterProvider router={router}/>
+        <RouterProvider router={router(user, signOut)}/>
       </Provider>
     </React.StrictMode>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
