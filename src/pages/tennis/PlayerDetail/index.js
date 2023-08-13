@@ -51,7 +51,8 @@ const renderRank = (playerDetail) => {
   return <></>
   }
 
-function PlayerTennis(route) {
+function PlayerTennis(props) {
+    const {user, signOut} = props
     const location = useLocation();
     const { playerId } = useLoaderData();
     const [playerDetail, setplayerDetail] = useState(undefined)
@@ -171,7 +172,7 @@ function PlayerTennis(route) {
 
     return (
       <div id="template" className="player_detail_container">
-        <Menu sport_default={"tennis"}/>
+        <Menu sport_default={"tennis"} user={user} signOut={signOut}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail['DEFAULT'].teamColoursHex[0]} color={constant.team_detail['DEFAULT'].teamColoursHex[1]} logo={constant.team_detail['DEFAULT'].img}/> : null}
         <Container className="template">
           <div id="detail">

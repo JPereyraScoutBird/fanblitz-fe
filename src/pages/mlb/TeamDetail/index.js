@@ -121,7 +121,8 @@ const renderTable3Games = (position, data, backgroundColor="#000", color='#fff')
 
 };
 
-function TeamDetail(route) {
+function TeamDetail(props) {
+    const {user, signOut} = props
     const location = useLocation();
     const { teamId } = useLoaderData();
     const [teamDetail, setteamDetail] = useState(undefined)
@@ -295,7 +296,7 @@ function TeamDetail(route) {
     return (
       <div id="template" className="player_detail_container">
       {/* <div id="template"> */}
-        <Menu sport_default={"mlb"}/>
+        <Menu sport_default={"mlb"} user={user} signOut={signOut}/>
         { teamDetail ? <SubMenu home={`/mlb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
         <Container className="template">
           <div id="detail">

@@ -18,7 +18,8 @@ import uuid from 'react-uuid';
 
 import './style.css'
 
-function HomeTennis() {
+function HomeTennis(props) {
+  const {user, signOut} = props
   const dispatch = useDispatch();
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0)
@@ -203,7 +204,7 @@ function HomeTennis() {
 
   return (
     <div id="home">
-      <Menu sport_default={"tennis"}/>
+      <Menu sport_default={"tennis"} signOut={signOut} user={user}/>
         {
           renderCards()
         }

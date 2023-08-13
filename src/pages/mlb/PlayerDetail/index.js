@@ -80,7 +80,8 @@ const renderRank = (playerDetail) => {
   return <></>
   }
 
-function Player(route) {
+function Player(props) {
+    const {user, signOut} = props
     const location = useLocation();
     const { playerId } = useLoaderData();
     const [playerDetail, setplayerDetail] = useState(undefined)
@@ -212,7 +213,7 @@ function Player(route) {
 
     return (
       <div id="template" className="player_detail_container">
-         <Menu sport_default={"mlb"}/>
+         <Menu sport_default={"mlb"} user={user} signOut={signOut}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
           <div id="detail">

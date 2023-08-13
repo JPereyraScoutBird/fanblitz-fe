@@ -16,29 +16,19 @@ import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
 import uuid from 'react-uuid';
-// <<<<<<< dev
 import { useNavigate } from "react-router-dom";
-// // .toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})
-// =======
-//   // Declare a new state variable with the "useState" Hook
 
-
-// >>>>>>> main
-function Home() {
+function Home(props) {
   const dispatch = useDispatch();
+  const {user, signOut} = props
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-// <<<<<<< dev
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 620;
-// =======
-//   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
-//   const [width, setWidth] = useState(window.innerWidth);
-//   const breakpoint = 620;
-// >>>>>>> main
+
 
   const fetchData = async () => {
     // if (gameDataStore.length == 0) {
@@ -81,7 +71,6 @@ function Home() {
   // console.log("Game stored:", gameData)
 
   // }, []);
-// >>>>>>> main
 
   const header = {
     "date_z": "Date",
@@ -176,7 +165,7 @@ function Home() {
   
   return (
     <div id="home">
-      <Menu sport_default={"mlb"}/>
+      <Menu sport_default={"mlb"} signOut={signOut} user={user}/>
         {
           renderCards()
         }

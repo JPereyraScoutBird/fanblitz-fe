@@ -7,7 +7,8 @@ import {
 
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+// import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 import {
   setSport,
   selectSport,
@@ -25,7 +26,7 @@ import Menu from '../Menu';
 function Menu3(props) {
   const sportReducer = useSelector(selectSport);
   const dispatch = useDispatch();
-  const {sport_default = "mlb"} = props
+  const {sport_default = "mlb", user, signOut} = props
   const [sport, setSportData] = useState(sport_default);
   const navigate = useNavigate();
 
@@ -60,6 +61,11 @@ function Menu3(props) {
               Tennis
           </Button>
         </Nav>
+         <div className='d-none d-md-block '>
+            {/* <Heading level={1}>Hello {user.email}</Heading> */}
+            <Button onClick={signOut}>Sign out</Button>
+            {/* <h2>Amplify Todos</h2> */}
+          </div>
       </Navbar>
       <Menu sport={sportReducer}/>
     </div>
