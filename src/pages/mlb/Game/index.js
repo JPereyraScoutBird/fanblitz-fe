@@ -66,15 +66,16 @@ function GamePlays(route) {
             <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
             <h3>Plays</h3>
             </div>
-            {renderTablePlays(gamePlays, constant.team_detail[gameInfo.home_team_abbr].teamColoursHex[0])}
+            {renderTablePlays(gamePlays)}
           </section>
         </div>    
       );
     }
 
     return (
-      <div id="template" className="playbyplay_away" style={{backgroundImage: `url(${gamePlays ? constant.team_detail[gameInfo.away_team_abbr].img: ""})`}}>
-      <div id="template" className="playbyplay_home" style={{backgroundImage: `url(${gamePlays ? constant.team_detail[gameInfo.home_team_abbr].img: ""})`}}>
+      // <div id="template" className="playbyplay_away" style={{backgroundImage: `url(${gamePlays ? constant.team_detail[gameInfo.away_team_abbr].img: ""})`}}>
+      // <div id="template" className="playbyplay_home" style={{backgroundImage: `url(${gamePlays ? constant.team_detail[gameInfo.home_team_abbr].img: ""})`}}>
+      <div id="template">
         <Menu sport_default={"mlb"}/>
         {/* { gamePlays ? <SubMenu home={`/mlb${PATH_LIST.GAME_DETAIL}/:${gamePlays.id}}`} links={constant.links} wins={gamePlays.wins} losses={gamePlays.losses} backgroundColor={"#041e42" || constant.team_detail[gamePlays.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[gamePlays.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[gamePlays.mysportfeeds_abbreviation].img} /> : null} */}
         <Container className="template">
@@ -84,7 +85,7 @@ function GamePlays(route) {
         </Container>
         <Footer />
       </div>
-      </div>
+      // </div>
     );
 }
 

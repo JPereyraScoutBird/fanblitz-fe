@@ -33,6 +33,8 @@ function Home(props) {
   const [team, setTeam] = useState('');
   const [modal, setModal] = useState(false);
   const [modal2, setModal2] = useState(false);
+  const [prompt, setPrompt] = useState('')
+  const [pitcher, setPitcher] = useState('')
 
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
@@ -122,17 +124,41 @@ function Home(props) {
   }
   
   const onClick2 = (game) => {
-    setTeam(gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team'])
+    const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
+    setTeam(new_team)
+    setPrompt(`${new_team}' baseball team history`)
     toggle()
   }
   
   const onClick3 = (game) => {
-    setTeam(gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team'])
+    const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
+    setTeam(new_team)
+    setPrompt(`${new_team}' baseball team history`)
     toggle()
   }
+
   
   const onClick4 = (game) => {
     toggle2()
+  }
+
+  const onClick6 = (pitcher_name) => {
+    // console.log("pitcher", player_full_name)
+    setPitcher(pitcher_name['player_full_name'])
+    setPrompt(`${pitcher_name['player_full_name']} mlb baseball player short biography`)
+    toggle()
+  }
+
+  const onClick7 = (player) => {
+    setTeam(player['pitcher_team_full'])
+    setPrompt(`${player['pitcher_team_full']}' baseball team history`)
+    toggle()
+  }
+
+  const onClick8 = (player) => {
+    setTeam(player['opp_team_full'])
+    setPrompt(`${player['opp_team_full']}' baseball team history`)
+    toggle()
   }
   
   const onClick5 = (game) => {
@@ -156,7 +182,8 @@ function Home(props) {
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
-            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_et, date.toDate()))} loading={dataAux.length == 0}/>
+            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_et, date.toDate()))} loading={dataAux.length == 0} 
+            onClickList={[(game) => onClick(game), (player) => onClick6(player), (player) => onClick7(player), (player) => onClick8(player), (player) => onClick4(player)]}/>
           </div>
         )
       }
@@ -253,7 +280,7 @@ function Home(props) {
         </div> */}
       </Container>    
       <Modal isOpen={modal} toggle={toggle}>
-        <Chatbot player={team} pre_prompt={`${team}' baseball team history`} />
+        <Chatbot player={team || pitcher} pre_prompt={prompt} />
       </Modal>
       <Modal isOpen={modal2} toggle={toggle2}>
         <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
