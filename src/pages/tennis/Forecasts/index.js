@@ -56,7 +56,7 @@ function ForecastsTennis() {
                       style="card-news"
                       title={`${forecast.home_player} vs ${forecast.away_player}`}
                       // body={constant.team_detail[forecast.home_team_abb].stadium}
-                      imageSrc={Image.TENNIS.Logo1}
+                      imageSrc={Image.TENNIS.randomPhoto()}
                       linkTitle={`/tennis${PATH_LIST.FORECAST_DETAIL}/${forecast.home_player}-${forecast.away_player}/${getDate2(forecast.date_z)}`}
                       footer={renderFooter(forecast.date_z)}
                     />
