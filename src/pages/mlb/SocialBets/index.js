@@ -108,7 +108,6 @@ function SocialBets() {
     console.log("sending body", body)
     try {
       const response_submit = await axios.post('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets', body);
-      console.log(response_submit)
       setAmount('')
       setBet('')
       setGameId('')
