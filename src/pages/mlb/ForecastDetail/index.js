@@ -146,7 +146,7 @@ function ForecastDetail() {
  
   return (
     <div id="forecast_detail">
-      {forecastData != {} && forecastData.hasOwnProperty('home_team')  ? renderPage() : 'Forecast Detail'}
+      {forecastData != {} && forecastData != undefined && forecastData.hasOwnProperty('home_team')  ? renderPage() : 'Forecast Detail'}
     </div>
   );
 }

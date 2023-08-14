@@ -19,11 +19,13 @@ import uuid from 'react-uuid';
 import { useNavigate } from "react-router-dom";
 import Chatbot from "../../../container/ChatBot";
 
+
 function Home(props) {
   const dispatch = useDispatch();
   const {user, signOut} = props
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
+  const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
@@ -35,22 +37,25 @@ function Home(props) {
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
   const breakpoint = 620;
-
+  const [showTable, setShowTable] = useState("home");
 
   const fetchData = async () => {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
         );
+        const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/pitchers/strikeout');
+        const jsonObjectModel = JSON.parse(responseModel.data.body)
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
         console.log(response_formated)
         setGameData(response_formated)
-        // dispatch(setValue(response_formated))
+        
+        const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
+        console.log("fetchDataStrikeout", response_formatedModel)
+        setPitcherStrikeout(response_formatedModel)
       } catch (error) {
         console.error('Error getting data:', error);
       }
-
-
   };
 
   useEffect(() => {
@@ -59,28 +64,6 @@ function Home(props) {
     }, 5000)
     return () => clearInterval(interval)
   }, []);
-    
-  const onClick = (game) => {
-    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${game.id}`);
-  }
-
-  const onClick2 = (game) => {
-    setTeam(gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team'])
-    toggle()
-  }
-
-  const onClick3 = (game) => {
-    setTeam(gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team'])
-    toggle()
-  }
-
-  const onClick4 = (game) => {
-    toggle2()
-  }
-
-  const onClick5 = (game) => {
-    navigate(`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
-  }
 
 // =======
   React.useEffect(() => {
@@ -92,16 +75,6 @@ function Home(props) {
        effect to only run when the component mounts, and not each time it updates.
        We only want the listener to be added once */
   }, []);
-
-
-  const header = {
-    "date_z": "Date",
-    "home_team_abbr": "Home",
-    "away_team_abbr": "Away",
-    "home_spreads_draftkings": "Vegas",
-    "margin_spread_fanblitz": "Fanblitz",
-    "difference": "Difference"
-  };
 
   const renderForecastComponent = (game) => (
     <CardForecastComponent
@@ -136,6 +109,79 @@ function Home(props) {
     }
   }
 
+  const handleButtonHome = () => {
+    setShowTable("home");
+  };
+
+  const handleButtonPitchingStrikeout = () => {
+    setShowTable("pitcher_strikeout");
+  };
+
+  const onClick = (game) => {
+    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${game.id}`);
+  }
+  
+  const onClick2 = (game) => {
+    setTeam(gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team'])
+    toggle()
+  }
+  
+  const onClick3 = (game) => {
+    setTeam(gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team'])
+    toggle()
+  }
+  
+  const onClick4 = (game) => {
+    toggle2()
+  }
+  
+  const onClick5 = (game) => {
+    navigate(`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
+  }
+  
+  const renderTableStrikeoutModel = (table, data, date, backgroundColor = "#000", color='#fff') => {
+      if(table == 'pitcher_strikeout') {
+        const dataAux = data["strikeout"]
+        const header = {
+          "date_et": "Time",
+          "player_full_name": "Name",
+          "pitcher_team": "Player Team",
+          "opp_team": "Opponent",
+          "pitcher_strikeouts": "Predict SO"
+        };
+        return (
+          <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
+            <h2>AI-POWERED MLB FORECASTS PITCHER STRIKEOUT</h2>
+            <br></br>
+            <div className="mb-4">
+              <DatePagination date={date} onClick={(date) => setDate(date)}/>
+            </div>
+            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_et, date.toDate()))} loading={dataAux.length == 0}/>
+          </div>
+        )
+      }
+      else {
+        const dataAux = data["home"]
+        const header = {
+          "date_z": "Date",
+          "home_team_abbr": "Home",
+          "away_team_abbr": "Away",
+          "home_spreads_draftkings": "Vegas",
+          "margin_spread_fanblitz": "Fanblitz",
+          "difference": "Difference"
+        };
+        return (
+          <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
+            <h2>MLB Game Schedule</h2>
+            <div className="mb-4">
+              <DatePagination date={date} onClick={(date) => setDate(date)}/>
+            </div>
+            <CustomTable noRange={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
+          </div>
+        )
+      }
+  };
+  
   const renderCards = () => {
     // console.log(gameData)
     if (gameData != undefined && gameData.length > 0) {
@@ -188,14 +234,23 @@ function Home(props) {
         {
           renderCards()
         }
+        <br></br>
       <Container>
-        <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
+        <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
+          <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000", fontWeight: `${showTable == "home" ? "bold" : "normal"}`}} onClick={handleButtonHome} >Spread Model</button>
+          <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "pitcher_strikeout" ? "bold" : "normal"}`}} onClick={handleButtonPitchingStrikeout}>Strikeout Model</button>
+        </div>
+      </Container>
+      
+      <Container>
+        {renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)}
+        {/* <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>MLB Game Schedule</h2>
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
           <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
-        </div>
+        </div> */}
       </Container>    
       <Modal isOpen={modal} toggle={toggle}>
         <Chatbot player={team} pre_prompt={`${team}' baseball team history`} />
