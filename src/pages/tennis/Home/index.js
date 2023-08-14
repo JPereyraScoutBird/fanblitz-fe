@@ -83,7 +83,7 @@ function HomeTennis(props) {
         key={uuid()} 
         className="col-12 col-md-6"
         title={`${game.home_player} vs. ${game.away_player}`}
-        imageSrc={IMAGE.TENNIS[img]}
+        imageSrc={IMAGE.TENNIS.randomPhoto()}
         body={
           <div>
             {game.tournament_name}.<br></br>
