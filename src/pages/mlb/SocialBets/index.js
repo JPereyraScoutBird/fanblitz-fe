@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import constant from './constant';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
-import { Button, Col, Container, Form, FormGroup, Input, Label, Modal, ModalBody, ModalHeader, Row } from 'reactstrap';
+import { Button, Col, Container, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader, Row } from 'reactstrap';
 import { getDate2, getDateString, getTime, getTodayItems } from '../../../utils';
 import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
@@ -16,44 +16,47 @@ import PATH_LIST from "../../../routes/constant";
 import CardProfileComponent from '../../../component/CardProfile';
 import CardTeamComponent from '../../../component/CardTeam';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComments } from "@fortawesome/free-regular-svg-icons";
 import Image from '../../../img';
 import { useOutletContext } from "react-router-dom";
+import { faBaseball } from "@fortawesome/free-solid-svg-icons";
 
 function SocialBets() {
-  const [bets, setBets] = useState([])
-  const [betsFriend, setBetsFriend] = useState([])
+  const [bets, setBets] = useState(undefined)
+  const [betsFriend, setBetsFriend] = useState(undefined)
   const [user] = useOutletContext();
 
   const [modal, setModal] = useState(false);
+  const [modal2, setModal2] = useState(false);
   const [game, setGameData] = useState([]);
   const [gameId, setGameId] = useState('');
   const [amount, setAmount] = useState('');
   const [bet, setBet] = useState('');
   const toggle = () => setModal(!modal);
+  const toggle2 = () => setModal2(!modal2);
 
   console.log("User: ", user)
 
+  const fetchData2 = async () => {
+    try {
+        const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets?user_id=${user.username}`);
+        let jsonObject = response.data.body
+        let jsonObjectFriend = response.data.data_friend
+        jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
+        jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
+
+        jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
+        jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
+
+        // console.log(jsonObject)
+        setBets(jsonObject)
+        setBetsFriend(jsonObjectFriend)
+        
+    } catch (error) {
+        console.error('Error getting data:', error);
+    }
+};
+
   useEffect(() => {
-    const fetchData2 = async () => {
-        try {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets?user_id=${user.username}`);
-            let jsonObject = response.data.body
-            let jsonObjectFriend = response.data.data_friend
-            jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
-            jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
-
-            jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
-            jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
-
-            // console.log(jsonObject)
-            setBets(jsonObject)
-            setBetsFriend(jsonObjectFriend)
-            
-        } catch (error) {
-            console.error('Error getting data:', error);
-        }
-    };
 
     fetchData2()
   }, []);
@@ -73,47 +76,45 @@ function SocialBets() {
         console.error('Error getting data:', error);
       }
   };
+  
 
   useEffect(() => {
+    fetchData();
     const interval = setInterval(() => {
       fetchData();
-    }, 5000)
+    }, 30000)
     return () => clearInterval(interval)
   }, []);
 
-  console.log('game: ', game.filter(x=> getTodayItems(x.date_z)))
+  console.log("email: ", user.attributes.email)
 
   const submitBet = async (e) => {
     e.preventDefault()
     const body = {
     "user_id": user.username,
+    "username": user.attributes.email,
+    "email": user.attributes.email,
     "sport_id": 1,
     "game_id": gameId,
     "bet": bet,
     "bet_type": 'spread',
     "amount": amount,
     "currency": 'dollar',
-    // "result": None,
-    // "paid": None,
     "created_date": Date.now(),
-    "status": true
+    "status": true,
+    "action": "create",
     }
 
-    console.log(body)
+    console.log("sending body", body)
     try {
-      const response_submit = await axios.post('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets', { headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'JWT fefege...'
-        },body });
+      const response_submit = await axios.post('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets', body);
       console.log(response_submit)
-      // setAmount('')
-      // setBet('')
-      // setGameId('')
-      // const jsonObject = JSON.parse(response.data.body)
-      // const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-      // console.log(response_formated)
-      // setGameData(response_formated)
-      // dispatch(setValue(response_formated))
+      setAmount('')
+      setBet('')
+      setGameId('')
+      toggle()
+      fetchData2()
+
     } catch (error) {
       console.error('Error getting data:', error);
     }
@@ -127,12 +128,12 @@ function SocialBets() {
           <h2>My Wagers</h2>
           <Button onClick={toggle}>Place a new Bet</Button>
           </div>
-          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets} loading={bets.length == 0}/>
+          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? bets.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel": <a onClick={toggle2}>See Bet</a>})) : []} loading={bets == undefined}/>
         </div>
         <br></br>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>Friend Wagers</h2>
-          <CustomTable noRange={true} range={50} header={constant.headerBets} data={betsFriend} loading={betsFriend.length == 0}/>
+          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
         </div>
       </Container>
       <Modal isOpen={modal} toggle={toggle}>
@@ -186,10 +187,21 @@ function SocialBets() {
               <Label for="Result" className="mr-sm-2">Result</Label>
               <Input type="currency" name="amount" id="amount" placeholder="1000.00" />
             </FormGroup> */}
-            <Button onSubmit={(e) => submitBet(e)}>Submit</Button>
+              <Button className='mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
           </Form>
         </ModalBody >
-      </Modal>    
+      </Modal>  
+      <Modal isOpen={modal2} toggle={toggle2}>
+        <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
+        <ModalBody>
+          <p>FanBlitz understands and embraces the excitement of sports betting, but we also promote responsible betting. It's important to remember to only bet what you can afford to lose and not go over your budget.</p>
+          <p>While it's assured that you will lose some bets, using FanDuel's tools, information, and data can help you minimize your losses and even potentially win some! So, enjoy the thrill of sports betting, but always remember to bet responsibly.</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={toggle2}>Cancel</Button>
+          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
+        </ModalFooter>
+      </Modal>  
     </div>    
   );
 }

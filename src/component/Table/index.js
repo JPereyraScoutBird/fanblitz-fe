@@ -43,6 +43,36 @@ const TableSkeletonElements = ({renderHeaderComponent, row=5, col=5, theme}) => 
     )
 }
 
+const renderData2 = (
+  data,
+  page,
+  range,
+  header,
+  onClickList,
+  playeImage=false,
+  // backgroundColor="#000",
+) => {
+  const item_list = data.slice((page - 1) * range, page * range);
+  if(playeImage) {
+    return item_list.map((x) => (
+      
+      <tr key={uuid()} style={{cursor: 'pointer'}}>
+        <td><img style={{border: `2px solid #041e42`, borderRadius: "50%", width: "45px", height: "45px", objectFit: "cover"}} src={x['image'] || IMAGE.PROFILE}/></td>
+        {Object.keys(header).slice(1).map((val, index) => (
+          <td onClick={() => onClickList[index + 1](x)} style={{cursor: 'pointer', userSelect: 'none'}}>{x[val]}</td>
+        ))}
+      </tr>
+    ));
+  }
+  return item_list.map((x) => (
+    <tr key={uuid()} style={onClickList.length > 0 ? {cursor: 'pointer'} : {}}>
+      {Object.keys(header).map((val, index) => (
+        <td style={{userSelect: 'none'}} onClick={() => (onClickList[index] ? onClickList[index](x) : {})}>{x[val]}</td>
+      ))}
+    </tr>
+  ));
+};
+
 const renderData = (
   data,
   page,
@@ -84,6 +114,7 @@ function CustomTable(props) {
     theme='light',
     loading = false,
     onClick = () => {},
+    onClickList = [],
     color="#fff",
     playeImage=false,
     backgroundColor="#000",
@@ -162,7 +193,16 @@ function CustomTable(props) {
               </tr>
             </thead>
             <tbody>
-              {renderData(
+              {onClickList.length > 0 ?
+              renderData2 (
+                items,
+                page,
+                itemRange,
+                header,
+                onClickList,
+                playeImage
+              )
+              : renderData(
                 items,
                 page,
                 itemRange,
