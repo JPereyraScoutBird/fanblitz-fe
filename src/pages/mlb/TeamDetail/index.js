@@ -291,7 +291,7 @@ function TeamDetail(props) {
             : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={teamDetail.mysportfeeds_abbreviation} pre_prompt={`The top 5 defining moments for the ${teamDetail.mysportfeeds_abbreviation} in the mlb history `} />
+            <Chatbot player={teamDetail.odds_api} pre_prompt={`${teamDetail.odds_api}' baseball team history`} />
           </Modal>
         </div>    
       );

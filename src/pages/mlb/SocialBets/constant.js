@@ -7,6 +7,7 @@ const headerBets = {
     "bet": "Bet",
     "result": "Result",
     "paid": "Paid",
+    "fanduel": "FanDuel",
     "username": "User"
 }
 

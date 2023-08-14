@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CustomTable from '../../../component/Table';
 import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
-import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal } from "reactstrap";
+import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
@@ -17,6 +17,7 @@ import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
 import uuid from 'react-uuid';
 import { useNavigate } from "react-router-dom";
+import Chatbot from "../../../container/ChatBot";
 
 function Home(props) {
   const dispatch = useDispatch();
@@ -27,11 +28,16 @@ function Home(props) {
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
+  const [team, setTeam] = useState('');
+  const [modal, setModal] = useState(false);
+  const [modal2, setModal2] = useState(false);
+
+  const toggle = () => setModal(!modal)
+  const toggle2 = () => setModal2(!modal2)
   const breakpoint = 620;
 
 
   const fetchData = async () => {
-    // if (gameDataStore.length == 0) {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
         );
@@ -54,10 +60,28 @@ function Home(props) {
     return () => clearInterval(interval)
   }, []);
     
-// <<<<<<< dev
-  const onClick = (user) => {
-    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${user.id}`);
+  const onClick = (game) => {
+    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${game.id}`);
   }
+
+  const onClick2 = (game) => {
+    setTeam(gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team'])
+    toggle()
+  }
+
+  const onClick3 = (game) => {
+    setTeam(gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team'])
+    toggle()
+  }
+
+  const onClick4 = (game) => {
+    toggle2()
+  }
+
+  const onClick5 = (game) => {
+    navigate(`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
+  }
+
 // =======
   React.useEffect(() => {
     /* Inside of a "useEffect" hook add an event listener that updates
@@ -68,9 +92,7 @@ function Home(props) {
        effect to only run when the component mounts, and not each time it updates.
        We only want the listener to be added once */
   }, []);
-  // console.log("Game stored:", gameData)
 
-  // }, []);
 
   const header = {
     "date_z": "Date",
@@ -141,7 +163,6 @@ function Home(props) {
         </Carousel>
         )
       }
-      console.log("width < breakpoint ?: ", today_games)
       return (
         <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(today_games2)} previous={() => prev()}>
           <CarouselIndicators items={today_games2} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
@@ -160,8 +181,6 @@ function Home(props) {
       return null
     }
   }
-
-  // console.log(date.toDate().setHours)
   
   return (
     <div id="home">
@@ -175,9 +194,23 @@ function Home(props) {
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
-          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0} onClick={(user) => onClick(user)}/>
+          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
         </div>
       </Container>    
+      <Modal isOpen={modal} toggle={toggle}>
+        <Chatbot player={team} pre_prompt={`${team}' baseball team history`} />
+      </Modal>
+      <Modal isOpen={modal2} toggle={toggle2}>
+        <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
+        <ModalBody>
+          <p>FanBlitz understands and embraces the excitement of sports betting, but we also promote responsible betting. It's important to remember to only bet what you can afford to lose and not go over your budget.</p>
+          <p>While it's assured that you will lose some bets, using FanDuel's tools, information, and data can help you minimize your losses and even potentially win some! So, enjoy the thrill of sports betting, but always remember to bet responsibly.</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={toggle2}>Cancel</Button>
+          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
+        </ModalFooter>
+      </Modal>
     </div>    
   );
 
