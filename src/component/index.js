@@ -5,6 +5,8 @@ import CardTeamComponent from './CardTeam';
 import CardProfileComponent from './CardProfile';
 import CardForecast from './CardForecast';
 import DatePagination from './DatePagination';
+import Search from './Search';
+import SearchTable from './SearchTable';
 
 export default {
     Table,
@@ -13,5 +15,7 @@ export default {
     CardTeamComponent,
     CardProfileComponent,
     CardForecast,
-    DatePagination
+    DatePagination,
+    Search,
+    SearchTable
 }

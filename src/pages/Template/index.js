@@ -31,7 +31,7 @@ export default function RenderPage(props) {
           id="detail"
           className={navigation.state === "loading" ? "loading" : ""}
         >
-          <Outlet />
+          <Outlet context={[user]}/>
         </div>
       </Container>
       <Footer />

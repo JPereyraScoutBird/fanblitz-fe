@@ -18,6 +18,8 @@ import SkeletonElements from "../Skeleton";
 import Shimmer from "../Skeleton/shimmer";
 import IMAGE from '../../img';
 import uuid from 'react-uuid';
+import SearchTable from "../SearchTable";
+// import { setDatasets } from "react-chartjs-2/dist/utils";
 
 
 const TableSkeletonElements = ({renderHeaderComponent, row=5, col=5, theme}) => {
@@ -85,11 +87,14 @@ function CustomTable(props) {
     color="#fff",
     playeImage=false,
     backgroundColor="#000",
+    search=false,
+    search_placeholder,
+    search_keys=[]
   } = props;
 
-  // console.log("Color: ", color)
-  // console.log("BackgroundColor: ", backgroundColor)
-  let data_cp = [...data]
+
+  const [data_cp, setData] = useState([])
+  // let data_cp = [...data]
 
   data.map((obj, index) =>
     Object.keys(obj).map((key) =>
@@ -100,6 +105,11 @@ function CustomTable(props) {
       }
     )
   );
+
+
+  useEffect(() => {
+    setData(data)
+  }, [data])
   
   const { items, requestSort, sortConfig } = useSortableData(data_cp);
   const [itemRange, setItemRange] = useState(range);
@@ -164,9 +174,10 @@ function CustomTable(props) {
         </Table>
       )
   }
-  
+
   return (
     <div id="custom_table">
+      <div className="d-flex align-items-center justify-content-between mb-2">
       {!noRange ? <div className="d-flex mb-2">
           <p>Show</p>
           <UncontrolledDropdown>
@@ -216,6 +227,12 @@ function CustomTable(props) {
           <p>Entries</p>
         </div>
       : null}
+      {search ? 
+        <div className="w-100 d-flex justify-content-end align-items-end">
+          <SearchTable placeholder={search_placeholder} list={data} onChange={(e) => setData(e)} search_keys={search_keys} />
+        </div>
+      : null}
+      </div>
       {renderTable()}
       {pagination ? 
       <div className="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between pb-4 pt-4">

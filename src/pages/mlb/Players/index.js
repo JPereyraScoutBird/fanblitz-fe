@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
+import SearchTable from "../../../component/SearchTable";
 
 function Players() {
     const [teamData, setTeamData] = useState([]);
@@ -20,6 +21,7 @@ function Players() {
                 setPitcherData(jsonObject.filter(x => x['position'] == 'P'))
                 setBatterData(jsonObject.filter(x => x['position'] != 'P'))
                 setTeamData(jsonObject);
+                console.log("jsonObject", jsonObject.length)
             } catch (error) {
                 console.error('Error getting data:', error);
             }
@@ -42,9 +44,9 @@ function Players() {
 
     const renderTable = () => {
         if (showTable === "hitters") {
-        return <CustomTable loading={teamData.length == 0} pagination={true} range={15} header={headerHitting} data={batterData} onClick={(user) => onClick(user)}/>;
+        return <CustomTable search={true} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData.length == 0} pagination={true} range={15} header={headerHitting} data={batterData} onClick={(user) => onClick(user)}/>;
         } else if (showTable === "pitchers") {
-        return <CustomTable loading={teamData.length == 0} pagination={true} range={15} header={headerPitching} data={pitcherData} onClick={(user) => onClick(user)}/>;
+        return <CustomTable search={true} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData.length == 0} pagination={true} range={15} header={headerPitching} data={pitcherData} onClick={(user) => onClick(user)}/>;
         }
         return null;
     };
@@ -98,7 +100,10 @@ function Players() {
     return (
         <div>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>Player Stats</h2>
+            {/* <div className="d-flex align-items-center">            
+                <h2 className="mr-4">Player Stats</h2>
+                <SearchTable className="ml-4" placeholder="Player name or team" list={batterData} onChange={e => setBatterData(e)}/>
+            </div> */}
             <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
             <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000" }} onClick={handleButtonHitting} >Hitting</button>
             <button style={{ border: "none", background: "transparent", padding: "0", color: "#000" }} onClick={handleButtonPitching}>Pitching</button>

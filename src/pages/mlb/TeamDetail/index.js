@@ -5,7 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import constant from './constant';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Modal, Row } from 'reactstrap';
 import { getDate2, getDateString, getTime } from '../../../utils';
 import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
@@ -19,6 +19,7 @@ import CardTeamComponent from '../../../component/CardTeam';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from "@fortawesome/free-regular-svg-icons";
 import Image from '../../../img';
+import Chatbot from '../../../container/ChatBot';
 
 export async function loader({ params }) {
     return params;
@@ -131,6 +132,8 @@ function TeamDetail(props) {
     const [forecast, setForecastData] = useState({})
     const [showTable, setShowTable] = useState("hitters");
     const navigate = useNavigate();
+    const [modal, setModal] = useState(true);
+    const toggle2 = () => setModal(!modal);
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -286,7 +289,10 @@ function TeamDetail(props) {
             </Row>
             </section>
             : null
-          } 
+          }
+          <Modal isOpen={modal} toggle={toggle2}>
+            <Chatbot player={teamDetail.mysportfeeds_abbreviation} pre_prompt={`The top 5 defining moments for the ${teamDetail.mysportfeeds_abbreviation} in the mlb history `} />
+          </Modal>
         </div>    
       );
     }
