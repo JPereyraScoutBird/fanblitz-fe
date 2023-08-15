@@ -8,7 +8,11 @@ import {
   NavItem,
   Button,
   Modal,
-  Col
+  Col,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
@@ -34,13 +38,20 @@ const renderNavLink = (path, text) => (
 );
 
 function Menu(props) {
+  const { onChange = () => {} } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropDownOpen] = useState();
+  const [modal, setModal] = useState(false);
+  const [gptStyle, setGtpStyle] = useState('')
 
   const toggle = () => setIsOpen(!isOpen);
-
-  const [modal, setModal] = useState(false);
-
   const toggle2 = () => setModal(!modal);
+  const toggle3 = () => setDropDownOpen(!dropdownOpen);
+
+  const onClick = (value) => {
+    setGtpStyle(value)
+    return onChange(value)
+  }
 
   const {sport} = props
 
@@ -53,7 +64,7 @@ function Menu(props) {
           <SearchComponent/>
         </Col>
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
-          <Nav className="mr-auto" navbar>
+          <Nav pills={true} className="mr-auto" navbar>
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
@@ -80,16 +91,28 @@ function Menu(props) {
                 {renderNavLink(`/${sport}${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
             <NavItem>
-              <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
-            </NavItem>
-            <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
+            <NavItem>
+              <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
+            </NavItem>
+            <Dropdown nav isOpen={dropdownOpen} value={gptStyle} toggle={toggle3}>
+              <DropdownToggle nav caret>
+                {gptStyle != '' ? gptStyle : "GPT Style"}
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem value="Howard Cosell" onClick={(e) => onClick(e.target.value)}>Howard Cosell</DropdownItem>
+                <DropdownItem value="Vin Scully" onClick={(e) => onClick(e.target.value)}>Vin Scully</DropdownItem>
+                <DropdownItem value="Dick Vitale" onClick={(e) => onClick(e.target.value)}>Dick Vitale</DropdownItem>
+                <DropdownItem value="Bill Walton" onClick={(e) => onClick(e.target.value)}>Bill Walton</DropdownItem>
+                <DropdownItem value="Andres Cantor" onClick={(e) => onClick(e.target.value)}>Andres Cantor</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </Nav>
         </Collapse>
       </Navbar>
       <Modal isOpen={modal} toggle={toggle2}>
-        <Chatbot />
+        <Chatbot gptStyle={gptStyle} />
       </Modal>
     </div>
   );

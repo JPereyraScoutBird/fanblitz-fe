@@ -17,6 +17,14 @@
     cursor: pointer;
   }
 
+  /* #primary_navbar .nav-item {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 50px;
+  } */
+
   #primary_navbar .nav-item  a {
     text-decoration: none;
     text-align: left !important;

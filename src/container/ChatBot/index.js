@@ -31,16 +31,18 @@ const Typing = () => (
 
 function Chatbot(props) {
 
-  const {player = '', pre_prompt = ''} = props
+  const {player = '', pre_prompt = '', gptStyle = ''} = props
   const [prompt, setPrompt] = useState('')
   const [isTyping, setIsTyping] = useState('')
   const [messageList, setMessageList] = useState([{"role": "assistant", "content": "How can I help you?"}])
+
+  const suffix_style = gptStyle == '' ? " " : ` in the style of ${gptStyle}`
 
   useEffect(() => {
     if(player != '') {
       const newMessage = [...messageList, ({
         "role": "user",
-        "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
+        "content": pre_prompt != '' ? pre_prompt + suffix_style : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts] ${suffix_style}`
       })]
       setMessageList(newMessage); 
       setPrompt(``)
@@ -56,7 +58,7 @@ function Chatbot(props) {
     e.preventDefault()
     const newMessage = [...messageList, ({
       "role": "user",
-      "content": prompt
+      "content": prompt + suffix_style
     })]
     setMessageList(newMessage); 
     setPrompt('')
@@ -66,7 +68,7 @@ function Chatbot(props) {
       console.log("Error")
     })
   }
-  console.log("asd", messageList[messageList.length - 1]['role'])
+  console.log("asd", suffix_style)
   return (
     <div id="chatbot">
       <div className="container-footer dark">
