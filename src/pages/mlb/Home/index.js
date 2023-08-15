@@ -49,11 +49,11 @@ function Home(props) {
         const jsonObjectModel = JSON.parse(responseModel.data.body)
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        console.log("games", response_formated)
+        // console.log("games", response_formated)
         setGameData(response_formated)
         
         const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
-        console.log("fetchDataStrikeout", response_formatedModel)
+        // console.log("fetchDataStrikeout", response_formatedModel)
         setPitcherStrikeout(response_formatedModel)
       } catch (error) {
         console.error('Error getting data:', error);
