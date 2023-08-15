@@ -91,7 +91,7 @@ function HomeTennis(props) {
             {/* Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p> */}
           </div>
         }
-        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}-${removechars(game.away_player)}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}_${removechars(game.away_player)}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 

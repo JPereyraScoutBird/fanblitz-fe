@@ -16,17 +16,17 @@ function News() {
   useEffect(() => {
 
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball`).then((resURL) => {
-      // console.log("resURL", resURL)
-      // console.log("resURL.data.URL", resURL.data.URL)
-      // console.log("CONSTANT.URL", CONSTANT.URL)
       if (resURL.status == 200){
         const sortedListArticles = resURL.data.content.sort(sortListArticles);
-        setNewsData(sortedListArticles)
+        const uniqueArticles = sortedListArticles.reduce((accumulator, current) => {
+          if (!accumulator.find((item) => (item.url === current.url || item.title === current.title || item.urlToImage === current.urlToImage))) {
+            accumulator.push(current);
+          }
+          return accumulator;
+        }, []);
+        setNewsData(uniqueArticles)
       }
-      
     })
-
-    
   }, [])
 
   return (

@@ -181,7 +181,7 @@ function TeamDetail(props) {
         <div className="d-flex justify-content-center align-items-center">
         <span>{getTime(article.date_z)}</span>
         <div className="border-dash"></div>
-        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analisis</span></div>
+        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analysis</span></div>
       </div>
     )
 

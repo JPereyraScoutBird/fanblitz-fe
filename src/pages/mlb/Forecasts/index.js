@@ -33,7 +33,7 @@ function Forecasts() {
       <div className="d-flex justify-content-center align-items-center">
       <span>{getTime(date_z)}</span>
       <div className="border-dash"></div>
-      <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analisis</span></div>
+      <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analysis</span></div>
     </div>
   )
 

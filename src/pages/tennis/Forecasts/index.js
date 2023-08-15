@@ -3,7 +3,7 @@ import Card from "../../../component/Card";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './style.css';
-import { filterByDate, getDate, getDate2, getDateString, getTime } from "../../../utils";
+import { filterByDate, getDate, getDate2, getDateString, getTime, getZTime } from "../../../utils";
 import Image from '../../../img';
 import PATH_LIST from "../../../routes/constant";
 import constant from "../PlayerDetail/constant";
@@ -28,12 +28,13 @@ function ForecastsTennis() {
     console.log(forecastData[0].home_team_abb)
   }
 
+
   const renderFooter = (date_z) => (
     <div className="">
       <div className="d-flex justify-content-center align-items-center">
       <span>{getTime(date_z)}</span>
       <div className="border-dash"></div>
-      <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analisis</span></div>
+      <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analysis</span></div>
     </div>
   )
 
@@ -57,7 +58,7 @@ function ForecastsTennis() {
                       title={`${forecast.home_player} vs ${forecast.away_player}`}
                       // body={constant.team_detail[forecast.home_team_abb].stadium}
                       imageSrc={Image.TENNIS.randomPhoto()}
-                      linkTitle={`/tennis${PATH_LIST.FORECAST_DETAIL}/${forecast.home_player}-${forecast.away_player}/${getDate2(forecast.date_z)}`}
+                      linkTitle={`/tennis${PATH_LIST.FORECAST_DETAIL}/${forecast.home_player}_${forecast.away_player}/${getDate2(forecast.date_z)}`}
                       footer={renderFooter(forecast.date_z)}
                     />
                   </Col>

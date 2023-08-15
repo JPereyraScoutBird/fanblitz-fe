@@ -30,7 +30,8 @@ function PlayersTennis() {
     }
 
     const renderTable = () => {
-        return <CustomTable loading={teamData.length == 0} pagination={true} range={15} header={headerPlayers} data={teamData} onClick={(user) => onClick(user)}/>;
+        return <CustomTable search={true} search_placeholder="Search player name" search_keys={['name']} oading={teamData.length == 0} pagination={true} range={15} header={headerPlayers} 
+        data={teamData.map(x => ({...x, "rank": parseInt(x.rank)}))} onClick={(user) => onClick(user)}/>;
     };
 
     const headerPlayers = {
@@ -39,7 +40,7 @@ function PlayersTennis() {
         "age": "Age",
         // "logo": "logo",
         "type": "type",
-        "rank": "rank",
+        // "rank": "rank",
         "titles": "titles",
         "matches_won": "matches won",
         "matches_lost": "matches lost",
