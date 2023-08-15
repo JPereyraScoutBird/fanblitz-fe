@@ -43,13 +43,13 @@ function Home(props) {
 
   const fetchData = async () => {
       try {
-        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
+        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/gamescore',
         );
         const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/pitchers/strikeout');
         const jsonObjectModel = JSON.parse(responseModel.data.body)
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        console.log(response_formated)
+        console.log("games", response_formated)
         setGameData(response_formated)
         
         const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
@@ -195,7 +195,9 @@ function Home(props) {
           "away_team_abbr": "Away",
           "home_spreads_draftkings": "Vegas",
           "margin_spread_fanblitz": "Fanblitz",
-          "difference": "Difference"
+          "difference": "Difference",
+          "home_score": "Home Score",
+          "away_score": "Away Score",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
