@@ -34,15 +34,17 @@ const Typing = () => (
 
 
 function Chatbot(props) {
+
+  const {player = '', pre_prompt = '', gptStyle = ''} = props
   const sendPromtReducer = useSelector(selectSendPromt);
   const dispatch = useDispatch();
-  const {player = '', pre_prompt = ''} = props
   const [sendPromt, setSendPromtState] = useState(false)
   const [prompt, setPrompt] = useState('')
   const [isTyping, setIsTyping] = useState('')
   const [socketUrl, setSocketUrl] = useState('wss://sfiwzuyyr4.execute-api.us-east-1.amazonaws.com/dev');
   const [messageList, setMessageList] = useState([{"role": "assistant", "content": "How can I help you?"}])
 
+  const suffix_style = gptStyle == '' ? " " : ` in the style of ${gptStyle}`
   const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
 
   // useEffect(() => {
@@ -81,7 +83,7 @@ function Chatbot(props) {
     if (messageList.length == 1 && player != '') {
       const newMessage = [...messageList, ({
         "role": "user",
-        "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
+        "content": pre_prompt != '' ? pre_prompt + suffix_style : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts] ${suffix_style}`
       })]
       setSendPromtState(true)
       dispatch(setSendPromt(true))
@@ -120,7 +122,7 @@ function Chatbot(props) {
     e.preventDefault()
     const newMessage = [...messageList, ({
       "role": "user",
-      "content": prompt
+      "content": prompt + suffix_style
     })]
     console.log("MESSAGE 2")
     setMessageList(newMessage); 
@@ -133,7 +135,7 @@ function Chatbot(props) {
     //   console.log("Error")
     // })
   }
-  console.log("asd", messageList[messageList.length - 1]['role'])
+  console.log("asd", suffix_style)
   return (
     <div id="chatbot">
       <div className="container-footer dark">

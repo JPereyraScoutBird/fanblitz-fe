@@ -144,7 +144,7 @@ function PlayerTennis(props) {
             {renderTable(playerDetail, constant.team_detail['DEFAULT'].teamColoursHex[0])}
           </section>
           {
-            newsData.length ?
+            newsData & newsData.length ?
             <section id="news">
               <h3>News</h3>
               <Row>

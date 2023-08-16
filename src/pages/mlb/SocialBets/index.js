@@ -200,7 +200,7 @@ function SocialBets() {
               <Label for="Result" className="mr-sm-2">Result</Label>
               <Input type="currency" name="amount" id="amount" placeholder="1000.00" />
             </FormGroup> */}
-              <Button className='mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
+              <Button outline color="secondary" className='btn rounded mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
           </Form>
         </ModalBody >
       </Modal>  

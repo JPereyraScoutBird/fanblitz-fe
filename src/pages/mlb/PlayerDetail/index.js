@@ -89,6 +89,7 @@ function Player(props) {
     const [newsData, setNewsData] = useState([])
     const [bio, setBio] = useState({})
     const [imageShow, setImageShow] = useState(false)
+    const [gptStyle, setGptStyle] = useState('')
     const [modal, setModal] = useState(true);
     const toggle2 = () => setModal(!modal);
 
@@ -212,7 +213,7 @@ function Player(props) {
           : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={playerDetail['full_name']} />
+            <Chatbot player={playerDetail['full_name']} gptStyle={gptStyle}/>
           </Modal>
         </div>    
     );
@@ -220,7 +221,7 @@ function Player(props) {
 
     return (
       <div id="template" className="player_detail_container">
-         <Menu sport_default={"mlb"} user={user} signOut={signOut}/>
+         <Menu sport_default={"mlb"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
         <Container className="template">
           <div id="detail">
