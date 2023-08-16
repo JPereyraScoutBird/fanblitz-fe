@@ -106,6 +106,38 @@ const headerPitching = {
 }
 
 const team_detail = {
+    'AMERICAN': {
+        "img": "https://www.mlbstatic.com/team-logos/159.svg",
+        "teamColoursHex": [
+            "#a71930",
+            "#e3d4ad",
+            "#000000",
+            "#30ced8",
+            "#ffffff"
+        ],
+        "socialMediaAccounts": [
+            {
+                "mediaType": "TWITTER",
+                "value": "American"
+            }
+        ]
+    },
+    'NATIONAL': {
+        "img": "https://www.mlbstatic.com/team-logos/160.svg",
+        "teamColoursHex": [
+            "#a71930",
+            "#e3d4ad",
+            "#000000",
+            "#30ced8",
+            "#ffffff"
+        ],
+        "socialMediaAccounts": [
+            {
+                "mediaType": "TWITTER",
+                "value": "National"
+            }
+        ]
+    },
     'ARI': {
         "img": "https://www.mlbstatic.com/team-logos/109.svg",
         "teamColoursHex": [

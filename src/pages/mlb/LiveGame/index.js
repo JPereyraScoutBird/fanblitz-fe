@@ -47,8 +47,9 @@ function LiveGame(props) {
   const fetchData = async () => {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/gamescore');
+        // const responseBox = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/box');
         const jsonObject = JSON.parse(response.data.body)
-        
+        // const jsonObjectBox = JSON.parse(responseBox.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
         console.log(response_formated)
         setGameData(response_formated)
@@ -85,59 +86,65 @@ function LiveGame(props) {
   }
   
   const renderTodaysGame = () => {
-    console.log()
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>MLB Today Games</h2>
+            <h2>MLB Games</h2>
+            <div className="mb-4">
+              <DatePagination date={date} onClick={(date) => setDate(date)}/>
+            </div>
             <div className="mb-4">
               <Row>
               {gameData.map(x => {
-                console.log(x)
-                return (
-                <Col xs={12} md={4}>
-                    <div className="mb-4">
-                    <CardTeamLiveComponent 
-                    homeImg={constant.team_detail[x['home_team_abbr']].img}
-                    awayImg={constant.team_detail[x['away_team_abbr']].img}
-                    home_abbr={x.home_team_abbr}
-                    away_abbr={x.away_team_abbr}
-                    home={x['home_team']} 
-                    away={x['away_team']} 
-                    footer={getTime(x.date_z)} 
-                    home_score={x['home_score']}
-                    away_score={x['away_score']}
-                    home_hit={x['home_hit']}
-                    away_hit={x['away_hit']}
-                    home_error={x['home_error']}
-                    away_error={x['away_error']}
-                    status={x['status']}
-                    inning={x['inning']}
-                    inning_half={x['inning_half']}
-                    home_pitcher={x['home_pitcher']}
-                    home_pitcher_image={x['home_pitcher_image']}
-                    home_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['home_pitcher_id']}`}
-                    home_pitcher_era={x['home_pitcher_era']}
-                    home_pitcher_wins={x['home_pitcher_wins']}
-                    home_pitcher_loss={x['home_pitcher_loss']}
-                    away_pitcher={x['away_pitcher']}
-                    away_pitcher_image={x['away_pitcher_image']}
-                    away_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['away_pitcher_id']}`}
-                    away_pitcher_era={x['away_pitcher_era']}
-                    away_pitcher_wins={x['away_pitcher_wins']}
-                    away_pitcher_loss={x['away_pitcher_loss']}
-                    pitcher_live_name={x['pitcher_live_name']}
-                    pitcher_live_image={x['pitcher_live_image']}
-                    pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['pitcher_live_id']}`}
-                    hitter_live_name={x['hitter_live']}
-                    hitter_live_image={x['hitter_live_image']}
-                    hitter_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['hitter_live_id']}`}
-                    link2={`/mlb${PATH_LIST.GAME_DETAIL}/${x['id']}`}
-                    date={x['date_z']}
-                    link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${x['home_team_abbr']}-${x['away_team_abbr']}/${getDate2(x.date_z)}`}
-                  />
-                  </div>
-                </Col>
-              )})}
+                if(filterByDate(x.date_z, date.toDate())){
+                  console.log(x)
+                  return (
+                  <Col xs={12} md={4}>
+                      <div className="mb-4">
+                      <CardTeamLiveComponent 
+                      homeImg={constant.team_detail[x['home_team_abbr']].img}
+                      awayImg={constant.team_detail[x['away_team_abbr']].img}
+                      home_abbr={x.home_team_abbr}
+                      away_abbr={x.away_team_abbr}
+                      home={x['home_team']} 
+                      away={x['away_team']} 
+                      footer={getTime(x.date_z)} 
+                      home_score={x['home_score']}
+                      away_score={x['away_score']}
+                      home_hit={x['home_hit']}
+                      away_hit={x['away_hit']}
+                      home_error={x['home_error']}
+                      away_error={x['away_error']}
+                      status={x['status']}
+                      inning={x['inning']}
+                      inning_half={x['inning_half']}
+                      home_pitcher={x['home_pitcher']}
+                      home_pitcher_image={x['home_pitcher_image']}
+                      home_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['home_pitcher_id']}`}
+                      home_pitcher_era={x['home_pitcher_era']}
+                      home_pitcher_wins={x['home_pitcher_wins']}
+                      home_pitcher_loss={x['home_pitcher_loss']}
+                      away_pitcher={x['away_pitcher']}
+                      away_pitcher_image={x['away_pitcher_image']}
+                      away_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['away_pitcher_id']}`}
+                      away_pitcher_era={x['away_pitcher_era']}
+                      away_pitcher_wins={x['away_pitcher_wins']}
+                      away_pitcher_loss={x['away_pitcher_loss']}
+                      pitcher_live_name={x['pitcher_live']}
+                      pitcher_live_image={x['pitcher_live_image']}
+                      pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['pitcher_live_id']}`}
+                      hitter_live_name={x['hitter_live']}
+                      hitter_live_image={x['hitter_live_image']}
+                      hitter_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['hitter_live_id']}`}
+                      link2={`/mlb${PATH_LIST.GAME_DETAIL}/${x['id']}`}
+                      linkBox={`/mlb${PATH_LIST.BOX}/${x['id']}`}
+                      date={x['date_z']}
+                      link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${x['home_team_abbr']}-${x['away_team_abbr']}/${getDate2(x.date_z)}`}
+                    />
+                    </div>
+                  </Col>
+                )
+                }
+                })}
               </Row>
             </div>
           </div>
