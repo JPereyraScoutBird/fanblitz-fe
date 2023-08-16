@@ -87,6 +87,22 @@ const router = (user, signOut) => createBrowserRouter([
     },
   },
   {
+    path: `/mlb${PATH_LIST.LIVE}`,
+    element: <Pages.mlb.LiveGame />,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `/mlb${PATH_LIST.BOX}/:gameId`,
+    element: <Pages.mlb.Box />,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.tennis.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,

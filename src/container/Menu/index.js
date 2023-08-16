@@ -68,6 +68,11 @@ function Menu(props) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
+            {sport == "mlb" ? (
+            <NavItem>
+                {renderNavLink(`/${sport}${PATH_LIST.LIVE}`, "Score")}
+            </NavItem>
+            ): null}
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.PLAYER}`, "Players")}
             </NavItem>
