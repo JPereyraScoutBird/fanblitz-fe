@@ -32,7 +32,14 @@ function LiveGame(props) {
   const breakpoint = 620;
   const [modal, setModal] = useState(false);
   const [modal2, setModal2] = useState(false);
-
+  const [boxData, setBoxData] = useState({
+    "home_team_abb": "NYY",
+    "away_team_abb": "ATL",
+    "home_team": "New York Yankees",
+    "away_team": "Atlanta Brave",
+    "home_score": 1,
+    "away_score": 4
+  });
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
 
@@ -61,16 +68,130 @@ React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
 
+  const renderTeamColumn = (team_abbr = "ATL") => {
+    return (
+    <div className="d-flex">
+      <img style={{marginRight: "0.5rem"}} src={constant.team_detail[boxData.home_team_abb || "NYY"].img} height={"24px"} />
+      <p>{team_abbr}</p>
+    </div>
+    )
+  }
+
+
+  const renderPitcherTable = (team_abbr) => (
+    <>
+      <h5>Pitcher {team_abbr}</h5>
+        <CustomTable 
+          noRange
+          header={{'name': '', 'ip':'IP','h': 'H','r': 'R' , 'er': 'ER' , 'bb': 'BB','k': 'K', 'hr': 'HR','era': 'ERA' }}
+          data={
+            [
+              {
+                'name': 'Altuve','ip': 0,'h': 1,'r': 0,'er': 1,'bb': 1,'k': 3,'hr': 3,'era': 4
+              },
+              {
+                'name': 'Tucker', 'ip': 0,'h': 0,'r': 0,'er':0,'bb': 1,'k': 1,'hr': 1,'era': 3
+              }, 
+              {
+                'name': 'Bregman', 'ip': 0,'h': 0,'r': 0,'er':0,'bb': 1,'k': 1,'hr': 1,'era': 4
+              }
+            ]
+          }
+        />
+    </>
+  )
+
+  const renderBatterTable = (team_abbr) => (
+    <>
+      <h5>Batters {team_abbr}</h5>
+        <CustomTable 
+          noRange
+          header={{'name': '', 'ab':'AB','r': 'R' ,'h': 'H', 'rbi': 'RBI' , 'bb': 'BB','k': 'K', 'avg': 'AVG','ops': 'OPS' }}
+          data={
+            [
+              {
+                'name': 'Altuve','ab': 0,'r': 0,'h': 1,'rbi': 1,'bb': 1,'k': 3,'avg': 3,'ops': 4
+              },
+              {
+                'name': 'Tucker', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 3
+              }, 
+              {
+                'name': 'Bregman', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 4
+              },
+              {
+                'name': 'Altuve','ab': 0,'r': 0,'h': 1,'rbi': 1,'bb': 1,'k': 3,'avg': 3,'ops': 4
+              },
+              {
+                'name': 'Tucker', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 3
+              }, 
+              {
+                'name': 'Bregman', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 4
+              },
+              {
+                'name': 'Tucker', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 3
+              }, 
+              {
+                'name': 'Bregman', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 4
+              },
+              {
+                'name': 'Tucker', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 3
+              }, 
+              {
+                'name': 'Total', 'ab': 0,'r': 0,'h': 0,'rbi':0,'bb': 1,'k': 1,'avg': 1,'ops': 4
+              }
+            ]
+          }
+        />
+    </>
+  )
+
   const renderTodaysGame = () => {
     console.log()
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>MLB Today Games</h2>
-            <div className="mb-4">
-              <Row>
-              
-              </Row>
+            <div className="w-100 d-flex flex-md-row flex-column align-items-center">
+              <div className="w-100 d-flex align-items-center">
+                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[boxData.home_team_abb || "NYY"].img} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {boxData.home_team || "NYY"} </h2>
+              {/* </div> */}
+              <h2 className="mr-2 ml-2" style={{marginLeft: "1rem", marginRight: "1rem"}}> vs </h2>
+              {/* <div className="w-100 d-flex align-items-center"> */}
+                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[boxData.away_team_abb || "ATL"].img} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {boxData.away_team || "ATL"}</h2>
+              </div>
             </div>
+            <div>
+              <CustomTable 
+                noRange
+                header={{'name': '', '1st': '1','2nd': '2','3rd': '3','4th': '4','5th': '5','6th': '6','7th': '7','8th': '8','9th': '9','R': 'R', 'H': 'H', 'E': 'E'}}
+                data={
+                  [
+                    {
+                      'name': renderTeamColumn(boxData.home_team),'1st': 0,'2nd': 0,'3rd': 1,'4th': 1,'5th': 1,'6th': 3,'7th': 3,'8th': 3,'9th': 3,'R': 3, 'H': 14, 'E': 3
+                    },
+                    {
+                      'name': renderTeamColumn(boxData.away_team), '1st': 0,'2nd': 0,'3rd': 0,'4th':0,'5th': 1,'6th': 1,'7th': 1,'8th':2,'9th': 2,'R': 2, 'H': 5, 'E': 6
+                    }
+                  ]
+                }
+              />
+            </div>
+            <Row className="mb-4 mt-4">
+              <Col xs={6}>
+                  {renderBatterTable(boxData.home_team)}
+              </Col>
+              <Col xs={6}>
+                  {renderBatterTable(boxData.away_team)}
+              </Col>
+            </Row>
+            <Row className="mb-4 mt-4">
+              <Col xs={6}>
+                  {renderPitcherTable(boxData.home_team)}
+              </Col>
+              <Col xs={6}>
+                  {renderPitcherTable(boxData.away_team)}
+              </Col>
+            </Row>
           </div>
         )
   };
