@@ -270,7 +270,7 @@ function TeamDetail(props) {
             {renderTablePastGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           {
-            newsData.length ?
+            newsData && newsData.length ?
             <section id="news">
               <h3>News</h3>
               <Row>
