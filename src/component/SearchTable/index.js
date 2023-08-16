@@ -43,11 +43,6 @@ return (
             <Input placeholder={placeholder} onChange={(e) => filter(e.target.value)} />
         </div>                        
     </div>
-    {/* <div className="search-results w-100">
-        <div className="w-100">
-            {renderChilds()}
-        </div>
-    </div> */}
     </div>
     )
 }

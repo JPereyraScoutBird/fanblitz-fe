@@ -17,7 +17,7 @@ const getZTime = (dateTimeStamp) => {
 }
 
 const getPaid = (value) => {
-    if (value == true){
+    if (value === true){
         return "Yes"
     }
     return "No"
@@ -33,6 +33,7 @@ const getTodayItems = (dateTimeStamp) => {
 }
 
 const filterByDate = (dateTimeStamp, date) => {
+    console.log(date, getTodayItems)
     const dateData = new Date(dateTimeStamp);
     let filterDate = date
     filterDate.setHours(0,0,0,0);

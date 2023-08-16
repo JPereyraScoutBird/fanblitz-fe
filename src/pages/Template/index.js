@@ -18,10 +18,11 @@ export default function RenderPage(props) {
   const navigation = useNavigation();
   const { userId } = useLoaderData();
   const {user, signOut} = props;
+  const [gptStyle, setGptStye] = useState('');
 
   return (
     <div id="template">
-      <Menu3 user={user} signOut={signOut}/>
+      <Menu3 user={user} signOut={signOut} onChange={(e) => setGptStye(e)}/>
       <Container
         
         // fluid
@@ -31,7 +32,7 @@ export default function RenderPage(props) {
           id="detail"
           className={navigation.state === "loading" ? "loading" : ""}
         >
-          <Outlet context={[user]}/>
+          <Outlet context={[user, gptStyle]}/>
         </div>
       </Container>
       <Footer />

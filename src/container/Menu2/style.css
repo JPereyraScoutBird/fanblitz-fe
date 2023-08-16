@@ -20,15 +20,19 @@
     /* margin-right: 1rem; */
   }
 
-  #secondary_navbar .nav-title {
-    color: #000 !important;
+  #secondary_navbar {
+
+  }
+
+  #primary .nav-title {
+    color: #666666 !important;
+    background-color: #eeeeee !important;
     font-weight: bold;
     font-size: 2rem;
     margin-left: 2rem;
     margin-bottom: 0px;
   }
 
-   
 /* 
   .container-fluid {
     display: flex;
