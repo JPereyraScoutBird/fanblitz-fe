@@ -282,9 +282,9 @@ function Home(props) {
         </div> */}
       </Container>    
       <Modal isOpen={modal} toggle={toggle}>
-        <Chatbot player={team} pre_prompt={prompt} />
+        <Chatbot player={team || pitcher} pre_prompt={prompt} />
       </Modal>
-      {/* <Modal isOpen={modal2} toggle={toggle2}>
+      <Modal isOpen={modal2} toggle={toggle2}>
         <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
         <ModalBody>
           <p>FanBlitz understands and embraces the excitement of sports betting, but we also promote responsible betting. It's important to remember to only bet what you can afford to lose and not go over your budget.</p>
@@ -294,7 +294,7 @@ function Home(props) {
           <Button onClick={toggle2}>Cancel</Button>
           <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
         </ModalFooter>
-      </Modal> */}
+      </Modal>
     </div>    
   );
 
