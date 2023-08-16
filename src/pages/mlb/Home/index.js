@@ -49,7 +49,7 @@ function Home(props) {
         const jsonObjectModel = JSON.parse(responseModel.data.body)
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        // console.log("games", response_formated)
+        console.log("games", response_formated)
         setGameData(response_formated)
         
         const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
@@ -126,14 +126,14 @@ function Home(props) {
   const onClick2 = (game) => {
     const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' baseball team history 1`)
     toggle()
   }
   
   const onClick3 = (game) => {
     const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' baseball team history 2`)
     toggle()
   }
 
@@ -282,9 +282,9 @@ function Home(props) {
         </div> */}
       </Container>    
       <Modal isOpen={modal} toggle={toggle}>
-        <Chatbot player={team || pitcher} pre_prompt={prompt} />
+        <Chatbot player={team} pre_prompt={prompt} />
       </Modal>
-      <Modal isOpen={modal2} toggle={toggle2}>
+      {/* <Modal isOpen={modal2} toggle={toggle2}>
         <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
         <ModalBody>
           <p>FanBlitz understands and embraces the excitement of sports betting, but we also promote responsible betting. It's important to remember to only bet what you can afford to lose and not go over your budget.</p>
@@ -294,7 +294,7 @@ function Home(props) {
           <Button onClick={toggle2}>Cancel</Button>
           <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
         </ModalFooter>
-      </Modal>
+      </Modal> */}
     </div>    
   );
 
