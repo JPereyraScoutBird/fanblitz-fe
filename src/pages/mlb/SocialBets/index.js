@@ -123,7 +123,7 @@ function SocialBets() {
 
   const renderBrands = (x) => (
     <div className='d-flex'>
-      <a style={{color: "#000", marginRight: "12px"}} href={`https://twitter.com/intent/tweet?text=${x.team_home} vs ${x.team_away}, spread ${x.bet} in MLB. More info www.fanblitz.com`}><FontAwesomeIcon icon={faTwitter} /> </a>
+      <a style={{color: "#000", marginRight: "12px"}} href={`https://twitter.com/intent/tweet?text=${x.team_home} vs ${x.team_away}, I bet the spread will be ${x.bet} in MLB. More info www.fanblitz.com`}><FontAwesomeIcon icon={faTwitter} /> </a>
       <a style={{color: "#000"}} href={`http://www.facebook.com/sharer.php?u=https://v6.scoutbird.net&summary=MySummary&title=MyTitle&text=THE_CUSTOM_TEXT`}><FontAwesomeIcon icon={faFacebook} /> </a>
       {/* <a  href={`https://twitter.com/intent/tweet?text=I am betting ${x.amount} that ${x.team_home} spread will be ${x.bet} in ${x.team_home} vs ${x.team_away} game`}><FontAwesomeIcon icon={faInstagram} /> </a> */}
     </div>
