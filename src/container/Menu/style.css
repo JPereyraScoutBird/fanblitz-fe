@@ -3,6 +3,9 @@
     z-index: 5;
   }
 
+
+  /* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
   #primary_navbar .nav-item a:focus {
     /* background-color: #41b883 !important; */
     color: #000 !important;
@@ -56,6 +59,8 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+}
+  
 
   #primary_navbar .nav-title {
     color: #666666 !important;
