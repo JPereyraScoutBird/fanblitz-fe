@@ -25,6 +25,8 @@ const SearchTable = (props) => {
             return onChange(list.filter(x => 
                 search_keys.includes('full_name') ? 
                 x['full_name'].toLowerCase().includes(val.toLowerCase()) || x['mysportfeeds_abbreviation'].toLowerCase().includes(val.toLowerCase()) :
+                search_keys.includes('name') ?
+                x['name'].toLowerCase().includes(val.toLowerCase()) :
                 x['mysportfeeds_abbreviation'].toLowerCase().includes(val.toLowerCase())
                 ))
         }
@@ -41,11 +43,6 @@ return (
             <Input placeholder={placeholder} onChange={(e) => filter(e.target.value)} />
         </div>                        
     </div>
-    {/* <div className="search-results w-100">
-        <div className="w-100">
-            {renderChilds()}
-        </div>
-    </div> */}
     </div>
     )
 }

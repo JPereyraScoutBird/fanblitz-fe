@@ -190,7 +190,7 @@ function Player(props) {
             {/* {playerDetail ? <Line height="70vh" options={playerDetail.summary} data={playerDetail.summary} /> : {}}; */}
           {/* </section> */}
           {
-            newsData.length ? 
+            newsData && newsData.length ? 
             <section id="news">
                 <h3>News</h3>
                 <Row>

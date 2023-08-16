@@ -83,7 +83,7 @@ function HomeTennis(props) {
         key={uuid()} 
         className="col-12 col-md-6"
         title={`${game.home_player} vs. ${game.away_player}`}
-        imageSrc={IMAGE.TENNIS.randomPhoto()}
+        imageSrc={IMAGE.TENNIS[img]}
         body={
           <div>
             {game.tournament_name}.<br></br>
@@ -91,7 +91,7 @@ function HomeTennis(props) {
             {/* Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p> */}
           </div>
         }
-        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}-${removechars(game.away_player)}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}_${removechars(game.away_player)}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
@@ -143,15 +143,15 @@ function HomeTennis(props) {
           return (
           <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
             <CarouselIndicators items={newArr} activeIndex={indexCarousel} onClickHandler={(index) => setIndexCarousel(index)} />
-            {newArr.map(x => x.length > 1 ? 
+            {newArr.map((x, pos) => x.length > 1 ? 
             <CarouselItem>
               <Row>
-                {renderForecastComponent(x[0], "Logo1")}
-                {renderForecastComponent(x[1], "Logo2")}
+                {renderForecastComponent(x[0], `Logo${pos}`)}
+                {renderForecastComponent(x[1], `Logo${newArr.length - pos}`)}
               </Row>
             </CarouselItem> :
             <CarouselItem>
-            <Row>{renderForecastComponent(x[0], "Logo1")}</Row>  
+            <Row>{renderForecastComponent(x[0], `Logo${pos}`)}</Row>  
             </CarouselItem>)}
             <CarouselControl style={{zIndex: "20"}} direction="prev" directionText="Previous" onClickHandler={() => prev(newArr)} />
             <CarouselControl style={{zIndex: "20"}} direction="next" directionText="Next" onClickHandler={() => next(newArr)} />

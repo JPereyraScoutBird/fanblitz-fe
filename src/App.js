@@ -88,7 +88,7 @@ const router = (user, signOut) => createBrowserRouter([
   },
   {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.tennis.Playe user={user} signOut={signOut}/>,
+    element: <Pages.tennis.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -100,11 +100,11 @@ const router = (user, signOut) => createBrowserRouter([
 
 function App({ signOut, user }) {
   return (
-    <React.StrictMode>
+    // <React.StrictMode>
       <Provider store={store}>
         <RouterProvider router={router(user, signOut)}/>
       </Provider>
-    </React.StrictMode>
+    // </React.StrictMode>
   );
 }
 

@@ -182,7 +182,7 @@ function TeamDetail(props) {
         <div className="d-flex justify-content-center align-items-center">
         <span>{getTime(article.date_z)}</span>
         <div className="border-dash"></div>
-        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analisis</span></div>
+        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analysis</span></div>
       </div>
     )
 
@@ -271,7 +271,7 @@ function TeamDetail(props) {
             {renderTablePastGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           {
-            newsData.length ?
+            newsData && newsData.length ?
             <section id="news">
               <h3>News</h3>
               <Row>

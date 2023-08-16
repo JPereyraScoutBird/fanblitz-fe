@@ -29,7 +29,7 @@ import SearchComponent from '../../component/Search';
 const renderNavLink = (path, text) => (
   <NavLink
     className={({ isActive, isPending }) =>
-      isActive ? "active" : isPending ? "pending" : ""
+      isActive ? "active btn" : isPending ? "pending btn" : "btn"
     }
     to={`${path}`}
   >
@@ -57,7 +57,7 @@ function Menu(props) {
 
   return (
     <div>
-      <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
+      <Navbar id="primary_navbar" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Col xs={12} md={3}>
@@ -94,7 +94,7 @@ function Menu(props) {
                 {renderNavLink(`/${sport}${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
             <NavItem>
-              <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
+              <a className="pointer btn" onClick={toggle2}>FanBlitz GPT</a>
             </NavItem>
             <Dropdown nav isOpen={dropdownOpen} value={gptStyle} toggle={toggle3}>
               <DropdownToggle nav caret>
