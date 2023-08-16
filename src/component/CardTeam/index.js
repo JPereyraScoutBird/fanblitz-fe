@@ -13,6 +13,8 @@ function CardTeamComponent (props) {
         title,
         home,
         away,
+        home_abbr,
+        away_abbr,
         homeImg,
         awayImg,
         home_score,
