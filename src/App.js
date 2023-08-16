@@ -88,7 +88,7 @@ const router = (user, signOut) => createBrowserRouter([
   },
   {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.tennis.Playe user={user} signOut={signOut}/>,
+    element: <Pages.tennis.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);

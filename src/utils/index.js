@@ -6,8 +6,18 @@ const getDate = (dateTimeStamp) => {
     return date.toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 }
 
+const getZTime = (dateTimeStamp) => {
+    console.log("datetime: ", dateTimeStamp)
+    var year        = dateTimeStamp.substring(0,4);
+    var month       = dateTimeStamp.substring(4,6);
+    var day         = dateTimeStamp.substring(6,8);
+    var date        = new Date(year, month-1, day);
+    console.log("date: ", date)
+    return getDate2(date)
+}
+
 const getPaid = (value) => {
-    if (value == true){
+    if (value === true){
         return "Yes"
     }
     return "No"
@@ -23,6 +33,7 @@ const getTodayItems = (dateTimeStamp) => {
 }
 
 const filterByDate = (dateTimeStamp, date) => {
+    console.log(date, getTodayItems)
     const dateData = new Date(dateTimeStamp);
     let filterDate = date
     filterDate.setHours(0,0,0,0);
@@ -73,5 +84,6 @@ export {
     filterByDate,
     sortListArticles,
     removechars,
-    getPaid
+    getPaid,
+    getZTime
 }

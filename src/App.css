@@ -37,6 +37,15 @@
   }
 }
 
+.btn, button {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 50px;
+  border-radius: 50px;
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 /* @media (min-width: 576px) { ... } */
 

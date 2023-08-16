@@ -26,7 +26,7 @@ import Menu from '../Menu';
 function Menu3(props) {
   const sportReducer = useSelector(selectSport);
   const dispatch = useDispatch();
-  const {sport_default = "mlb", user, signOut} = props
+  const {sport_default = "mlb", user, signOut, onChange} = props
   const [sport, setSportData] = useState(sport_default);
   const navigate = useNavigate();
 
@@ -67,7 +67,7 @@ function Menu3(props) {
             {/* <h2>Amplify Todos</h2> */}
           </div>
       </Navbar>
-      <Menu sport={sportReducer}/>
+      <Menu sport={sportReducer} onChange={(e) => onChange(e)}/>
     </div>
   );
 }

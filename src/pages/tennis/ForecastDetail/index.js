@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './style.css';
-import { getDate, getDateString } from "../../../utils";
+import { getDate, getDateString, getZTime } from "../../../utils";
 import parse from 'html-react-parser'; 
 import Image from '../../../img';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,11 +22,12 @@ function ForecastDetailTennis() {
   const {teams, date} = useLoaderData();
 
   useEffect(() => {
-    const [home, away] = teams.split('-');
+    const [home, away] = teams.split('_');
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/tennis/forecasts?home=${home}&away=${away}&date=${date}`).then((res) => {
       const jsonObject = JSON.parse(res.data.body)
 
-      if (jsonObject.hasOwnProperty('forecast')){
+      
+      if (jsonObject.hasOwnProperty('forecast') && jsonObject.forecast.length > 0){
         setForecastData(JSON.parse(jsonObject.forecast)[0])
       }
       

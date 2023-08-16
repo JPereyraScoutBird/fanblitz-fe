@@ -19,6 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../../../img';
 import { useOutletContext } from "react-router-dom";
 import { faBaseball } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 function SocialBets() {
   const [bets, setBets] = useState(undefined)
@@ -118,6 +119,14 @@ function SocialBets() {
       console.error('Error getting data:', error);
     }
   }
+
+  const renderBrands = (x) => (
+    <div className='d-flex'>
+      <a style={{color: "#000", marginRight: "12px"}} href={`https://twitter.com/intent/tweet?text=I am betting ${x.amount} that ${x.team_home} spread will be ${x.bet} in ${x.team_home} vs ${x.team_away} game`}><FontAwesomeIcon icon={faTwitter} /> </a>
+      <a style={{color: "#000"}} href={`http://www.facebook.com/sharer.php?u=https://v6.scoutbird.net&summary=MySummary&title=MyTitle&text=THE_CUSTOM_TEXT`}><FontAwesomeIcon icon={faFacebook} /> </a>
+      {/* <a  href={`https://twitter.com/intent/tweet?text=I am betting ${x.amount} that ${x.team_home} spread will be ${x.bet} in ${x.team_home} vs ${x.team_away} game`}><FontAwesomeIcon icon={faInstagram} /> </a> */}
+    </div>
+  )
   
   return (
     <div id="socialbets">
@@ -127,12 +136,17 @@ function SocialBets() {
           <h2>My Wagers</h2>
           <Button onClick={toggle}>Place a new Bet</Button>
           </div>
-          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? bets.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel": <a onClick={toggle2}>See Bet</a>})) : []} loading={bets == undefined}/>
+          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? 
+          bets.map(x => ({...x, 
+            "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, 
+            "result": "TBD",
+            "fanduel": <a onClick={toggle2}>See Bet</a>, 
+            "share": renderBrands(x)})) : []} loading={bets == undefined}/>
         </div>
         <br></br>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>Friend Wagers</h2>
-          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
+          <CustomTable noRange={true} range={50} header={constant.headerBets2} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
         </div>
       </Container>
       <Modal isOpen={modal} toggle={toggle}>
@@ -186,7 +200,7 @@ function SocialBets() {
               <Label for="Result" className="mr-sm-2">Result</Label>
               <Input type="currency" name="amount" id="amount" placeholder="1000.00" />
             </FormGroup> */}
-              <Button className='mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
+              <Button outline color="secondary" className='btn rounded mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
           </Form>
         </ModalBody >
       </Modal>  
@@ -201,6 +215,7 @@ function SocialBets() {
           <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
         </ModalFooter>
       </Modal>  
+      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
     </div>    
   );
 }

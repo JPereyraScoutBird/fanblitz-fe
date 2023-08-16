@@ -134,6 +134,7 @@ function TeamDetail(props) {
     const navigate = useNavigate();
     const [modal, setModal] = useState(true);
     const toggle2 = () => setModal(!modal);
+    const [gptStyle, setGptStyle] = useState('')
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -181,7 +182,7 @@ function TeamDetail(props) {
         <div className="d-flex justify-content-center align-items-center">
         <span>{getTime(article.date_z)}</span>
         <div className="border-dash"></div>
-        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analisis</span></div>
+        <span><FontAwesomeIcon className="icon" icon={faComments}  color="#ccc" />Analysis</span></div>
       </div>
     )
 
@@ -270,7 +271,7 @@ function TeamDetail(props) {
             {renderTablePastGames(showTable, teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           {
-            newsData.length ?
+            newsData && newsData.length ?
             <section id="news">
               <h3>News</h3>
               <Row>
@@ -291,7 +292,7 @@ function TeamDetail(props) {
             : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={teamDetail.odds_api} pre_prompt={`${teamDetail.odds_api}' baseball team history`} />
+            <Chatbot player={teamDetail.odds_api} pre_prompt={`${teamDetail.odds_api}' baseball team history`} gptStyle={gptStyle}/>
           </Modal>
         </div>    
       );
@@ -302,7 +303,7 @@ function TeamDetail(props) {
     return (
       <div id="template" className="player_detail_container">
       {/* <div id="template"> */}
-        <Menu sport_default={"mlb"} user={user} signOut={signOut}/>
+        <Menu sport_default={"mlb"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
         { teamDetail ? <SubMenu home={`/mlb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
         <Container className="template">
           <div id="detail">

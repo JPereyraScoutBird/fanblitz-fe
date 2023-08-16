@@ -34,8 +34,8 @@ function Pagination(props) {
         <Button outline className='mr-1' disabled={currentPage == 1} onClick={() => onPageChange(currentPage - 1)}>{'Previous'}</Button>
         {paginationRange.map(pageNumber => {
         // If the pageItem is a DOT, render the DOTS unicode character
-        if (pageNumber === paginationRange['DOTS']) {
-            return <li className="pagination-item dots">&#8230;</li>;
+        if (pageNumber === paginationRange['DOTS'] || pageNumber === '...') {
+            return <li className="pagination-item dots mr-1 ml-1" style={{marginLeft: '0.5rem', marginRight: '0.5rem'}}>&#8230;</li>;
         }
         // Render our Page Pills
         return (<Button outline className={currentPage == pageNumber ? 'active mr-1' : 'mr-1'} disabled={currentPage == pageNumber} onClick={() => onPageChange(pageNumber)}>{pageNumber}</Button>)

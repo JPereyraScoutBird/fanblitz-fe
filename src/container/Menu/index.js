@@ -8,7 +8,11 @@ import {
   NavItem,
   Button,
   Modal,
-  Col
+  Col,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
@@ -25,7 +29,7 @@ import SearchComponent from '../../component/Search';
 const renderNavLink = (path, text) => (
   <NavLink
     className={({ isActive, isPending }) =>
-      isActive ? "active" : isPending ? "pending" : ""
+      isActive ? "active btn" : isPending ? "pending btn" : "btn"
     }
     to={`${path}`}
   >
@@ -34,26 +38,33 @@ const renderNavLink = (path, text) => (
 );
 
 function Menu(props) {
+  const { onChange = () => {} } = props;
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropDownOpen] = useState();
+  const [modal, setModal] = useState(false);
+  const [gptStyle, setGtpStyle] = useState('')
 
   const toggle = () => setIsOpen(!isOpen);
-
-  const [modal, setModal] = useState(false);
-
   const toggle2 = () => setModal(!modal);
+  const toggle3 = () => setDropDownOpen(!dropdownOpen);
+
+  const onClick = (value) => {
+    setGtpStyle(value)
+    return onChange(value)
+  }
 
   const {sport} = props
 
   return (
     <div>
-      <Navbar id="primary_navbar" color="dark" light expand="md" className='d-flex justify-content-end'>
+      <Navbar id="primary_navbar" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Col xs={12} md={3}>
           <SearchComponent/>
         </Col>
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
-          <Nav className="mr-auto" navbar>
+          <Nav pills={true} className="mr-auto" navbar>
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
@@ -80,16 +91,28 @@ function Menu(props) {
                 {renderNavLink(`/${sport}${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
             <NavItem>
-              <a className="pointer" onClick={toggle2}>FanBlitz GPT</a>
-            </NavItem>
-            <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.TUTORIAL}`, "Tutorial")}
             </NavItem>
+            <NavItem>
+              <a className="pointer btn" onClick={toggle2}>FanBlitz GPT</a>
+            </NavItem>
+            <Dropdown nav isOpen={dropdownOpen} value={gptStyle} toggle={toggle3}>
+              <DropdownToggle nav caret>
+                {gptStyle != '' ? gptStyle : "GPT Style"}
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem value="Howard Cosell" onClick={(e) => onClick(e.target.value)}>Howard Cosell</DropdownItem>
+                <DropdownItem value="Vin Scully" onClick={(e) => onClick(e.target.value)}>Vin Scully</DropdownItem>
+                <DropdownItem value="Dick Vitale" onClick={(e) => onClick(e.target.value)}>Dick Vitale</DropdownItem>
+                <DropdownItem value="Bill Walton" onClick={(e) => onClick(e.target.value)}>Bill Walton</DropdownItem>
+                <DropdownItem value="Andres Cantor" onClick={(e) => onClick(e.target.value)}>Andres Cantor</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </Nav>
         </Collapse>
       </Navbar>
       <Modal isOpen={modal} toggle={toggle2}>
-        <Chatbot />
+        <Chatbot gptStyle={gptStyle} />
       </Modal>
     </div>
   );

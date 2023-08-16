@@ -23,6 +23,7 @@ import Chatbot from "../../../container/ChatBot";
 function Home(props) {
   const dispatch = useDispatch();
   const {user, signOut} = props
+  const [gptStyle, setGptStye] = useState('')
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
   const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
@@ -260,7 +261,7 @@ function Home(props) {
   
   return (
     <div id="home">
-      <Menu sport_default={"mlb"} signOut={signOut} user={user}/>
+      <Menu sport_default={"mlb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
         {
           renderCards()
         }
@@ -283,7 +284,7 @@ function Home(props) {
         </div> */}
       </Container>    
       <Modal isOpen={modal} toggle={toggle}>
-        <Chatbot player={team || pitcher} pre_prompt={prompt} />
+        <Chatbot player={team || pitcher} pre_prompt={prompt} gptStyle={gptStyle}/>
       </Modal>
       <Modal isOpen={modal2} toggle={toggle2}>
         <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
