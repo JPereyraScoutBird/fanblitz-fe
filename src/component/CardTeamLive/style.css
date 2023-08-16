@@ -1,0 +1,98 @@
+/* Style for the Custom Card Component */
+
+/* body {
+    font-size: 40px;
+} */
+
+.card-link {
+    text-decoration: none;
+    border: none
+}
+
+.card-link:hover {
+    text-decoration: none;
+    border: 2px solid #041e42
+}
+
+.card_team_component_live .team-img {
+    margin: 0 2rem;
+}
+
+.card_team_component_live .team-img p {
+    font-weight: bold;
+}
+
+.card_team_component_live {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+}
+
+.vs p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card_team_component_live p {
+    margin-bottom: 0px;
+}
+
+.card_team_component_live .card-footer {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card_team_component_live .card-title {
+    height: 1.5rem;
+    overflow-y: auto;
+    width: 100;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .card_team_component_live .team-name {
+    font-weight: 12px;
+} */
+
+.card_team_component_live .card-img {
+    /* border-radius: 50%; */
+    /* width: 30px; */
+    width: auto;
+    height: 40px;
+    padding: 5px;
+    object-fit: cover;
+    /* border: 3px solid #041e42; */
+}
+
+.card_team_component_live {
+    padding: 0.5rem;
+}
+
+.card_team_component_live span {
+    /* padding-left: 0.5rem;
+    padding-right: 0.5rem; */
+    display: inline-block;
+    text-align: center;
+    width: 1.5rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.player_img {
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 50%;
+    border: 2px solid #000;
+    padding: 0px;
+    margin: 0px;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}

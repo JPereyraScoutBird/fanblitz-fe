@@ -38,10 +38,10 @@ const renderTableNextGames = (position, data, backgroundColor = "#000", color='#
             awayImg={constant.team_detail[data.games[0]['away_team']].img}
             home={data.games[0]['home_team']} 
             away={data.games[0]['away_team']} 
-            footer={getTime(data.games[0].date_et)} 
+            footer={getTime(data.games[0].date_z)} 
             home_score={data.games[0]['home_score']}
             away_score={data.games[0]['away_score']}
-            link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${data.games[0]['home_team']}-${data.games[0]['away_team']}/${getDate2(data.games[0].date_et)}`}
+            link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${data.games[0]['home_team']}-${data.games[0]['away_team']}/${getDate2(data.games[0].date_z)}`}
           />
         </div>
       )
