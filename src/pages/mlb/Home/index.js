@@ -63,17 +63,10 @@ function Home(props) {
 
   useEffect(() => {
     fetchData();
-<<<<<<< HEAD
-    // const interval = setInterval(() => {
-    //   fetchData();
-    // }, 5000)
-    // return () => clearInterval(interval)
-=======
     const interval = setInterval(() => {
       fetchData();
     }, 120000)
     return () => clearInterval(interval)
->>>>>>> b55f7be275faa0ec7f29cb81c03c7483378f8358
   }, []);
 
   React.useEffect(() => {
