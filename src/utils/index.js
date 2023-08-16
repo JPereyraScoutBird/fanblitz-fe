@@ -33,6 +33,7 @@ const getTodayItems = (dateTimeStamp) => {
 }
 
 const filterByDate = (dateTimeStamp, date) => {
+    console.log(date, getTodayItems)
     const dateData = new Date(dateTimeStamp);
     let filterDate = date
     filterDate.setHours(0,0,0,0);
