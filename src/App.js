@@ -100,11 +100,11 @@ const router = (user, signOut) => createBrowserRouter([
 
 function App({ signOut, user }) {
   return (
-    <React.StrictMode>
+    // <React.StrictMode>
       <Provider store={store}>
         <RouterProvider router={router(user, signOut)}/>
       </Provider>
-    </React.StrictMode>
+    // </React.StrictMode>
   );
 }
 
