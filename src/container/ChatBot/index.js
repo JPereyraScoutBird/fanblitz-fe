@@ -45,37 +45,53 @@ function Chatbot(props) {
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
 
+  // useEffect(() => {
+  //   let sendPromtLocal = false
+  //   console.log("player: ", player)
+  //   if(player != '') {
+  //     const newMessage = [...messageList, ({
+  //       "role": "user",
+  //       "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
+  //     })]
+  //     // "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
+
+  //     // console.log("sendPromtReducer", sendPromtReducer)
+  //     // if (sendPromt==false && sendPromtLocal==false && sendPromtReducer==false){
+  //     setMessageList(newMessage); 
+  //     //   console.log("MESSAGE 1", sendPromt, newMessage)
+  //     //   // sendMessage(JSON.stringify({complete_text: newMessage}))
+  //     //   // setSendPromtState(true)
+  //     //   // dispatch(setSendPromt(true))
+  //     //   // sendPromtLocal = true
+  //     //   // console.log("SENDING...", sendPromt, sendPromtReducer, sendPromtLocal)
+  //     //   // setMessageList([...newMessage, ""]); 
+  //     //   // setPrompt('')
+  //     // }
+  //     // axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
+  //     // setMessageList([...newMessage, res.data.response])
+  //     // }).catch(err => {
+  //     //   console.log("Error")
+  //     // })
+  //   }
+  // }, [])
+
   useEffect(() => {
     let sendPromtLocal = false
-    if(player != '') {
+    console.log("lastMessage", messageList.length)
+    if (messageList.length == 1 && player != '') {
       const newMessage = [...messageList, ({
         "role": "user",
         "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
       })]
-      // "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
-
-      console.log("sendPromtReducer", sendPromtReducer)
-      if (sendPromt==false && sendPromtLocal==false && sendPromtReducer==false){
-        setMessageList(newMessage); 
-        console.log("MESSAGE 1", sendPromt, newMessage)
-        sendMessage(JSON.stringify({complete_text: newMessage}))
-        setSendPromtState(true)
-        dispatch(setSendPromt(true))
-        sendPromtLocal = true
-        console.log("SENDING...", sendPromt, sendPromtReducer, sendPromtLocal)
-        setMessageList([...newMessage, ""]); 
-        setPrompt('')
-      }
-      // axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
-      // setMessageList([...newMessage, res.data.response])
-      // }).catch(err => {
-      //   console.log("Error")
-      // })
+      setSendPromtState(true)
+      dispatch(setSendPromt(true))
+      sendPromtLocal = true
+      console.log("SENDING...", sendPromt, sendPromtReducer, sendPromtLocal)
+      setMessageList([...newMessage, ""]);
+      sendMessage(JSON.stringify({complete_text: newMessage})) 
+      setPrompt('')
     }
-  }, [])
-
-  useEffect(() => {
-    if (lastMessage !== null) {
+    else if (lastMessage !== null) {
       dispatch(setSendPromt(true))
       setSendPromtState(true)
       if (lastMessage.data != ""){

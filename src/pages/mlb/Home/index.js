@@ -61,9 +61,10 @@ function Home(props) {
   };
 
   useEffect(() => {
+    fetchData();
     const interval = setInterval(() => {
       fetchData();
-    }, 5000)
+    }, 120000)
     return () => clearInterval(interval)
   }, []);
 
