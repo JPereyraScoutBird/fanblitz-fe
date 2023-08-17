@@ -5,26 +5,17 @@ import { useLoaderData } from "react-router-dom";
 import constant from './constant';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Container, Modal, Row } from 'reactstrap';
 import { getDateString } from '../../../utils';
 import Menu from '../../../container/Menu3';
 import Footer from '../../../container/Footer';
 import './style.css'
 import SubMenu from '../../../container/Menu2';
+import Chatbot from '../../../container/ChatBot';
 
 export async function loader({ params }) {
     return params;
 }
-
-const getNewsSpecificPlayer = async (player_name) => {
-  const newURL = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis&subject=${player_name}`);
-  // const aux =  `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado) +NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
-  return newURL.data.URL
-}
-
-// const getNewsSpecificPlayer = (player_name) => (
-//   `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado)+NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
-// )
 
 const renderTable = (data, backgroundColor = undefined, color='#fff') => {
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerStats} data={data.summary}/>;
@@ -41,11 +32,12 @@ const renderTable3 = (data, backgroundColor=undefined, color='#fff') => {
 const renderRank = (playerDetail) => {
   if(playerDetail && playerDetail.ranking.length > 0) {
     return (
-      <div>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Place: </span>{playerDetail.ranking[0].place} th<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Points: </span>{playerDetail.ranking[0].points}<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>League: </span>{playerDetail.ranking[0].league}<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Movement: </span>{playerDetail.ranking[0].movement}</p>      </div>
+      <div className='player_rank'>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Place: </span>{playerDetail.ranking[0].place} th</p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Points: </span>{playerDetail.ranking[0].points}</p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>League: </span>{playerDetail.ranking[0].league}</p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Movement: </span>{playerDetail.ranking[0].movement}</p>
+      </div>
     )
   }
   return <></>
@@ -58,6 +50,9 @@ function PlayerTennis(props) {
     const [playerDetail, setplayerDetail] = useState(undefined)
     const [newsData, setNewsData] = useState([])
     const [imageShow, setImageShow] = useState(false)
+    const [gptStyle, setGptStyle] = useState('')
+    const [modal, setModal] = useState(true);
+    const toggle2 = () => setModal(!modal);
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -78,8 +73,6 @@ function PlayerTennis(props) {
       const fetchData3 = async () => {
         try {
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=tennis&subject=${playerDetail['name']}`);
-
-            // await axios.get(`${getNewsSpecificPlayer(playerDetail['name'])}&apikey=${constant.API}`);
             setNewsData(response.data.content)
         } catch (error) {
           console.error('Error getting data:', error);
@@ -90,25 +83,24 @@ function PlayerTennis(props) {
     
 
     const renderPage = () => {
-      console.log("playerDetail", playerDetail)
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-              <div className="d-flex">
+              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center">
                   <div style={{ border: `5px solid ${constant.team_detail['DEFAULT'].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.logo} onError={() => setImageShow(true)}/>
                   </div>
-                  <div className='d-flex'>
-                      <div>
+                  <div className='d-flex flex-column flex-md-row'>
+                      <div className='player_info_container'>
                         <h2>{playerDetail['name']}</h2>
                         <div>
-                          <div>
-                            <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
-                            <span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{getDateString(playerDetail.birth_date)}</p>
+                          <div className='player_info'>
+                            <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Age: </span>{playerDetail.age}</p>
+                            <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Birth Date: </span>{getDateString(playerDetail.birth_date)}</p>
                           </div>
                           </div>
                       </div>
-                      <div style={{marginLeft: '4rem'}}>
+                      <div className='rank_container'>
                         <h3>Rank</h3>
                         {renderRank(playerDetail)}
                         </div>
@@ -150,14 +142,16 @@ function PlayerTennis(props) {
             </section>
             : null
           }
-
+          <Modal isOpen={modal} toggle={toggle2}>
+            <Chatbot player={playerDetail['name']} pre_prompt={`${playerDetail['name']} tennis player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`} gptStyle={gptStyle}/>
+          </Modal>
         </div>    
     );
     }
 
     return (
       <div id="template" className="player_detail_container">
-        <Menu sport_default={"tennis"} user={user} signOut={signOut}/>
+        <Menu sport_default={"tennis"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
         {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail['DEFAULT'].teamColoursHex[0]} color={constant.team_detail['DEFAULT'].teamColoursHex[1]} logo={constant.team_detail['DEFAULT'].img}/> : null}
         <Container className="template">
           <div id="detail">

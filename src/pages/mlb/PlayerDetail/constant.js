@@ -561,10 +561,6 @@ const team_detail = {
 
 const links = [
     {
-      label: "Bio",
-      id: "#bio"
-    },
-    {
       label: "Last games",
       id: "#lastGames",
     },

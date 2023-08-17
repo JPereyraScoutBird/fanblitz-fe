@@ -17,12 +17,6 @@ export async function loader({ params }) {
     return params;
 }
 
-const getNewsSpecificPlayer = async (player_name) => {
-  const newURL = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${player_name}`);
-  // const aux =  `https://newsapi.org/v2/everything?q=(baseball) AND (${player_name}) (yankees OR baltimore OR boston OR cleveland OR "white sox" OR twins OR detroit OR "kansas city" OR houston OR seattle OR angels OR ranger OR oakland OR atlanta OR mets OR phildelphia OR miami OR nationals OR louis OR milwaukee OR cubs OR reds OR pittsburgh OR dodgers OR "san diego" OR giants OR diamondbacks OR colorado) +NOT+college+NOT+racial+NOT+"how to watch"+NOT+aaa+NOT+delayed+NOT+sex+NOT+shooting+NOT+dies+NOT+minors+NOT+retires+NOT+retirement&searchin=title&excludedomains=espn.com,biztoc.com,denverpost.com,brobible.com,seattlepi.com,hypebeast.com,nypost.com,thedailybeast.com,dailymail.co.uk,rivals.com,trendhunter.com&language=en&pageSize=100&sortBy=publishedAt`
-  return newURL.data.URL
-}
-
 const renderTable = (position, data, backgroundColor = undefined, color='#fff') => {
   if (position !== "P") {
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerHitting} data={data.summary}/>;
@@ -54,27 +48,25 @@ const renderRank = (playerDetail) => {
   if(playerDetail && playerDetail.ranking.length > 0) {
       if(playerDetail.position == 'P') {
       return (
-        <div>
-          <p>
-            <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}
-          </p>
+        <div className='player_rank'>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}</p>
         </div>
       )
     } 
     return (
-      <div>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SLG: </span>{playerDetail.ranking[0].batter_slugging_percentage} th<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>OBP: </span>{playerDetail.ranking[0].batter_on_base_percentage} th<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AVG: </span>{playerDetail.ranking[0].batting_average} th<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].hits} th<br></br>
-        <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>HR: </span>{playerDetail.ranking[0].homeruns}</p>
+      <div className='player_rank'>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SLG: </span>{playerDetail.ranking[0].batter_slugging_percentage} th </p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>OBP: </span>{playerDetail.ranking[0].batter_on_base_percentage} th </p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AVG: </span>{playerDetail.ranking[0].batting_average} th </p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].hits} th </p>
+        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>HR: </span>{playerDetail.ranking[0].homeruns}</p>
       </div>
     )
   }
@@ -121,25 +113,24 @@ function Player(props) {
     }, [playerDetail])    
 
     const renderPage = () => {
-      console.log("player: ", playerDetail)
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-              <div className="d-flex">
+              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center">
                   <div style={{ border: `5px solid ${constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.image} onError={() => setImageShow(true)}/>
                   </div>
-                  <div>
+                  <div className='player_info_container'>
                       <h2>{playerDetail['full_name']}</h2>
                       <div>
-                        <div>
-                          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Age: </span>{playerDetail.age}<br></br>
-                          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}<br></br>
-                          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Height: </span>{playerDetail.height}<br></br>
-                          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
+                        <div className='player_info'>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Age: </span>{playerDetail.age}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Height: </span>{playerDetail.height}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
                         </div>
                         <div>
-                        <h3>Rank</h3>
+                        <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
                         {renderRank(playerDetail)}
                         </div>
                       </div>
@@ -160,10 +151,6 @@ function Player(props) {
             <h3>Stats</h3>
             {renderTable(playerDetail.position, playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
-          {/* <section id="charts"> */}
-            {/* <h3>Charts</h3> */}
-            {/* {playerDetail ? <Line height="70vh" options={playerDetail.summary} data={playerDetail.summary} /> : {}}; */}
-          {/* </section> */}
           {
             newsData && newsData.length ? 
             <section id="news">
