@@ -1,14 +1,25 @@
 const headerBets = {
     "created_date": "Wager Date",
     "amount": "Amount",
-    "currency": "Currency",
     "sport": "Sport",
     "team_home": "Home",
     "team_away": "Away",
     "bet": "Bet",
     "result": "Result",
-    "paid": "Paid",
-    "username": "User"
+    "fanduel": "FanDuel",
+    "share": "Share"
+}
+
+const headerBets2 = {
+    "created_date": "Wager Date",
+    "amount": "Amount",
+    "sport": "Sport",
+    "team_home": "Home",
+    "team_away": "Away",
+    "bet": "Bet",
+    "result": "Result",
+    "fanduel": "FanDuel",
+    "username": "Username"
 }
 
 

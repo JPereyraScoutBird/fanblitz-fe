@@ -63,9 +63,7 @@ function Menu3(props) {
           </Button>
         </Nav>
          <div className='d-none d-md-block '>
-            {/* <Heading level={1}>Hello {user.email}</Heading> */}
             <Button style={{borderRadius: "50px"}} className='btn' onClick={signOut}>Sign out</Button>
-            {/* <h2>Amplify Todos</h2> */}
           </div>
       </Navbar>
       <Menu sport={sportReducer} onChange={(e) => onChange(e)}/>

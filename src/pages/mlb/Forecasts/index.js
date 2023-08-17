@@ -51,7 +51,6 @@ function Forecasts() {
           </div>
           <Row>
               {
-                // gameData
                 forecastData.length ? forecastData.filter(x => filterByDate(getDate(x.date_z), date.toDate())).map(forecast => (
                   <Col xs={12} md={6}>
                     <Card 
@@ -61,6 +60,7 @@ function Forecasts() {
                       imageSrc={Image[forecast.home_team_abb]}
                       linkTitle={`/mlb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
                       footer={renderFooter(forecast.date_z)}
+                      imageRedirect={true}
                     />
                   </Col>
                 ))

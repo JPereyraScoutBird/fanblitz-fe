@@ -96,9 +96,6 @@ function Menu(props) {
                 {renderNavLink(`/${sport}${PATH_LIST.SOCIAL_BETS}`, "SocialBets")}
             </NavItem>
             <NavItem>
-                {renderNavLink(`/${sport}${PATH_LIST.TUTORIAL}`, "Tutorial")}
-            </NavItem>
-            <NavItem>
               <a className="pointer btn" onClick={toggle2}>FanBlitz GPT</a>
             </NavItem>
             <Dropdown nav isOpen={dropdownOpen} value={gptStyle} toggle={toggle3}>

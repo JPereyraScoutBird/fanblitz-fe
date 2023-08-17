@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './style.css'
 import { Link, NavLink } from "react-router-dom";
 import { Container } from 'reactstrap';
+import PATH_LIST from '../../routes/constant';
 
 /**
  * Custom Footer
@@ -25,6 +26,9 @@ function Footer(args) {
             <div>
               <strong>Email:</strong> info@fanblitz.com
             </div>
+            <NavLink style={{color: "#fff"}} to={`/mlb${PATH_LIST.TUTORIAL}`}>
+              Tutorial
+            </NavLink>
           </div>
           <div>
             <div>

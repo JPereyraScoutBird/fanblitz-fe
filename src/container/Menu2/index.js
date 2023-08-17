@@ -6,7 +6,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Container
 } from 'reactstrap';
 import PATH_LIST from '../../routes/constant';
 import './style.css'
@@ -40,9 +41,9 @@ function SubMenu(props) {
   );
 
   return (
-    <div>
+    <Container>
       <Navbar id="secondary_navbar" style={{backgroundImage: "#fff" }}  expand="md" className='d-flex justify-content-end'>
-        <div className='container d-flex justify-content-end'>
+        {/* <div className='container d-flex justify-content-end'> */}
         <NavbarBrand href="/" style={{flexGrow: 0,  borderRadius: "25%"}}>
           <div className='d-flex align-items-center'>
             <img src={logo} height="50px" />
@@ -53,23 +54,10 @@ function SubMenu(props) {
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="mr-auto" navbar>
             {links.map(x => renderNavLink(x.id, x.label))}
-            {/* <NavItem>
-                {renderNavLink(`#bio`, "Bio")}
-            </NavItem>
-            <NavItem>
-                {renderNavLink(`#splits`, "Splits")}
-            </NavItem>
-            <NavItem>
-                {renderNavLink(`#stats`, "Stats")}
-            </NavItem>
-            <NavItem>
-                {renderNavLink(`#news`, "News")}
-            </NavItem> */}
           </Nav>
         </Collapse>
-        </div>
       </Navbar>
-    </div>
+    </Container>
   );
 }
 export default SubMenu

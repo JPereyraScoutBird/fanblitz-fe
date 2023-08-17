@@ -3,9 +3,12 @@ import { Card, CardBody, CardFooter, CardImg, CardTitle } from "reactstrap";
 import './style.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 function CardComponent (props) {
     const [error, setError] = useState(false)
+    const navigate = useNavigate();
 
     const {
         imageSrc,
@@ -15,16 +18,17 @@ function CardComponent (props) {
         style,
         className,
         body,
-        classNameImg
+        classNameImg,
+        imageRedirect=false
     } = props
 
     if (error != true && imageSrc) {
         return (
             <div className={className}>
                 <Card className={`card_component ${style}`}>
-                    <CardImg className={error ? "error" : classNameImg} onError={() => setError(true)} src={imageSrc || false}/>
+                    <CardImg onClick={() => imageRedirect ? navigate(linkTitle) : null} className={error ? "error" : classNameImg} onError={() => setError(true)} src={imageSrc || false}/>
                     <CardTitle className="mt-3">
-                        <a href={linkTitle}>{title}</a>
+                        <Link to={linkTitle}>{title}</Link>
                     </CardTitle>
                     <CardBody>
                         {body}
