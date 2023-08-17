@@ -64,7 +64,7 @@ const headerHitting3Games = {
 }
 
 const headerPitching3Games = {
-    "duration": "Day",
+    "start_time": "Day",
     "wins": "W",
     "losses": "L",
     "earned_run_agerage": "ERA",

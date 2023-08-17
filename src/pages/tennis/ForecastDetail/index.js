@@ -11,13 +11,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faUser } from "@fortawesome/free-regular-svg-icons";
 import constant from "../PlayerDetail/constant";
 import PATH_LIST from "../../../routes/constant";
+import {
+  setSport,
+  selectSport,
+} from '../../../reducers/sportSlide';
+import { useSelector, useDispatch } from 'react-redux';
+
 
 export async function loader({ params }) {
   return params;
 }
 
 function ForecastDetailTennis() {
-
+  const dispatch = useDispatch();
+  dispatch(setSport('tennis'))
   const [forecastData, setForecastData] = useState({})
   const {teams, date} = useLoaderData();
 

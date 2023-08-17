@@ -56,14 +56,13 @@ const renderRank = (playerDetail) => {
       return (
         <div>
           <p>
-            <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th<br></br>
-          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].earned_run_agerage} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].wins} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].saves} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AVG: </span>{playerDetail.ranking[0].pitching_average} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].earned_runs_allowed} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].pitcher_strikeouts} th<br></br>
+          <span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].walks_and_hits_per_inning_pitched}
           </p>
         </div>
       )
