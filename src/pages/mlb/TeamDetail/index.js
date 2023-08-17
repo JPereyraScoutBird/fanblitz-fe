@@ -59,8 +59,8 @@ const renderTablePlayers = (position, data, backgroundColor = "#000", color='#ff
 };
 
 const renderTableRanking = (position, data, backgroundColor = "#000", color='#fff') => (
-  <div className='d-flex ranking-summary'>
-  <div>
+  <div className='d-flex flex-md-row flex-column ranking-summary'>
+  <div className='team_hitter_stats'>
     <h4>Hitter Stats</h4>
     <div className='d-flex'>
     <p><strong>H</strong> {data.ranking.hitter[0]['hits']}</p> 
@@ -82,7 +82,7 @@ const renderTableRanking = (position, data, backgroundColor = "#000", color='#ff
     <p><strong>OPS:</strong> {data.ranking.hitter[0]["ops"]}</p>
     </div>
   </div>
-  <div style={{marginLeft: "4rem"}}>
+  <div className='team_pitcher_stats'>
     <h4>Pitching Stats</h4>
     <div className='d-flex'>
       <p><strong>W:</strong> {data.ranking.pitcher[0]["wins"]}</p>
@@ -193,7 +193,7 @@ function TeamDetail(props) {
           return (
             <Row className='d-flex justify-content-between'>
             {data.leaders.hitter.map(x => (
-            <CardProfileComponent link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] || Image.PROFILE}/>
+            <CardProfileComponent link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-12 col-md-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] || Image.PROFILE}/>
             ))}
           </Row>
           )

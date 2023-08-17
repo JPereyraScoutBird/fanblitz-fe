@@ -23,9 +23,7 @@ function SearchComponent (props) {
     const handleOnSearch = async (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
-        console.log("klok manin1")
         if(string.length == 1 && prompt != string) {
-            console.log("klok manin2")
             const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/search?q=${string}&sport=${sportReducer}`);
             const response2 = JSON.parse(response.data.body)
             console.log("response search", response2)
