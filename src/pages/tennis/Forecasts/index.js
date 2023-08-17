@@ -60,6 +60,7 @@ function ForecastsTennis() {
                       imageSrc={Image.TENNIS.randomPhoto()}
                       linkTitle={`/tennis${PATH_LIST.FORECAST_DETAIL}/${forecast.home_player}_${forecast.away_player}/${getDate2(forecast.date_z)}`}
                       footer={renderFooter(forecast.date_z)}
+                      imageRedirect={true}
                     />
                   </Col>
                 ))

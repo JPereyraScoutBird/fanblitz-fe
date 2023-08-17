@@ -264,7 +264,6 @@ function Home(props) {
           <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "pitcher_strikeout" ? "bold" : "normal"}`}} onClick={handleButtonPitchingStrikeout}>Strikeout Model</button>
         </div>
       </Container>
-      
       <Container>
         {renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)}
       </Container>
