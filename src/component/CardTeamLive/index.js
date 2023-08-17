@@ -103,7 +103,7 @@ function CardTeamLiveComponent (props) {
     }
 
 
-    if (error != true) {
+    // if (error != true) {
         console.log("status: ", status)
         return (
             // <Link to={link} className={`${className} card-link shadow mb-5 p-2`}>
@@ -161,9 +161,6 @@ function CardTeamLiveComponent (props) {
                 </Card>
             // </Link>
         )
-    } 
-    return null
-
 }
 
 export default CardTeamLiveComponent

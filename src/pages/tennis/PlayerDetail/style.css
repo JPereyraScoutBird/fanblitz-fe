@@ -22,3 +22,48 @@
     background-attachment: fixed;
     /* padding-right: 20px; */
 }
+
+.player_detail_container .player_info p, .player_detail_container .player_rank p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.player_info_container {
+    width: 100%;
+}
+
+.player_info_container h3{
+    text-align: center;
+    margin-left: 0px;
+}
+
+.player_info_container h2 {
+    text-align: center;
+}
+
+.rank_container {
+    margin-top: 2rem;
+    margin-left: 0rem;
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .player_detail_container .player_info p, .player_detail_container .player_rank p {
+        justify-content: start;
+    }
+    .player_info_container {
+        width: auto;
+    }
+    .player_info_container h3{
+        text-align: left;
+        margin-left: 4rem;
+    }
+    .player_info_container h2 {
+        text-align: left;
+    }
+    .rank_container {
+        margin-left: 2rem;
+        margin-top: 0rem;
+    }
+}

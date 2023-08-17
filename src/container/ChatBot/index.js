@@ -24,14 +24,6 @@ const renderMessages = (message) => {
   )
 }
 
-const Typing = () => (
-  <div className="typing">
-    <div className="typing__dot"></div>
-    <div className="typing__dot"></div>
-    <div className="typing__dot"></div>
-  </div>
-)
-
 
 function Chatbot(props) {
 
@@ -40,46 +32,14 @@ function Chatbot(props) {
   const dispatch = useDispatch();
   const [sendPromt, setSendPromtState] = useState(false)
   const [prompt, setPrompt] = useState('')
-  const [isTyping, setIsTyping] = useState('')
   const [socketUrl, setSocketUrl] = useState('wss://sfiwzuyyr4.execute-api.us-east-1.amazonaws.com/dev');
   const [messageList, setMessageList] = useState([{"role": "assistant", "content": "How can I help you?"}])
 
   const suffix_style = gptStyle == '' ? " " : ` in the style of ${gptStyle}`
   const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
 
-  // useEffect(() => {
-  //   let sendPromtLocal = false
-  //   console.log("player: ", player)
-  //   if(player != '') {
-  //     const newMessage = [...messageList, ({
-  //       "role": "user",
-  //       "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
-  //     })]
-  //     // "content": pre_prompt != '' ? pre_prompt : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts]`
-
-  //     // console.log("sendPromtReducer", sendPromtReducer)
-  //     // if (sendPromt==false && sendPromtLocal==false && sendPromtReducer==false){
-  //     setMessageList(newMessage); 
-  //     //   console.log("MESSAGE 1", sendPromt, newMessage)
-  //     //   // sendMessage(JSON.stringify({complete_text: newMessage}))
-  //     //   // setSendPromtState(true)
-  //     //   // dispatch(setSendPromt(true))
-  //     //   // sendPromtLocal = true
-  //     //   // console.log("SENDING...", sendPromt, sendPromtReducer, sendPromtLocal)
-  //     //   // setMessageList([...newMessage, ""]); 
-  //     //   // setPrompt('')
-  //     // }
-  //     // axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
-  //     // setMessageList([...newMessage, res.data.response])
-  //     // }).catch(err => {
-  //     //   console.log("Error")
-  //     // })
-  //   }
-  // }, [])
-
   useEffect(() => {
     let sendPromtLocal = false
-    console.log("lastMessage", messageList.length)
     if (messageList.length == 1 && player != '') {
       const newMessage = [...messageList, ({
         "role": "user",
@@ -88,7 +48,6 @@ function Chatbot(props) {
       setSendPromtState(true)
       dispatch(setSendPromt(true))
       sendPromtLocal = true
-      console.log("SENDING...", sendPromt, sendPromtReducer, sendPromtLocal)
       setMessageList([...newMessage, ""]);
       sendMessage(JSON.stringify({complete_text: newMessage})) 
       setPrompt('')
@@ -98,10 +57,8 @@ function Chatbot(props) {
       setSendPromtState(true)
       if (lastMessage.data != ""){
         const new_data = JSON.parse(lastMessage.data)
-        // console.log(new_data.response)
         messageList[messageList.length - 1] = new_data.response
         setMessageList(messageList)
-        // setMessageList((prev) => prev.concat(new_data.response));
       }
     }
     else{
@@ -129,11 +86,6 @@ function Chatbot(props) {
     sendMessage(JSON.stringify({complete_text: newMessage}))
     setMessageList([...newMessage, ""]); 
     setPrompt('')
-    // axios.post(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/chat`, {complete_text: newMessage}).then((res) => {
-    // setMessageList([...newMessage, res.data.response])
-    // }).catch(err => {
-    //   console.log("Error")
-    // })
   }
   console.log("asd", suffix_style)
   return (
@@ -149,7 +101,6 @@ function Chatbot(props) {
               {messageList.length ? messageList.map(x => renderMessages(x)) : null}
               {messageList[messageList.length - 1]['role'] == 'user' ?
               <div>
-                {/* <span>"fanblitz bot is typing"</span>  */}
                 <div className="typing">
                   <div className="typing__dot"></div>
                   <div className="typing__dot"></div>
