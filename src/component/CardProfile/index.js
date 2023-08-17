@@ -22,7 +22,6 @@ function CardProfileComponent (props) {
     } = props
 
 
-    // if (error != true) {
         return (
             <Link to={link} className={`${className} card-link shadow mb-5 p-2 bg-white rounded`}>
                 <Card className={`card_profile_component ${style}`}>
@@ -40,8 +39,6 @@ function CardProfileComponent (props) {
                 </Card>
             </Link>
         )
-    // } 
-    // return null
 
 }
 
