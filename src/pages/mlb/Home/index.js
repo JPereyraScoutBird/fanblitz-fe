@@ -116,20 +116,20 @@ function Home(props) {
   };
 
   const onClick = (game) => {
-    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${game.id}`);
+    navigate(`/mlb${PATH_LIST.LIVE}`);
   }
   
   const onClick2 = (game) => {
     const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history 1`)
+    setPrompt(`${new_team}' baseball team history`)
     toggle()
   }
   
   const onClick3 = (game) => {
     const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history 2`)
+    setPrompt(`${new_team}' baseball team history`)
     toggle()
   }
 
