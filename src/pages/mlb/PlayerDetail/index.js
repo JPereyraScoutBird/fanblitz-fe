@@ -48,25 +48,31 @@ const renderRank = (playerDetail) => {
   if(playerDetail && playerDetail.ranking.length > 0) {
       if(playerDetail.position == 'P') {
       return (
-        <div className='player_rank'>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th</p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}</p>
-        </div>
+        <>
+          <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
+          <div className='player_rank'>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Era: </span>{playerDetail.ranking[0].runs} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>G: </span>{playerDetail.ranking[0].hits} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SV: </span>{playerDetail.ranking[0].homeruns} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>IP: </span>{playerDetail.ranking[0].runs_batted_in} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].batter_walks} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>ER: </span>{playerDetail.ranking[0].batter_strike_outs} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SO: </span>{playerDetail.ranking[0].batter_on_base_percentage} th</p>
+            <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>WHIP: </span>{playerDetail.ranking[0].batter_slugging_percentage}</p>
+          </div>
+        </>
       )
     } 
     return (
-      <div className='player_rank'>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SLG: </span>{playerDetail.ranking[0].batter_slugging_percentage} th </p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>OBP: </span>{playerDetail.ranking[0].batter_on_base_percentage} th </p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AVG: </span>{playerDetail.ranking[0].batting_average} th </p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].hits} th </p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>HR: </span>{playerDetail.ranking[0].homeruns}</p>
+      <div>
+        <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
+        <div className='player_rank'>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>SLG: </span>{playerDetail.ranking[0].batter_slugging_percentage} th </p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>OBP: </span>{playerDetail.ranking[0].batter_on_base_percentage} th </p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AVG: </span>{playerDetail.ranking[0].batting_average} th </p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>H: </span>{playerDetail.ranking[0].hits} th </p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>HR: </span>{playerDetail.ranking[0].homeruns}</p>
+        </div>
       </div>
     )
   }
@@ -116,7 +122,7 @@ function Player(props) {
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center">
+              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center align-items-md-start">
                   <div style={{ border: `5px solid ${constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.image} onError={() => setImageShow(true)}/>
                   </div>
@@ -130,8 +136,7 @@ function Player(props) {
                           <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
                         </div>
                         <div>
-                        <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
-                        {renderRank(playerDetail)}
+                          {renderRank(playerDetail)}
                         </div>
                       </div>
                       

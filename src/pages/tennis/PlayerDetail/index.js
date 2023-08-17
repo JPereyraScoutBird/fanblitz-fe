@@ -32,12 +32,15 @@ const renderTable3 = (data, backgroundColor=undefined, color='#fff') => {
 const renderRank = (playerDetail) => {
   if(playerDetail && playerDetail.ranking.length > 0) {
     return (
-      <div className='player_rank'>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Place: </span>{playerDetail.ranking[0].place} th</p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Points: </span>{playerDetail.ranking[0].points}</p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>League: </span>{playerDetail.ranking[0].league}</p>
-        <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Movement: </span>{playerDetail.ranking[0].movement}</p>
-      </div>
+      <>
+        <h3>Rank</h3>
+        <div className='player_rank'>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Place: </span>{playerDetail.ranking[0].place} th</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Points: </span>{playerDetail.ranking[0].points}</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>League: </span>{playerDetail.ranking[0].league}</p>
+          <p><span style={{fontWeight: "bold", color: constant.team_detail['DEFAULT'].teamColoursHex[1]}}>Movement: </span>{playerDetail.ranking[0].movement}</p>
+        </div>
+      </>
     )
   }
   return <></>
@@ -86,7 +89,7 @@ function PlayerTennis(props) {
       return (
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center">
+              <div className="d-flex flex-column flex-md-row justify-content-start align-items-center align-items-md-start">
                   <div style={{ border: `5px solid ${constant.team_detail['DEFAULT'].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.logo} onError={() => setImageShow(true)}/>
                   </div>
@@ -101,7 +104,6 @@ function PlayerTennis(props) {
                           </div>
                       </div>
                       <div className='rank_container'>
-                        <h3>Rank</h3>
                         {renderRank(playerDetail)}
                         </div>
                       </div>
