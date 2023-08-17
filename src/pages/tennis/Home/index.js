@@ -146,7 +146,7 @@ function HomeTennis(props) {
     }
 
     const onClick = (game) => {
-      navigate(`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}_${removechars(game.away_player)}`);
+      navigate(`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}_${removechars(game.away_player)}/${getDate2(game.date_z)}`);
     }
     
     const onClick2 = (game) => {
