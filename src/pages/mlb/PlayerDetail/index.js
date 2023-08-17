@@ -179,7 +179,7 @@ function Player(props) {
           : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={playerDetail['full_name']} gptStyle={gptStyle}/>
+            <Chatbot player={`${playerDetail['first_name']} ${playerDetail['last_name']}`} gptStyle={gptStyle}/>
           </Modal>
         </div>    
     );
