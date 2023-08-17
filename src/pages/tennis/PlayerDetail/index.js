@@ -18,15 +18,15 @@ export async function loader({ params }) {
 }
 
 const renderTable = (data, backgroundColor = undefined, color='#fff') => {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data && data.summary && data.summary.length == 0} header={constant.headerStats} data={data.summary || []}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={!data} header={constant.headerStats} data={data.summary}/>;
 };
 
 const renderTable2 = (data, backgroundColor=undefined, color='#fff') => {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data && data.split && data.split.length == 0} header={constant.headerSplit} data={data.split || []}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={!data} header={constant.headerSplit} data={data.split}/>;
 };
 
 const renderTable3 = (data, backgroundColor=undefined, color='#fff') => {
-  return <CustomTable backgroundColor={backgroundColor} color={color} loading={data && data.last3Games && data.last3Games.length == 0} header={constant.header3Games} data={data.last3Games || []}/>;
+  return <CustomTable backgroundColor={backgroundColor} color={color} loading={!data} header={constant.header3Games} data={data.last3Games}/>;
 };
 
 const renderRank = (playerDetail) => {

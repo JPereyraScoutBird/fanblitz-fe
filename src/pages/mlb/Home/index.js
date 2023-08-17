@@ -45,30 +45,38 @@ function Home(props) {
 
   const fetchData = async () => {
       try {
-        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/gamescore',
-        );
-        const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/pitchers/strikeout');
-        const jsonObjectModel = JSON.parse(responseModel.data.body)
+        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',);
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
         console.log("games", response_formated)
         setGameData(response_formated)
-        
-        const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
-        // console.log("fetchDataStrikeout", response_formatedModel)
-        setPitcherStrikeout(response_formatedModel)
       } catch (error) {
         console.error('Error getting data:', error);
       }
   };
 
+  const fetchDataStrikeout = async () => {
+    try {
+      const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/pitchers/strikeout');
+      const jsonObjectModel = JSON.parse(responseModel.data.body)
+      const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
+      setPitcherStrikeout(response_formatedModel)
+    } catch (error) {
+      console.error('Error getting data:', error);
+    }
+};
+
   useEffect(() => {
     fetchData();
-    const interval = setInterval(() => {
-      fetchData();
-    }, 120000)
-    return () => clearInterval(interval)
+    // const interval = setInterval(() => {
+    //   fetchData();
+    // }, 120000)
+    // return () => clearInterval(interval)
   }, []);
+
+  useEffect(() => {
+    fetchDataStrikeout();
+  }, [gameData]);
 
   React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -192,8 +200,8 @@ function Home(props) {
           "home_spreads_draftkings": "Vegas",
           "margin_spread_fanblitz": "Fanblitz",
           "difference": "Difference",
-          "home_score": "Home Score",
-          "away_score": "Away Score",
+          // "home_score": "Home Score",
+          // "away_score": "Away Score",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
