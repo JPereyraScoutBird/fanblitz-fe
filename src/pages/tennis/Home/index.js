@@ -17,6 +17,7 @@ import moment from 'moment'
 import uuid from 'react-uuid';
 
 import './style.css'
+import Footer from "../../../container/Footer";
 
 function HomeTennis(props) {
   const {user, signOut} = props
@@ -216,7 +217,8 @@ function HomeTennis(props) {
           </div>
           <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/>
         </div>
-      </Container>    
+      </Container>
+      <Footer />    
     </div>    
   );
 

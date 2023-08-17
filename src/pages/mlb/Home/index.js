@@ -18,6 +18,7 @@ import moment from 'moment'
 import uuid from 'react-uuid';
 import { useNavigate } from "react-router-dom";
 import Chatbot from "../../../container/ChatBot";
+import Footer from "../../../container/Footer";
 
 
 function Home(props) {
@@ -207,13 +208,11 @@ function Home(props) {
   };
   
   const renderCards = () => {
-    // console.log(gameData)
     if (gameData != undefined && gameData.length > 0) {
       const today_games = gameData.filter(x => getTodayItems(x.date_z))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
-      // console.log("today games: ", newArr)
       if (width > breakpoint ) {
         return (
         <Carousel style={{zIndex: "4"}} activeIndex={indexCarousel} next={() => next(newArr)} previous={() => prev()}>
@@ -268,14 +267,8 @@ function Home(props) {
       
       <Container>
         {renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)}
-        {/* <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-          <h2>MLB Game Schedule</h2>
-          <div className="mb-4">
-            <DatePagination date={date} onClick={(date) => setDate(date)}/>
-          </div>
-          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
-        </div> */}
-      </Container>    
+      </Container>
+      <Footer />  
       <Modal isOpen={modal} toggle={toggle}>
         <Chatbot player={team || pitcher} pre_prompt={prompt} gptStyle={gptStyle}/>
       </Modal>
