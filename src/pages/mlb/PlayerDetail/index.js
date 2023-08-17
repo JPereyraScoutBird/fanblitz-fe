@@ -87,7 +87,6 @@ function Player(props) {
     const { playerId } = useLoaderData();
     const [playerDetail, setplayerDetail] = useState(undefined)
     const [newsData, setNewsData] = useState([])
-    const [bio, setBio] = useState({})
     const [imageShow, setImageShow] = useState(false)
     const [gptStyle, setGptStyle] = useState('')
     const [modal, setModal] = useState(true);
@@ -119,22 +118,7 @@ function Player(props) {
         }
       }
       fetchData3()
-    }, [playerDetail])
-
-    // useEffect(() => {
-      
-    //   const fetchData4 = async () => {
-    //     try {
-    //         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${playerDetail.full_name}&team=${playerDetail.mysportfeeds_abbreviation}&season=${playerDetail.summary.map(x => x.season).sort().slice(-1)}`);
-    //         setBio(response.data.body)
-    //     } catch (error) {
-    //       console.error('Error getting data:', error);
-    //     }
-    //   }
-    //   // fetchData4()
-    // }, [playerDetail])
-
-    
+    }, [playerDetail])    
 
     const renderPage = () => {
       console.log("player: ", playerDetail)
@@ -163,16 +147,7 @@ function Player(props) {
                   </div>
               </div>
               <br></br>
-          </div>
-          {/* <section>
-            {console.log("Bio: ", bio)}
-            <h3>Bio</h3>
-            <p>{bio ? bio.bio : ""}</p>
-            <h4>Background</h4>
-            <p>{bio ? bio.background : ""}</p>
-            <h4>Facts</h4>
-            <p>{bio ? bio.facts : ""}</p>
-          </section> */}
+          </div>    
           <section id="lastGames">
             <h3>Last 3 Games</h3>
             {renderTable3(playerDetail.position, playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}

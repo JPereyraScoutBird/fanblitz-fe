@@ -57,7 +57,6 @@ function PlayerTennis(props) {
     const { playerId } = useLoaderData();
     const [playerDetail, setplayerDetail] = useState(undefined)
     const [newsData, setNewsData] = useState([])
-    const [bio, setBio] = useState({})
     const [imageShow, setImageShow] = useState(false)
 
     useEffect(() => {
@@ -88,20 +87,6 @@ function PlayerTennis(props) {
       }
       fetchData3()
     }, [playerDetail])
-
-    useEffect(() => {
-      
-      const fetchData4 = async () => {
-        try {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/bio?player_name=${playerDetail.full_name}&team=${playerDetail.mysportfeeds_abbreviation}&season=${playerDetail.summary.map(x => x.season).sort().slice(-1)}`);
-            setBio(response.data.body)
-        } catch (error) {
-          console.error('Error getting data:', error);
-        }
-      }
-      // fetchData4()
-    }, [playerDetail])
-
     
 
     const renderPage = () => {
