@@ -177,7 +177,7 @@ function HomeTennis(props) {
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
           <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}
-          onClickList={[(game) => onClick(game), (player) => onClick2(player), (player) => onClick3(player)]}
+          onClickList={[(game) => onClick(game), () => {}, (player) => onClick2(player), () => {}, (player) => onClick3(player)]}
             />
         </div>
       </Container>

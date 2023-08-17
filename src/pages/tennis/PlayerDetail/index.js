@@ -30,7 +30,7 @@ const renderTable3 = (data, backgroundColor=undefined, color='#fff') => {
 };
 
 const renderRank = (playerDetail) => {
-  if(playerDetail && playerDetail.ranking.length > 0) {
+  if(playerDetail && playerDetail.ranking && playerDetail.ranking.length > 0) {
     return (
       <>
         <h3>Rank</h3>
@@ -70,7 +70,7 @@ function PlayerTennis(props) {
         };
 
         fetchData2()
-    }, []);
+    }, [playerId, location.key]);
 
     useEffect(() => {
       const fetchData3 = async () => {

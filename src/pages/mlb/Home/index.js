@@ -181,7 +181,7 @@ function Home(props) {
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>AI-POWERED MLB FORECASTS PITCHER STRIKEOUT</h2>
+            <h2>MLB Strikeout Model</h2>
             <br></br>
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
