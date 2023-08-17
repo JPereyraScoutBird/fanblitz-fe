@@ -31,6 +31,7 @@ const getNewsSpecificPlayer = (player_name) => (
 
 const renderTableNextGames = (position, data, backgroundColor = "#000", color='#fff') => {
     if(data && data.games.length > 0) {
+      console.log("klok menil", data)
       return (
         <div className='w-100 d-flex flex-column align-items-center'>
           <CardTeamComponent 
@@ -38,7 +39,7 @@ const renderTableNextGames = (position, data, backgroundColor = "#000", color='#
             awayImg={constant.team_detail[data.games[0]['away_team']].img}
             home={data.games[0]['home_team']} 
             away={data.games[0]['away_team']} 
-            footer={getTime(data.games[0].date_z)} 
+            footer={getTime(data.games[0].date_et)} 
             home_score={data.games[0]['home_score']}
             away_score={data.games[0]['away_score']}
             link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${data.games[0]['home_team']}-${data.games[0]['away_team']}/${getDate2(data.games[0].date_z)}`}

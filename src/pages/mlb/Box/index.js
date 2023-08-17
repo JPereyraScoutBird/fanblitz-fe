@@ -122,6 +122,19 @@ React.useEffect(() => {
     return "AMERICAN"
   }
 
+  const getHomeInning = (data) =>{
+    if (data.length != 0){
+      return data[0]["_team"]
+    }
+    return "AMERICAN"
+  }
+
+  const getAwayInning = (data) =>{
+    if (data.length != 0){
+      return data[1]["_team"]
+    }
+    return "AMERICAN"
+  }
 
   const renderPitcherTable = (data) => (
     <>
@@ -151,13 +164,13 @@ React.useEffect(() => {
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
             <div className="w-100 d-flex flex-md-row flex-column align-items-center">
               <div className="w-100 d-flex align-items-center">
-                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getTeam(boxDataHitHome) || "NYY"].img} height={"32px"} />
-                <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {getTeam(boxDataHitHome) || "NYY"} </h2>
+                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getHomeInning(boxDataInnings) || "NYY"].img} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {getHomeInning(boxDataInnings) || "NYY"} </h2>
               {/* </div> */}
               <h2 className="mr-2 ml-2" style={{marginLeft: "1rem", marginRight: "1rem"}}> vs </h2>
               {/* <div className="w-100 d-flex align-items-center"> */}
-                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getTeam(boxDataHitAway) || "ATL"].img} height={"32px"} />
-                <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {getTeam(boxDataHitAway) || "ATL"}</h2>
+                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getAwayInning(boxDataInnings) || "ATL"].img} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {getAwayInning(boxDataInnings) || "ATL"}</h2>
               </div>
             </div>
             <div>

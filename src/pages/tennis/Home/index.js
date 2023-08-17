@@ -53,12 +53,13 @@ function HomeTennis(props) {
 
   const header = {
     "date_z": "Date",
-    "home_player": "Player Home",
-    "away_player": "Player Away",
-    "home_score": "Home score",
-    "away_score": "Away score",
-    "tournament_name": "Tournament",
-    "event_type": "Tournament Type"
+    // "tournament_name": "Tournament",
+    "event_type": "Tournament Type",
+    "home_player": "Player 1",
+    "rank_home": "Rank",
+    "away_player": "Player 2",
+    "rank_away": "Rank",
+    "winner2": "Prediction to Win"
   };
 
   const renderForecastComponent = (game, img) => (
