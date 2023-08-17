@@ -101,7 +101,7 @@ function Player(props) {
         };
 
         fetchData2()
-    }, []);
+    }, [playerId, location.key]);
 
     useEffect(() => {
       const fetchData3 = async () => {

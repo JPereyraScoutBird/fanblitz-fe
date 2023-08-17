@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import CustomTable from '../../../component/Table';
 import { filterByDate, getDate, getDate2, getTodayItems, removechars } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
-import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
+import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal } from "reactstrap";
 import { Link, useNavigate } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
@@ -18,6 +18,7 @@ import uuid from 'react-uuid';
 
 import './style.css'
 import Footer from "../../../container/Footer";
+import Chatbot from "../../../container/ChatBot";
 
 function HomeTennis(props) {
   const {user, signOut} = props
@@ -27,6 +28,11 @@ function HomeTennis(props) {
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
+  const [prompt, setPrompt] = useState('')
+  const [player, setPlayer] = useState('')
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal)
+  const [gptStyle, setGptStyle] = useState('')
   const breakpoint = 620;
 
   const fetchData = async () => {
@@ -139,9 +145,27 @@ function HomeTennis(props) {
       }
     }
 
+    const onClick = (game) => {
+      navigate(`/tennis${PATH_LIST.FORECAST_DETAIL}/${removechars(game.home_player)}_${removechars(game.away_player)}`);
+    }
+    
+    const onClick2 = (game) => {
+      setPlayer(game.home_player)
+      setPrompt(`${game.home_player}' tennis team history`)
+      toggle()
+    }
+    
+    const onClick3 = (game) => {
+      setPlayer(game.away_player)
+      setPrompt(`${game.away_player}' tennis team history`)
+      toggle()
+    }
+
+    
+
   return (
     <div id="home">
-      <Menu sport_default={"tennis"} signOut={signOut} user={user}/>
+      <Menu sport_default={"tennis"} signOut={signOut} user={user} onChange={(e) => setGptStyle(e)}/>
         {
           renderCards()
         }
@@ -151,9 +175,14 @@ function HomeTennis(props) {
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
-          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}/>
+          <CustomTable noRange={true} range={50} header={header} data={gameData.filter(x => filterByDate(x.date_z, date.toDate()))} loading={gameData.length == 0}
+          onClickList={[(game) => onClick(game), (player) => onClick2(player), (player) => onClick3(player)]}
+            />
         </div>
       </Container>
+      <Modal isOpen={modal} toggle={toggle}>
+        <Chatbot player={player} pre_prompt={prompt} gptStyle={gptStyle}/>
+      </Modal>
       <Footer />    
     </div>    
   );
