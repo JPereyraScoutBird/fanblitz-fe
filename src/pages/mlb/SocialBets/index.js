@@ -29,12 +29,15 @@ function SocialBets() {
 
   const [modal, setModal] = useState(false);
   const [modal2, setModal2] = useState(false);
+  const [modalFriend, setModalFriend] = useState(false);
   const [game, setGameData] = useState([]);
   const [gameId, setGameId] = useState('');
   const [amount, setAmount] = useState('');
   const [bet, setBet] = useState('');
+  const [usernameFriend, setUsernameFriend] = useState('');
   const toggle = () => setModal(!modal);
   const toggle2 = () => setModal2(!modal2);
+  const toggleFriend = () => setModalFriend(!modalFriend);
 
   console.log("User: ", user)
 
@@ -46,10 +49,9 @@ function SocialBets() {
         jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
         jsonObject = jsonObject.length ? jsonObject.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
 
-        jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
+        jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.filter(x => x.approved != 0).map(x => ({...x, "created_date": getDate(x['created_date']), "updated_date": getDate(x['updated_date'])})) : []
         jsonObjectFriend = jsonObjectFriend.length ? jsonObjectFriend.map(x => ({...x, "paid": getPaid(x['paid'])})) : []
 
-        // console.log(jsonObject)
         setBets(jsonObject)
         setBetsFriend(jsonObjectFriend)
         
@@ -65,7 +67,6 @@ function SocialBets() {
   
 
   const fetchData = async () => {
-    // if (gameDataStore.length == 0) {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',
         );
@@ -73,7 +74,6 @@ function SocialBets() {
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
         console.log(response_formated)
         setGameData(response_formated)
-        // dispatch(setValue(response_formated))
       } catch (error) {
         console.error('Error getting data:', error);
       }
@@ -121,6 +121,25 @@ function SocialBets() {
     }
   }
 
+  const submiFriend = async (e) => {
+    e.preventDefault()
+    const body = {
+    "user_id": user.username,
+    "friend_username": usernameFriend,
+    "action": "create"
+    }
+
+    console.log("sending body", body)
+    try {
+      const response_submit = await axios.post('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/friends', body);
+      toggleFriend()
+      fetchData2()
+
+    } catch (error) {
+      console.error('Error getting data:', error);
+    }
+  }
+
   const renderBrands = (x) => (
     <div className='d-flex'>
       <a style={{color: "#000", marginRight: "12px"}} href={`https://twitter.com/intent/tweet?text=${x.team_home} vs ${x.team_away}, I bet the spread will be ${x.bet} in MLB. More info www.fanblitz.com`}><FontAwesomeIcon icon={faTwitter} /> </a>
@@ -146,8 +165,11 @@ function SocialBets() {
         </div>
         <br></br>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-          <h2>Friend Wagers</h2>
-          <CustomTable noRange={true} range={50} header={constant.headerBets2} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
+          <div className='d-flex justify-content-between align-items-between'>
+            <h2>Friend Wagers</h2>
+            <Button style={{borderRadius: "50px", border: "1px solid #666666", backgroundColor: "transparent", color: "#666666"}} color="secondary" onClick={toggleFriend}>Search username</Button>
+          </div>
+          <CustomTable search={false} search_placeholder="Search friends email" search_keys={['username']} pagination={true} range={5} header={constant.headerBets2} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
         </div>
       </Container>
       <Modal isOpen={modal} toggle={toggle}>
@@ -219,7 +241,23 @@ function SocialBets() {
           <Button onClick={toggle2}>Cancel</Button>
           <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
         </ModalFooter>
-      </Modal>  
+      </Modal>
+
+      <Modal isOpen={modalFriend} toggle={toggleFriend}>
+        <ModalHeader style={{backgroundColor: "#000", color: "#fff"}} toggle={toggleFriend}>Find new friend</ModalHeader>
+        <ModalBody>
+            <Form inline onSubmit={(e) => submiFriend(e)}>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="bet" className="mr-sm-2">Username</Label>
+              <Input value={usernameFriend} onChange={e => setUsernameFriend(e.target.value)} type="currency" name="usernameFriend" id="usernameFriend" placeholder="username@gmail.com" />
+            </FormGroup>
+            <div className='d-flex justify-content-end'>
+              <Button outline className='btn mt-4 mr-4 mb-4' onSubmit={(e) => toggleFriend()}>Cancel</Button>
+              <Button disabled={usernameFriend==''} className='btn ml-2 mt-4 mb-4' onSubmit={(e) => submiFriend(e)}>Submit</Button>
+            </div>
+          </Form>
+        </ModalBody >
+      </Modal>   
       <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
     </div>    
   );

@@ -24,5 +24,6 @@ const headerBets2 = {
 
 
 export default {
-    headerBets
+    headerBets,
+    headerBets2
 }
