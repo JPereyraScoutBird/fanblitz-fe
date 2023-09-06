@@ -82,10 +82,6 @@ function SocialBets() {
 
   useEffect(() => {
     fetchData();
-    const interval = setInterval(() => {
-      fetchData();
-    }, 30000)
-    return () => clearInterval(interval)
   }, []);
 
   console.log("email: ", user.attributes.email)
