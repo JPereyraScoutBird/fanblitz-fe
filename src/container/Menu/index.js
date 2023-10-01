@@ -68,7 +68,7 @@ function Menu(props) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
-            {sport == "mlb" ? (
+            {sport == "mlb" || sport == "cbb"? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.LIVE}`, "Score")}
             </NavItem>
@@ -79,7 +79,7 @@ function Menu(props) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.NEWS}`, "News")}
             </NavItem>
-            {sport == "mlb" ? (
+            {sport == "mlb" || sport == "cbb" ? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.TEAM}`, "Team")}
             </NavItem>

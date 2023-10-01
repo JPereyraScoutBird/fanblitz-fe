@@ -42,6 +42,11 @@ const router = (user, signOut) => createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: `cbb/${PATH_LIST.HOME}`,
+    element: <Pages.cbb.Home user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <RenderPage user={user} signOut={signOut} />,
     errorElement: <ErrorPage />,
@@ -63,8 +68,23 @@ const router = (user, signOut) => createBrowserRouter([
     loader: loader,
   },
   {
+    path: "/cbb",
+    element: <RenderPage user={user} signOut={signOut} />,
+    errorElement: <ErrorPage />,
+    children: ROUTES.CBB,
+    loader: loader,
+  },
+  {
     path: `/mlb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.mlb.Player user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `/cbb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
+    element: <Pages.cbb.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -79,6 +99,14 @@ const router = (user, signOut) => createBrowserRouter([
     },
   },
   {
+    path: `/cbb${PATH_LIST.TEAM_DETAIL}/:teamId`,
+    element: <Pages.cbb.TeamDetail user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
     path: `/mlb${PATH_LIST.GAME_DETAIL}/:gameId`,
     element: <Pages.mlb.GamePlays user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
@@ -87,8 +115,24 @@ const router = (user, signOut) => createBrowserRouter([
     },
   },
   {
+    path: `/cbb${PATH_LIST.GAME_DETAIL}/:gameId`,
+    element: <Pages.cbb.GamePlays user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
     path: `/mlb${PATH_LIST.LIVE}`,
     element: <Pages.mlb.LiveGame />,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `/cbb${PATH_LIST.LIVE}`,
+    element: <Pages.cbb.LiveGame />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
