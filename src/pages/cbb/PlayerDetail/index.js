@@ -36,11 +36,11 @@ const renderRank = (playerDetail) => {
       <div>
         <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
         <div className='player_rank'>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>PTS: </span>{playerDetail.ranking[0].pts} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>REB: </span>{playerDetail.ranking[0].reb} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AST: </span>{playerDetail.ranking[0].ast} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>STL: </span>{playerDetail.ranking[0].stl} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>TOV: </span>{playerDetail.ranking[0].tov} th </p>
+          <p><span style={{fontWeight: "bold"}}>PTS: </span>{playerDetail.ranking[0].pts} th </p>
+          <p><span style={{fontWeight: "bold"}}>REB: </span>{playerDetail.ranking[0].reb} th </p>
+          <p><span style={{fontWeight: "bold"}}>AST: </span>{playerDetail.ranking[0].ast} th </p>
+          <p><span style={{fontWeight: "bold"}}>STL: </span>{playerDetail.ranking[0].stl} th </p>
+          <p><span style={{fontWeight: "bold"}}>TOV: </span>{playerDetail.ranking[0].tov} th </p>
         </div>
       </div>
     )
@@ -92,17 +92,17 @@ function Player(props) {
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex flex-column flex-md-row justify-content-start align-items-center align-items-md-start">
-                  <div style={{ border: `5px solid ${constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
+                  <div style={{ border: `5px solid red`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.image} onError={() => setImageShow(true)}/>
                   </div>
                   <div className='player_info_container'>
                       <h2>{playerDetail['full_name']}</h2>
                       <div>
                         <div className='player_info'>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Age: </span>{playerDetail.age}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Height: </span>{playerDetail.height}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold"}}>Age: </span>{playerDetail.age}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold"}}>Birth Date: </span>{playerDetail.birth_date}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold"}}>Height: </span>{playerDetail.height}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold"}}>Weight: </span>{playerDetail.weight}</p>
                         </div>
                         <div>
                           {renderRank(playerDetail)}
@@ -115,15 +115,15 @@ function Player(props) {
           </div>    
           <section id="lastGames">
             <h3>Last 3 Games</h3>
-            {renderTable3(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable3(playerDetail)}
           </section>
           <section id="splits">
             <h3>Splits</h3>
-            {renderTable2(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable2(playerDetail)}
           </section>
           <section id="stats">
             <h3>Stats</h3>
-            {renderTable(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable(playerDetail)}
           </section>
           {
             newsData && newsData.length ? 
@@ -158,7 +158,7 @@ function Player(props) {
     return (
       <div id="template" className="player_detail_container">
          <Menu sport_default={"cbb"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
-        {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
+        {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42"} logo={''}/> : null}
         <Container className="template">
           <div id="detail">
             {playerDetail && playerDetail.hasOwnProperty('full_name') ? renderPage() : <></> }
