@@ -14,7 +14,7 @@ import {
   selectSport,
 } from '../../reducers/sportSlide';
 
-import { faBaseball, faVolleyballBall } from "@fortawesome/free-solid-svg-icons";
+import { faBaseball, faVolleyballBall, faBasketball } from "@fortawesome/free-solid-svg-icons";
 import Menu from '../Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /**
@@ -60,6 +60,10 @@ function Menu3(props) {
           <div className="border-dash" style={{margin: "0px 0.5rem"}}></div>
           <Button outline className='btn btn-link' onClick={() => onClick("tennis")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
             <FontAwesomeIcon icon={faVolleyballBall}/>Tennis
+          </Button>
+          <div className="border-dash" style={{margin: "0px 0.5rem"}}></div>
+          <Button outline className='btn btn-link' onClick={() => onClick("cbb")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
+            <FontAwesomeIcon icon={faBasketball}/>NCAA BM
           </Button>
         </Nav>
          <div className='d-none d-md-block '>

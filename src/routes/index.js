@@ -39,7 +39,7 @@ const routeList = (sport) => [
   ]
 
 
-  const routeListTennis = (sport) => [
+const routeListTennis = (sport) => [
     {
       path: `/${sport}${PATH_LIST.PLAYER}`,
       element: <Pages.tennis.Players />,
@@ -71,7 +71,44 @@ const routeList = (sport) => [
     },
   ]
 
+const routeListCBB = (sport) => [
+    {
+      path: `/${sport}${PATH_LIST.PLAYER}`,
+      element: <Pages.cbb.Players />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.TEAM}`,
+      element: <Pages.cbb.Team />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.TEAM_DETAIL}`,
+      element: <Pages.cbb.TeamDetail />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.NEWS}`,
+      element: <Pages.cbb.News />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.FORECAST}`,
+      element: <Pages.cbb.Forecasts />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.cbb.ForecastDetail />,
+      loader: newsLoader
+    },
+    {
+      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+      element: <Pages.cbb.SocialBets />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.TUTORIAL}`,
+      element: <Pages.cbb.Tutorial />,
+    },
+  ]
+
 export default {
   MLB: routeList('mlb'),
-  TENNIS: routeListTennis('tennis')
+  TENNIS: routeListTennis('tennis'),
+  CBB: routeListCBB('cbb')
 }

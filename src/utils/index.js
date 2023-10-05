@@ -33,7 +33,7 @@ const getTodayItems = (dateTimeStamp) => {
 }
 
 const filterByDate = (dateTimeStamp, date) => {
-    console.log(date, getTodayItems)
+    // console.log(date, getTodayItems)
     const dateData = new Date(dateTimeStamp);
     let filterDate = date
     filterDate.setHours(0,0,0,0);
@@ -59,7 +59,7 @@ const removechars = (word) => {
 const getDate2 = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
     // console.log("date: ", date)
-    return `${date.getFullYear()}${date.getMonth() < 10 ? '0'+(date.getMonth() + 1) : date.getMonth()}${date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()}`
+    return `${date.getFullYear()}${date.getMonth() + 1 < 10 ? '0'+(date.getMonth() + 1) : date.getMonth() + 1}${date.getDate() < 10 ? '0'+(date.getDate()) : date.getDate()}`
 }
 
 const getDateString = (dateTimeStamp) => {
