@@ -252,7 +252,7 @@ function Home(props) {
   
   return (
     <div id="home">
-      <Menu sport_default={"mlb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
+      <Menu sport_default={"cbb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
         {
           renderCards()
         }
