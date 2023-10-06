@@ -60,7 +60,7 @@ function HomeTennis(props) {
   const header = {
     "date_z": "Date",
     "tournament_name": "Tournament Name",
-    "event_type": "Tournament Type",
+    // "event_type": "Tournament Type",
     "home_player": "Player 1",
     "rank_home": "Rank",
     "away_player": "Player 2",
