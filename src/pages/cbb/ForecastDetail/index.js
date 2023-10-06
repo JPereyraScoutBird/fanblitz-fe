@@ -98,6 +98,7 @@ function ForecastDetail() {
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <div className="d-flex flex-md-row flex-column align-items-center">
             <div className="d-flex align-items-center">
+              {/* <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.home_team_abb].img} height={"24px"} /> */}
               <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.home_team_abb].img} height={"24px"} />
             <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_team} </h2>
             </div>
@@ -117,7 +118,10 @@ function ForecastDetail() {
           <section >
             <Row>
               <Col xs={12} md={9}>
-                <img width="100%" height={"300px"} className="section-image" src={Image[forecastData.home_team_abb]}/>
+              {/* <img style={{marginRight: "0.5rem"}} src={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"} height={"24px"} /> */}
+
+                <img width="100%" height={"300px"} className="section-image" src={'https://d3i6fh83elv35t.cloudfront.net/static/2023/03/2023-03-16T193846Z_626209374_MT1USATODAY20243404_RTRMADP_3_NCAA-BASKETBALL-NCAA-TOURNAMENT-FIRST-ROUND-GREENSBORO-PRACTICE-e1680644334647-1024x580.jpg'}/>
+                {/* <img width="100%" height={"300px"} className="section-image" src={Image[forecastData.home_team_abb]}/> */}
                 {parse(forecastData.open_ai_explanation || '')}
                 <Row className="profile-container shadow-sm mt-5 p-3 mb-5 bg-body rounded d-flex flex-xs-column flex-md-row justify-content-center">
                   <Col xs={6} md={1}>

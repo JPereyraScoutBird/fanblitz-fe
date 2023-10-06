@@ -59,7 +59,8 @@ function Forecasts() {
                       style="card-news"
                       title={`${forecast.home_team} vs ${forecast.away_team}`}
                       body={constants.team_detail[forecast.home_team_abb].stadium}
-                      imageSrc={Image[forecast.home_team_abb]}
+                      imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
+                      // imageSrc={Image[forecast.home_team_abb]}
                       linkTitle={`/cbb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
                       footer={getDate2(forecast.date_z)}
                       imageRedirect={true}
