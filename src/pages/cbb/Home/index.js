@@ -123,14 +123,14 @@ function Home(props) {
   const onClick2 = (game) => {
     const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' college basketball team history`)
     toggle()
   }
   
   const onClick3 = (game) => {
     const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' college basketball team history`)
     toggle()
   }
 
@@ -142,19 +142,19 @@ function Home(props) {
   const onClick6 = (pitcher_name) => {
     // console.log("pitcher", player_full_name)
     setPitcher(pitcher_name['player_full_name'])
-    setPrompt(`${pitcher_name['player_full_name']} mlb baseball player short biography`)
+    setPrompt(`${pitcher_name['player_full_name']} college basketball player short biography`)
     toggle()
   }
 
   const onClick7 = (player) => {
     setTeam(player['pitcher_team_full'])
-    setPrompt(`${player['pitcher_team_full']}' baseball team history`)
+    setPrompt(`${player['pitcher_team_full']}' college basketball team history`)
     toggle()
   }
 
   const onClick8 = (player) => {
     setTeam(player['opp_team_full'])
-    setPrompt(`${player['opp_team_full']}' baseball team history`)
+    setPrompt(`${player['opp_team_full']}' college basketball team history`)
     toggle()
   }
   
@@ -252,7 +252,7 @@ function Home(props) {
   
   return (
     <div id="home">
-      <Menu sport_default={"mlb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
+      <Menu sport_default={"cbb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
         {
           renderCards()
         }

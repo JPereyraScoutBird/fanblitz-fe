@@ -137,7 +137,7 @@ function Player(props) {
                           className={'col-12 col-md-3'}
                           style="card-news"
                           title={article.title}
-                          imageSrc={article.urlToImage || "https://media.istockphoto.com/id/482805043/photo/baseball-in-the-infield.jpg?s=612x612&w=0&k=20&c=I9ubYdLnf7heRWh7V8I0Zxo5s1OEBGMBgsj6Sg4b9"}
+                          imageSrc={article.urlToImage || "https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
                           linkTitle={article.url}
                           footer={getDateString(article.publishedAt)}
                         />

@@ -232,7 +232,7 @@ function TeamDetail(props) {
             : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={teamDetail.odds_api} pre_prompt={`${teamDetail.odds_api}' baseball team history`} gptStyle={gptStyle}/>
+            <Chatbot player={teamDetail.odds_api} pre_prompt={`${teamDetail.odds_api}'college basketball team history`} gptStyle={gptStyle}/>
           </Modal>
         </div>    
       );
