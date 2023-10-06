@@ -59,7 +59,7 @@ function GamePlays(route) {
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
                   <div style={{ border: `5px solid ${constants.team_detail[gameInfo.home_team_abbr].teamColoursHex[0]}`, marginRight: "1rem"}}>
-                    <img src={constants.team_detail[gameInfo.home_team_abbr].img}/>
+                    <img src={gameInfo.image}/>
                   </div>
                   <div className='w-100'>
                       <h2>{gameInfo['away_team']} vs {gameInfo['home_team']}</h2>

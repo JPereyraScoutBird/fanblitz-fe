@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {useLocation} from 'react-router-dom';
 import { useLoaderData } from "react-router-dom";
 import constant from './constant';
+import constants from '../constants';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
 import { Col, Container, Modal, Row } from 'reactstrap';
@@ -36,11 +37,11 @@ const renderRank = (playerDetail) => {
       <div>
         <h3 className='mt-4' style={{marginLeft: '0px'}}>Rank</h3>
         <div className='player_rank'>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>PTS: </span>{playerDetail.ranking[0].pts} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>REB: </span>{playerDetail.ranking[0].reb} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AST: </span>{playerDetail.ranking[0].ast} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>STL: </span>{playerDetail.ranking[0].stl} th </p>
-          <p><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>TOV: </span>{playerDetail.ranking[0].tov} th </p>
+          <p><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>PTS: </span>{playerDetail.ranking[0].pts} th </p>
+          <p><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>REB: </span>{playerDetail.ranking[0].reb} th </p>
+          <p><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>AST: </span>{playerDetail.ranking[0].ast} th </p>
+          <p><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>STL: </span>{playerDetail.ranking[0].stl} th </p>
+          <p><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>TOV: </span>{playerDetail.ranking[0].tov} th </p>
         </div>
       </div>
     )
@@ -65,6 +66,7 @@ function Player(props) {
                 const jsonObject = JSON.parse(response.data.body)
                 setplayerDetail(jsonObject)
                 console.log("dime a ve", jsonObject)
+                console.log("dime a ve player", playerId)
             } catch (error) {
                 console.error('Error getting data:', error);
             }
@@ -76,8 +78,9 @@ function Player(props) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${playerDetail['full_name']}`);
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=basketball&subject=${playerDetail['full_name']}`);
             // const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
+            console.log("dime a ve new", response)
             setNewsData(response.data.content)
             // setModal(true)
         } catch (error) {
@@ -92,17 +95,17 @@ function Player(props) {
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex flex-column flex-md-row justify-content-start align-items-center align-items-md-start">
-                  <div style={{ border: `5px solid ${constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
+                  <div style={{ border: `5px solid ${constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
                     <img hidden={imageShow} src={playerDetail.image} onError={() => setImageShow(true)}/>
                   </div>
                   <div className='player_info_container'>
                       <h2>{playerDetail['full_name']}</h2>
                       <div>
                         <div className='player_info'>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Age: </span>{playerDetail.age}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Height: </span>{playerDetail.height}</p>
-                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Age: </span>{playerDetail.age}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Birth Date: </span>{playerDetail.birth_date}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Height: </span>{playerDetail.height}</p>
+                          <p style={{marginBottom:'0px'}}><span style={{fontWeight: "bold", color: constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]}}>Weight: </span>{playerDetail.weight}</p>
                         </div>
                         <div>
                           {renderRank(playerDetail)}
@@ -115,15 +118,15 @@ function Player(props) {
           </div>    
           <section id="lastGames">
             <h3>Last 3 Games</h3>
-            {renderTable3(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable3(playerDetail, constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="splits">
             <h3>Splits</h3>
-            {renderTable2(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable2(playerDetail, constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="stats">
             <h3>Stats</h3>
-            {renderTable(playerDetail, constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable(playerDetail, constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           {
             newsData && newsData.length ? 
@@ -158,7 +161,7 @@ function Player(props) {
     return (
       <div id="template" className="player_detail_container">
          <Menu sport_default={"cbb"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
-        {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[playerDetail.mysportfeeds_abbreviation].img}/> : null}
+        {playerDetail ? <SubMenu links={constant.links} backgroundColor={"#041e42" || constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constants.team_detail[playerDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={playerDetail.team_image}/> : null}
         <Container className="template">
           <div id="detail">
             {playerDetail && playerDetail.hasOwnProperty('full_name') ? renderPage() : <></> }

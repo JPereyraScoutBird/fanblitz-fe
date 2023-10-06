@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {useLocation} from 'react-router-dom';
 import { useLoaderData } from "react-router-dom";
 import constant from './constant';
+import constants from '../constants';
 import CustomTable from '../../../component/Table';
 import CardComponent from '../../../component/Card';
 import { Col, Container, Modal, Row } from 'reactstrap';
@@ -34,8 +35,8 @@ const renderTableNextGames = (data, backgroundColor = "#000", color='#fff') => {
       return (
         <div className='w-100 d-flex flex-column align-items-center'>
           <CardTeamComponent 
-            homeImg={constant.team_detail[data.games[0]['home_team']].img}
-            awayImg={constant.team_detail[data.games[0]['away_team']].img}
+            homeImg={data.games[0]['home_image']}
+            awayImg={data.games[0]['away_image']}
             home={data.games[0]['home_team']} 
             away={data.games[0]['away_team']} 
             footer={getTime(data.games[0].date_et)} 
@@ -115,6 +116,7 @@ function TeamDetail(props) {
             try {
                 const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams?id=${teamId}`);
                 const jsonObject = JSON.parse(response.data.body)
+                console.log("klok1", jsonObject)
                 jsonObject.games = jsonObject.games.length ? jsonObject.games.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
                 setteamDetail(jsonObject)
                 console.log("klok", jsonObject)
@@ -167,17 +169,17 @@ function TeamDetail(props) {
         <div style={{}}>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
-                  <div style={{ border: `5px solid ${constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
-                    <img src={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img}/>
+                  <div style={{ border: `5px solid ${constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]}`, marginRight: "1rem"}}>
+                    <img src={teamDetail.team_image}/>
                   </div>
                   <div className='w-100'>
                       <h2>{teamDetail['odds_api']}</h2>
                       <div className='d-flex justify-content-between'>
                         <div>
-                          {renderTableRanking(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+                          {renderTableRanking(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
                         </div>
                         <div>
-                          {renderTableNextGames(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+                          {renderTableNextGames(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
                         </div>
                       </div>
                       
@@ -187,28 +189,28 @@ function TeamDetail(props) {
           </div>
           <section id="leaders">
             <h3>Leaders</h3>
-            {renderTableLeaders(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTableLeaders(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="lastGames">
             <h3>Last 3 Games</h3>
             <br></br>
-            {renderTable3Games(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTable3Games(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="splits">
             <h3>Splits</h3>
-            {renderTableSplit(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTableSplit(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="stats">
             <h3>Stats</h3>
-            {renderTableStats(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTableStats(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="players">
             <h3>Players</h3>
-            {renderTablePlayers(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTablePlayers(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           <section id="pastGames">
             <h3>Past Predictions</h3>
-            {renderTablePastGames(teamDetail, constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
+            {renderTablePastGames(teamDetail, constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0])}
           </section>
           {
             newsData && newsData.length ?
@@ -244,7 +246,7 @@ function TeamDetail(props) {
       <div id="template" className="player_detail_container">
       {/* <div id="template"> */}
         <Menu sport_default={"cbb"} user={user} signOut={signOut} onChange={(e) => setGptStyle(e)}/>
-        { teamDetail ? <SubMenu home={`/cbb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constant.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={constant.team_detail[teamDetail.mysportfeeds_abbreviation].img} /> : null}
+        { teamDetail ? <SubMenu home={`/cbb${PATH_LIST.TEAM_DETAIL}/:${teamDetail.id}}`} links={constant.links} wins={teamDetail.wins} losses={teamDetail.losses} backgroundColor={"#041e42" || constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[0]} color={constants.team_detail[teamDetail.mysportfeeds_abbreviation].teamColoursHex[1]} logo={teamDetail.team_image} /> : null}
         <Container className="template">
           <div id="detail">
             {teamDetail ? renderPage() : <></> }

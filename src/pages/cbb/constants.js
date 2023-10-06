@@ -1,9 +1,9 @@
 const team_detail = {
     "ABILCH": {
-        "img": "https://www.mlbstatic.com/team-logos/159.svg",
+        "img": "https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/abilene-christian.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -18,8 +18,8 @@ const team_detail = {
     "ACAART": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -34,8 +34,8 @@ const team_detail = {
     "AIRFOR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -50,8 +50,8 @@ const team_detail = {
     "AKRON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -66,8 +66,8 @@ const team_detail = {
     "ALA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -82,8 +82,8 @@ const team_detail = {
     "AL A&MALA ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -98,8 +98,8 @@ const team_detail = {
     "ALBANY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -114,8 +114,8 @@ const team_detail = {
     "ALBYST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -130,8 +130,8 @@ const team_detail = {
     "ALBMAG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -146,8 +146,8 @@ const team_detail = {
     "ALCORN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -162,8 +162,8 @@ const team_detail = {
     "ALCLYD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -178,8 +178,8 @@ const team_detail = {
     "ALLEN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -194,8 +194,8 @@ const team_detail = {
     "ALMA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -210,8 +210,8 @@ const team_detail = {
     "AMER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -226,8 +226,8 @@ const team_detail = {
     "AND IN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -242,8 +242,8 @@ const team_detail = {
     "AND SC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -258,8 +258,8 @@ const team_detail = {
     "AVC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -274,8 +274,8 @@ const team_detail = {
     "APP ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -290,8 +290,8 @@ const team_detail = {
     "ARCADI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -306,8 +306,8 @@ const team_detail = {
     "ARIZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -322,8 +322,8 @@ const team_detail = {
     "AZ ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -338,8 +338,8 @@ const team_detail = {
     "ARK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -354,8 +354,8 @@ const team_detail = {
     "ARKBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -370,8 +370,8 @@ const team_detail = {
     "ARK ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -386,8 +386,8 @@ const team_detail = {
     "ARK PB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -402,8 +402,8 @@ const team_detail = {
     "AR BAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -418,8 +418,8 @@ const team_detail = {
     "ARMY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -434,8 +434,8 @@ const team_detail = {
     "AUBURN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -450,8 +450,8 @@ const team_detail = {
     "AURORA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -466,8 +466,8 @@ const team_detail = {
     "A PEAY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -482,8 +482,8 @@ const team_detail = {
     "AVEMAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -498,8 +498,8 @@ const team_detail = {
     "AVERET": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -512,10 +512,10 @@ const team_detail = {
         ]
     } ,
     "BALDWA": {
-        "img": "https://www.mlbstatic.com/team-logos/159.svg",
+        "img": "https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/abilene-christian.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -530,8 +530,8 @@ const team_detail = {
     "BALLST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -546,8 +546,8 @@ const team_detail = {
     "BAYLOR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -562,8 +562,8 @@ const team_detail = {
     "BELH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -578,8 +578,8 @@ const team_detail = {
     "BELLAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -594,8 +594,8 @@ const team_detail = {
     "BELMNT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -610,8 +610,8 @@ const team_detail = {
     "BNMESA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -626,8 +626,8 @@ const team_detail = {
     "BTHLTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -642,8 +642,8 @@ const team_detail = {
     "BETCHS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -658,8 +658,8 @@ const team_detail = {
     "BECOOK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -674,8 +674,8 @@ const team_detail = {
     "BINGHA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -690,8 +690,8 @@ const team_detail = {
     "BLACKB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -706,8 +706,8 @@ const team_detail = {
     "BLUMTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -722,8 +722,8 @@ const team_detail = {
     "BLUFF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -738,8 +738,8 @@ const team_detail = {
     "BOB JO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -754,8 +754,8 @@ const team_detail = {
     "BOISE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -770,8 +770,8 @@ const team_detail = {
     "BC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -786,8 +786,8 @@ const team_detail = {
     "BU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -802,8 +802,8 @@ const team_detail = {
     "BGSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -818,8 +818,8 @@ const team_detail = {
     "BOYCE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -834,8 +834,8 @@ const team_detail = {
     "BRAD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -850,8 +850,8 @@ const team_detail = {
     "BRAND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -866,8 +866,8 @@ const team_detail = {
     "BRESCI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -882,8 +882,8 @@ const team_detail = {
     "BRVARD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -898,8 +898,8 @@ const team_detail = {
     "BREWPK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -914,8 +914,8 @@ const team_detail = {
     "BRIDVA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -930,8 +930,8 @@ const team_detail = {
     "BROWN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -946,8 +946,8 @@ const team_detail = {
     "BRYAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -962,8 +962,8 @@ const team_detail = {
     "BRYANT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -978,8 +978,8 @@ const team_detail = {
     "BRYN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -994,8 +994,8 @@ const team_detail = {
     "BUCKNL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1010,8 +1010,8 @@ const team_detail = {
     "BUFF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1026,8 +1026,8 @@ const team_detail = {
     "BUSHNL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1042,8 +1042,8 @@ const team_detail = {
     "BUTLER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1058,8 +1058,8 @@ const team_detail = {
     "BYU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1074,8 +1074,8 @@ const team_detail = {
     "CAIRN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1090,8 +1090,8 @@ const team_detail = {
     "CALPLY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1106,8 +1106,8 @@ const team_detail = {
     "CSUEBY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1122,8 +1122,8 @@ const team_detail = {
     "CSLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1138,8 +1138,8 @@ const team_detail = {
     "CAL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1154,8 +1154,8 @@ const team_detail = {
     "CALBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1170,8 +1170,8 @@ const team_detail = {
     "CALMAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1186,8 +1186,8 @@ const team_detail = {
     "UC MCD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1202,8 +1202,8 @@ const team_detail = {
     "CALUM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1218,8 +1218,8 @@ const team_detail = {
     "CALVRY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1234,8 +1234,8 @@ const team_detail = {
     "CAMPBL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1250,8 +1250,8 @@ const team_detail = {
     "CMPHRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1266,8 +1266,8 @@ const team_detail = {
     "CANISI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1282,8 +1282,8 @@ const team_detail = {
     "CRDSTR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1298,8 +1298,8 @@ const team_detail = {
     "CARLOW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1314,8 +1314,8 @@ const team_detail = {
     "CAROLI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1330,8 +1330,8 @@ const team_detail = {
     "CAZENO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1346,8 +1346,8 @@ const team_detail = {
     "CENTNJ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1362,8 +1362,8 @@ const team_detail = {
     "CENTLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1378,8 +1378,8 @@ const team_detail = {
     "C ARK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1394,8 +1394,8 @@ const team_detail = {
     "CENBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1410,8 +1410,8 @@ const team_detail = {
     "C CONN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1426,8 +1426,8 @@ const team_detail = {
     "C MICH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1442,8 +1442,8 @@ const team_detail = {
     "CHAMIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1458,8 +1458,8 @@ const team_detail = {
     "CHBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1474,8 +1474,8 @@ const team_detail = {
     "CHAPMN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1490,8 +1490,8 @@ const team_detail = {
     "C OF C": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1506,8 +1506,8 @@ const team_detail = {
     "CHARSO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1522,8 +1522,8 @@ const team_detail = {
     "CHAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1538,8 +1538,8 @@ const team_detail = {
     "CHAT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1554,8 +1554,8 @@ const team_detail = {
     "CHI ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1570,8 +1570,8 @@ const team_detail = {
     "CINCY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1586,8 +1586,8 @@ const team_detail = {
     "CINCLR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1602,8 +1602,8 @@ const team_detail = {
     "CLRKMA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1618,8 +1618,8 @@ const team_detail = {
     "BAPBIB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1634,8 +1634,8 @@ const team_detail = {
     "CLAYST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1650,8 +1650,8 @@ const team_detail = {
     "CLEM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1666,8 +1666,8 @@ const team_detail = {
     "CLE ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1682,8 +1682,8 @@ const team_detail = {
     "CLNTON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1698,8 +1698,8 @@ const team_detail = {
     "COAST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1714,8 +1714,8 @@ const team_detail = {
     "CO CAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1730,8 +1730,8 @@ const team_detail = {
     "CSTGEO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1746,8 +1746,8 @@ const team_detail = {
     "CBYSAW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1762,8 +1762,8 @@ const team_detail = {
     "COLGAT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1778,8 +1778,8 @@ const team_detail = {
     "TCNJ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1794,8 +1794,8 @@ const team_detail = {
     "COLO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1810,8 +1810,8 @@ const team_detail = {
     "Co CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1826,8 +1826,8 @@ const team_detail = {
     "CO COL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1842,8 +1842,8 @@ const team_detail = {
     "CO ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1858,8 +1858,8 @@ const team_detail = {
     "COLUMB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1874,8 +1874,8 @@ const team_detail = {
     "COLINT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1890,8 +1890,8 @@ const team_detail = {
     "CONCRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1906,8 +1906,8 @@ const team_detail = {
     "CONCMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1922,8 +1922,8 @@ const team_detail = {
     "COPPIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1938,8 +1938,8 @@ const team_detail = {
     "CORN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1954,8 +1954,8 @@ const team_detail = {
     "COVENT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1970,8 +1970,8 @@ const team_detail = {
     "CREIGH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -1986,8 +1986,8 @@ const team_detail = {
     "CRORDG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2002,8 +2002,8 @@ const team_detail = {
     "CROWN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2018,8 +2018,8 @@ const team_detail = {
     "CSUBAK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2034,8 +2034,8 @@ const team_detail = {
     "CSFULL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2050,8 +2050,8 @@ const team_detail = {
     "CSUN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2066,8 +2066,8 @@ const team_detail = {
     "DYOUV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2082,8 +2082,8 @@ const team_detail = {
     "DAKST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2098,8 +2098,8 @@ const team_detail = {
     "DALCHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2114,8 +2114,8 @@ const team_detail = {
     "DART": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2130,8 +2130,8 @@ const team_detail = {
     "DAVID": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2146,8 +2146,8 @@ const team_detail = {
     "DAVELK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2162,8 +2162,8 @@ const team_detail = {
     "DAYTON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2178,8 +2178,8 @@ const team_detail = {
     "DEAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2192,10 +2192,10 @@ const team_detail = {
         ]
     } ,
     "DEFIAN": {
-        "img": "https://www.mlbstatic.com/team-logos/159.svg",
+        "img": "https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/abilene-christian.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2210,8 +2210,8 @@ const team_detail = {
     "DEL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2226,8 +2226,8 @@ const team_detail = {
     "DEL ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2242,8 +2242,8 @@ const team_detail = {
     "DENVER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2258,8 +2258,8 @@ const team_detail = {
     "DEPAUL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2274,8 +2274,8 @@ const team_detail = {
     "DET": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2290,8 +2290,8 @@ const team_detail = {
     "DILLRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2306,8 +2306,8 @@ const team_detail = {
     "UDC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2322,8 +2322,8 @@ const team_detail = {
     "DRAKE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2338,8 +2338,8 @@ const team_detail = {
     "DREXEL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2354,8 +2354,8 @@ const team_detail = {
     "DUKE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2370,8 +2370,8 @@ const team_detail = {
     "DUQSNE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2386,8 +2386,8 @@ const team_detail = {
     "EARLHA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2402,8 +2402,8 @@ const team_detail = {
     "E CAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2418,8 +2418,8 @@ const team_detail = {
     "ETSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2434,8 +2434,8 @@ const team_detail = {
     "ESTWST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2450,8 +2450,8 @@ const team_detail = {
     "E ILL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2466,8 +2466,8 @@ const team_detail = {
     "E KY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2482,8 +2482,8 @@ const team_detail = {
     "E MICH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2498,8 +2498,8 @@ const team_detail = {
     "E NAZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2514,8 +2514,8 @@ const team_detail = {
     "EOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2530,8 +2530,8 @@ const team_detail = {
     "E WASH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2546,8 +2546,8 @@ const team_detail = {
     "ECCLES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2562,8 +2562,8 @@ const team_detail = {
     "ED WAT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2578,8 +2578,8 @@ const team_detail = {
     "ELON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2594,8 +2594,8 @@ const team_detail = {
     "EMERSO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2610,8 +2610,8 @@ const team_detail = {
     "EM&HEN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2626,8 +2626,8 @@ const team_detail = {
     "ERSKIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2642,8 +2642,8 @@ const team_detail = {
     "EUREKA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2658,8 +2658,8 @@ const team_detail = {
     "EVANS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2674,8 +2674,8 @@ const team_detail = {
     "EVGRST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2690,8 +2690,8 @@ const team_detail = {
     "FAIR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2706,8 +2706,8 @@ const team_detail = {
     "FDU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2722,8 +2722,8 @@ const team_detail = {
     "FAIRMO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2738,8 +2738,8 @@ const team_detail = {
     "FDUFLO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2754,8 +2754,8 @@ const team_detail = {
     "FISHER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2770,8 +2770,8 @@ const team_detail = {
     "FISK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2786,8 +2786,8 @@ const team_detail = {
     "FLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2802,8 +2802,8 @@ const team_detail = {
     "FL A&M": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2818,8 +2818,8 @@ const team_detail = {
     "FAU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2834,8 +2834,8 @@ const team_detail = {
     "FLACOL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2850,8 +2850,8 @@ const team_detail = {
     "FGCU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2866,8 +2866,8 @@ const team_detail = {
     "FIU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2882,8 +2882,8 @@ const team_detail = {
     "FLANAT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2898,8 +2898,8 @@ const team_detail = {
     "FSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2914,8 +2914,8 @@ const team_detail = {
     "FLTECH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2930,8 +2930,8 @@ const team_detail = {
     "FORDHM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2946,8 +2946,8 @@ const team_detail = {
     "FRANCI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2962,8 +2962,8 @@ const team_detail = {
     "FRANK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2978,8 +2978,8 @@ const team_detail = {
     "FREDON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -2994,8 +2994,8 @@ const team_detail = {
     "FREPAC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3010,8 +3010,8 @@ const team_detail = {
     "FRESNO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3026,8 +3026,8 @@ const team_detail = {
     "FURMAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3042,8 +3042,8 @@ const team_detail = {
     "GALLUD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3058,8 +3058,8 @@ const team_detail = {
     "G WEBB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3074,8 +3074,8 @@ const team_detail = {
     "GMU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3090,8 +3090,8 @@ const team_detail = {
     "G WASH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3106,8 +3106,8 @@ const team_detail = {
     "GTOWN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3122,8 +3122,8 @@ const team_detail = {
     "UGA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3138,8 +3138,8 @@ const team_detail = {
     "GACOLL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3154,8 +3154,8 @@ const team_detail = {
     "GA SOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3170,8 +3170,8 @@ const team_detail = {
     "GA SW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3186,8 +3186,8 @@ const team_detail = {
     "GA ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3200,10 +3200,10 @@ const team_detail = {
         ]
     } ,
     "GATECH": {
-        "img": "https://www.mlbstatic.com/team-logos/159.svg",
+        "img": "https://i.turner.ncaa.com/sites/default/files/images/logos/schools/bgl/abilene-christian.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3218,8 +3218,8 @@ const team_detail = {
     "GCOURT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3234,8 +3234,8 @@ const team_detail = {
     "GLENVI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3250,8 +3250,8 @@ const team_detail = {
     "GONZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3266,8 +3266,8 @@ const team_detail = {
     "GOSHEN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3282,8 +3282,8 @@ const team_detail = {
     "GCHER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3298,8 +3298,8 @@ const team_detail = {
     "GRCBBL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3314,8 +3314,8 @@ const team_detail = {
     "GRAMB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3330,8 +3330,8 @@ const team_detail = {
     "GCANYN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3346,8 +3346,8 @@ const team_detail = {
     "GRNBAY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3362,8 +3362,8 @@ const team_detail = {
     "GREENS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3378,8 +3378,8 @@ const team_detail = {
     "GUILF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3394,8 +3394,8 @@ const team_detail = {
     "GWYMER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3410,8 +3410,8 @@ const team_detail = {
     "HAMPTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3426,8 +3426,8 @@ const team_detail = {
     "HANNIB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3442,8 +3442,8 @@ const team_detail = {
     "HARSIM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3458,8 +3458,8 @@ const team_detail = {
     "HARDNG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3474,8 +3474,8 @@ const team_detail = {
     "HARSTW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3490,8 +3490,8 @@ const team_detail = {
     "HRTFRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3506,8 +3506,8 @@ const team_detail = {
     "HARV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3522,8 +3522,8 @@ const team_detail = {
     "HAWAII": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3538,8 +3538,8 @@ const team_detail = {
     "HAWPAC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3554,8 +3554,8 @@ const team_detail = {
     "HENDRX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3570,8 +3570,8 @@ const team_detail = {
     "HIGHPT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3586,8 +3586,8 @@ const team_detail = {
     "HOFSTR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3602,8 +3602,8 @@ const team_detail = {
     "HOLYCR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3618,8 +3618,8 @@ const team_detail = {
     "HOLYNM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3634,8 +3634,8 @@ const team_detail = {
     "HOUGHT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3650,8 +3650,8 @@ const team_detail = {
     "HOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3666,8 +3666,8 @@ const team_detail = {
     "HOUBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3682,8 +3682,8 @@ const team_detail = {
     "HOWARD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3698,8 +3698,8 @@ const team_detail = {
     "HOWPAY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3714,8 +3714,8 @@ const team_detail = {
     "HUSTIL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3730,8 +3730,8 @@ const team_detail = {
     "IDAHO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3746,8 +3746,8 @@ const team_detail = {
     "ID ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3762,8 +3762,8 @@ const team_detail = {
     "ILL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3778,8 +3778,8 @@ const team_detail = {
     "ILL ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3794,8 +3794,8 @@ const team_detail = {
     "ILLTEC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3810,8 +3810,8 @@ const team_detail = {
     "IL SPR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3826,8 +3826,8 @@ const team_detail = {
     "IMMAC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3842,8 +3842,8 @@ const team_detail = {
     "INCWRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3858,8 +3858,8 @@ const team_detail = {
     "IND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3874,8 +3874,8 @@ const team_detail = {
     "INSOBN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3890,8 +3890,8 @@ const team_detail = {
     "IND ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3906,8 +3906,8 @@ const team_detail = {
     "UINDY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3922,8 +3922,8 @@ const team_detail = {
     "IONA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3938,8 +3938,8 @@ const team_detail = {
     "IOWA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3954,8 +3954,8 @@ const team_detail = {
     "IOWAST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3970,8 +3970,8 @@ const team_detail = {
     "IA WES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -3986,8 +3986,8 @@ const team_detail = {
     "ITHACA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4002,8 +4002,8 @@ const team_detail = {
     "IUPUI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4018,8 +4018,8 @@ const team_detail = {
     "JACKST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4034,8 +4034,8 @@ const team_detail = {
     "JVILLE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4050,8 +4050,8 @@ const team_detail = {
     "JAX ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4066,8 +4066,8 @@ const team_detail = {
     "JMU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4082,8 +4082,8 @@ const team_detail = {
     "JARCHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4098,8 +4098,8 @@ const team_detail = {
     "JOHNBR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4114,8 +4114,8 @@ const team_detail = {
     "JONJAY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4130,8 +4130,8 @@ const team_detail = {
     "JOWARI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4146,8 +4146,8 @@ const team_detail = {
     "FL CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4162,8 +4162,8 @@ const team_detail = {
     "JHNSON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4178,8 +4178,8 @@ const team_detail = {
     "JOWANC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4194,8 +4194,8 @@ const team_detail = {
     "KANSAS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4210,8 +4210,8 @@ const team_detail = {
     "KS CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4226,8 +4226,8 @@ const team_detail = {
     "KC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4242,8 +4242,8 @@ const team_detail = {
     "KAN ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4258,8 +4258,8 @@ const team_detail = {
     "KEAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4274,8 +4274,8 @@ const team_detail = {
     "KENSAW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4290,8 +4290,8 @@ const team_detail = {
     "KENT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4306,8 +4306,8 @@ const team_detail = {
     "UK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4322,8 +4322,8 @@ const team_detail = {
     "KY CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4338,8 +4338,8 @@ const team_detail = {
     "KY ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4354,8 +4354,8 @@ const team_detail = {
     "KEYSTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4370,8 +4370,8 @@ const team_detail = {
     "KNOX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4386,8 +4386,8 @@ const team_detail = {
     "LASALL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4402,8 +4402,8 @@ const team_detail = {
     "LASIER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4418,8 +4418,8 @@ const team_detail = {
     "LAVERN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4434,8 +4434,8 @@ const team_detail = {
     "LAFAYE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4450,8 +4450,8 @@ const team_detail = {
     "LAGRAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4466,8 +4466,8 @@ const team_detail = {
     "LAMAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4482,8 +4482,8 @@ const team_detail = {
     "LANE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4498,8 +4498,8 @@ const team_detail = {
     "LEBVAL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4514,8 +4514,8 @@ const team_detail = {
     "LEESMC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4530,8 +4530,8 @@ const team_detail = {
     "LEHIGH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4546,8 +4546,8 @@ const team_detail = {
     "LETOUR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4562,8 +4562,8 @@ const team_detail = {
     "LEWCLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4578,8 +4578,8 @@ const team_detail = {
     "LIBRTY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4594,8 +4594,8 @@ const team_detail = {
     "LPC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4610,8 +4610,8 @@ const team_detail = {
     "LINCMO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4626,8 +4626,8 @@ const team_detail = {
     "LINCPA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4642,8 +4642,8 @@ const team_detail = {
     "LINWOD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4658,8 +4658,8 @@ const team_detail = {
     "LINWIL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4674,8 +4674,8 @@ const team_detail = {
     "LIPSCO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4690,8 +4690,8 @@ const team_detail = {
     "UALR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4706,8 +4706,8 @@ const team_detail = {
     "LBSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4722,8 +4722,8 @@ const team_detail = {
     "LIU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4738,8 +4738,8 @@ const team_detail = {
     "LONGWD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4754,8 +4754,8 @@ const team_detail = {
     "LORAS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4770,8 +4770,8 @@ const team_detail = {
     "LA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4786,8 +4786,8 @@ const team_detail = {
     "LA CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4802,8 +4802,8 @@ const team_detail = {
     "LATECH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4818,8 +4818,8 @@ const team_detail = {
     "LOUIS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4834,8 +4834,8 @@ const team_detail = {
     "LOURDS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4850,8 +4850,8 @@ const team_detail = {
     "LOY MD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4866,8 +4866,8 @@ const team_detail = {
     "LOYCHI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4882,8 +4882,8 @@ const team_detail = {
     "LMU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4898,8 +4898,8 @@ const team_detail = {
     "LOY LA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4914,8 +4914,8 @@ const team_detail = {
     "LSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4930,8 +4930,8 @@ const team_detail = {
     "LSUALX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4946,8 +4946,8 @@ const team_detail = {
     "LYNCH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4962,8 +4962,8 @@ const team_detail = {
     "LYNN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4978,8 +4978,8 @@ const team_detail = {
     "LYON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -4994,8 +4994,8 @@ const team_detail = {
     "MAINE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5010,8 +5010,8 @@ const team_detail = {
     "ME AUG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5026,8 +5026,8 @@ const team_detail = {
     "MNE FK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5042,8 +5042,8 @@ const team_detail = {
     "MANCHS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5058,8 +5058,8 @@ const team_detail = {
     "MANHAT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5074,8 +5074,8 @@ const team_detail = {
     "MARIST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5090,8 +5090,8 @@ const team_detail = {
     "MARQ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5106,8 +5106,8 @@ const team_detail = {
     "MARHIL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5122,8 +5122,8 @@ const team_detail = {
     "MARSH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5138,8 +5138,8 @@ const team_detail = {
     "MARYBA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5154,8 +5154,8 @@ const team_detail = {
     "MHARBA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5170,8 +5170,8 @@ const team_detail = {
     "MD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5186,8 +5186,8 @@ const team_detail = {
     "UMES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5202,8 +5202,8 @@ const team_detail = {
     "MARYTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5218,8 +5218,8 @@ const team_detail = {
     "MCLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5234,8 +5234,8 @@ const team_detail = {
     "MASTRS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5250,8 +5250,8 @@ const team_detail = {
     "MCDAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5266,8 +5266,8 @@ const team_detail = {
     "MCMURR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5282,8 +5282,8 @@ const team_detail = {
     "MCNEES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5298,8 +5298,8 @@ const team_detail = {
     "MEDGEV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5314,8 +5314,8 @@ const team_detail = {
     "MEM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5330,8 +5330,8 @@ const team_detail = {
     "MENLO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5346,8 +5346,8 @@ const team_detail = {
     "MERCER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5362,8 +5362,8 @@ const team_detail = {
     "MERCY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5378,8 +5378,8 @@ const team_detail = {
     "MERMCK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5394,8 +5394,8 @@ const team_detail = {
     "METHOD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5410,8 +5410,8 @@ const team_detail = {
     "MIAMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5426,8 +5426,8 @@ const team_detail = {
     "MIA OH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5442,8 +5442,8 @@ const team_detail = {
     "MIAOMD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5458,8 +5458,8 @@ const team_detail = {
     "MIAHAM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5474,8 +5474,8 @@ const team_detail = {
     "MICH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5490,8 +5490,8 @@ const team_detail = {
     "MICHST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5506,8 +5506,8 @@ const team_detail = {
     "MDACHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5522,8 +5522,8 @@ const team_detail = {
     "MDATLCH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5538,8 +5538,8 @@ const team_detail = {
     "MGA ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5554,8 +5554,8 @@ const team_detail = {
     "MIDTEN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5570,8 +5570,8 @@ const team_detail = {
     "MIDLND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5586,8 +5586,8 @@ const team_detail = {
     "MILLIG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5602,8 +5602,8 @@ const team_detail = {
     "MILWKE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5618,8 +5618,8 @@ const team_detail = {
     "MSOE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5634,8 +5634,8 @@ const team_detail = {
     "MINN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5650,8 +5650,8 @@ const team_detail = {
     "MISERI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5666,8 +5666,8 @@ const team_detail = {
     "MISSST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5682,8 +5682,8 @@ const team_detail = {
     "MS VAL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5698,8 +5698,8 @@ const team_detail = {
     "MUW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5714,8 +5714,8 @@ const team_detail = {
     "MIZZOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5730,8 +5730,8 @@ const team_detail = {
     "MO S&T": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5746,8 +5746,8 @@ const team_detail = {
     "MO ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5762,8 +5762,8 @@ const team_detail = {
     "MOBILE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5778,8 +5778,8 @@ const team_detail = {
     "MONMTH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5794,8 +5794,8 @@ const team_detail = {
     "MONT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5810,8 +5810,8 @@ const team_detail = {
     "MONTST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5826,8 +5826,8 @@ const team_detail = {
     "MONNOR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5842,8 +5842,8 @@ const team_detail = {
     "MONT W": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5858,8 +5858,8 @@ const team_detail = {
     "MONTEV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5874,8 +5874,8 @@ const team_detail = {
     "MONTRE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5890,8 +5890,8 @@ const team_detail = {
     "MOREST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5906,8 +5906,8 @@ const team_detail = {
     "MORHSE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5922,8 +5922,8 @@ const team_detail = {
     "MORGAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5938,8 +5938,8 @@ const team_detail = {
     "MORRIS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5954,8 +5954,8 @@ const team_detail = {
     "MTMRTY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5970,8 +5970,8 @@ const team_detail = {
     "MT OLI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -5986,8 +5986,8 @@ const team_detail = {
     "MT STJ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6002,8 +6002,8 @@ const team_detail = {
     "MSM NY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6018,8 +6018,8 @@ const team_detail = {
     "MTSTMY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6034,8 +6034,8 @@ const team_detail = {
     "MT STV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6050,8 +6050,8 @@ const team_detail = {
     "MULTNO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6066,8 +6066,8 @@ const team_detail = {
     "MURRAY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6082,8 +6082,8 @@ const team_detail = {
     "MUSKIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6098,8 +6098,8 @@ const team_detail = {
     "NAVY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6114,8 +6114,8 @@ const team_detail = {
     "NC ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6130,8 +6130,8 @@ const team_detail = {
     "NEB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6146,8 +6146,8 @@ const team_detail = {
     "NEUMAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6162,8 +6162,8 @@ const team_detail = {
     "NEVADA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6178,8 +6178,8 @@ const team_detail = {
     "NEWENG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6194,8 +6194,8 @@ const team_detail = {
     "UNH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6210,8 +6210,8 @@ const team_detail = {
     "N MEX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6226,8 +6226,8 @@ const team_detail = {
     "NMHU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6242,8 +6242,8 @@ const team_detail = {
     "NM ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6258,8 +6258,8 @@ const team_detail = {
     "UNO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6274,8 +6274,8 @@ const team_detail = {
     "NIAGRA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6290,8 +6290,8 @@ const team_detail = {
     "NICHST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6306,8 +6306,8 @@ const team_detail = {
     "NJIT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6322,8 +6322,8 @@ const team_detail = {
     "NORFLK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6338,8 +6338,8 @@ const team_detail = {
     "N ALA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6354,8 +6354,8 @@ const team_detail = {
     "NOAMER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6370,8 +6370,8 @@ const team_detail = {
     "UNC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6386,8 +6386,8 @@ const team_detail = {
     "NC A&T": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6402,8 +6402,8 @@ const team_detail = {
     "NC CEN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6418,8 +6418,8 @@ const team_detail = {
     "NC MIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6434,8 +6434,8 @@ const team_detail = {
     "NO DAK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6450,8 +6450,8 @@ const team_detail = {
     "ND ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6466,8 +6466,8 @@ const team_detail = {
     "NO FLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6482,8 +6482,8 @@ const team_detail = {
     "NGU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6498,8 +6498,8 @@ const team_detail = {
     "NO PRK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6514,8 +6514,8 @@ const team_detail = {
     "NO TEX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6530,8 +6530,8 @@ const team_detail = {
     "NOEAST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6546,8 +6546,8 @@ const team_detail = {
     "NAU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6562,8 +6562,8 @@ const team_detail = {
     "N COLO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6578,8 +6578,8 @@ const team_detail = {
     "NIU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6594,8 +6594,8 @@ const team_detail = {
     "N IOWA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6610,8 +6610,8 @@ const team_detail = {
     "N KY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6626,8 +6626,8 @@ const team_detail = {
     "NORNMX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6642,8 +6642,8 @@ const team_detail = {
     "NW IND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6658,8 +6658,8 @@ const team_detail = {
     "NWSTRN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6674,8 +6674,8 @@ const team_detail = {
     "NWSTOH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6690,8 +6690,8 @@ const team_detail = {
     "NW ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6706,8 +6706,8 @@ const team_detail = {
     "NDC OH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6722,8 +6722,8 @@ const team_detail = {
     "N DAME": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6738,8 +6738,8 @@ const team_detail = {
     "JOHNST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6754,8 +6754,8 @@ const team_detail = {
     "LYNDON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6770,8 +6770,8 @@ const team_detail = {
     "OAK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6786,8 +6786,8 @@ const team_detail = {
     "OAKCTY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6802,8 +6802,8 @@ const team_detail = {
     "OAKWD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6818,8 +6818,8 @@ const team_detail = {
     "OCCID": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6834,8 +6834,8 @@ const team_detail = {
     "OGLETH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6850,8 +6850,8 @@ const team_detail = {
     "OHIO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6866,8 +6866,8 @@ const team_detail = {
     "OH DOM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6882,8 +6882,8 @@ const team_detail = {
     "OHIOST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6898,8 +6898,8 @@ const team_detail = {
     "OKLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6914,8 +6914,8 @@ const team_detail = {
     "OK BAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6930,8 +6930,8 @@ const team_detail = {
     "OKLAST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6946,8 +6946,8 @@ const team_detail = {
     "ODU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6962,8 +6962,8 @@ const team_detail = {
     "OLDWES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6978,8 +6978,8 @@ const team_detail = {
     "MISS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -6994,8 +6994,8 @@ const team_detail = {
     "OMAHA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7010,8 +7010,8 @@ const team_detail = {
     "ORU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7026,8 +7026,8 @@ const team_detail = {
     "OREGN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7042,8 +7042,8 @@ const team_detail = {
     "ORE ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7058,8 +7058,8 @@ const team_detail = {
     "OTTAZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7074,8 +7074,8 @@ const team_detail = {
     "OUABAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7090,8 +7090,8 @@ const team_detail = {
     "OLOTL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7106,8 +7106,8 @@ const team_detail = {
     "OZ CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7122,8 +7122,8 @@ const team_detail = {
     "PACIF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7138,8 +7138,8 @@ const team_detail = {
     "PAC LU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7154,8 +7154,8 @@ const team_detail = {
     "PAINE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7170,8 +7170,8 @@ const team_detail = {
     "PARKAZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7186,8 +7186,8 @@ const team_detail = {
     "PQUINN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7202,8 +7202,8 @@ const team_detail = {
     "PENNST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7218,8 +7218,8 @@ const team_detail = {
     "PSUGA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7234,8 +7234,8 @@ const team_detail = {
     "PNSTNK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7250,8 +7250,8 @@ const team_detail = {
     "PSWB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7266,8 +7266,8 @@ const team_detail = {
     "PSYORK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7282,8 +7282,8 @@ const team_detail = {
     "PENN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7298,8 +7298,8 @@ const team_detail = {
     "PEPPER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7314,8 +7314,8 @@ const team_detail = {
     "PERUST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7330,8 +7330,8 @@ const team_detail = {
     "PFEIFF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7346,8 +7346,8 @@ const team_detail = {
     "PHISMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7362,8 +7362,8 @@ const team_detail = {
     "PIEDMT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7378,8 +7378,8 @@ const team_detail = {
     "PITT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7394,8 +7394,8 @@ const team_detail = {
     "PITTGR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7410,8 +7410,8 @@ const team_detail = {
     "PORT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7426,8 +7426,8 @@ const team_detail = {
     "PORBIB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7442,8 +7442,8 @@ const team_detail = {
     "PORTST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7458,8 +7458,8 @@ const team_detail = {
     "PV A&M": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7474,8 +7474,8 @@ const team_detail = {
     "PRESBY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7490,8 +7490,8 @@ const team_detail = {
     "PRINCE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7506,8 +7506,8 @@ const team_detail = {
     "PROV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7522,8 +7522,8 @@ const team_detail = {
     "PUGSND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7538,8 +7538,8 @@ const team_detail = {
     "PURDUE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7554,8 +7554,8 @@ const team_detail = {
     "IPFW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7570,8 +7570,8 @@ const team_detail = {
     "PUR NW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7586,8 +7586,8 @@ const team_detail = {
     "QUENNC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7602,8 +7602,8 @@ const team_detail = {
     "QUINN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7618,8 +7618,8 @@ const team_detail = {
     "RADFRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7634,8 +7634,8 @@ const team_detail = {
     "RANDOL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7650,8 +7650,8 @@ const team_detail = {
     "REGENT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7666,8 +7666,8 @@ const team_detail = {
     "REINHA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7682,8 +7682,8 @@ const team_detail = {
     "URI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7698,8 +7698,8 @@ const team_detail = {
     "RHODES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7714,8 +7714,8 @@ const team_detail = {
     "RICE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7730,8 +7730,8 @@ const team_detail = {
     "RICH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7746,8 +7746,8 @@ const team_detail = {
     "RIDER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7762,8 +7762,8 @@ const team_detail = {
     "ROBMOR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7778,8 +7778,8 @@ const team_detail = {
     "ROCHMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7794,8 +7794,8 @@ const team_detail = {
     "ROCKFO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7810,8 +7810,8 @@ const team_detail = {
     "ROG ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7826,8 +7826,8 @@ const team_detail = {
     "RUST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7842,8 +7842,8 @@ const team_detail = {
     "RUTGER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7858,8 +7858,8 @@ const team_detail = {
     "SAC ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7874,8 +7874,8 @@ const team_detail = {
     "SACHRT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7890,8 +7890,8 @@ const team_detail = {
     "SAGU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7906,8 +7906,8 @@ const team_detail = {
     "ST LOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7922,8 +7922,8 @@ const team_detail = {
     "STMART": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7938,8 +7938,8 @@ const team_detail = {
     "STMAWD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7954,8 +7954,8 @@ const team_detail = {
     "STMARY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7970,8 +7970,8 @@ const team_detail = {
     "ST PTR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -7986,8 +7986,8 @@ const team_detail = {
     "ST VIN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8002,8 +8002,8 @@ const team_detail = {
     "SAMHOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8018,8 +8018,8 @@ const team_detail = {
     "SAMFRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8034,8 +8034,8 @@ const team_detail = {
     "USD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8050,8 +8050,8 @@ const team_detail = {
     "SD CHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8066,8 +8066,8 @@ const team_detail = {
     "SDSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8082,8 +8082,8 @@ const team_detail = {
     "S FRAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8098,8 +8098,8 @@ const team_detail = {
     "SF ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8114,8 +8114,8 @@ const team_detail = {
     "SJSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8130,8 +8130,8 @@ const team_detail = {
     "STCLAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8146,8 +8146,8 @@ const team_detail = {
     "SRHLAW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8162,8 +8162,8 @@ const team_detail = {
     "SCHREI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8178,8 +8178,8 @@ const team_detail = {
     "SCI OK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8194,8 +8194,8 @@ const team_detail = {
     "SE LA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8210,8 +8210,8 @@ const team_detail = {
     "SEATTL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8226,8 +8226,8 @@ const team_detail = {
     "SETON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8242,8 +8242,8 @@ const team_detail = {
     "SHRTER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8258,8 +8258,8 @@ const team_detail = {
     "SIENA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8274,8 +8274,8 @@ const team_detail = {
     "SNAHTS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8290,8 +8290,8 @@ const team_detail = {
     "SIMFRA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8306,8 +8306,8 @@ const team_detail = {
     "SIUE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8322,8 +8322,8 @@ const team_detail = {
     "SMU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8338,8 +8338,8 @@ const team_detail = {
     "SONOMA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8354,8 +8354,8 @@ const team_detail = {
     "S ALA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8370,8 +8370,8 @@ const team_detail = {
     "S CAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8386,8 +8386,8 @@ const team_detail = {
     "SC ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8402,8 +8402,8 @@ const team_detail = {
     "SC UPS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8418,8 +8418,8 @@ const team_detail = {
     "SO DAK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8434,8 +8434,8 @@ const team_detail = {
     "SDAKST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8450,8 +8450,8 @@ const team_detail = {
     "USF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8466,8 +8466,8 @@ const team_detail = {
     "SEMO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8482,8 +8482,8 @@ const team_detail = {
     "SOUTHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8498,8 +8498,8 @@ const team_detail = {
     "USC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8514,8 +8514,8 @@ const team_detail = {
     "SIU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8530,8 +8530,8 @@ const team_detail = {
     "S IND": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8546,8 +8546,8 @@ const team_detail = {
     "S MISS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8562,8 +8562,8 @@ const team_detail = {
     "S NAZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8578,8 +8578,8 @@ const team_detail = {
     "S UTAH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8594,8 +8594,8 @@ const team_detail = {
     "SOU NO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8610,8 +8610,8 @@ const team_detail = {
     "SW TX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8626,8 +8626,8 @@ const team_detail = {
     "SWADVE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8642,8 +8642,8 @@ const team_detail = {
     "SWAGOD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8658,8 +8658,8 @@ const team_detail = {
     "SWCRST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8674,8 +8674,8 @@ const team_detail = {
     "SPALD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8690,8 +8690,8 @@ const team_detail = {
     "SPRHLL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8706,8 +8706,8 @@ const team_detail = {
     "STAMBR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8722,8 +8722,8 @@ const team_detail = {
     "STANDR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8738,8 +8738,8 @@ const team_detail = {
     "ST AUG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8754,8 +8754,8 @@ const team_detail = {
     "STBONA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8770,8 +8770,8 @@ const team_detail = {
     "STELIZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8786,8 +8786,8 @@ const team_detail = {
     "STFRBK": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8802,8 +8802,8 @@ const team_detail = {
     "STFRIL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8818,8 +8818,8 @@ const team_detail = {
     "STFRPA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8834,8 +8834,8 @@ const team_detail = {
     "STJOFI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8850,8 +8850,8 @@ const team_detail = {
     "STJOHN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8866,8 +8866,8 @@ const team_detail = {
     "STJOES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8882,8 +8882,8 @@ const team_detail = {
     "STJOME": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8898,8 +8898,8 @@ const team_detail = {
     "STJOLI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8914,8 +8914,8 @@ const team_detail = {
     "STKATH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8930,8 +8930,8 @@ const team_detail = {
     "STMYMD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8946,8 +8946,8 @@ const team_detail = {
     "STMYTX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8962,8 +8962,8 @@ const team_detail = {
     "STTHFL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8978,8 +8978,8 @@ const team_detail = {
     "ST THOM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -8994,8 +8994,8 @@ const team_detail = {
     "STTHOM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9010,8 +9010,8 @@ const team_detail = {
     "STXAV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9026,8 +9026,8 @@ const team_detail = {
     "STAN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9042,8 +9042,8 @@ const team_detail = {
     "CSUSTN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9058,8 +9058,8 @@ const team_detail = {
     "SFA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9074,8 +9074,8 @@ const team_detail = {
     "STETSN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9090,8 +9090,8 @@ const team_detail = {
     "STONEH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9106,8 +9106,8 @@ const team_detail = {
     "STONY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9122,8 +9122,8 @@ const team_detail = {
     "SULROS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9138,8 +9138,8 @@ const team_detail = {
     "SUNYMA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9154,8 +9154,8 @@ const team_detail = {
     "CANTON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9170,8 +9170,8 @@ const team_detail = {
     "SUNY D": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9186,8 +9186,8 @@ const team_detail = {
     "ONEONT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9202,8 +9202,8 @@ const team_detail = {
     "PURCH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9218,8 +9218,8 @@ const team_detail = {
     "SYR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9234,8 +9234,8 @@ const team_detail = {
     "TARLET": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9250,8 +9250,8 @@ const team_detail = {
     "TCU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9266,8 +9266,8 @@ const team_detail = {
     "TEMPLE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9282,8 +9282,8 @@ const team_detail = {
     "TENN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9298,8 +9298,8 @@ const team_detail = {
     "MARMET": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9314,8 +9314,8 @@ const team_detail = {
     "TENNST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9330,8 +9330,8 @@ const team_detail = {
     "TNTECH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9346,8 +9346,8 @@ const team_detail = {
     "TN WES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9362,8 +9362,8 @@ const team_detail = {
     "TEXAS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9378,8 +9378,8 @@ const team_detail = {
     "TX A&M": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9394,8 +9394,8 @@ const team_detail = {
     "TAMUCC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9410,8 +9410,8 @@ const team_detail = {
     "TAMUCO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9426,8 +9426,8 @@ const team_detail = {
     "TX LUT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9442,8 +9442,8 @@ const team_detail = {
     "TX SOU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9458,8 +9458,8 @@ const team_detail = {
     "TX ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9474,8 +9474,8 @@ const team_detail = {
     "TXTECH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9490,8 +9490,8 @@ const team_detail = {
     "CITDEL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9506,8 +9506,8 @@ const team_detail = {
     "THOMAS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9522,8 +9522,8 @@ const team_detail = {
     "TOCCOA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9538,8 +9538,8 @@ const team_detail = {
     "TOLEDO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9554,8 +9554,8 @@ const team_detail = {
     "TOWSON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9570,8 +9570,8 @@ const team_detail = {
     "TRVNAZ": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9586,8 +9586,8 @@ const team_detail = {
     "TRINTX": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9602,8 +9602,8 @@ const team_detail = {
     "TRIBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9618,8 +9618,8 @@ const team_detail = {
     "TRICHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9634,8 +9634,8 @@ const team_detail = {
     "TROY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9650,8 +9650,8 @@ const team_detail = {
     "TRUETM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9666,8 +9666,8 @@ const team_detail = {
     "TUFTS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9682,8 +9682,8 @@ const team_detail = {
     "TULANE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9698,8 +9698,8 @@ const team_detail = {
     "TULSA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9714,8 +9714,8 @@ const team_detail = {
     "TUSCUL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9730,8 +9730,8 @@ const team_detail = {
     "UAB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9746,8 +9746,8 @@ const team_detail = {
     "UC DAV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9762,8 +9762,8 @@ const team_detail = {
     "UC IRV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9778,8 +9778,8 @@ const team_detail = {
     "UC RIV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9794,8 +9794,8 @@ const team_detail = {
     "UCSD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9810,8 +9810,8 @@ const team_detail = {
     "UCSB": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9826,8 +9826,8 @@ const team_detail = {
     "UCF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9842,8 +9842,8 @@ const team_detail = {
     "UCLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9858,8 +9858,8 @@ const team_detail = {
     "UCONN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9874,8 +9874,8 @@ const team_detail = {
     "UIC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9890,8 +9890,8 @@ const team_detail = {
     "LA MON": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9906,8 +9906,8 @@ const team_detail = {
     "UMASS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9922,8 +9922,8 @@ const team_detail = {
     "UMASSL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9938,8 +9938,8 @@ const team_detail = {
     "UMBC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9954,8 +9954,8 @@ const team_detail = {
     "UNC A": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9970,8 +9970,8 @@ const team_detail = {
     "UNC G": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -9986,8 +9986,8 @@ const team_detail = {
     "UNCW": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10002,8 +10002,8 @@ const team_detail = {
     "UNION": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10018,8 +10018,8 @@ const team_detail = {
     "UNLV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10034,8 +10034,8 @@ const team_detail = {
     "MERMAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10050,8 +10050,8 @@ const team_detail = {
     "TX ARL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10066,8 +10066,8 @@ const team_detail = {
     "UT MAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10082,8 +10082,8 @@ const team_detail = {
     "UTRGV": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10098,8 +10098,8 @@ const team_detail = {
     "UTAH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10114,8 +10114,8 @@ const team_detail = {
     "UT ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10130,8 +10130,8 @@ const team_detail = {
     "UTTECH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10146,8 +10146,8 @@ const team_detail = {
     "UT VAL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10162,8 +10162,8 @@ const team_detail = {
     "UTEP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10178,8 +10178,8 @@ const team_detail = {
     "UTSA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10194,8 +10194,8 @@ const team_detail = {
     "VALFRG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10210,8 +10210,8 @@ const team_detail = {
     "VALPO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10226,8 +10226,8 @@ const team_detail = {
     "VANDY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10242,8 +10242,8 @@ const team_detail = {
     "VANGRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10258,8 +10258,8 @@ const team_detail = {
     "VCU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10274,8 +10274,8 @@ const team_detail = {
     "VERMNT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10290,8 +10290,8 @@ const team_detail = {
     "NOVA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10306,8 +10306,8 @@ const team_detail = {
     "UVA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10322,8 +10322,8 @@ const team_detail = {
     "VA ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10338,8 +10338,8 @@ const team_detail = {
     "VT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10354,8 +10354,8 @@ const team_detail = {
     "VA WES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10370,8 +10370,8 @@ const team_detail = {
     "VA LYN": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10386,8 +10386,8 @@ const team_detail = {
     "VMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10402,8 +10402,8 @@ const team_detail = {
     "VOORHS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10418,8 +10418,8 @@ const team_detail = {
     "WABASH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10434,8 +10434,8 @@ const team_detail = {
     "WAGNER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10450,8 +10450,8 @@ const team_detail = {
     "WAKE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10466,8 +10466,8 @@ const team_detail = {
     "WALDRF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10482,8 +10482,8 @@ const team_detail = {
     "WALLA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10498,8 +10498,8 @@ const team_detail = {
     "WARPAC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10514,8 +10514,8 @@ const team_detail = {
     "WARWIL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10530,8 +10530,8 @@ const team_detail = {
     "WRTBRG": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10546,8 +10546,8 @@ const team_detail = {
     "WASH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10562,8 +10562,8 @@ const team_detail = {
     "WASHMD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10578,8 +10578,8 @@ const team_detail = {
     "WASHST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10594,8 +10594,8 @@ const team_detail = {
     "WAYSMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10610,8 +10610,8 @@ const team_detail = {
     "WEBINT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10626,8 +10626,8 @@ const team_detail = {
     "WEB ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10642,8 +10642,8 @@ const team_detail = {
     "WELLS": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10658,8 +10658,8 @@ const team_detail = {
     "WC BAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10674,8 +10674,8 @@ const team_detail = {
     "WVU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10690,8 +10690,8 @@ const team_detail = {
     "WVAWES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10706,8 +10706,8 @@ const team_detail = {
     "WSTCLF": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10722,8 +10722,8 @@ const team_detail = {
     "W CAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10738,8 +10738,8 @@ const team_detail = {
     "WESTST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10754,8 +10754,8 @@ const team_detail = {
     "W ILL": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10770,8 +10770,8 @@ const team_detail = {
     "W KY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10786,8 +10786,8 @@ const team_detail = {
     "W MICH": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10802,8 +10802,8 @@ const team_detail = {
     "W NE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10818,8 +10818,8 @@ const team_detail = {
     "W NM": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10834,8 +10834,8 @@ const team_detail = {
     "W ORE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10850,8 +10850,8 @@ const team_detail = {
     "WESTPA": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10866,8 +10866,8 @@ const team_detail = {
     "WESTMI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10882,8 +10882,8 @@ const team_detail = {
     "WEMONT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10898,8 +10898,8 @@ const team_detail = {
     "WHITTI": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10914,8 +10914,8 @@ const team_detail = {
     "WICHST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10930,8 +10930,8 @@ const team_detail = {
     "WILEY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10946,8 +10946,8 @@ const team_detail = {
     "WILKES": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10962,8 +10962,8 @@ const team_detail = {
     "WM&MRY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10978,8 +10978,8 @@ const team_detail = {
     "WCAREY": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -10994,8 +10994,8 @@ const team_detail = {
     "WM JSP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11010,8 +11010,8 @@ const team_detail = {
     "PEACE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11026,8 +11026,8 @@ const team_detail = {
     "WLWOOD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11042,8 +11042,8 @@ const team_detail = {
     "WILBAP": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11058,8 +11058,8 @@ const team_detail = {
     "WILMDE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11074,8 +11074,8 @@ const team_detail = {
     "WINTHR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11090,8 +11090,8 @@ const team_detail = {
     "WISC": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11106,8 +11106,8 @@ const team_detail = {
     "UW PAR": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11122,8 +11122,8 @@ const team_detail = {
     "UW ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11138,8 +11138,8 @@ const team_detail = {
     "WOFFRD": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11154,8 +11154,8 @@ const team_detail = {
     "WRIGHT": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11170,8 +11170,8 @@ const team_detail = {
     "WYO": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11186,8 +11186,8 @@ const team_detail = {
     "XAVIER": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11202,8 +11202,8 @@ const team_detail = {
     "YALE": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11218,8 +11218,8 @@ const team_detail = {
     "YSU": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"
@@ -11234,8 +11234,8 @@ const team_detail = {
     "ALA ST": {
         "img": "https://www.mlbstatic.com/team-logos/159.svg",
         "teamColoursHex": [
-            "#a71930",
-            "#e3d4ad",
+            "#27251f",
+            "#c4ced4",
             "#000000",
             "#30ced8",
             "#ffffff"

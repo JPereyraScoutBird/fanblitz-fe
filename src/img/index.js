@@ -32,6 +32,7 @@ import WAS from './WAS.jpg';
 import BLITZBOT_PROFILE from './blitzbot_profile.png'
 import PROFILE from './PROFILE.svg'
 import TENNIS from './tennis'
+import CBB from './cbb'
 
 export default {
     Logo,
@@ -67,5 +68,6 @@ export default {
     WAS,
     BLITZBOT_PROFILE,
     PROFILE,
-    TENNIS
+    TENNIS,
+    CBB
 }
