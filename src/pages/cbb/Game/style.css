@@ -1,0 +1,39 @@
+#home .carousel-control-next, #home .carousel-control-prev, #home .carousel-indicators {
+    z-index: 5;
+}
+
+#home .carousel-indicators {
+    z-index: 5;
+    bottom: -1rem;
+}
+
+
+#home .carousel-control-prev{
+    display: flex;
+    justify-content: left;
+    width: 2rem;
+}
+
+#home .carousel-control-next {
+    display: flex;
+    justify-content: right;
+    width: 2rem;
+}
+
+.playbyplay_home { 
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 30vh;
+    background-attachment: fixed;
+    /* padding-right: 20px; */
+}
+
+.playbyplay_away { 
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position-x: 1%;
+    background-position-y: 30vh;
+    background-attachment: fixed;
+    /* padding-right: 20px; */
+}

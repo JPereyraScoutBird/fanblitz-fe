@@ -29,7 +29,8 @@ function Home(props) {
   const [gameData, setGameData] = useState([]);
   const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-  const [date, setDate] = useState(moment(new Date('2023-10-05').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  // const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');
@@ -45,7 +46,7 @@ function Home(props) {
 
   const fetchData = async () => {
       try {
-        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games',);
+        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games',);
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
         console.log("games", response_formated)
@@ -57,7 +58,7 @@ function Home(props) {
 
   const fetchDataStrikeout = async () => {
     try {
-      const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/players/pitchers/strikeout');
+      const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/players/pitchers/strikeout');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
       const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
       setPitcherStrikeout(response_formatedModel)
@@ -68,15 +69,11 @@ function Home(props) {
 
   useEffect(() => {
     fetchData();
-    // const interval = setInterval(() => {
-    //   fetchData();
-    // }, 120000)
-    // return () => clearInterval(interval)
   }, []);
 
-  useEffect(() => {
-    fetchDataStrikeout();
-  }, [gameData]);
+  // useEffect(() => {
+  //   fetchDataStrikeout();
+  // }, [gameData]);
 
   React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -95,7 +92,7 @@ function Home(props) {
             Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p>
           </div>
         }
-        footer={<Link to={`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+        footer={<Link to={`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
       />
   )
 
@@ -119,25 +116,21 @@ function Home(props) {
     setShowTable("home");
   };
 
-  const handleButtonPitchingStrikeout = () => {
-    setShowTable("pitcher_strikeout");
-  };
-
   const onClick = (game) => {
-    navigate(`/mlb${PATH_LIST.LIVE}`);
+    navigate(`/cbb${PATH_LIST.LIVE}`);
   }
   
   const onClick2 = (game) => {
     const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' college basketball team history`)
     toggle()
   }
   
   const onClick3 = (game) => {
     const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
     setTeam(new_team)
-    setPrompt(`${new_team}' baseball team history`)
+    setPrompt(`${new_team}' college basketball team history`)
     toggle()
   }
 
@@ -149,28 +142,28 @@ function Home(props) {
   const onClick6 = (pitcher_name) => {
     // console.log("pitcher", player_full_name)
     setPitcher(pitcher_name['player_full_name'])
-    setPrompt(`${pitcher_name['player_full_name']} mlb baseball player short biography`)
+    setPrompt(`${pitcher_name['player_full_name']} college basketball player short biography`)
     toggle()
   }
 
   const onClick7 = (player) => {
     setTeam(player['pitcher_team_full'])
-    setPrompt(`${player['pitcher_team_full']}' baseball team history`)
+    setPrompt(`${player['pitcher_team_full']}' college basketball team history`)
     toggle()
   }
 
   const onClick8 = (player) => {
     setTeam(player['opp_team_full'])
-    setPrompt(`${player['opp_team_full']}' baseball team history`)
+    setPrompt(`${player['opp_team_full']}' college basketball team history`)
     toggle()
   }
   
   const onClick5 = (game) => {
-    navigate(`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
+    navigate(`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
   }
   
   const renderTableStrikeoutModel = (table, data, date, backgroundColor = "#000", color='#fff') => {
-      if(table == 'pitcher_strikeout') {
+      if(table == 'pitcher_strikeout' || false) {
         const dataAux = data["strikeout"]
         const header = {
           "date_et": "Time",
@@ -200,12 +193,10 @@ function Home(props) {
           "home_spreads_draftkings": "Vegas",
           "margin_spread_fanblitz": "Fanblitz",
           "difference": "Difference",
-          // "home_score": "Home Score",
-          // "away_score": "Away Score",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>MLB Game Schedule</h2>
+            <h2>NCAA Men Basketball Game Schedule</h2>
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
@@ -261,7 +252,7 @@ function Home(props) {
   
   return (
     <div id="home">
-      <Menu sport_default={"mlb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
+      <Menu sport_default={"cbb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
         {
           renderCards()
         }
@@ -269,7 +260,7 @@ function Home(props) {
       <Container>
         <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
           <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000", fontWeight: `${showTable == "home" ? "bold" : "normal"}`}} onClick={handleButtonHome} >Spread Model</button>
-          <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "pitcher_strikeout" ? "bold" : "normal"}`}} onClick={handleButtonPitchingStrikeout}>Strikeout Model</button>
+          {/* <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "pitcher_strikeout" ? "bold" : "normal"}`}} onClick={handleButtonPitchingStrikeout}>Strikeout Model</button> */}
         </div>
       </Container>
       <Container>
@@ -287,7 +278,7 @@ function Home(props) {
         </ModalBody>
         <ModalFooter>
           <Button onClick={toggle2}>Cancel</Button>
-          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
+          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/cbb">Continue</Button>
         </ModalFooter>
       </Modal>
     </div>    

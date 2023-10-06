@@ -87,7 +87,7 @@ function Chatbot(props) {
     setMessageList([...newMessage, ""]); 
     setPrompt('')
   }
-  console.log("asd", suffix_style)
+  // console.log("asd", suffix_style)
   return (
     <div id="chatbot">
       <div className="container-footer dark">

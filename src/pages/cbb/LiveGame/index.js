@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
 import constant from "../PlayerDetail/constant";
+import constantTeams from "../constants";
 import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
@@ -19,7 +20,7 @@ import uuid from 'react-uuid';
 import { useNavigate } from "react-router-dom";
 import Chatbot from "../../../container/ChatBot";
 import CardComponent from "../../../component/Card";
-import CardTeamLiveComponent from "../../../component/CardTeamLive";
+import CardTeamLiveComponent from "../../../component/CardTeamCbbLive";
 
 
 function LiveGame(props) {
@@ -28,7 +29,7 @@ function LiveGame(props) {
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-  const [date, setDate] = useState(moment(new Date('2023-10-05').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');
@@ -46,8 +47,8 @@ function LiveGame(props) {
 
   const fetchData = async () => {
       try {
-        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/gamescore');
-        // const responseBox = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/games/box');
+        const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/gamescore');
+        // const responseBox = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/cbb/dev/games/box');
         const jsonObject = JSON.parse(response.data.body)
         // const jsonObjectBox = JSON.parse(responseBox.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
@@ -62,7 +63,7 @@ function LiveGame(props) {
     fetchData()
     const interval = setInterval(() => {
       fetchData();
-    }, 300000)
+    }, 60000)
     return () => clearInterval(interval)
   }, []);
 
@@ -78,17 +79,17 @@ function LiveGame(props) {
   }, []);
 
   const onClick = (game) => {
-    navigate(`/mlb${PATH_LIST.GAME_DETAIL}/${game.id}`);
+    navigate(`/cbb${PATH_LIST.GAME_DETAIL}/${game.id}`);
   }
   
   const onClick5 = (game) => {
-    navigate(`/mlb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
+    navigate(`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
   }
   
   const renderTodaysGame = () => {
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>MLB Games</h2>
+            <h2>NCAA Men Basketball Games</h2>
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
@@ -101,8 +102,8 @@ function LiveGame(props) {
                   <Col xs={12} md={4}>
                       <div className="mb-4">
                       <CardTeamLiveComponent 
-                      homeImg={constant.team_detail[x['home_team_abbr']].img}
-                      awayImg={constant.team_detail[x['away_team_abbr']].img}
+                      homeImg={x['home_image']}
+                      awayImg={x['away_image']}
                       home_abbr={x.home_team_abbr}
                       away_abbr={x.away_team_abbr}
                       home={x['home_team']} 
@@ -110,35 +111,35 @@ function LiveGame(props) {
                       footer={getTime(x.date_z)} 
                       home_score={x['home_score']}
                       away_score={x['away_score']}
-                      home_hit={x['home_hit']}
-                      away_hit={x['away_hit']}
-                      home_error={x['home_error']}
-                      away_error={x['away_error']}
+                      half_1_home={x['half_1_home']}
+                      half_1_away={x['half_1_away']}
+                      half_2_home={x['half_2_home']}
+                      half_2_away={x['half_2_away']}
                       status={x['status']}
-                      inning={x['inning']}
-                      inning_half={x['inning_half']}
+                      current_half={x['current_half']}
+                      current_half_seconds_remaining={x['current_half_seconds_remaining']}
                       home_pitcher={x['home_pitcher']}
                       home_pitcher_image={x['home_pitcher_image']}
-                      home_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['home_pitcher_id']}`}
+                      home_pitcher_link={`/cbb${PATH_LIST.PLAYER_DETAIL}/${x['home_pitcher_id']}`}
                       home_pitcher_era={x['home_pitcher_era']}
                       home_pitcher_wins={x['home_pitcher_wins']}
                       home_pitcher_loss={x['home_pitcher_loss']}
                       away_pitcher={x['away_pitcher']}
                       away_pitcher_image={x['away_pitcher_image']}
-                      away_pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['away_pitcher_id']}`}
+                      away_pitcher_link={`/cbb${PATH_LIST.PLAYER_DETAIL}/${x['away_pitcher_id']}`}
                       away_pitcher_era={x['away_pitcher_era']}
                       away_pitcher_wins={x['away_pitcher_wins']}
                       away_pitcher_loss={x['away_pitcher_loss']}
                       pitcher_live_name={x['pitcher_live']}
                       pitcher_live_image={x['pitcher_live_image']}
-                      pitcher_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['pitcher_live_id']}`}
+                      pitcher_link={`/cbb${PATH_LIST.PLAYER_DETAIL}/${x['pitcher_live_id']}`}
                       hitter_live_name={x['hitter_live']}
                       hitter_live_image={x['hitter_live_image']}
-                      hitter_link={`/mlb${PATH_LIST.PLAYER_DETAIL}/${x['hitter_live_id']}`}
-                      link2={`/mlb${PATH_LIST.GAME_DETAIL}/${x['id']}`}
-                      linkBox={`/mlb${PATH_LIST.BOX}/${x['id']}`}
+                      hitter_link={`/cbb${PATH_LIST.PLAYER_DETAIL}/${x['hitter_live_id']}`}
+                      link2={`/cbb${PATH_LIST.GAME_DETAIL}/${x['id']}`}
+                      linkBox={`/cbb${PATH_LIST.BOX}/${x['id']}`}
                       date={x['date_z']}
-                      link={`/mlb${PATH_LIST.FORECAST_DETAIL}/${x['home_team_abbr']}-${x['away_team_abbr']}/${getDate2(x.date_z)}`}
+                      link={`/cbb${PATH_LIST.FORECAST_DETAIL}/${x['home_team_abbr']}-${x['away_team_abbr']}/${getDate2(x.date_z)}`}
                     />
                     </div>
                   </Col>
@@ -153,7 +154,7 @@ function LiveGame(props) {
 
   return (
     <div id="home">
-      <Menu sport_default={"mlb"} signOut={signOut} user={user}/>
+      <Menu sport_default={"cbb"} signOut={signOut} user={user}/>
       <Container>
         {
           renderTodaysGame()
@@ -170,7 +171,7 @@ function LiveGame(props) {
         </ModalBody>
         <ModalFooter>
           <Button onClick={toggle2}>Cancel</Button>
-          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/mlb">Continue</Button>
+          <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/cbb">Continue</Button>
         </ModalFooter>
       </Modal>
     </div>    

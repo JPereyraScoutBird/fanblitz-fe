@@ -82,6 +82,10 @@ function SocialBets() {
 
   useEffect(() => {
     fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+    }, 30000)
+    return () => clearInterval(interval)
   }, []);
 
   console.log("email: ", user.attributes.email)
@@ -136,7 +140,7 @@ function SocialBets() {
           <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? 
           bets.map(x => ({...x, 
             "sport": <><FontAwesomeIcon icon={faBaseball} /> <span>MLB</span></>, 
-            "result": x.result,
+            "result": "TBD",
             "fanduel": <a onClick={toggle2}>See Bet</a>, 
             "share": renderBrands(x)})) : []} loading={bets == undefined}/>
         </div>

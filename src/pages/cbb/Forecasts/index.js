@@ -7,6 +7,7 @@ import { filterByDate, getDate, getDate2, getDateString, getTime } from "../../.
 import Image from '../../../img';
 import PATH_LIST from "../../../routes/constant";
 import constant from "../PlayerDetail/constant";
+import constants from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments } from "@fortawesome/free-regular-svg-icons";
 import DatePagination from "../../../component/DatePagination";
@@ -15,12 +16,13 @@ import moment from 'moment'
 function Forecasts() {
 
   const [forecastData, setForecastData] = useState([])
-  const [date, setDate] = useState(moment(new Date('2023-10-05').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
 
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
-    axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/mlb/dev/forecasts`).then((res) => {
+    axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts`).then((res) => {
       setForecastData((JSON.parse(res.data.body)))
+      console.log("forecasts", (JSON.parse(res.data.body)))
     })
   }, [])
 
@@ -56,10 +58,11 @@ function Forecasts() {
                     <Card 
                       style="card-news"
                       title={`${forecast.home_team} vs ${forecast.away_team}`}
-                      body={constant.team_detail[forecast.home_team_abb].stadium}
-                      imageSrc={Image[forecast.home_team_abb]}
-                      linkTitle={`/mlb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
-                      footer={renderFooter(forecast.date_z)}
+                      body={constants.team_detail[forecast.home_team_abb].stadium}
+                      imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
+                      // imageSrc={Image[forecast.home_team_abb]}
+                      linkTitle={`/cbb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
+                      footer={getDate2(forecast.date_z)}
                       imageRedirect={true}
                     />
                   </Col>
