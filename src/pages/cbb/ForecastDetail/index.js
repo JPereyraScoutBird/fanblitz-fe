@@ -99,12 +99,12 @@ function ForecastDetail() {
           <div className="d-flex flex-md-row flex-column align-items-center">
             <div className="d-flex align-items-center">
               {/* <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.home_team_abb].img} height={"24px"} /> */}
-              <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.home_team_abb].img} height={"24px"} />
+              <img style={{marginRight: "0.5rem"}} src={forecastData.home_image} height={"24px"} />
             <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_team} </h2>
             </div>
             <h2> vs </h2>
             <div className="d-flex align-items-center">
-              <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.away_team_abb].img} height={"24px"} />
+              <img style={{marginRight: "0.5rem"}} src={forecastData.away_image} height={"24px"} />
               <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {forecastData.away_team}</h2>
             </div>
           </div>
