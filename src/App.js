@@ -147,6 +147,14 @@ const router = (user, signOut) => createBrowserRouter([
     },
   },
   {
+    path: `/cbb${PATH_LIST.BOX}/:gameId`,
+    element: <Pages.cbb.Box />,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
     element: <Pages.tennis.Player user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,

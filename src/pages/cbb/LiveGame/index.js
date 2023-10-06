@@ -102,8 +102,8 @@ function LiveGame(props) {
                   <Col xs={12} md={4}>
                       <div className="mb-4">
                       <CardTeamLiveComponent 
-                      homeImg={constantTeams.team_detail[x['home_team_abbr']].img}
-                      awayImg={constantTeams.team_detail[x['away_team_abbr']].img}
+                      homeImg={x['home_image']}
+                      awayImg={x['away_image']}
                       home_abbr={x.home_team_abbr}
                       away_abbr={x.away_team_abbr}
                       home={x['home_team']} 

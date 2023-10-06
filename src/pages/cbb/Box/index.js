@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
 import constant from "../PlayerDetail/constant";
+import constants from "../constants";
 import './style.css';
 import DatePagination from "../../../component/DatePagination";
 import moment from 'moment'
@@ -58,6 +59,9 @@ function LiveGame(props) {
         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/box?game_id=${gameId}`);
         const jsonObjectHome = JSON.parse(response.data.body_home)
         const jsonObjectAway = JSON.parse(response.data.body_away)
+        console.log("box data home", jsonObjectHome)
+        console.log("box data away", jsonObjectAway)
+
         setBoxDataHitHome(jsonObjectHome)
         setBoxDataHitAway(jsonObjectAway)
       } catch (error) {
@@ -69,6 +73,7 @@ function LiveGame(props) {
     try {
       const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/gamescore?game_id=${gameId}`);
       const jsonObject = response.data.body2
+      console.log("data game score", jsonObject)
       setBoxDataInnings(jsonObject)
     } catch (error) {
       console.error('Error getting data:', error);
@@ -84,11 +89,10 @@ React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
 
-  const renderTeamColumn = (teamNameAbb) => {
-    console.log("la melmelada", teamNameAbb)
+  const renderTeamColumn = (teamNameAbb, image) => {
     return (
     <div className="d-flex">
-      <img style={{marginRight: "0.5rem"}} src={constant.team_detail[teamNameAbb || "AMERICAN"].img} height={"24px"} />
+      <img style={{marginRight: "0.5rem"}} src={image} height={"24px"} />
       <p>{teamNameAbb}</p>
     </div>
     )
@@ -96,7 +100,7 @@ React.useEffect(() => {
 
   const fixRenderLogo = (data) => {
     if (data.length != 0){
-      return data.map(x => ({...x, "_team": renderTeamColumn(x["_team"])}))
+      return data.map(x => ({...x, "_team": renderTeamColumn(x["_team"], x["_image"])}))
     }
   }
 
@@ -104,37 +108,26 @@ React.useEffect(() => {
     if (data.length != 0){
       return data[0]["_team"]
     }
-    return "AMERICAN"
+    return "LEHIGH"
   }
 
   const getHomeInning = (data) =>{
     if (data.length != 0){
-      return data[0]["_team"]
+      return [data[0]["_team"], data[0]["_image"]]
     }
-    return "AMERICAN"
+    return ["LEHIGH", constants.team_detail["LEHIGH"].img]
   }
 
   const getAwayInning = (data) =>{
     if (data.length != 0){
-      return data[1]["_team"]
+      return [data[1]["_team"], data[1]["_image"]]
     }
-    return "AMERICAN"
+    return ["LEHIGH", constants.team_detail["LEHIGH"].img]
   }
-
-  const renderPitcherTable = (data) => (
-    <>
-      <h5>Pitchers {getTeam(data)}</h5>
-        <CustomTable 
-          noRange={false} pagination={true} range={5} row={5}
-          header={constantLocal.headerpitchers}
-          data={data}
-        />
-    </>
-  )
 
   const renderBatterTable = (data) => (
     <>
-      <h5>Batters {getTeam(data)}</h5>
+      <h5>Players {getTeam(data)}</h5>
         <CustomTable 
           noRange={false} pagination={true} range={9} row={10}
           header={constantLocal.headerHitters}
@@ -144,18 +137,17 @@ React.useEffect(() => {
   )
 
   const renderBoxGame = () => {
-    console.log("DALIDA", fixRenderLogo(boxDataInnings))
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
             <div className="w-100 d-flex flex-md-row flex-column align-items-center">
               <div className="w-100 d-flex align-items-center">
-                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getHomeInning(boxDataInnings) || "NYY"].img} height={"32px"} />
-                <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {getHomeInning(boxDataInnings) || "NYY"} </h2>
+                <img style={{marginRight: "0.5rem"}} src={getHomeInning(boxDataInnings)[1]} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {getHomeInning(boxDataInnings)[0]} </h2>
               {/* </div> */}
               <h2 className="mr-2 ml-2" style={{marginLeft: "1rem", marginRight: "1rem"}}> vs </h2>
               {/* <div className="w-100 d-flex align-items-center"> */}
-                <img style={{marginRight: "0.5rem"}} src={constant.team_detail[getAwayInning(boxDataInnings) || "ATL"].img} height={"32px"} />
-                <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {getAwayInning(boxDataInnings) || "ATL"}</h2>
+                <img style={{marginRight: "0.5rem"}} src={getAwayInning(boxDataInnings)[1]} height={"32px"} />
+                <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {getAwayInning(boxDataInnings)[0]}</h2>
               </div>
             </div>
             <div>
@@ -171,14 +163,6 @@ React.useEffect(() => {
               </Col>
               <Col xs={6}>
                   {renderBatterTable(boxDataHitHome)}
-              </Col>
-            </Row>
-            <Row className="mb-4 mt-4">
-              <Col xs={6}>
-                  {renderPitcherTable(boxDataPitcherAway)}
-              </Col>
-              <Col xs={6}>
-                  {renderPitcherTable(boxDataPitcherHome)}
               </Col>
             </Row>
           </div>
