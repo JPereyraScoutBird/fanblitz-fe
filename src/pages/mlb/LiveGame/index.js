@@ -51,7 +51,7 @@ function LiveGame(props) {
         const jsonObject = JSON.parse(response.data.body)
         // const jsonObjectBox = JSON.parse(responseBox.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        console.log(response_formated)
+        console.log("gamescore", response_formated)
         setGameData(response_formated)
       } catch (error) {
         console.error('Error getting data:', error);
