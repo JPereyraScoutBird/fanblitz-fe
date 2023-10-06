@@ -61,6 +61,7 @@ function Home(props) {
       const jsonObjectModel = JSON.parse(responseModel.data.body)
       const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
       setPitcherStrikeout(response_formatedModel)
+      console.log("picher mdel", response_formatedModel)
     } catch (error) {
       console.error('Error getting data:', error);
     }
@@ -217,7 +218,7 @@ function Home(props) {
   
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => getTodayItems(x.date_z))
+      const today_games = gameData.filter(x => getTodayItems(x.date_z, "2023-10-05"))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))

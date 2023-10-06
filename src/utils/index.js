@@ -23,8 +23,13 @@ const getPaid = (value) => {
     return "No"
 }
 
-const getTodayItems = (dateTimeStamp) => {
-    const today = new Date('2023-10-05');
+const getTodayItems = (dateTimeStamp, day = null) => {
+
+    let today = new Date();
+    if (day != null){
+        today = new Date(day);
+    }
+    
     today.setHours(0,0,0,0);
     const tomorrow = new Date(today)
     tomorrow.setDate(today.getDate() + 1)
