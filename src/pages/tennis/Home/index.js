@@ -60,7 +60,7 @@ function HomeTennis(props) {
   const header = {
     "date_z": "Date",
     "tournament_name": "Tournament Name",
-    "event_type": "Tournament Type",
+    // "event_type": "Tournament Type",
     "home_player": "Player 1",
     "rank_home": "Rank",
     "away_player": "Player 2",
@@ -152,13 +152,13 @@ function HomeTennis(props) {
     
     const onClick2 = (game) => {
       setPlayer(game.home_player)
-      setPrompt(`${game.home_player}' tennis team history`)
+      setPrompt(`${game.home_player}' tennis history`)
       toggle()
     }
     
     const onClick3 = (game) => {
       setPlayer(game.away_player)
-      setPrompt(`${game.away_player}' tennis team history`)
+      setPrompt(`${game.away_player}' tennis history`)
       toggle()
     }
 
