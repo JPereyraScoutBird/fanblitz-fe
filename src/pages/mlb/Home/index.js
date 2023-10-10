@@ -29,7 +29,7 @@ function Home(props) {
   const [gameData, setGameData] = useState([]);
   const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-  const [date, setDate] = useState(moment(new Date('2023-10-05').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');
@@ -218,7 +218,7 @@ function Home(props) {
   
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => getTodayItems(x.date_z, "2023-10-05"))
+      const today_games = gameData.filter(x => getTodayItems(x.date_z))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
