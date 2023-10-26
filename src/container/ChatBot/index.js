@@ -27,7 +27,7 @@ const renderMessages = (message) => {
 
 function Chatbot(props) {
 
-  const {player = '', pre_prompt = '', gptStyle = ''} = props
+  const {player = '', pre_prompt = '', gptStyle = '', sportLeague = 'mlb', sportPlayer = 'baseball'} = props
   const sendPromtReducer = useSelector(selectSendPromt);
   const dispatch = useDispatch();
   const [sendPromt, setSendPromtState] = useState(false)
@@ -43,7 +43,7 @@ function Chatbot(props) {
     if (messageList.length == 1 && player != '') {
       const newMessage = [...messageList, ({
         "role": "user",
-        "content": pre_prompt != '' ? pre_prompt + suffix_style : `${player} mlb baseball player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts] ${suffix_style}`
+        "content": pre_prompt != '' ? pre_prompt + suffix_style : `${player} ${sportLeague} ${sportPlayer} player extremely succinct background and obscure/interesting facts output as [background][obscure/interesting facts] ${suffix_style}`
       })]
       setSendPromtState(true)
       dispatch(setSendPromt(true))

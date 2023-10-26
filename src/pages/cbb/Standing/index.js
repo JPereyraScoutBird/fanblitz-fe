@@ -127,11 +127,11 @@ function Standing() {
   };
 
   const onClickPlayer = (user) => {
-    navigate(`/mlb${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
+    navigate(`/cbb${PATH_LIST.PLAYER_DETAIL}/${user.player_id}`);
   }
 
   const onClickTeam = (user) => {
-    navigate(`/mlb${PATH_LIST.TEAM_DETAIL}/${user.team_id}`);
+    navigate(`/cbb${PATH_LIST.TEAM_DETAIL}/${user.team_id}`);
   }
 
   const handleFilter = () => {
@@ -159,14 +159,14 @@ function Standing() {
         return sortedKeys.map((name, index) => (
           <div> 
           <p>{name}</p>
-          <CustomTable search={false} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData[name].length == 0} pagination={true} range={30} header={constant.headerTeamNumber} data={teamData[name]} onClick={(user) => onClickPlayer(user)}/>
+          <CustomTable search={false} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData[name].length == 0} pagination={true} range={30} header={constant.headerTeamNumber} data={teamData[name]} onClick={(user) => onClickTeam(user)}/>
           </div>
         ))  
       }
       return sortedKeys.map((name, index) => (
         <div> 
         <p>{name}</p>
-        <CustomTable search={false} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData[name].length == 0} pagination={true} range={30} header={constant.headerTeam} data={teamData[name]} onClick={(user) => onClickPlayer(user)}/>
+        <CustomTable search={false} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData[name].length == 0} pagination={true} range={30} header={constant.headerTeam} data={teamData[name]} onClick={(user) => onClickTeam(user)}/>
         </div>
       ))
 

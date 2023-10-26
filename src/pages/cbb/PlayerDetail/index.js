@@ -64,7 +64,6 @@ function Player(props) {
                 const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/players?id=${playerId}`);
                 const jsonObject = JSON.parse(response.data.body)
                 setplayerDetail(jsonObject)
-                console.log("dime a ve", jsonObject)
             } catch (error) {
                 console.error('Error getting data:', error);
             }
@@ -149,7 +148,7 @@ function Player(props) {
           : null
           }
           <Modal isOpen={modal} toggle={toggle2}>
-            <Chatbot player={`${playerDetail['first_name']} ${playerDetail['last_name']}`} gptStyle={gptStyle}/>
+            <Chatbot player={`${playerDetail['first_name']} ${playerDetail['last_name']}`} gptStyle={gptStyle} sportLeague={'ncaa'} sportPlayer={'basketball'}/>
           </Modal>
         </div>    
     );
