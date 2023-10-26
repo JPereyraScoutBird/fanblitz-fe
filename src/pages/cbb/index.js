@@ -11,6 +11,7 @@ import ForecastDetail from './ForecastDetail';
 import GamePlays from './Game';
 import LiveGame from './LiveGame';
 import Box from './Box';
+import Standing from './Standing';
 
 export default {
     Home,
@@ -25,5 +26,6 @@ export default {
     TeamDetail,
     GamePlays,
     LiveGame,
-    Box
+    Box,
+    Standing
 }

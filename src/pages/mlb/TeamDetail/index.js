@@ -145,6 +145,7 @@ function TeamDetail(props) {
                 jsonObject.games = jsonObject.games.length ? jsonObject.games.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
 
                 setteamDetail(jsonObject)
+                console.log("TEAM DETAIL DATA", jsonObject)
                 
             } catch (error) {
                 console.error('Error getting data:', error);
@@ -299,7 +300,7 @@ function TeamDetail(props) {
       );
     }
     
-    console.log(teamDetail)
+    // console.log(teamDetail)
 
     return (
       <div id="template" className="player_detail_container">

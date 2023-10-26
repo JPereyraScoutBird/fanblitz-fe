@@ -10,7 +10,7 @@ const PATH_LIST = {
     STATS: "/stats",
     TUTORIAL: "/tutorial",
     FORECAST_DETAIL: "/forecast",
-    STANDING_TENNIS: "/standing",
+    STANDING: "/standing",
     GAME_DETAIL: "/playbyplay",
     LIVE: "/live",
     BOX: "/box"

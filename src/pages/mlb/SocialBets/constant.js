@@ -22,7 +22,14 @@ const headerBets2 = {
     "username": "Username"
 }
 
+const headerUsers = {
+    "username": "User",
+    "status_friend": "Fallow"
+}
+
 
 export default {
-    headerBets
+    headerBets,
+    headerBets2,
+    headerUsers
 }
