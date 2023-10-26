@@ -84,9 +84,9 @@ function Menu(props) {
                 {renderNavLink(`/${sport}${PATH_LIST.TEAM}`, "Team")}
             </NavItem>
             ): null}
-            {sport == "tennis" ? (
+            {sport == "tennis" || sport == "mlb" || sport == "cbb" ? (
             <NavItem>
-                {renderNavLink(`/${sport}${PATH_LIST.STANDING_TENNIS}`, "Standing")}
+                {renderNavLink(`/${sport}${PATH_LIST.STANDING}`, "Standing")}
             </NavItem>
             ): null}
             <NavItem>

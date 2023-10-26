@@ -36,6 +36,10 @@ const routeList = (sport) => [
       path: `/${sport}${PATH_LIST.TUTORIAL}`,
       element: <Pages.mlb.Tutorial />,
     },
+    {
+      path: `/${sport}${PATH_LIST.STANDING}`,
+      element: <Pages.mlb.Standing />,
+    },
   ]
 
 
@@ -66,7 +70,7 @@ const routeListTennis = (sport) => [
       element: <Pages.tennis.Tutorial />,
     },
     {
-      path: `/${sport}${PATH_LIST.STANDING_TENNIS}`,
+      path: `/${sport}${PATH_LIST.STANDING}`,
       element: <Pages.tennis.StandingTennis />,
     },
   ]
@@ -104,6 +108,10 @@ const routeListCBB = (sport) => [
     {
       path: `/${sport}${PATH_LIST.TUTORIAL}`,
       element: <Pages.cbb.Tutorial />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.STANDING}`,
+      element: <Pages.cbb.Standing />,
     },
   ]
 
