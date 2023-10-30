@@ -441,7 +441,7 @@ import MISS from './MISS.jpg'
 import OMAHA from './OMAHA.jpg'
 import ORU from './ORU.jpg'
 import OREGN from './OREGN.webp'
-// import ORE_ST from './ORE_ST.jpg'
+import ORE_ST from './ORE_ST.jpg'
 // import OTTAZ from './OTTAZ.jpg'
 // import OUABAP from './OUABAP.jpg'
 // import OLOTL from './OLOTL.jpg'
@@ -1149,7 +1149,7 @@ MISS,
 OMAHA,
 ORU,
 OREGN,
-// ORE_ST,
+ORE_ST,
 // OTTAZ,
 // OUABAP,
 // OLOTL,
