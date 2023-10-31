@@ -38,6 +38,7 @@ function Home(props) {
   const [modal2, setModal2] = useState(false);
   const [prompt, setPrompt] = useState('')
   const [pitcher, setPitcher] = useState('')
+  const [standing, setStanding] = useState(0)
 
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
@@ -49,8 +50,18 @@ function Home(props) {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games',);
         const jsonObject = JSON.parse(response.data.body)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        console.log("games", response_formated)
+        // console.log("games", response_formated)
+        const standing_home = response_formated.length ? Math.min(...response_formated.map(item => item.home_position)) : 0
+        const standing_away = response_formated.length ? Math.min(...response_formated.map(item => item.away_position)) : 0
         setGameData(response_formated)
+        // console.log("standing home", standing_home)
+        // console.log("standing away", standing_away)
+        if (standing_home>standing_away){
+          setStanding(standing_away)
+        }else{
+          setStanding(standing_home)
+        }
+        
       } catch (error) {
         console.error('Error getting data:', error);
       }
@@ -93,24 +104,29 @@ function Home(props) {
     }
   }
 
-  const renderForecastComponent = (game) => (
-    <CardForecastComponent
-        key={uuid()} 
-        className="col-12 col-md-6"
-        title={`${game.home_team} vs. ${game.away_team}`}
-        imageSrc={(geImage(game.home_team_abbr, game.home_image))}
-        // imageSrc={IMAGE[game.home_team_abbr]}
-        body={
-          <div>
-            <p>{game.venue}.<br></br>
-            {/* <p>{constant.team_detail[game.home_team_abbr].stadium}.<br></br> */}
-            {game.date_z}<br></br>
-            Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p>
-          </div>
-        }
-        footer={<Link to={`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
-      />
-  )
+  const renderForecastComponent = (game) => {
+    if(game.home_position <= 0 || game.away_position <= 0 || true){
+      return <CardForecastComponent
+              key={uuid()} 
+              className="col-12 col-md-6"
+              title={`${game.home_team} ${game.home_position} vs. ${game.away_team} ${game.away_position}`}
+              imageSrc={(geImage(game.home_team_abbr, game.home_image))}
+              // imageSrc={IMAGE[game.home_team_abbr]}
+              body={
+                <div>
+                  <p>{game.venue}.<br></br>
+                  {/* <p>{constant.team_detail[game.home_team_abbr].stadium}.<br></br> */}
+                  {game.date_z}<br></br>
+                  Spread (H): Vegas {game.home_spreads_draftkings}, FB:{game.margin_spread_fanblitz}</p>
+                </div>
+              }
+              footer={<Link to={`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`} className="btn btn-outline-light" outline={true}>FanBlitz Analysis</Link>}
+            />
+    }
+    return <></>
+  }
+    
+
 
   const next = (items) => {
     if(items.length - 1 > indexCarousel) {
@@ -224,7 +240,7 @@ function Home(props) {
   
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => getTodayItems(x.date_z, '2022-11-08'))
+      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2022-11-08') && (x.home_position <= standing || x.away_position <= standing)))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
