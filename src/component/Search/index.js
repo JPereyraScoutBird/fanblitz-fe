@@ -36,7 +36,7 @@ function SearchComponent (props) {
             }
             setPrompt(string)
         }
-        console.log("items: ", items)
+        // console.log("items: ", items)
         console.log(`string:  ${string}, results: ${results}`)
       }
     
@@ -55,7 +55,7 @@ function SearchComponent (props) {
         console.log('Focused')
       }
 
-      console.log("items: ", items)
+      // console.log("items: ", items)
     
       const formatResult = (item) => {
         return (

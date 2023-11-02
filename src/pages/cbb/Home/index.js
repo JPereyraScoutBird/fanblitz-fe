@@ -67,11 +67,14 @@ function Home(props) {
       }
   };
 
-  const fetchDataStrikeout = async () => {
+  const fetchDataScoreData = async () => {
     try {
-      const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/players/pitchers/strikeout');
+      const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams/score');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
-      const response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
+      let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et']), "difference":  x['margin_spread_fanblitz']  })) : []
+      response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({...x,  "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(1), 'pts_home':x['pts_home'].toFixed(1)       })) : []
+      
+      // console.log("games2", response_formatedModel)
       setPitcherStrikeout(response_formatedModel)
     } catch (error) {
       console.error('Error getting data:', error);
@@ -82,9 +85,9 @@ function Home(props) {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   fetchDataStrikeout();
-  // }, [gameData]);
+  useEffect(() => {
+    fetchDataScoreData();
+  }, [], gameData);
 
   React.useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -148,6 +151,10 @@ function Home(props) {
     setShowTable("home");
   };
 
+  const handleButtonScoreModel = () => {
+    setShowTable("score");
+  };
+
   const onClick = (game) => {
     navigate(`/cbb${PATH_LIST.LIVE}`);
   }
@@ -195,24 +202,24 @@ function Home(props) {
   }
   
   const renderTableStrikeoutModel = (table, data, date, backgroundColor = "#000", color='#fff') => {
-      if(table == 'pitcher_strikeout' || false) {
+      if(table == 'score' || false) {
         const dataAux = data["strikeout"]
         const header = {
-          "date_et": "Time",
-          "player_full_name": "Name",
-          "pitcher_team": "Player Team",
-          "opp_team": "Opponent",
-          "pitcher_strikeouts": "Predict SO"
+          "date_z": "Date",
+          "home_team_abbr": "Home",
+          "away_team_abbr": "Away",
+          "pts_home": "Home Score",
+          "away_pts": "Away Score",
+          "difference": "Difference",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
-            <h2>MLB Strikeout Model</h2>
+            <h2>NCAA Men Basketball Game Schedule</h2>
             <br></br>
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
-            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_et, date.toDate()))} loading={dataAux.length == 0} 
-            onClickList={[(game) => onClick(game), (player) => onClick6(player), (player) => onClick7(player), (player) => onClick8(player), (player) => onClick4(player)]}/>
+            <CustomTable noRange={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
           </div>
         )
       }
@@ -292,7 +299,7 @@ function Home(props) {
       <Container>
         <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
           <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000", fontWeight: `${showTable == "home" ? "bold" : "normal"}`}} onClick={handleButtonHome} >Spread Model</button>
-          {/* <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "pitcher_strikeout" ? "bold" : "normal"}`}} onClick={handleButtonPitchingStrikeout}>Strikeout Model</button> */}
+          <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "score" ? "bold" : "normal"}`}} onClick={handleButtonScoreModel}>Score Model</button>
         </div>
       </Container>
       <Container>
