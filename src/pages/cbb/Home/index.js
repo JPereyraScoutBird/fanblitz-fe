@@ -109,7 +109,7 @@ function Home(props) {
       return <CardForecastComponent
               key={uuid()} 
               className="col-12 col-md-6"
-              title={`${game.home_team} ${game.home_position} vs. ${game.away_team} ${game.away_position}`}
+              title={`${game.home_team} ${parseInt(game.home_position)+1} vs. ${game.away_team} ${parseInt(game.away_position)+1}`}
               imageSrc={(geImage(game.home_team_abbr, game.home_image))}
               // imageSrc={IMAGE[game.home_team_abbr]}
               body={

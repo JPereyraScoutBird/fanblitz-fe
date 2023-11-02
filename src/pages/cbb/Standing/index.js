@@ -184,8 +184,8 @@ function Standing() {
       return (
       <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
         <br></br>
-        <button className="button" onClick={handleButtonPosition} >Positions</button>
-        <button className="button" onClick={handleButtonAdvance}>Advance</button>
+        <button className="button" style={{fontWeight: `${showTableOptions == "Position" ? "bold" : "normal"}`}} onClick={handleButtonPosition} >Positions</button>
+        <button className="button" style={{fontWeight: `${showTableOptions == "Advance" ? "bold" : "normal"}`}} onClick={handleButtonAdvance}>Advance</button>
       </div>
       )
     } 
@@ -193,8 +193,8 @@ function Standing() {
       return (
       <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
         <br></br>
-        <button className="button" onClick={handleButtonPosition} >Positions</button>
-        <button className="button" onClick={handleButtonAdvance}>Advance</button>
+        <button className="button" style={{fontWeight: `${showTableOptions == "Position" ? "bold" : "normal"}`}} onClick={handleButtonPosition} >Positions</button>
+        <button className="button" style={{fontWeight: `${showTableOptions == "Advance" ? "bold" : "normal"}`}} onClick={handleButtonAdvance}>Advance</button>
       </div>
       )
     } 
@@ -260,8 +260,8 @@ function Standing() {
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h2>NCAA Men Basketball Standing</h2>
           <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
-          <button className="button" onClick={handleButtonTeam} >Team</button>
-          <button className="button" onClick={handleButtonPlayer}>Player</button>
+          <button className="button" style={{fontWeight: `${showTable == "Team" ? "bold" : "normal"}`}} onClick={handleButtonTeam} >Team</button>
+          <button className="button" style={{fontWeight: `${showTable == "Player" ? "bold" : "normal"}`}} onClick={handleButtonPlayer}>Player</button>
           </div>
           {renderOptions()}
           <br></br>

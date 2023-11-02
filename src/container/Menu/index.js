@@ -60,10 +60,17 @@ function Menu(props) {
       <Navbar id="primary_navbar" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Col xs={12} md={3}>
-          <SearchComponent/>
-        </Col>
-        <Collapse isOpen={isOpen} navbar className='justify-content-end'>
+        {sport == "mlb" || sport == "cbb"? (
+          <Col xs={12} md={2}>
+            <SearchComponent/>
+          </Col>
+        ) : (
+          <Col xs={12} md={3}>
+            <SearchComponent/>
+          </Col>
+        )}
+        
+        <Collapse id="primary_collapse" isOpen={isOpen} navbar className='justify-content-end'>
           <Nav pills={true} className="mr-auto" navbar>
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
