@@ -28,7 +28,7 @@ function LiveGame(props) {
   // const gameDataStore = useSelector((state) => state.gameData.value);
   const [gameData, setGameData] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
-  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date('2023-11-02').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');

@@ -27,7 +27,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Menu3(props) {
   const sportReducer = useSelector(selectSport);
   const dispatch = useDispatch();
-  const {sport_default = "mlb", user, signOut, onChange} = props
+  const {sport_default = "cbb", user, signOut, onChange} = props
   const [sport, setSportData] = useState(sport_default);
   const navigate = useNavigate();
 
