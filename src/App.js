@@ -28,7 +28,7 @@ Amplify.configure(awsconfig);
 const router = (user, signOut) => createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.mlb.Home user={user} signOut={signOut}/>,
+    element: <Pages.cbb.Home user={user} signOut={signOut}/>,
     errorElement: <ErrorPage />,
   },
   {
