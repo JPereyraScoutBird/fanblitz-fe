@@ -18,14 +18,24 @@ import Pages from './pages';
 import PATH_LIST from './routes/constant';
 import { Amplify } from "@aws-amplify/core";
 import awsconfig from "./aws-exports";
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import { withAuthenticator, Button, Heading, AmplifySignIn, Authenticator   } from '@aws-amplify/ui-react';
+// import {useTheme} from '@aws-amplify/ui-react-native';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import '@aws-amplify/ui-react/styles.css';
+import RequireAuth from './RequireAuth';
 
+// withAuthenticator
 Amplify.configure(awsconfig);
+
+const BetsWithAuthMLB = RequireAuth(Pages.mlb.SocialBets);
+const BetsWithAuthCBB = RequireAuth(Pages.cbb.SocialBets);
+const BetsWithAuthTENNIS = RequireAuth(Pages.tennis.SocialBets);
+
 
 // const router = createBrowserRouter([...ROUTES[count]]);
 
-const router = (user, signOut) => createBrowserRouter([
+const router = (user="", signOut=undefined) => createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
     element: <Pages.cbb.Home user={user} signOut={signOut}/>,
@@ -50,7 +60,7 @@ const router = (user, signOut) => createBrowserRouter([
     path: "/",
     element: <RenderPage user={user} signOut={signOut} />,
     errorElement: <ErrorPage />,
-    children: ROUTES.MLB,
+    children: ROUTES.CBB,
     loader: loader,
   },
   {
@@ -162,9 +172,31 @@ const router = (user, signOut) => createBrowserRouter([
       return (params);
     },
   },
+  {
+    path: `/mlb${PATH_LIST.SOCIAL_BETS}`,
+    element: <BetsWithAuthMLB user={user} signOut={signOut} />,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `/cbb${PATH_LIST.SOCIAL_BETS}`,
+    element: <BetsWithAuthCBB user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
+  {
+    path: `/tennis${PATH_LIST.SOCIAL_BETS}`,
+    element: <BetsWithAuthTENNIS user={user} signOut={signOut}/>,
+    errorElement: <ErrorPage />,
+    loader: ({ params }) => {
+      return (params);
+    },
+  },
 ]);
-
-
 
 function App({ signOut, user }) {
   return (
@@ -176,4 +208,4 @@ function App({ signOut, user }) {
   );
 }
 
-export default withAuthenticator(App);
+export default App;

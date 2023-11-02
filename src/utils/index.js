@@ -48,6 +48,22 @@ const filterByDate = (dateTimeStamp, date) => {
     return dateData >= (filterDate) && dateData < (tomorrow)
 }
 
+const filterByDateGameCard = (dateTimeStamp, date, status) => {
+    // console.log(date, getTodayItems)
+    const dateData = new Date(dateTimeStamp);
+    let filterDate = date
+    filterDate.setHours(0,0,0,0);
+    let tomorrow = new Date(filterDate)
+    tomorrow.setDate(filterDate.getDate() + 1)
+    // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}, ${getDate(filterDate)}, ${dateTimeStamp}`)
+    if(dateData >= (filterDate) && dateData < (tomorrow) && status != null){
+        return true
+    }
+    return false
+    return dateData >= (filterDate) && dateData < (tomorrow)
+}
+
+
 const getTime = (dateTimeStamp) => {
     const date = new Date(dateTimeStamp);
     const date2 = new Date().getTimezoneOffset();
@@ -90,5 +106,6 @@ export {
     sortListArticles,
     removechars,
     getPaid,
-    getZTime
+    getZTime,
+    filterByDateGameCard
 }
