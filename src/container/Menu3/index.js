@@ -44,6 +44,10 @@ function Menu3(props) {
   //   fetchData2();
   // }, []);
 
+  console.log("======= AUTENTICADO", signOut)
+  console.log("======= AUTENTICADO usuario", user)
+
+
   const onClick = (newSport) => {
     setSportData(newSport)
     dispatch(setSport(newSport))
@@ -66,9 +70,11 @@ function Menu3(props) {
             <FontAwesomeIcon icon={faBasketball}/>NCAA BM
           </Button>
         </Nav>
+        {signOut != undefined? 
          <div className='d-none d-md-block '>
             <Button style={{borderRadius: "50px"}} className='btn' onClick={signOut}>Sign out</Button>
           </div>
+        :null} 
       </Navbar>
       <Menu sport={sportReducer} onChange={(e) => onChange(e)}/>
     </div>

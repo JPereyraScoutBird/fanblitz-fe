@@ -23,11 +23,12 @@ import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg
 import './style.css';
 import ChatComponent from '../../../container/ChatSlack';
 
-function SocialBets() {
+function SocialBets(props) {
+  const {user, signOut} = props
   const [sport, setSport] = useState("Please select")
   const [bets, setBets] = useState(undefined)
   const [betsFriend, setBetsFriend] = useState(undefined)
-  const [user] = useOutletContext();
+  // const [user] = useOutletContext();
 
   const [modal, setModal] = useState(false);
   const [modalFriend, setModalFriend] = useState(false);
@@ -246,6 +247,7 @@ function SocialBets() {
   
   return (
     <div id="socialbets">
+      <Menu sport_default={"cbb"} signOut={signOut} user={user}/>
       <Container>
         <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <div className='d-flex justify-content-between align-items-between'>

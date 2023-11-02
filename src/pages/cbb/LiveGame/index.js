@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomTable from '../../../component/Table';
-import { filterByDate, getDate, getDate2, getTime, getTodayItems } from "../../../utils";
+import { filterByDate, getDate, getDate2, getTime, getTodayItems, filterByDateGameCard } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal, ModalHeader, ModalBody, ModalFooter, Col, Card, CardTitle, CardBody, CardFooter } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -96,8 +96,8 @@ function LiveGame(props) {
             <div className="mb-4">
               <Row>
               {gameData.map(x => {
-                if(filterByDate(x.date_z, date.toDate())){
-                  console.log(x)
+                if(filterByDateGameCard(x.date_z, date.toDate(), x.status)){
+                  console.log("game card", x)
                   return (
                   <Col xs={12} md={4}>
                       <div className="mb-4">

@@ -1,6 +1,9 @@
 import PATH_LIST from './constant';
 import Pages from '../pages';
 import { loader as newsLoader,}  from '../pages/mlb/PlayerDetail';
+// import RequireAuth from '../RequireAuth';
+// const BetsWithAuthMLB = RequireAuth(Pages.mlb.SocialBets);
+
 
 const routeList = (sport) => [
     {
@@ -28,10 +31,10 @@ const routeList = (sport) => [
       element: <Pages.mlb.ForecastDetail />,
       loader: newsLoader
     },
-    {
-      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
-      element: <Pages.mlb.SocialBets />,
-    },
+    // {
+    //   path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+    //   element: <Pages.mlb.SocialBets />,
+    // },
     {
       path: `/${sport}${PATH_LIST.TUTORIAL}`,
       element: <Pages.mlb.Tutorial />,
@@ -61,10 +64,10 @@ const routeListTennis = (sport) => [
       element: <Pages.tennis.ForecastDetail />,
       loader: newsLoader
     },
-    {
-      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
-      element: <Pages.tennis.SocialBets />,
-    },
+    // {
+    //   path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+    //   element: <Pages.tennis.SocialBets />,
+    // },
     {
       path: `/${sport}${PATH_LIST.TUTORIAL}`,
       element: <Pages.tennis.Tutorial />,
@@ -101,10 +104,10 @@ const routeListCBB = (sport) => [
       element: <Pages.cbb.ForecastDetail />,
       loader: newsLoader
     },
-    {
-      path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
-      element: <Pages.cbb.SocialBets />,
-    },
+    // {
+    //   path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+    //   element: <Pages.cbb.SocialBets />,
+    // },
     {
       path: `/${sport}${PATH_LIST.TUTORIAL}`,
       element: <Pages.cbb.Tutorial />,

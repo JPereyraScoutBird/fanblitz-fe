@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.auth-logo::before {
+  content: '';
+  display: block;
+  background-image: url('https://docs.amplify.aws/assets/logo-dark.svg'); /* Asegúrate de cambiar esto por la ruta correcta de tu logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; /* Altura del logo */
+  width: 100%; /* Esto hará que se centre el logo si su contenedor es lo suficientemente ancho */
+  margin-bottom: 30px; /* Espacio entre el logo y los campos de formulario */
+}
