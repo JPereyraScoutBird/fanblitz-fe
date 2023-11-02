@@ -1,6 +1,7 @@
   
   #primary_navbar {
     z-index: 5;
+    flex-wrap: wrap;
   }
 
 
@@ -49,6 +50,8 @@
     -webkit-font-smoothing: antialiased;
     font-family: 'Lato', sans-serif;
     width: 100%;
+    margin: 0 2px;
+    padding: 8px 5px; 
   }
 
   #primary_navbar .nav-item  a:hover {
@@ -75,6 +78,18 @@
     margin-left: 1rem;
     /* margin-right: 1rem; */
   }
+
+  /* #primary_navbar .Nav .nav-item a {
+    margin: 0 5px;
+    padding: 5px 10px; 
+  } */
+
+  /* .Nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } */
 /* 
   .container-fluid {
     display: flex;

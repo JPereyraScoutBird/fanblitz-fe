@@ -252,7 +252,7 @@ function SocialBets() {
           <h2>My Wagers</h2>
           <Button style={{borderRadius: "50px", border: "1px solid #666666", backgroundColor: "transparent", color: "#666666"}} color="secondary" onClick={toggle}>Place a new Bet</Button>
           </div>
-          <CustomTable noRange={true} range={50} header={constant.headerBets} data={bets ? 
+          <CustomTable noRange={false} pagination={true} range={50} header={constant.headerBets} data={bets ? 
           bets.map(x => ({...x, 
             "sport": <><FontAwesomeIcon icon={renderImg(x.sport)} /> <span>{x.sport.toUpperCase()}</span></>, 
             "result": x.result,
@@ -265,7 +265,7 @@ function SocialBets() {
             <h2>Friend Wagers</h2>
             <Button style={{borderRadius: "50px", border: "1px solid #666666", backgroundColor: "transparent", color: "#666666"}} color="secondary" onClick={toggleFriend}>Search new friend</Button>
           </div>
-          <CustomTable noRange={true} range={50} header={constant.headerBets2} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={renderImg(x.sport)} /> <span>{x.sport.toUpperCase()}</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
+          <CustomTable noRange={false} pagination={true} range={50} header={constant.headerBets2} data={bets ? betsFriend.map(x => ({...x, "sport": <><FontAwesomeIcon icon={renderImg(x.sport)} /> <span>{x.sport.toUpperCase()}</span></>, "fanduel":  <a onClick={toggle2}>See Bet</a>})): []} loading={betsFriend == undefined}/>
         </div>
         {/* <ChatComponent /> */}
       </Container>
