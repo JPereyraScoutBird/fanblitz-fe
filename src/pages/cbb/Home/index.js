@@ -92,8 +92,8 @@ function Home(props) {
 
   const geImage = (homeTeam, homeImage) =>{
     try{
-      let aux = homeTeam.replace(" ", "_")
-      aux = aux.replace("&", "_")
+      let aux = homeTeam.replace(/\s+/g, "_")
+      aux = aux.replace(/&/g, "_")
       if (IMAGE.CBB.hasOwnProperty(aux)){
         return IMAGE.CBB[aux]
       }

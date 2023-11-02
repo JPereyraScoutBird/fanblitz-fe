@@ -32,7 +32,7 @@ import AUBURN from './AUBURN.jpg'
 // import AURORA from './AURORA.jpg'
 import A_PEAY from './A_PEAY.jpg'
 // import AVEMAR from './AVEMAR.jpg'
-// import AVERET from './AVERET.jpg'
+import AVERET from './AVERET.jpg'
 // import BALDWA from './BALDWA.jpg'
 import BALLST from './BALLST.webp'
 import BAYLOR from './BAYLOR.jpg'
@@ -100,8 +100,8 @@ import CHAR from './CHAR.jpg'
 import CHAT from './CHAT.jpg'
 import CHI_ST from './CHI_ST.jpg'
 import CINCY from './CINCY.jpeg'
-// import CINCLR from './CINCLR.jpg'
-// import CLRKMA from './CLRKMA.jpg'
+import CINCLR from './CINCLR.jpg'
+import CLRKMA from './CLRKMA.jpg'
 // import BAPBIB from './BAPBIB.jpg'
 // import CLAYST from './CLAYST.jpg'
 import CLEM from './CLEM.jpg'
@@ -114,7 +114,7 @@ import CO_CAR from './CO_CAR.jpg'
 import COLGAT from './COLGAT.jpg'
 // import TCNJ from './TCNJ.jpg'
 import COLO from './COLO.jpg'
-// import Co_CHR from './Co_CHR.jpg'
+import Co_CHR from './Co_CHR.jpg'
 // import CO_COL from './CO_COL.jpg'
 import CO_ST from './CO_ST.jpg'
 import COLUMB from './COLUMB.jpg'
@@ -332,7 +332,7 @@ import UMES from './UMES.jpg'
 // import MCDAN from './MCDAN.jpg'
 // import MCMURR from './MCMURR.jpg'
 import MCNEES from './MCNEES.jpg'
-// import MEDGEV from './MEDGEV.jpg'
+import MEDGEV from './MEDGEV.jpg'
 import MEM from './MEM.webp'
 // import MENLO from './MENLO.jpg'
 import MERCER from './MERCER.jpg'
@@ -354,7 +354,7 @@ import MIDTEN from './MIDTEN.png'
 import MILWKE from './MILWKE.jpg'
 // import MSOE from './MSOE.jpg'
 import MINN from './MINN.jpg'
-// import MISERI from './MISERI.jpg'
+import MISERI from './MISERI.jpg'
 import MISSST from './MISSST.jpg'
 import MS_VAL from './MS_VAL.jpg'
 // import MUW from './MUW.jpg'
@@ -564,7 +564,7 @@ import STJOES from './STJOES.jpeg'
 // import STTHFL from './STTHFL.jpg'
 // import ST_THOM from './ST_THOM.jpg'
 import STTHOM from './STTHOM.jpg'
-// import STXAV from './STXAV.jpg'
+import STXAV from './STXAV.jpg'
 import STAN from './STAN.jpg'
 // import CSUSTN from './CSUSTN.jpg'
 import SFA from './SFA.webp'
@@ -740,7 +740,7 @@ AUBURN,
 // AURORA,
 A_PEAY,
 // AVEMAR,
-// AVERET,
+AVERET,
 // BALDWA,
 BALLST,
 BAYLOR,
@@ -808,8 +808,8 @@ CHAR,
 CHAT,
 CHI_ST,
 CINCY,
-// CINCLR,
-// CLRKMA,
+CINCLR,
+CLRKMA,
 // BAPBIB,
 // CLAYST,
 CLEM,
@@ -822,7 +822,7 @@ CO_CAR,
 COLGAT,
 // TCNJ,
 COLO,
-// Co_CHR,
+Co_CHR,
 // CO_COL,
 CO_ST,
 COLUMB,
@@ -1040,7 +1040,7 @@ UMES,
 // MCDAN,
 // MCMURR,
 MCNEES,
-// MEDGEV,
+MEDGEV,
 MEM,
 // MENLO,
 MERCER,
@@ -1062,7 +1062,7 @@ MIDTEN,
 MILWKE,
 // MSOE,
 MINN,
-// MISERI,
+MISERI,
 MISSST,
 MS_VAL,
 // MUW,
@@ -1272,7 +1272,7 @@ STJOES,
 // STTHFL,
 // ST_THOM,
 STTHOM,
-// STXAV,
+STXAV,
 STAN,
 // CSUSTN,
 SFA,
