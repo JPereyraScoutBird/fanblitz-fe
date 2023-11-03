@@ -15,7 +15,7 @@ function Team() {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams');
         const jsonObject = JSON.parse(response.data.body)
-        console.log(jsonObject)
+        console.log("team", jsonObject)
         setTeamData(jsonObject);
       } catch (error) {
         console.error('Error getting data:', error);
