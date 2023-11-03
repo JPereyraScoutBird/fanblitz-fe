@@ -27,7 +27,7 @@ function Players() {
                 // setPitcherData(jsonObject.filter(x => x['position'] == 'P'))
                 // setBatterData(jsonObject.filter(x => x['position'] != 'P'))
                 setTeamData(jsonObject);
-                console.log("player stats data", jsonObject)
+                // console.log("player stats data", jsonObject)
             } catch (error) {
                 console.error('Error getting data:', error);
             }
@@ -43,8 +43,8 @@ function Players() {
     const renderTable = () => {
         let season = seasonValue == null? "2023-2024-regular": seasonValue.value
         let data_filter = teamData.filter(x => x['season']==season)
-        console.log("current season", season)
-        console.log("filtrado", data_filter)
+        // console.log("current season", season)
+        // console.log("filtrado", data_filter)
         return <CustomTable search={true} search_placeholder="Search player name or team on table" search_keys={['full_name']} loading={teamData.length == 0} pagination={true} range={15} header={header} data={data_filter} onClick={(user) => onClick(user)}/>;
     };
 
