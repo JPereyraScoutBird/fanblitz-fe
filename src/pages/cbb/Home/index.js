@@ -71,7 +71,7 @@ function Home(props) {
     try {
       const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams/score');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
-      let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_et": getDate(x['date_et']), "difference":  x['margin_spread_fanblitz']  })) : []
+      let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_z": getDate(x['date_z']), "difference":  x['margin_spread_fanblitz']  })) : []
       response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({...x,  "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(1), 'pts_home':x['pts_home'].toFixed(1)       })) : []
       
       // console.log("games2", response_formatedModel)
@@ -208,8 +208,8 @@ function Home(props) {
           "date_z": "Date",
           "home_team_abbr": "Home",
           "away_team_abbr": "Away",
-          "pts_home": "Home Score",
-          "away_pts": "Away Score",
+          "pts_home": "Fanblitz Home Score",
+          "away_pts": "Fanblitz Away Score",
           "difference": "Difference",
         };
         return (
