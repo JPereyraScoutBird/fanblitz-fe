@@ -22,7 +22,7 @@ function Forecasts() {
   useEffect(() => {
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts`).then((res) => {
       setForecastData((JSON.parse(res.data.body)))
-      console.log("forecasts", (JSON.parse(res.data.body)))
+      // console.log("forecasts", (JSON.parse(res.data.body)))
     })
   }, [])
 

@@ -55,7 +55,7 @@ function ForecastDetail() {
         setForecastData(JSON.parse(jsonObject.forecast)[0])
         // console.log("asd", jsonObject.home_team)
         setStat({"home_team": jsonObject.home_team, "away_team": jsonObject.away_team})
-        console.log("forecasts detail 2", jsonObject)
+        // console.log("forecasts detail 2", jsonObject)
       }
       
     })
