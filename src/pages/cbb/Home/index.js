@@ -72,7 +72,7 @@ function Home(props) {
       const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams/score');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
       let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_z": getDate(x['date_z']), "difference":  x['margin_spread_fanblitz']  })) : []
-      response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({...x,  "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(1), 'pts_home':x['pts_home'].toFixed(1)       })) : []
+      response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({...x,  "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(0), 'pts_home':x['pts_home'].toFixed(0)       })) : []
       
       // console.log("games2", response_formatedModel)
       setPitcherStrikeout(response_formatedModel)
@@ -244,10 +244,10 @@ function Home(props) {
         )
       }
   };
-  
+
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_points > 0 || x.away_points > 0)))
+      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_points > 0 || x.away_points > 0) && (x.venue != "Reed Arena")))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
