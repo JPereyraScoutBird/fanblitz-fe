@@ -247,7 +247,7 @@ function Home(props) {
   
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_position <= standing || x.away_position <= standing)))
+      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_points > 0 || x.away_points > 0)))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))

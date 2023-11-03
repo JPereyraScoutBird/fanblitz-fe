@@ -19,12 +19,12 @@ function Standing() {
   const [playerData, setPlayerData] = useState([]);
   const [rankingSeason, setRankingSeason] = useState([{value: "", label: ""}]);
   const [rankingLeague, setRankingLeague] = useState([{value: "", label: ""}]);
-  const [rankingTeamLeague, setRankingTeamLeague] = useState([{value: "League", label: "League"}, {value: "NCAA", label: "NCAA"}]);
+  const [rankingTeamLeague, setRankingTeamLeague] = useState([{value: "League", label: "League"}, {value: "NCAA", label: "NCAA"}, {value: "Associated press", label: "Associated press"}]);
   const [rankingDivision, setRankingDivision] = useState([{value: "", label: ""}]);
   const [rankingPosition, setRankingPosition] = useState([{value: "", label: ""}]);
   const [rankingTeam, setRankingTeam] = useState([{value: "", label: ""}]);
 
-  const [seasonValue, setSeasonValue] = useState(null);
+  const [seasonValue, setSeasonValue] = useState({ value: "2023-2024-regular", label: "2023-2024-regular" });
   const [leagueValue, setLeagueValue] = useState(null);
   const [teamLeagueValue, setTeamLeagueValue] = useState(null);
   const [divisionValue, setDivisionValue] = useState(null);
@@ -37,6 +37,8 @@ function Standing() {
         );
         const jsonObject = JSON.parse(response.data.body)
         console.log("options", jsonObject)
+        let season = jsonObject.season.map(x => ({ value: x, label: x }))
+        season.push({ value: "2023-2024-regular", label: "2023-2024-regular" })
         setRankingSeason(jsonObject.season.map(x => ({ value: x, label: x })))
         setRankingLeague(jsonObject.league.map(x => ({ value: x, label: x })))
         setRankingPosition(jsonObject.position.map(x => ({ value: x, label: x })))
