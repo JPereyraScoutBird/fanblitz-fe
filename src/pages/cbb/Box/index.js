@@ -59,8 +59,8 @@ function LiveGame(props) {
         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/box?game_id=${gameId}`);
         const jsonObjectHome = JSON.parse(response.data.body_home)
         const jsonObjectAway = JSON.parse(response.data.body_away)
-        console.log("box data home", jsonObjectHome)
-        console.log("box data away", jsonObjectAway)
+        // console.log("box data home", jsonObjectHome)
+        // console.log("box data away", jsonObjectAway)
 
         setBoxDataHitHome(jsonObjectHome)
         setBoxDataHitAway(jsonObjectAway)
@@ -73,7 +73,7 @@ function LiveGame(props) {
     try {
       const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/gamescore?game_id=${gameId}`);
       const jsonObject = response.data.body2
-      console.log("data game score", jsonObject)
+      // console.log("data game score", jsonObject)
       setBoxDataInnings(jsonObject)
     } catch (error) {
       console.error('Error getting data:', error);

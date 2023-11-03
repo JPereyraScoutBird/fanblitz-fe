@@ -40,10 +40,12 @@ function GamePlays(route) {
                 const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/playbyplay?gameid=${gameId}`);
                 console.log("response", response)
                 if (response.status == 200){
-                  let jsonObject = JSON.parse(response.data.body)
-                  console.log("jsonObject", jsonObject)
-                  setGameInfo(jsonObject)
-                  setGamePlays(jsonObject.data)
+                  if (response.data.status == 200){
+                    let jsonObject = JSON.parse(response.data.body)
+                    // console.log("jsonObject", jsonObject)
+                    setGameInfo(jsonObject)
+                    setGamePlays(jsonObject.data)
+                  }
                 }
             } catch (error) {
                 console.error('Error getting data:', error);
@@ -56,6 +58,7 @@ function GamePlays(route) {
     const renderPage = () => {
       return (
         <div style={{}}>
+          <h3>klok</h3>
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
                   <div style={{ border: `5px solid ${constants.team_detail[gameInfo.home_team_abbr].teamColoursHex[0]}`, marginRight: "1rem"}}>
@@ -77,12 +80,20 @@ function GamePlays(route) {
     }
 
     const renderPageNoData = () => {
-      <section id="players">
+      return (
+        <section id="players">
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
           <h3>Plays</h3>
           </div>
-          <h3>No play by play found :/</h3>
+          <br></br>
+          <br></br>
+          <h5>New season starts November 6, 2023</h5>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </section>
+      )
     }
 
     return (
