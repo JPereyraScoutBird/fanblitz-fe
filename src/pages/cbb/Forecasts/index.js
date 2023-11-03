@@ -16,7 +16,7 @@ import moment from 'moment'
 function Forecasts() {
 
   const [forecastData, setForecastData] = useState([])
-  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+  const [date, setDate] = useState(moment(new Date('2023-11-07').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
 
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
@@ -43,8 +43,8 @@ function Forecasts() {
 
   const geImage = (homeTeam, homeImage) =>{
     try{
-      let aux = homeTeam.replace(" ", "_")
-      aux = aux.replace("&", "_")
+      let aux = homeTeam.replace(/\s+/g, "_")
+      aux = aux.replace(/&/g, "_")
       if (Image.CBB.hasOwnProperty(aux)){
         return Image.CBB[aux]
       }

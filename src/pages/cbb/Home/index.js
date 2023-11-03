@@ -30,7 +30,7 @@ function Home(props) {
   const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
   // const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
-  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date('2023-11-07').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');
@@ -219,7 +219,7 @@ function Home(props) {
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
-            <CustomTable noRange={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
+            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
           </div>
         )
       }
@@ -239,7 +239,7 @@ function Home(props) {
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
-            <CustomTable noRange={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
+            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
           </div>
         )
       }
@@ -247,7 +247,7 @@ function Home(props) {
   
   const renderCards = () => {
     if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2022-11-08') && (x.home_position <= standing || x.away_position <= standing)))
+      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_position <= standing || x.away_position <= standing)))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))

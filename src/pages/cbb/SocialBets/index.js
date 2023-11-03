@@ -163,7 +163,7 @@ function SocialBets(props) {
     }
     else if(sport == 2){
       // console.log("showGames NCAA")
-      return gameNCAA.filter(x => getTodayItems(x.date_z, "2022-11-07")).map(y => {
+      return gameNCAA.filter(x => getTodayItems(x.date_z)).map(y => {
         return (
           <option value={y.id}>
             {y.home_team_abbr} vs {y.away_team_abbr}

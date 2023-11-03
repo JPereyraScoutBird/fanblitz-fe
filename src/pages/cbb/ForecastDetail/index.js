@@ -93,9 +93,9 @@ function ForecastDetail() {
   
   const geImage = (homeTeam, homeImage) =>{
     try{
-      let aux = homeTeam.replace(" ", "_")
-      aux = aux.replace("&", "_")
-      return homeImage
+      let aux = homeTeam.replace(/\s+/g, "_")
+      aux = aux.replace(/&/g, "_")
+      // return homeImage
       if (Image.CBB.hasOwnProperty(aux)){
         return Image.CBB[aux]
       }
@@ -134,9 +134,9 @@ function ForecastDetail() {
               <Col xs={12} md={9}>
               {/* <img style={{marginRight: "0.5rem"}} src={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"} height={"24px"} /> */}
 
-                <img width="40%" height={"300px"} className="section-image" src={(geImage(forecastData.home_team_abb, forecastData.home_image))}/>
-                <img width="20%" height={"300px"} className="section-image" src={Image.CBB["VS"]}/>
-                <img width="40%" height={"300px"} className="section-image" src={(geImage(forecastData.away_team_abb, forecastData.away_image))}/>
+                <img width="100%" height={"300px"} className="section-image" src={(geImage(forecastData.home_team_abb, forecastData.home_image))}/>
+                {/* <img width="20%" height={"300px"} className="section-image" src={Image.CBB["VS"]}/> */}
+                {/* <img width="40%" height={"300px"} className="section-image" src={(geImage(forecastData.away_team_abb, forecastData.away_image))}/> */}
                 {/* <img width="100%" height={"300px"} className="section-image" src={'https://d3i6fh83elv35t.cloudfront.net/static/2023/03/2023-03-16T193846Z_626209374_MT1USATODAY20243404_RTRMADP_3_NCAA-BASKETBALL-NCAA-TOURNAMENT-FIRST-ROUND-GREENSBORO-PRACTICE-e1680644334647-1024x580.jpg'}/> */}
                 {/* <img width="100%" height={"300px"} className="section-image" src={Image[forecastData.home_team_abb]}/> */}
                 {parse(forecastData.open_ai_explanation || '')}
