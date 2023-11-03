@@ -51,12 +51,15 @@ const filterByDate = (dateTimeStamp, date) => {
 const filterByDateGameCard = (dateTimeStamp, date, status) => {
     // console.log(date, getTodayItems)
     const dateData = new Date(dateTimeStamp);
+    const dateDataToday = new Date();
     let filterDate = date
     filterDate.setHours(0,0,0,0);
     let tomorrow = new Date(filterDate)
+    let yesterday = new Date(filterDate)
     tomorrow.setDate(filterDate.getDate() + 1)
+    yesterday.setDate(filterDate.getDate() + 2)
     // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}, ${getDate(filterDate)}, ${dateTimeStamp}`)
-    if(dateData >= (filterDate) && dateData < (tomorrow) && status != null){
+    if(dateData >= (filterDate) && dateData < (tomorrow) && (status != null && dateData < (yesterday))){
         return true
     }
     return false

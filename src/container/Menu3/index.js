@@ -44,10 +44,6 @@ function Menu3(props) {
   //   fetchData2();
   // }, []);
 
-  console.log("======= AUTENTICADO", signOut)
-  console.log("======= AUTENTICADO usuario", user)
-
-
   const onClick = (newSport) => {
     setSportData(newSport)
     dispatch(setSport(newSport))
