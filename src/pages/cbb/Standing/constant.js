@@ -5,6 +5,7 @@ const headerTeam = {
     "losses": "L",
     "position_league": "GB",
     "division": "Division",
+    "points": "Points"
 }
 
 const headerTeamNumber = {
