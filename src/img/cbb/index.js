@@ -194,7 +194,7 @@ import FURMAN from './FURMAN.jpeg'
 // import GALLUD from './GALLUD.jpg'
 import G_WEBB from './G_WEBB.webp'
 import GMU from './GMU.jpg'
-// import G_WASH from './G_WASH.jpg'
+import G_WASH from './G_WASH.jpg'
 import GTOWN from './GTOWN.jpeg'
 import UGA from './UGA.jpg'
 // import GACOLL from './GACOLL.jpg'
@@ -557,8 +557,8 @@ import STFRPA from './STFRPA.jpg'
 import STJOHN from './STJOHN.jpg'
 import STJOES from './STJOES.jpeg'
 // import STJOME from './STJOME.jpg'
-// import STJOLI from './STJOLI.jpg'
-// import STKATH from './STKATH.jpg'
+import STJOLI from './STJOLI.jpg'
+import STKATH from './STKATH.jpg'
 // import STMYMD from './STMYMD.jpg'
 // import STMYTX from './STMYTX.jpg'
 // import STTHFL from './STTHFL.jpg'
@@ -683,7 +683,7 @@ import W_MICH from './W_MICH.jpg'
 // import WESTMI from './WESTMI.jpg'
 // import WEMONT from './WEMONT.jpg'
 // import WHITTI from './WHITTI.jpg'
-import WICHST from './WICHST.avif'
+import WICHST from './WICHST.jpg'
 // import WILEY from './WILEY.jpg'
 // import WILKES from './WILKES.jpg'
 import WM_MRY from './WM_MRY.jpg'
@@ -902,7 +902,7 @@ FURMAN,
 // GALLUD,
 G_WEBB,
 GMU,
-// G_WASH,
+G_WASH,
 GTOWN,
 UGA,
 // GACOLL,
@@ -1265,8 +1265,8 @@ STFRPA,
 STJOHN,
 STJOES,
 // STJOME,
-// STJOLI,
-// STKATH,
+STJOLI,
+STKATH,
 // STMYMD,
 // STMYTX,
 // STTHFL,
