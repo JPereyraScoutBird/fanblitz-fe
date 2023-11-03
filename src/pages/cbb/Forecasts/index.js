@@ -16,7 +16,7 @@ import moment from 'moment'
 function Forecasts() {
 
   const [forecastData, setForecastData] = useState([])
-  const [date, setDate] = useState(moment(new Date('2022-11-08').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+  const [date, setDate] = useState(moment(new Date('2023-11-07').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
 
   // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
