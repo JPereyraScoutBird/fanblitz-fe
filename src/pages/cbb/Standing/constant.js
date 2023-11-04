@@ -1,4 +1,5 @@
 const headerTeam = {
+    "pos_top_25": "Top 25",
     "mysportfeeds_name": "Name",
     "team_abbreviation": "Abbr",
     "wins": "W",

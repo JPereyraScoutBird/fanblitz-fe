@@ -81,8 +81,17 @@ function Standing() {
       let i = 0;
       while (i < sortedKeys.length) {
         jsonObject[sortedKeys[i]] = JSON.parse(jsonObject[sortedKeys[i]])
+        if(sortedKeys[i] == "Associated press"){
+            jsonObject[sortedKeys[i]].sort((a, b) => {
+              if (a.pos_top_25 === null) return 1;
+              if (b.pos_top_25 === null) return -1;
+              return a.pos_top_25 - b.pos_top_25;
+            });
+        }
+        
         i++;
       }
+
       setTeamData(jsonObject)
       console.log("team data", jsonObject)
     } catch (error) {
