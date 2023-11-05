@@ -104,7 +104,7 @@ function CardTeamLiveComponent (props) {
 
 
     // if (error != true) {
-        console.log("status: ", status)
+        // console.log("status: ", status)
         return (
             // <Link to={link} className={`${className} card-link shadow mb-5 p-2`}>
                 <Card className={`card_team_component_live shadow mb-5 rounded ${style}`}>

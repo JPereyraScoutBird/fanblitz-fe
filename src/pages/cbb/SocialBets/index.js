@@ -21,9 +21,20 @@ import { useOutletContext } from "react-router-dom";
 import { faBaseball, faBasketball } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import './style.css';
-import ChatComponent from '../../../container/ChatSlack';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  setStatus,
+  selectUserStatus,
+} from '../../../reducers/userLogin';
+import {
+  setBetHomeStatus,
+  selectBetStatus,
+} from '../../../reducers/betFromHome';
 
 function SocialBets(props) {
+  const isUserLogin = useSelector(selectUserStatus);
+  const isBetFromHome = useSelector(selectBetStatus);
+  const dispatch = useDispatch();
   const {user, signOut} = props
   const [sport, setSport] = useState("Please select")
   const [bets, setBets] = useState(undefined)
@@ -43,11 +54,19 @@ function SocialBets(props) {
   const toggle = () => setModal(!modal);
   const toggleFriend = () => setModalFriend(!modalFriend);
   const toggle2 = () => setModal2(!modal2);
+  const navigate = useNavigate();
 
-  // console.log("User: ", user)
+  console.log("REDUCER isBetFromHome social: ", isBetFromHome)
+
+  if(isBetFromHome == true){
+    navigate(`/cbb${PATH_LIST.HOME}`);
+  }
 
   const fetchData2 = async () => {
     try {
+      dispatch(setStatus(user))
+      console.log("REDUCER User bets: ", isUserLogin)
+
         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets?user_id=${user.username}`);
         let jsonObject = response.data.body
         let jsonObjectFriend = response.data.data_friend
