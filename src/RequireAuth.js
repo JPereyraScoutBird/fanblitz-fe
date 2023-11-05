@@ -12,6 +12,6 @@ const RequireAuth = (Component) => (props) => withAuthenticator(Component, {
       },
       Footer: login.Footer
     }
-  })(props);
+  })({...props});
 
 export default RequireAuth;

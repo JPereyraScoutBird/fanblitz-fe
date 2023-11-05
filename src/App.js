@@ -38,55 +38,55 @@ const BetsWithAuthTENNIS = RequireAuth(Pages.tennis.SocialBets);
 const router = (user="", signOut=undefined) => createBrowserRouter([
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.cbb.Home user={user} signOut={signOut}/>,
+    element: <Pages.cbb.Home user={user}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `mlb/${PATH_LIST.HOME}`,
-    element: <Pages.mlb.Home user={user} signOut={signOut}/>,
+    element: <Pages.mlb.Home user={user}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `tennis/${PATH_LIST.HOME}`,
-    element: <Pages.tennis.Home user={user} signOut={signOut}/>,
+    element: <Pages.tennis.Home user={user}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: `cbb/${PATH_LIST.HOME}`,
-    element: <Pages.cbb.Home user={user} signOut={signOut}/>,
+    element: <Pages.cbb.Home user={user}/>,
     errorElement: <ErrorPage />,
   },
   {
     path: "/",
-    element: <RenderPage user={user} signOut={signOut} />,
+    element: <RenderPage user={user} />,
     errorElement: <ErrorPage />,
     children: ROUTES.CBB,
     loader: loader,
   },
   {
     path: "/mlb/",
-    element: <RenderPage user={user} signOut={signOut} />,
+    element: <RenderPage user={user}  />,
     errorElement: <ErrorPage />,
     children: ROUTES.MLB,
     loader: loader,
   },
   {
     path: "/tennis/",
-    element: <RenderPage user={user} signOut={signOut} />,
+    element: <RenderPage user={user} />,
     errorElement: <ErrorPage />,
     children: ROUTES.TENNIS,
     loader: loader,
   },
   {
     path: "/cbb",
-    element: <RenderPage user={user} signOut={signOut} />,
+    element: <RenderPage user={user}  />,
     errorElement: <ErrorPage />,
     children: ROUTES.CBB,
     loader: loader,
   },
   {
     path: `/mlb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.mlb.Player user={user} signOut={signOut}/>,
+    element: <Pages.mlb.Player user={user} />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -94,7 +94,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/cbb${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.cbb.Player user={user} signOut={signOut}/>,
+    element: <Pages.cbb.Player user={user}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -102,7 +102,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/mlb${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.mlb.TeamDetail user={user} signOut={signOut}/>,
+    element: <Pages.mlb.TeamDetail user={user} />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -110,7 +110,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/cbb${PATH_LIST.TEAM_DETAIL}/:teamId`,
-    element: <Pages.cbb.TeamDetail user={user} signOut={signOut}/>,
+    element: <Pages.cbb.TeamDetail user={user}/>,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -118,7 +118,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/mlb${PATH_LIST.GAME_DETAIL}/:gameId`,
-    element: <Pages.mlb.GamePlays user={user} signOut={signOut}/>,
+    element: <Pages.mlb.GamePlays user={user} />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -126,7 +126,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/cbb${PATH_LIST.GAME_DETAIL}/:gameId`,
-    element: <Pages.cbb.GamePlays user={user} signOut={signOut}/>,
+    element: <Pages.cbb.GamePlays user={user} />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -166,7 +166,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/tennis${PATH_LIST.PLAYER_DETAIL}/:playerId`,
-    element: <Pages.tennis.Player user={user} signOut={signOut}/>,
+    element: <Pages.tennis.Player user={user} />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);
@@ -182,7 +182,7 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
   },
   {
     path: `/cbb${PATH_LIST.SOCIAL_BETS}`,
-    element: <BetsWithAuthCBB user={user} signOut={signOut}/>,
+    element: <BetsWithAuthCBB />,
     errorElement: <ErrorPage />,
     loader: ({ params }) => {
       return (params);

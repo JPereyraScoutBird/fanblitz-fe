@@ -27,6 +27,12 @@ const SearchTable = (props) => {
                 x['full_name'].toLowerCase().includes(val.toLowerCase()) || x['mysportfeeds_abbreviation'].toLowerCase().includes(val.toLowerCase()) :
                 search_keys.includes('name') ?
                 x['name'].toLowerCase().includes(val.toLowerCase()) :
+                search_keys.includes('home_name') ?
+                x['home_name'].toLowerCase().includes(val.toLowerCase()) :
+                search_keys.includes('away_name') ?
+                x['away_name'].toLowerCase().includes(val.toLowerCase()) :
+                search_keys.includes('game_name') ?
+                x['game_name'].toLowerCase().includes(val.toLowerCase()) :
                 x['mysportfeeds_abbreviation'].toLowerCase().includes(val.toLowerCase())
                 ))
         }

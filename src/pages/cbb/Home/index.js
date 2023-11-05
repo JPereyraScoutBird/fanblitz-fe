@@ -7,7 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import CustomTable from '../../../component/Table';
 import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
-import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+
 import { Link } from "react-router-dom";
 import PATH_LIST from "../../../routes/constant";
 import IMAGE from '../../../img';
@@ -19,10 +20,21 @@ import uuid from 'react-uuid';
 import { useNavigate } from "react-router-dom";
 import Chatbot from "../../../container/ChatBot";
 import Footer from "../../../container/Footer";
+import {
+  setStatus,
+  selectUserStatus,
+} from '../../../reducers/userLogin';
+import {
+  setBetHomeStatus,
+  selectBetStatus,
+} from '../../../reducers/betFromHome';
 
 
 function Home(props) {
   const dispatch = useDispatch();
+  // const isUserLogin = false
+  const isUserLogin = useSelector(selectUserStatus);
+  const isBetFromHome = useSelector(selectBetStatus);
   const {user, signOut} = props
   const [gptStyle, setGptStye] = useState('')
   // const gameDataStore = useSelector((state) => state.gameData.value);
@@ -36,14 +48,30 @@ function Home(props) {
   const [team, setTeam] = useState('');
   const [modal, setModal] = useState(false);
   const [modal2, setModal2] = useState(false);
+  const [modal3, setModal3] = useState(false);
+  const [modalBet, setModalBet] = useState(false);
   const [prompt, setPrompt] = useState('')
   const [pitcher, setPitcher] = useState('')
   const [standing, setStanding] = useState(0)
+  const [bet, setBet] = useState('')
+  const [amount, setAmount] = useState('');
+  const [gameBet, setGame] = useState(<></>);
+  const [gameId, setGameId] = useState('');
 
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
+  const toggle3 = () => setModal3(!modal3)
+  const toggleSetBet = () => setModalBet(!modalBet)
+
   const breakpoint = 620;
-  const [showTable, setShowTable] = useState("home");
+  const [showTable, setShowTable] = useState("score");
+
+  // console.log("Reducer User home: ", isUserLogin)
+  console.log("REDUCER isBetFromHome home: ", isBetFromHome)
+
+  if(isBetFromHome == true && isUserLogin != undefined){
+    dispatch(setBetHomeStatus(false))
+  }
 
   const fetchData = async () => {
       try {
@@ -72,8 +100,14 @@ function Home(props) {
       const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams/score');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
       let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_z": getDate(x['date_z']), "difference":  x['margin_spread_fanblitz']  })) : []
-      response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({...x,  "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(0), 'pts_home':x['pts_home'].toFixed(0)       })) : []
-      
+      response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({
+        ...x,
+        "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(0),
+        'pts_home': x['pts_home'].toFixed(0),
+        "home_name": x['home_team_city'] + " " + x['home_team'],
+        "away_name": x['away_team_city'] + " " + x['away_team'],
+        "game_name": x['home_team_city'] + " " + x['home_team'] + " vs " + x['away_team_city'] + " " + x['away_team']
+      })) : []
       // console.log("games2", response_formatedModel)
       setPitcherStrikeout(response_formatedModel)
     } catch (error) {
@@ -129,7 +163,6 @@ function Home(props) {
     return <></>
   }
     
-
 
   const next = (items) => {
     if(items.length - 1 > indexCarousel) {
@@ -196,21 +229,48 @@ function Home(props) {
     setPrompt(`${player['opp_team_full']}' college basketball team history`)
     toggle()
   }
+
+  const onClickSetBet = (game) => {
+    setGame(<option value={game.id}>
+      {game.home_team_abbr} vs {game.away_team_abbr}
+    </option>)
+  }
   
   const onClick5 = (game) => {
     navigate(`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
   }
-  
+
+  const setBets = () =>{
+    if(isUserLogin == undefined){
+      dispatch(setBetHomeStatus(true))
+      toggle3()
+    }else{
+      toggleSetBet()
+    }
+  }
+
+  const onClickLogin = () => {
+    navigate(`/cbb${PATH_LIST.SOCIAL_BETS}`);
+  }
+
   const renderTableStrikeoutModel = (table, data, date, backgroundColor = "#000", color='#fff') => {
       if(table == 'score' || false) {
-        const dataAux = data["strikeout"]
+        // let dataAux = data["strikeout"]
+        let dataAux = data["strikeout"].length ? data["strikeout"].map(x => ({...x, "bet_icon": <a onClick={setBets}>Set a Bet</a>})) : []
+        // <a onClick={toggle2}>See Bet</a>
         const header = {
           "date_z": "Date",
-          "home_team_abbr": "Home",
-          "away_team_abbr": "Away",
+          "home_name": "Home",
+          "away_name": "Away",
+          "home_spreads_draftkings": "Vegas",
+          "margin_spread_fanblitz": "Fanblitz",
           "pts_home": "Fanblitz Home Score",
           "away_pts": "Fanblitz Away Score",
-          "difference": "Difference",
+          "difference": "Diff.",
+          "max_bet": "Max bet",
+          "min_bet": "Min bet",
+          "average_bet": "Avg. bet",
+          "bet_icon": "Bet",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
@@ -219,7 +279,7 @@ function Home(props) {
             <div className="mb-4">
               <DatePagination date={date} onClick={(date) => setDate(date)}/>
             </div>
-            <CustomTable noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game)]}/>
+            <CustomTable search={true} search_placeholder="Search game on table"  search_keys={['game_name']} noRange={false} pagination={true} range={50} header={header} data={dataAux.filter(x => filterByDate(x.date_z, date.toDate()))} loading={dataAux.length == 0} onClickList={[(game) => onClick(game), (game) => onClick2(game), (game) => onClick3(game), (game) => onClick4(game), (game) => onClick5(game), undefined, undefined, undefined, undefined, undefined, undefined, (game) => onClickSetBet(game)]}/>
           </div>
         )
       }
@@ -288,6 +348,40 @@ function Home(props) {
       return null
     }
   }
+
+  const submitBet = async (e) => {
+    e.preventDefault()
+    console.log("users", isUserLogin)
+    const body = {
+    "user_id": isUserLogin.username,
+    "username": isUserLogin.attributes.email,
+    "email": isUserLogin.attributes.email,
+    "sport_id": 2,
+    "game_id": gameId,
+    "bet": bet,
+    "bet_type": 'spread',
+    "amount": amount,
+    "currency": 'dollar',
+    "created_date": Date.now(),
+    "status": true,
+    "action": "create",
+    }
+
+    console.log("sending body", body)
+    try {
+      const response_submit = await axios.post('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/users/bets', body);
+      setAmount('')
+      setBet('')
+      setGameId('')
+      fetchDataScoreData()
+      toggleSetBet()
+      
+      console.log("response set bet", response_submit)
+
+    } catch (error) {
+      console.error('Error getting data:', error);
+    }
+  }
   
   return (
     <div id="home">
@@ -298,7 +392,7 @@ function Home(props) {
         <br></br>
       <Container>
         <div style={{ display: "flex", justifyContent: "left", marginBottom: "1rem" }}>
-          <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000", fontWeight: `${showTable == "home" ? "bold" : "normal"}`}} onClick={handleButtonHome} >Spread Model</button>
+          {/* <button style={{ border: "none", background: "transparent", padding: "0", marginRight: "1rem", color: "#000", fontWeight: `${showTable == "home" ? "bold" : "normal"}`}} onClick={handleButtonHome} >Spread Model</button> */}
           <button style={{ border: "none", background: "transparent", padding: "0", color: "#000", fontWeight: `${showTable == "score" ? "bold" : "normal"}`}} onClick={handleButtonScoreModel}>Score Model</button>
         </div>
       </Container>
@@ -320,6 +414,70 @@ function Home(props) {
           <Button color="primary" href="https://ny.sportsbook.fanduel.com/navigation/cbb">Continue</Button>
         </ModalFooter>
       </Modal>
+      <Modal isOpen={modal3} toggle={toggle3}>
+        <ModalHeader>FANBLITZ WANTS YOU TO BET RESPONSIBLY!</ModalHeader>
+        <ModalBody>
+          <p>FanBlitz understands and embraces the excitement of sports betting, but we also promote responsible betting. It's important to remember to only bet what you can afford to lose and not go over your budget.</p>
+          <p>While it's assured that you will lose some bets, using FanDuel's tools, information, and data can help you minimize your losses and even potentially win some! So, enjoy the thrill of sports betting, but always remember to bet responsibly.</p>
+          <p>In order to create your bet we need to identify you. If you wish to register or login please press continue.</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button onClick={toggle3}>Cancel</Button>
+          <Button color="primary" onClick={onClickLogin}>Continue</Button>
+        </ModalFooter>
+      </Modal>
+      
+      <Modal isOpen={modalBet} toggle={toggleSetBet}>
+        <ModalHeader style={{backgroundColor: "#000", color: "#fff"}} toggle={toggleSetBet}>Set New Bet</ModalHeader>
+        <ModalBody>
+            <Form inline onSubmit={(e) => submitBet(e)}>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="sportSelect" className="mr-sm-2">Sport</Label>
+              <Input
+                id="sportSelect"
+                name="select"
+                type="select"
+              >
+                <option value={2} hidden>NCAA Men Basketball</option>
+                <option value={2}>
+                  NCAA Men Basketball
+                </option>
+              </Input>
+            </FormGroup>
+            <br></br>
+            <FormGroup>
+              <Label for="gameSelect" className="mr-sm-2">Games</Label>
+              <Input
+                id="gameSelect"
+                name="select"
+                type="select"
+                onChange={e => setGameId(e.target.value)}
+              >
+              <option value="" hidden>Please select</option>
+              {gameBet}
+              </Input>
+            </FormGroup>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="bet" className="mr-sm-2">Bet</Label>
+              <Input value={bet} onChange={e => setBet(e.target.value)}t type="currency" name="bet" id="bet" placeholder="-1" />
+            </FormGroup>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label for="amount" className="mr-sm-2">Amount</Label>
+              <Input value={amount} onChange={e => setAmount(e.target.value)}t type="currency" name="amount" id="amount" placeholder="7.00" />
+            </FormGroup>
+            {/* <FormGroup>
+              <Label for="Result" className="mr-sm-2">Result</Label>
+              <Input type="currency" name="amount" id="amount" placeholder="1000.00" />
+            </FormGroup> */}
+            <div className='d-flex justify-content-end'>
+              <Button outline className='btn mt-4 mr-4 mb-4' onSubmit={(e) => toggleSetBet()}>Cancel</Button>
+              <Button disabled={bet=='' || amount == ''} className='btn ml-2 mt-4 mb-4' onSubmit={(e) => submitBet(e)}>Submit</Button>
+            </div>
+          </Form>
+        </ModalBody >
+      </Modal> 
+
+
     </div>    
   );
 

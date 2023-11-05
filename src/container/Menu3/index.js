@@ -14,6 +14,11 @@ import {
   selectSport,
 } from '../../reducers/sportSlide';
 
+import {
+  setStatus,
+  selectUserStatus,
+} from '../../reducers/userLogin';
+
 import { faBaseball, faVolleyballBall, faBasketball } from "@fortawesome/free-solid-svg-icons";
 import Menu from '../Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,6 +30,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 function Menu3(props) {
+  const isUserLogin = useSelector(selectUserStatus);
   const sportReducer = useSelector(selectSport);
   const dispatch = useDispatch();
   const {sport_default = "cbb", user, signOut, onChange} = props
@@ -48,7 +54,14 @@ function Menu3(props) {
     setSportData(newSport)
     dispatch(setSport(newSport))
     navigate(`/${newSport}`)
-    }
+  }
+
+  const userSignOut = (e) => {
+    console.log("==")
+    console.log("salida")
+    dispatch(setStatus(false))
+  }
+  
 
   return (
     <div>    
@@ -68,7 +81,7 @@ function Menu3(props) {
         </Nav>
         {signOut != undefined? 
          <div className='d-none d-md-block '>
-            <Button style={{borderRadius: "50px"}} className='btn' onClick={signOut}>Sign out</Button>
+            <Button style={{borderRadius: "50px"}} className='btn' onClick={signOut} > <Button style={{borderRadius: "50px"}} className='btn' onClick={(e) => userSignOut(e)} >Sign out</Button></Button>
           </div>
         :null} 
       </Navbar>
