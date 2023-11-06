@@ -33,6 +33,8 @@ const SearchTable = (props) => {
                 x['away_name'].toLowerCase().includes(val.toLowerCase()) :
                 search_keys.includes('game_name') ?
                 x['game_name'].toLowerCase().includes(val.toLowerCase()) :
+                search_keys.includes('team') ?
+                x['city'].toLowerCase().includes(val.toLowerCase()) :
                 x['mysportfeeds_abbreviation'].toLowerCase().includes(val.toLowerCase())
                 ))
         }
