@@ -106,8 +106,8 @@ function LiveGame(props) {
                       awayImg={x['away_image']}
                       home_abbr={x.home_team_abbr}
                       away_abbr={x.away_team_abbr}
-                      home={x['home_team']} 
-                      away={x['away_team']} 
+                      home={x['home_team_city']} 
+                      away={x['away_team_city']} 
                       footer={getTime(x.date_z)} 
                       home_score={x['home_score']}
                       away_score={x['away_score']}
