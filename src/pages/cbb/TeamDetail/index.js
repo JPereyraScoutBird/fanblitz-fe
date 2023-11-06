@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from "@fortawesome/free-regular-svg-icons";
 import Image from '../../../img';
 import Chatbot from '../../../container/ChatBot';
+import Select from 'react-select';
 
 export async function loader({ params }) {
     return params;
@@ -52,10 +53,6 @@ const renderTableNextGames = (data, backgroundColor = "#000", color='#fff') => {
 const renderTablePastGames =  (data, backgroundColor = "#000", color='#fff') => {
   return <CustomTable backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerLastGames} data={data.last_games.map(x => ({...x, date_et: getDateString(x['date_et'])}))}/>;
 }
-
-const renderTablePlayers = (data, backgroundColor = "#000", color='#fff') => {
-  return <CustomTable playeImage={true} backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPlayer} data={data.players}/>;
-};
 
 const renderTableRanking = (data, backgroundColor = "#000", color='#fff') => (
   <div className='d-flex flex-md-row flex-column ranking-summary'>
@@ -109,6 +106,10 @@ function TeamDetail(props) {
     const [modal, setModal] = useState(true);
     const toggle2 = () => setModal(!modal);
     const [gptStyle, setGptStyle] = useState('')
+    const [seasonValue, setSeasonValue] = useState({value: "2023-2024-regular", label: "2023-2024-regular"});
+    const [selectSeason, setSelectSeason] = useState([{value: "", label: ""}]);
+    const [rankingSeason, setRankingSeason] = useState([{value: "2023-2024-regular", label: "2023-2024-regular"}, {value: "2022-2023-regular", label: "2022-2023-regular"}]);
+    const [currentSeason, setCurrentSeason] = useState({value: "2023-2024-regular", label: "2023-2024-regular"}); 
 
     useEffect(() => {
         const fetchData2 = async () => {
@@ -151,15 +152,42 @@ function TeamDetail(props) {
       </div>
     )
 
-    const renderTableLeaders = (data, backgroundColor = "#000", color='#fff') => {
-
+    const renderTableLeaders = (data, seasonValue, backgroundColor = "#000", color='#fff') => {
+      let season = seasonValue == null? "2023-2024-regular": seasonValue.value
+      let data_filter = data.leaders.player.filter(x => x['season']==season)
       return (
         <Row className='d-flex justify-content-between'>
-        {data.leaders.player.map(x => (
+        {data_filter.map(x => (
           <CardProfileComponent link={`/cbb${PATH_LIST.PLAYER_DETAIL}/${x.player_id}`} title={`${x['first_name'][0]}. ${x['last_name']}`} className="col-2" body={<div className="w-100 d-flex justify-content-around"><span>{x['position']}.</span> <span>{x.feature}: <strong>{x.value}</strong></span></div>} imageSrc={x['image'] ||  Image.PROFILE}/>
         ))}
       </Row>
       )
+    };
+
+    const renderTablePlayers = (data, seasonValue, backgroundColor = "#000", color='#fff') => {
+      let season = seasonValue == null? "2023-2024-regular": seasonValue.value
+      let data_filter = data.players.filter(x => x['season']==season)
+      return <CustomTable playeImage={false} pagination={true} range={25} backgroundColor={backgroundColor} color={color} loading={data.length == 0} header={constant.headerPlayer} data={data_filter} onClick={(user) => onClick(user)}/>;
+    };
+
+    const renderOptions = () => {
+      return (
+        <div>
+            <div className="dropdown-container">
+            <Select
+              className="dropdown"
+              options={rankingSeason}
+              placeholder="Season"
+              value={seasonValue}
+              onChange={setSeasonValue}
+            />
+          </div>
+          {/* <div className="button-container">
+            <button onClick={handleFilter} className="button">Apply</button>
+            <button onClick={handleClear} className="button">Clear</button>
+          </div> */}
+        </div>
+      );
     };
 
     const renderPage = () => {
@@ -185,11 +213,15 @@ function TeamDetail(props) {
               </div>
               <br></br>
           </div>
+          <br></br>
+          {renderOptions()}
+          <br></br>
+          <br></br>
           <section id="leaders">
             <h3>Leaders</h3>
-            {renderTableLeaders(teamDetail, "#000")}
+            {renderTableLeaders(teamDetail, seasonValue, "#000")}
           </section>
-          <section id="lastGames">
+          {/* <section id="lastGames">
             <h3>Last 3 Games</h3>
             <br></br>
             {renderTable3Games(teamDetail, "#000")}
@@ -197,19 +229,19 @@ function TeamDetail(props) {
           <section id="splits">
             <h3>Splits</h3>
             {renderTableSplit(teamDetail, "#000")}
-          </section>
-          <section id="stats">
+          </section> */}
+          {/* <section id="stats">
             <h3>Stats</h3>
             {renderTableStats(teamDetail, "#000")}
-          </section>
+          </section> */}
           <section id="players">
             <h3>Players</h3>
-            {renderTablePlayers(teamDetail, "#000")}
+            {renderTablePlayers(teamDetail, seasonValue, "#000")}
           </section>
-          <section id="pastGames">
+          {/* <section id="pastGames">
             <h3>Past Predictions</h3>
             {renderTablePastGames(teamDetail, "#000")}
-          </section>
+          </section> */}
           {
             newsData && newsData.length ?
             <section id="news">

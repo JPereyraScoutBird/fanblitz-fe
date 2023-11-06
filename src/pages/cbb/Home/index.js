@@ -199,16 +199,25 @@ function Home(props) {
   }
   
   const onClick2 = (game) => {
-    const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_team']
-    setTeam(new_team)
-    setPrompt(`${new_team}' college basketball team history`)
+    const new_team = gameData.find(x => x['home_team_abbr'] == game.home_team_abbr)['home_name']
+    const city = game['home_team_city']
+    const name = game['home_team']
+
+    // console.log("home team klok 2", new_team)
+    const new_team2 = `${city} ${name}`
+    setTeam(new_team2)
+    setPrompt(`${new_team2}' college basketball team history`)
     toggle()
   }
   
   const onClick3 = (game) => {
     const new_team = gameData.find(x => x['away_team_abbr'] == game.away_team_abbr)['away_team']
-    setTeam(new_team)
-    setPrompt(`${new_team}' college basketball team history`)
+    const city = game['away_team_city']
+    const name = game['away_team']
+    const new_team2 = `${city} ${name}`
+
+    setTeam(new_team2)
+    setPrompt(`${new_team2}' college basketball team history`)
     toggle()
   }
 
