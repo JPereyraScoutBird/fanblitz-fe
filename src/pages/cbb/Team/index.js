@@ -66,7 +66,6 @@ function Team() {
         </div> */}
       </div>
     );
-    
   };
 
   return (

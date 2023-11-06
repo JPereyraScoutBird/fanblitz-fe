@@ -550,39 +550,65 @@ const headerLeader = {
     "value": "Value"
 }
 
+// const headerPlayer = {
+//     "image": "Image",
+//     "full_name": "Player",
+//     "birth_date": "Birth date",
+//     "position": "Position",
+//     "weight": "Weight",
+//     "height": "Height",
+// }
+
 const headerPlayer = {
-    "image": "Image",
-    "full_name": "Player",
-    "birth_date": "Birth date",
-    "position": "Position",
-    "weight": "Weight",
-    "height": "Height",
+    "full_name_pos": "Player",
+    "games_played": "GP",
+    "min_per_game": "MIN",
+    "pts_per_game": "PTS",
+    "reb_per_game": "REB",
+    "ast_per_game": "AST",
+    "stl_per_game": "STL",
+    "blk_per_game": "BLK",
+    "tov_per_game": "TO",
+    "fg_pct": "FG%",
+    "ft_pct": "FT%",
+    "fg_3pt_pct": "3P%"
 }
+
+// const links = [
+//     {
+//       label: "Last 3 Games",
+//       id: "#lastGames"
+//     },
+//     {
+//       label: "Splits",
+//       id: "#splits"
+//     },
+//     {
+//       label: "Stats",
+//       id: "#stats"
+//     },
+//     {
+//         label: "Players",
+//         id: "#players"
+//     },
+//     {
+//         label: "Past Predictions",
+//         id: "#pastGames"
+//     },
+//     {
+//         label: "News",
+//         id: "#news"
+//     }
+//   ]
 
 const links = [
     {
-      label: "Last 3 Games",
-      id: "#lastGames"
-    },
-    {
-      label: "Splits",
-      id: "#splits"
-    },
-    {
-      label: "Stats",
-      id: "#stats"
+        label: "Leaders",
+        id: "#leaders"
     },
     {
         label: "Players",
         id: "#players"
-    },
-    {
-        label: "Past Predictions",
-        id: "#pastGames"
-    },
-    {
-        label: "News",
-        id: "#news"
     }
   ]
 
