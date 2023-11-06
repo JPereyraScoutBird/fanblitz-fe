@@ -6,6 +6,15 @@ const getDate = (dateTimeStamp) => {
     return date.toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 }
 
+const getTimeGame = (dateTimeStamp) => {
+    const date = new Date(dateTimeStamp);
+    return date.toLocaleTimeString('en-US', {
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+}
+
 const getZTime = (dateTimeStamp) => {
     console.log("datetime: ", dateTimeStamp)
     var year        = dateTimeStamp.substring(0,4);
@@ -115,5 +124,6 @@ export {
     removechars,
     getPaid,
     getZTime,
-    filterByDateGameCard
+    filterByDateGameCard,
+    getTimeGame
 }
