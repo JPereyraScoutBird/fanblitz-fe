@@ -1,5 +1,5 @@
 const header = {
-    "mysportfeeds_abbreviation": "Team",
+    "city": "Team",
     "wins": "W",
     "losses": "L",
     "pts_per_game": "PTS",
