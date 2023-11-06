@@ -42,7 +42,7 @@ function Home(props) {
   const [pitcherStrikeoutData, setPitcherStrikeout] = useState([]);
   const [indexCarousel, setIndexCarousel] = useState(0);
   // const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
-  const [date, setDate] = useState(moment(new Date('2023-11-07').toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
+  const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone}) ))
   const navigate = useNavigate();
   const [width, setWidth] = useState(window.innerWidth);
   const [team, setTeam] = useState('');
@@ -114,7 +114,7 @@ function Home(props) {
         "away_name": x['away_team_city'],
         "game_name": x['home_team_city'] + " " + x['home_team'] + " vs " + x['away_team_city'] + " " + x['away_team']
       })) : []
-      // console.log("games2", response_formatedModel)
+      console.log("games2", response_formatedModel)
       setPitcherStrikeout(response_formatedModel)
     } catch (error) {
       console.error('Error getting data:', error);
@@ -148,11 +148,14 @@ function Home(props) {
   }
 
   const renderForecastComponent = (game) => {
-    if(game.home_position <= 0 || game.away_position <= 0 || true){
+    console.log("game card", game)
+    if(game.home_pos_top_25 <= 25 || game.away_pos_top_25 <= 25 || true){
+      game.home_pos_top_25 = game.home_pos_top_25 == null? "": game.home_pos_top_25
+      game.away_pos_top_25 = game.away_pos_top_25 == null? "": game.away_pos_top_25
       return <CardForecastComponent
               key={uuid()} 
               className="col-12 col-md-6"
-              title={`${game.home_team} ${parseInt(game.home_position)+1} vs. ${game.away_team} ${parseInt(game.away_position)+1}`}
+              title={`${game.home_team_city} ${game.home_pos_top_25} vs. ${game.away_team_city} ${game.away_pos_top_25}`}
               imageSrc={(geImage(game.home_team_abbr, game.home_image))}
               // imageSrc={IMAGE[game.home_team_abbr]}
               body={
@@ -321,8 +324,9 @@ function Home(props) {
   };
 
   const renderCards = () => {
-    if (gameData != undefined && gameData.length > 0) {
-      const today_games = gameData.filter(x => (getTodayItems(x.date_z, '2023-11-07') && (x.home_points > 0 || x.away_points > 0) && (x.venue != "Reed Arena")))
+    console.log("klok", pitcherStrikeoutData)
+    if (pitcherStrikeoutData != undefined && pitcherStrikeoutData.length > 0) {
+      const today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (parseInt(x.home_pos_top_25) <= 25 || parseInt(x.away_pos_top_25) <= 25) && (x.venue != "Reed Arena")))
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
