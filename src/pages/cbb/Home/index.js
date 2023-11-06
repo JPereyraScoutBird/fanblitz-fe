@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import CustomTable from '../../../component/Table';
-import { filterByDate, getDate, getDate2, getTodayItems } from "../../../utils";
+import { filterByDate, getDate, getDate2, getTodayItems, getTimeGame } from "../../../utils";
 import CardForecastComponent from "../../../component/CardForecast";
 import { Form, FormGroup, Label, Input, Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
@@ -99,13 +99,19 @@ function Home(props) {
     try {
       const responseModel = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/stats/teams/score');
       const jsonObjectModel = JSON.parse(responseModel.data.body)
-      let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({...x, "date_z": getDate(x['date_z']), "difference":  x['margin_spread_fanblitz']  })) : []
+      let response_formatedModel = jsonObjectModel.length ? jsonObjectModel.map(x => ({
+        ...x,
+        "date_z": getDate(x['date_z']),
+        "time_z": getTimeGame(x['date_z']),
+        "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])
+      })) : []
+
       response_formatedModel = response_formatedModel.length ? response_formatedModel.map(x => ({
         ...x,
         "away_pts": (x['pts_home'] + x['margin_spread_fanblitz']).toFixed(0),
         'pts_home': x['pts_home'].toFixed(0),
-        "home_name": x['home_team_city'] + " " + x['home_team'],
-        "away_name": x['away_team_city'] + " " + x['away_team'],
+        "home_name": x['home_team_city'],
+        "away_name": x['away_team_city'],
         "game_name": x['home_team_city'] + " " + x['home_team'] + " vs " + x['away_team_city'] + " " + x['away_team']
       })) : []
       // console.log("games2", response_formatedModel)
@@ -259,18 +265,18 @@ function Home(props) {
         let dataAux = data["strikeout"].length ? data["strikeout"].map(x => ({...x, "bet_icon": <a onClick={setBets}>Set a Bet</a>})) : []
         // <a onClick={toggle2}>See Bet</a>
         const header = {
-          "date_z": "Date",
+          "time_z": "Time",
           "home_name": "Home",
           "away_name": "Away",
-          "home_spreads_draftkings": "Vegas",
-          "margin_spread_fanblitz": "Fanblitz",
           "pts_home": "Fanblitz Home Score",
           "away_pts": "Fanblitz Away Score",
+          "margin_spread_fanblitz": "Fanblitz spread",
+          "home_spreads_draftkings": "Vegas spread",
           "difference": "Diff.",
-          "max_bet": "Max bet",
-          "min_bet": "Min bet",
-          "average_bet": "Avg. bet",
-          "bet_icon": "Bet",
+          // "max_bet": "Max bet",
+          // "min_bet": "Min bet",
+          // "average_bet": "Avg. bet",
+          // "bet_icon": "Bet",
         };
         return (
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
