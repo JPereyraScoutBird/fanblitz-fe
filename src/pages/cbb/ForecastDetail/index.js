@@ -46,11 +46,15 @@ function ForecastDetail() {
   const [stat, setStat] = useState({})
 
   useEffect(() => {
-    const [home, away] = teams.split('-');
-    // console.log("home", home, "away", away)
+    let [home, away] = teams.split('-');
+    // console.log("home", home, "away", away, "teams", teams)
+    home = home.replace(/\s+/g, "-")
+    away = away.replace(/\s+/g, "-")
+
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts?home=${home}&away=${away}&date=${date}`).then((res) => {
       const jsonObject = JSON.parse(res.data.body)
-      console.log("forecasts detail 1", jsonObject)
+      // console.log("forecasts detail 1", `https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts?home=${home}&away=${away}&date=${date}`)
+      // console.log("forecasts detail 1", jsonObject)
       if (jsonObject.hasOwnProperty('forecast')){
         setForecastData(JSON.parse(jsonObject.forecast)[0])
         // console.log("asd", jsonObject.home_team)
