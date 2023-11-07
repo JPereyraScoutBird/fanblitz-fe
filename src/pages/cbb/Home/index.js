@@ -77,7 +77,9 @@ function Home(props) {
       try {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games',);
         const jsonObject = JSON.parse(response.data.body)
+        // console.log(" Data: ", jsonObject)
         const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
+        console.log("Data: ", response_formated)
         // console.log("games", response_formated)
         const standing_home = response_formated.length ? Math.min(...response_formated.map(item => item.home_position)) : 0
         const standing_away = response_formated.length ? Math.min(...response_formated.map(item => item.away_position)) : 0
@@ -275,6 +277,9 @@ function Home(props) {
       if(table == 'score' || false) {
         // let dataAux = data["strikeout"]
         let dataAux = data["strikeout"].length ? data["strikeout"].map(x => ({...x, "bet_icon": <a onClick={setBets}>Set a Bet</a>})) : []
+        dataAux = dataAux.sort((a,b) => a.time_z.localeCompare(b.time_z))
+        console.log("Data aux", dataAux)
+
         // <a onClick={toggle2}>See Bet</a>
         const header = {
           "time_z": "Time",
@@ -302,7 +307,10 @@ function Home(props) {
         )
       }
       else {
-        const dataAux = data["home"]
+        const dataAux = data["home"].sort((a,b) => a.date_z - b.date_z)
+        console.log("Data aux", dataAux)
+        // dataAux = dataAux.sort((a,b) => b.date_z - a.date_z)
+
         const header = {
           "date_z": "Date",
           "home_team_abbr": "Home",
