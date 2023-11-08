@@ -22,7 +22,7 @@ function Forecasts() {
   useEffect(() => {
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts`).then((res) => {
       setForecastData((JSON.parse(res.data.body)))
-      // console.log("forecasts", (JSON.parse(res.data.body)))
+      console.log("forecasts", (JSON.parse(res.data.body)))
     })
   }, [])
 
@@ -71,7 +71,7 @@ function Forecasts() {
                   <Col xs={12} md={6}>
                     <Card 
                       style="card-news"
-                      title={`${forecast.home_team} vs ${forecast.away_team}`}
+                      title={`${forecast.home_city} vs ${forecast.away_city}`}
                       body={constants.team_detail[forecast.home_team_abb].stadium}
                       // imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
                       imageSrc={(geImage(forecast.home_team_abb, forecast.home_image))}
