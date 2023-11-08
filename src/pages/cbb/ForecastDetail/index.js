@@ -57,9 +57,7 @@ function ForecastDetail() {
       // console.log("forecasts detail 1", jsonObject)
       if (jsonObject.hasOwnProperty('forecast')){
         setForecastData(JSON.parse(jsonObject.forecast)[0])
-        // console.log("asd", jsonObject.home_team)
         setStat({"home_team": jsonObject.home_team, "away_team": jsonObject.away_team})
-        // console.log("forecasts detail 2", jsonObject)
       }
       
     })
@@ -118,12 +116,12 @@ function ForecastDetail() {
             <div className="d-flex align-items-center">
               {/* <img style={{marginRight: "0.5rem"}} src={constants.team_detail[forecastData.home_team_abb].img} height={"24px"} /> */}
               <img style={{marginRight: "0.5rem"}} src={forecastData.home_image} height={"24px"} />
-            <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_team} </h2>
+            <h2 style={{marginRight: "0.5rem"}} className="mb-0"> {forecastData.home_city} </h2>
             </div>
             <h2> vs </h2>
             <div className="d-flex align-items-center">
               <img style={{marginRight: "0.5rem"}} src={forecastData.away_image} height={"24px"} />
-              <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {forecastData.away_team}</h2>
+              <h2 style={{marginRight: "0.5rem"}} className="ml-2 mb-0"> {forecastData.away_city}</h2>
             </div>
           </div>
           <div className="d-flex align-items-center">
