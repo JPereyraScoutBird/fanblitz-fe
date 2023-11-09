@@ -162,7 +162,7 @@ import E_MICH from './E_MICH.jpg'
 import E_WASH from './E_WASH.jpg'
 // import ECCLES from './ECCLES.jpg'
 // import ED_WAT from './ED_WAT.jpg'
-import ELON from './ELON.webp'
+import ELON from './ELON.jpg'
 // import EMERSO from './EMERSO.jpg'
 // import EM_HEN from './EM_HEN.jpg'
 // import ERSKIN from './ERSKIN.jpg'
@@ -508,7 +508,7 @@ import USD from './USD.jpg'
 import SDSU from './SDSU.jpg'
 import S_FRAN from './S_FRAN.jpg'
 // import SF_ST from './SF_ST.jpg'
-import SJSU from './SJSU.webp'
+import SJSU from './SJSU.jpg'
 import STCLAR from './STCLAR.jpg'
 // import SRHLAW from './SRHLAW.jpg'
 // import SCHREI from './SCHREI.jpg'
@@ -569,7 +569,7 @@ import STAN from './STAN.jpg'
 // import CSUSTN from './CSUSTN.jpg'
 import SFA from './SFA.jpg'
 import STETSN from './STETSN.jpg'
-// import STONEH from './STONEH.jpg'
+import STONEH from './STONEH.jpg'
 import STONY from './STONY.jpg'
 // import SULROS from './SULROS.jpg'
 // import SUNYMA from './SUNYMA.jpg'
@@ -1277,7 +1277,7 @@ STAN,
 // CSUSTN,
 SFA,
 STETSN,
-// STONEH,
+STONEH,
 STONY,
 // SULROS,
 // SUNYMA,
