@@ -42,7 +42,7 @@ function GamePlays(route) {
                 if (response.status == 200){
                   if (response.data.status == 200){
                     let jsonObject = JSON.parse(response.data.body)
-                    // console.log("jsonObject", jsonObject)
+                    console.log("play by play", jsonObject)
                     setGameInfo(jsonObject)
                     setGamePlays(jsonObject.data)
                   }
@@ -87,7 +87,7 @@ function GamePlays(route) {
           </div>
           <br></br>
           <br></br>
-          <h5>New season starts November 6, 2023</h5>
+          <h5>No play by play information please come back later.</h5>
           <br></br>
           <br></br>
           <br></br>

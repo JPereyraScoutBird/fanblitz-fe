@@ -50,9 +50,11 @@ function LiveGame(props) {
         const response = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/games/gamescore');
         // const responseBox = await axios.get('https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/cbb/dev/games/box');
         const jsonObject = JSON.parse(response.data.body)
+        console.log(jsonObject.length)
         // const jsonObjectBox = JSON.parse(responseBox.data.body)
-        const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z']), "difference": Math.abs(x['home_spreads_draftkings'] - x['margin_spread_fanblitz'])})) : []
-        // console.log(response_formated)
+        const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z'])})) : []
+        console.log(response_formated.length)
+        console.log(response_formated)
         setGameData(response_formated.sort((a,b) => a.date_z.localeCompare(b.date_z)))
       } catch (error) {
         console.error('Error getting data:', error);

@@ -247,7 +247,7 @@ import IND from './IND.jpg'
 import IND_ST from './IND_ST.jpg'
 // import UINDY from './UINDY.jpg'
 import IONA from './IONA.jpg'
-import IOWA from './IOWA.webp'
+import IOWA from './IOWA.jpg'
 import IOWAST from './IOWAST.jpg'
 // import IA_WES from './IA_WES.jpg'
 // import ITHACA from './ITHACA.jpg'
@@ -380,7 +380,7 @@ import MORGAN from './MORGAN.jpg'
 import MTSTMY from './MTSTMY.jpg'
 // import MT_STV from './MT_STV.jpg'
 // import MULTNO from './MULTNO.jpg'
-import MURRAY from './MURRAY.webp'
+import MURRAY from './MURRAY.jpg'
 // import MUSKIN from './MUSKIN.jpg'
 import NAVY from './NAVY.jpg'
 import NC_ST from './NC_ST.jpg'
@@ -618,7 +618,7 @@ import UCSB from './UCSB.jpg'
 import UCF from './UCF.jpg'
 import UCLA from './UCLA.jpg'
 import UCONN from './UCONN.jpg'
-// import UIC from './UIC.jpg'
+import UIC from './UIC.jpg'
 // import LA_MON from './LA_MON.jpg'
 import UMASS from './UMASS.jpg'
 import UMASSL from './UMASSL.png'
@@ -1326,7 +1326,7 @@ UCSB,
 UCF,
 UCLA,
 UCONN,
-// UIC,
+UIC,
 // LA_MON,
 UMASS,
 UMASSL,
