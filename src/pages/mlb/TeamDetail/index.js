@@ -31,7 +31,7 @@ const getNewsSpecificPlayer = (player_name) => (
 
 const renderTableNextGames = (position, data, backgroundColor = "#000", color='#fff') => {
     if(data && data.games.length > 0) {
-      console.log("klok menil", data)
+      // console.log("klok menil", data)
       return (
         <div className='w-100 d-flex flex-column align-items-center'>
           <CardTeamComponent 

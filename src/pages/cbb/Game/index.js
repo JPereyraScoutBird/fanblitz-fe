@@ -58,7 +58,7 @@ function GamePlays(route) {
     const renderPage = () => {
       return (
         <div style={{}}>
-          <h3>klok</h3>
+          {/* <h3>klok</h3> */}
           <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
               <div className="d-flex">
                   <div style={{ border: `5px solid ${constants.team_detail[gameInfo.home_team_abbr].teamColoursHex[0]}`, marginRight: "1rem"}}>

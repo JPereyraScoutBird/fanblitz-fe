@@ -150,7 +150,7 @@ function Home(props) {
   }
 
   const renderForecastComponent = (game) => {
-    console.log("game card", game)
+    // console.log("game card", game)
     if(game.home_pos_top_25 <= 25 || game.away_pos_top_25 <= 25 || true){
       game.home_pos_top_25 = game.home_pos_top_25 == null? "": game.home_pos_top_25
       game.away_pos_top_25 = game.away_pos_top_25 == null? "": game.away_pos_top_25
@@ -332,9 +332,13 @@ function Home(props) {
   };
 
   const renderCards = () => {
-    console.log("klok", pitcherStrikeoutData)
     if (pitcherStrikeoutData != undefined && pitcherStrikeoutData.length > 0) {
-      const today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (parseInt(x.home_pos_top_25) <= 25 || parseInt(x.away_pos_top_25) <= 25) && (x.venue != "Reed Arena")))
+      const lenTodayGame = pitcherStrikeoutData.length
+      let today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (x.venue != "Reed Arena")))
+      if(today_games.length >= 30){
+        today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (parseInt(x.home_pos_top_25) <= 25 || parseInt(x.away_pos_top_25) <= 25) && (x.venue != "Reed Arena")))
+      }
+
       const today_games2 = [...today_games]
       const newArr = []
       while(today_games.length) newArr.push(today_games.splice(0,2))
