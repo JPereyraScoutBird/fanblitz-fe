@@ -54,7 +54,7 @@ const filterByDate = (dateTimeStamp, date) => {
     filterDate.setHours(0,0,0,0);
     let tomorrow = new Date(filterDate)
     tomorrow.setDate(filterDate.getDate() + 1)
-    // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}, ${getDate(filterDate)}, ${dateTimeStamp}`)
+    // console.log(`today: ${filterDate}, tomorrow: ${tomorrow}, ${getDate(filterDate)}, ${dateData}`)
     return dateData >= (filterDate) && dateData < (tomorrow)
 }
 

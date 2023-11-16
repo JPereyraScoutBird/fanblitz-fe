@@ -22,7 +22,12 @@ function Forecasts() {
   useEffect(() => {
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts`).then((res) => {
       setForecastData((JSON.parse(res.data.body)))
+
+      // const jsonObject = JSON.parse(res.data.body)
+      // const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z'])})) : []
+
       // console.log("forecasts", (JSON.parse(res.data.body)))
+      // console.log("forecasts2", response_formated)
     })
   }, [])
 

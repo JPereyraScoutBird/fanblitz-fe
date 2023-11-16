@@ -118,7 +118,7 @@ function TeamDetail(props) {
                 const jsonObject = JSON.parse(response.data.body)
                 jsonObject.games = jsonObject.games.length ? jsonObject.games.map(x => ({...x, "date_et": getDate(x['date_et'])})) : []
                 setteamDetail(jsonObject)
-                console.log("klok", jsonObject)
+                // console.log("klok", jsonObject)
             } catch (error) {
                 console.error('Error getting data:', error);
             }
