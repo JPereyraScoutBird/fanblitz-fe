@@ -57,6 +57,7 @@ function Home(props) {
   const [amount, setAmount] = useState('');
   const [gameBet, setGame] = useState(<></>);
   const [gameId, setGameId] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
@@ -91,6 +92,7 @@ function Home(props) {
         }else{
           setStanding(standing_home)
         }
+        setIsLoading(true);
         
       } catch (error) {
         console.error('Error getting data:', error);
@@ -116,18 +118,21 @@ function Home(props) {
         "away_name": x['away_team_city'],
         "game_name": x['home_team_city'] + " " + x['home_team'] + " vs " + x['away_team_city'] + " " + x['away_team']
       })) : []
-      console.log("games2", response_formatedModel)
+      // console.log("games2", response_formatedModel)
       setPitcherStrikeout(response_formatedModel)
+      setIsLoading(true);
     } catch (error) {
       console.error('Error getting data:', error);
     }
 };
 
   useEffect(() => {
+    setIsLoading(false);
     fetchData();
   }, []);
 
   useEffect(() => {
+    setIsLoading(false);
     fetchDataScoreData();
   }, [], gameData);
 
@@ -226,28 +231,8 @@ function Home(props) {
     toggle()
   }
 
-  
   const onClick4 = (game) => {
     toggle2()
-  }
-
-  const onClick6 = (pitcher_name) => {
-    // console.log("pitcher", player_full_name)
-    setPitcher(pitcher_name['player_full_name'])
-    setPrompt(`${pitcher_name['player_full_name']} college basketball player short biography`)
-    toggle()
-  }
-
-  const onClick7 = (player) => {
-    setTeam(player['pitcher_team_full'])
-    setPrompt(`${player['pitcher_team_full']}' college basketball team history`)
-    toggle()
-  }
-
-  const onClick8 = (player) => {
-    setTeam(player['opp_team_full'])
-    setPrompt(`${player['opp_team_full']}' college basketball team history`)
-    toggle()
   }
 
   const onClickSetBet = (game) => {
@@ -413,12 +398,21 @@ function Home(props) {
       console.error('Error getting data:', error);
     }
   }
+
+  const getLoading = () => {
+    return  (
+    <div className = "loading-container" >
+      <img src = {IMAGE["loading"]} alt = "loading" className = "loading-image" />
+    </div>
+    )    
+  }
   
   return (
     <div id="home">
       <Menu sport_default={"cbb"} signOut={signOut} user={user} onChange={(e) => setGptStye(e)}/>
+        {/* {renderCards()} */}
         {
-          renderCards()
+          isLoading == false ? getLoading() : renderCards()
         }
         <br></br>
       <Container>
@@ -428,7 +422,10 @@ function Home(props) {
         </div>
       </Container>
       <Container>
-        {renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)}
+        {/* {renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)} */}
+        {
+          isLoading == false ? getLoading() : renderTableStrikeoutModel(showTable, {"home": gameData, "strikeout": pitcherStrikeoutData}, date)
+        }
       </Container>
       <Footer />  
       <Modal isOpen={modal} toggle={toggle}>

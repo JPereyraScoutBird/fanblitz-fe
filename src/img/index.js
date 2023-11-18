@@ -33,6 +33,7 @@ import BLITZBOT_PROFILE from './blitzbot_profile.png'
 import PROFILE from './PROFILE.svg'
 import TENNIS from './tennis'
 import CBB from './cbb'
+import loading from './loading.gif'
 
 export default {
     Logo,
@@ -69,5 +70,6 @@ export default {
     BLITZBOT_PROFILE,
     PROFILE,
     TENNIS,
-    CBB
+    CBB,
+    loading
 }
