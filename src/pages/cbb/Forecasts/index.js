@@ -17,17 +17,13 @@ function Forecasts() {
 
   const [forecastData, setForecastData] = useState([])
   const [date, setDate] = useState(moment(new Date().toLocaleString('en-US', {timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone})))
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Fetch Data from NewsApi (ComponentDidMount)
   useEffect(() => {
+    setIsLoading(false);
     axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/devncaa/cbb/forecasts`).then((res) => {
       setForecastData((JSON.parse(res.data.body)))
-
-      // const jsonObject = JSON.parse(res.data.body)
-      // const response_formated = jsonObject.length ? jsonObject.map(x => ({...x, "date_z": getDate(x['date_z'])})) : []
-
-      // console.log("forecasts", (JSON.parse(res.data.body)))
-      // console.log("forecasts2", response_formated)
+      setIsLoading(true);
     })
   }, [])
 
@@ -44,7 +40,7 @@ function Forecasts() {
     </div>
   )
 
-  console.log(date.toDate(), forecastData.filter(x => filterByDate(x.date_z, date.toDate())))
+  // console.log(date.toDate(), forecastData.filter(x => filterByDate(x.date_z, date.toDate())))
 
   const geImage = (homeTeam, homeImage) =>{
     try{
@@ -60,6 +56,38 @@ function Forecasts() {
     }
   }
 
+  const getLoading = () => {
+    return  (
+    <div className = "loading-container" >
+      <img src = {Image["loading"]} alt = "loading" className = "loading-image" />
+    </div>
+    )    
+  }
+
+  const render = () => {
+    return  (
+      <Row>
+          {
+            forecastData.length ? forecastData.filter(x => filterByDate(getDate(x.date_z), date.toDate())).map(forecast => (
+              <Col xs={12} md={6}>
+                <Card 
+                  style="card-news"
+                  title={`${forecast.home_city} vs ${forecast.away_city}`}
+                  body={constants.team_detail[forecast.home_team_abb].stadium}
+                  // imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
+                  imageSrc={(geImage(forecast.home_team_abb, forecast.home_image))}
+                  linkTitle={`/cbb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
+                  footer={getDate2(forecast.date_z)}
+                  imageRedirect={true}
+                />
+              </Col>
+            ))
+            : null
+          }
+      </Row>
+    )
+  }
+
   return (
     <div id="forecast">
       <div style={{ backgroundColor: "#fff", marginTop: "2rem" }}>
@@ -70,25 +98,7 @@ function Forecasts() {
           <div className="mb-4">
             <DatePagination date={date} onClick={(date) => setDate(date)}/>
           </div>
-          <Row>
-              {
-                forecastData.length ? forecastData.filter(x => filterByDate(getDate(x.date_z), date.toDate())).map(forecast => (
-                  <Col xs={12} md={6}>
-                    <Card 
-                      style="card-news"
-                      title={`${forecast.home_city} vs ${forecast.away_city}`}
-                      body={constants.team_detail[forecast.home_team_abb].stadium}
-                      // imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
-                      imageSrc={(geImage(forecast.home_team_abb, forecast.home_image))}
-                      linkTitle={`/cbb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
-                      footer={getDate2(forecast.date_z)}
-                      imageRedirect={true}
-                    />
-                  </Col>
-                ))
-                : null
-              }
-          </Row>
+          {isLoading == false ? getLoading() : render()}
         </section>
       </div>
     </div>

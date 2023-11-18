@@ -44,8 +44,10 @@ function ForecastDetail() {
   const [forecastData, setForecastData] = useState({})
   const {teams, date} = useLoaderData();
   const [stat, setStat] = useState({})
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(false);
     let [home, away] = teams.split('-');
     // console.log("home", home, "away", away, "teams", teams)
     home = home.replace(/\s+/g, "-")
@@ -59,7 +61,7 @@ function ForecastDetail() {
         setForecastData(JSON.parse(jsonObject.forecast)[0])
         setStat({"home_team": jsonObject.home_team, "away_team": jsonObject.away_team})
       }
-      
+      setIsLoading(true);
     })
   }, [])
 
@@ -169,10 +171,19 @@ function ForecastDetail() {
       </div>
     )
   }
+
+  const getLoading = () => {
+    return  (
+    <div className = "loading-container" >
+      <img src = {Image["loading"]} alt = "loading" className = "loading-image" />
+    </div>
+    )    
+  }
  
   return (
     <div id="forecast_detail">
-      {forecastData != {} && forecastData != undefined && forecastData.hasOwnProperty('home_team')  ? renderPage() : 'Forecast Detail'}
+       {/* {isLoading == false ? getLoading() : render()} */}
+      {isLoading == false ? getLoading() : (forecastData != {} && forecastData != undefined && forecastData.hasOwnProperty('home_team')  ? renderPage() : 'Forecast Detail in progress')}
     </div>
   );
 }

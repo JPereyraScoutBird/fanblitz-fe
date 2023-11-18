@@ -37,6 +37,7 @@ function LiveGame(props) {
   const [modal2, setModal2] = useState(false);
   const [prompt, setPrompt] = useState('')
   const [pitcher, setPitcher] = useState('')
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggle = () => setModal(!modal)
   const toggle2 = () => setModal2(!modal2)
@@ -56,12 +57,14 @@ function LiveGame(props) {
         console.log(response_formated.length)
         console.log(response_formated)
         setGameData(response_formated.sort((a,b) => a.date_z.localeCompare(b.date_z)))
+        setIsLoading(true);
       } catch (error) {
         console.error('Error getting data:', error);
       }
   };
 
   useEffect(() => {
+    setIsLoading(false);
     fetchData()
     const interval = setInterval(() => {
       fetchData();
@@ -79,14 +82,6 @@ function LiveGame(props) {
        effect to only run when the component mounts, and not each time it updates.
        We only want the listener to be added once */
   }, []);
-
-  const onClick = (game) => {
-    navigate(`/cbb${PATH_LIST.GAME_DETAIL}/${game.id}`);
-  }
-  
-  const onClick5 = (game) => {
-    navigate(`/cbb${PATH_LIST.FORECAST_DETAIL}/${game.home_team_abbr}-${game.away_team_abbr}/${getDate2(game.date_z)}`);
-  }
   
   const renderTodaysGame = () => {
         return (
@@ -154,12 +149,23 @@ function LiveGame(props) {
         )
   };
 
+  const getLoading = () => {
+    return  (
+    <div className = "loading-container" >
+      <img src = {IMAGE["loading"]} alt = "loading" className = "loading-image" />
+    </div>
+    )    
+  }
+
   return (
     <div id="home">
       <Menu sport_default={"cbb"} signOut={signOut} user={user}/>
       <Container>
-        {
+        {/* {
           renderTodaysGame()
+        } */}
+        {
+          isLoading == false ? getLoading() : renderTodaysGame()
         }
       </Container>
       <Modal isOpen={modal} toggle={toggle}>

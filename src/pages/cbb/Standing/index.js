@@ -7,6 +7,7 @@ import PATH_LIST from "../../../routes/constant";
 import { useNavigate } from "react-router-dom";
 import { Button, Carousel, Container, CarouselItem, Row, UncontrolledCarousel, CarouselIndicators, CarouselControl } from "reactstrap";
 import Select from 'react-select';
+import IMAGE from '../../../img';
 import './style.css';
 
 function Standing() {
@@ -32,6 +33,7 @@ function Standing() {
   const [divisionValue, setDivisionValue] = useState(null);
   const [positionValue, setPositionValue] = useState(null);
   const [teamValue, setTeamValue] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
       try {
@@ -45,7 +47,7 @@ function Standing() {
         setRankingLeague(jsonObject.league.map(x => ({ value: x, label: x })))
         setRankingPosition(jsonObject.position.map(x => ({ value: x, label: x })))
         setRankingTeam(jsonObject.team.map(x => ({ value: x, label: x })))
-        
+        setIsLoading(true);
       } catch (error) {
         console.error('Error getting data:', error);
       }
@@ -88,7 +90,7 @@ function Standing() {
         setPlayerData(jsonObject)
         // console.log("player data", jsonObject)
       }
-      
+      setIsLoading(true);
     } catch (error) {
       console.error('Error getting data:', error);
     }
@@ -136,17 +138,19 @@ function Standing() {
       else{
         setTeamData(jsonObject)
       }
-      
+      setIsLoading(true);
     } catch (error) {
       console.error('Error getting data:', error);
     }
   };
 
   useEffect(() => {
+    setIsLoading(false);
     fetchData();
   }, []);
 
   useEffect(() => {
+    setIsLoading(false);
     fetchDataTeam();
   }, [], rankingTeam);
 
@@ -215,10 +219,6 @@ function Standing() {
     setPositionValue(null)
     setTeamValue(null)
   };
-
-  // const isJsonEmpty = (json) => {
-  //   return Object.keys(json).length === 0;
-  // }
 
   const renderTable = () => {
     if (showTable === "Team") {
@@ -384,6 +384,14 @@ function Standing() {
     
   };
 
+  const getLoading = () => {
+    return  (
+    <div className = "loading-container" >
+      <img src = {IMAGE["loading"]} alt = "loading" className = "loading-image" />
+    </div>
+    )    
+  }
+
   return (
     <>
       <Container>
@@ -396,7 +404,8 @@ function Standing() {
           {renderOptions()}
           <br></br>
           {renderRankingOptions()}
-          {renderTable()}
+          {/* {renderTable()} */}
+          {isLoading == false ? getLoading() : renderTable()}
         </div>
       </Container>    
     </>    

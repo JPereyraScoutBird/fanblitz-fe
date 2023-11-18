@@ -24,3 +24,15 @@
     text-align: left;
     /* padding: 2rem */
 }
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+  
+  .loading-image {
+    width: 100px;
+    height: auto;
+  }
