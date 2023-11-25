@@ -1,0 +1,50 @@
+#template {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#template #menu {
+    flex: 1;
+}
+
+#template #footer {
+    flex: 0;
+    margin-top: auto;
+    /* align-self: flex-end; */
+}
+
+.player_detail_container { 
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-position-y: 30vh;
+    background-attachment: fixed;
+    /* padding-right: 20px; */
+}
+
+.player_detail_container th {
+    background-color: #041e42 !important;
+}
+
+.ranking-summary p {
+    margin-right: 1rem;
+    margin-bottom: 0px
+}
+
+.team_hitter_stats {
+
+}
+
+.team_pitcher_stats {
+    margin-left: 0px;
+    margin-top: 2rem;
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .team_pitcher_stats {
+        margin-left: 4rem;
+        margin-top: 0rem;
+    }
+}

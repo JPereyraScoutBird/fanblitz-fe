@@ -14,7 +14,8 @@ const header = {
     "ft_made": "FT M",
     "off_reb": "OFF REB",
     "def_reb": "DEF REB",
-    "plus_minus_per_game": "+/-"
+    "plus_minus_per_game": "+/-",
+    "expenses": "Expenses"
 }
 
 export default {

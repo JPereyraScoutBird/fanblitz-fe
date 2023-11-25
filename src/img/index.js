@@ -33,6 +33,7 @@ import BLITZBOT_PROFILE from './blitzbot_profile.png'
 import PROFILE from './PROFILE.svg'
 import TENNIS from './tennis'
 import CBB from './cbb'
+import NBA from './nba'
 import loading from './loading.gif'
 
 export default {
@@ -71,5 +72,6 @@ export default {
     PROFILE,
     TENNIS,
     CBB,
+    NBA,
     loading
 }

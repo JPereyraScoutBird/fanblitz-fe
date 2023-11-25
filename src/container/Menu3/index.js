@@ -78,6 +78,10 @@ function Menu3(props) {
           <Button outline className='btn btn-link' onClick={() => onClick("cbb")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
             <FontAwesomeIcon icon={faBasketball}/>NCAA BM
           </Button>
+          <div className="border-dash" style={{margin: "0px 0.5rem"}}></div>
+          <Button outline className='btn btn-link' onClick={() => onClick("nba")} style={{textDecoration: 'none', color: "#ffffff", margin: '0px', padding: '0px'}}>
+            <FontAwesomeIcon icon={faBasketball}/>NBA
+          </Button>
         </Nav>
         {signOut != undefined? 
          <div className='d-none d-md-block '>
