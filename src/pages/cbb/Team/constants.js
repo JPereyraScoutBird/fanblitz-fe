@@ -15,7 +15,7 @@ const header = {
     "off_reb": "OFF REB",
     "def_reb": "DEF REB",
     "plus_minus_per_game": "+/-",
-    "expenses": "Expenses"
+    "expenses": "Expenses (USD MM)"
 }
 
 export default {
