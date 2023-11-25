@@ -60,8 +60,8 @@ function LiveGame(props) {
         const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/qanba/nba/games/box?game_id=${gameId}`);
         const jsonObjectHome = JSON.parse(response.data.body_home)
         const jsonObjectAway = JSON.parse(response.data.body_away)
-        console.log("box data home", jsonObjectHome)
-        console.log("box data away", jsonObjectAway)
+        // console.log("box data home", jsonObjectHome)
+        // console.log("box data away", jsonObjectAway)
 
         setBoxDataHitHome(jsonObjectHome)
         setBoxDataHitAway(jsonObjectAway)
