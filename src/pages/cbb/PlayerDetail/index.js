@@ -75,7 +75,7 @@ function Player(props) {
     useEffect(() => {
       const fetchData3 = async () => {
         try {
-            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=baseball&subject=${playerDetail['full_name']}`);
+            const response = await axios.get(`https://crfh3pd7oi.execute-api.us-east-1.amazonaws.com/dev/news?sport=cbb&subject=${playerDetail['full_name']}`);
             // const response = await axios.get(`${await getNewsSpecificPlayer(playerDetail['full_name'])}&apikey=${constant.API}`);
             setNewsData(response.data.content)
             // setModal(true)

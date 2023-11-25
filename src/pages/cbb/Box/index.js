@@ -109,7 +109,7 @@ React.useEffect(() => {
     if (data.length != 0){
       return data[0]["_team"]
     }
-    return "LEHIGH"
+    return ""
   }
 
   const getHomeInning = (data) =>{
@@ -133,6 +133,7 @@ React.useEffect(() => {
           noRange={false} pagination={true} range={9} row={10}
           header={constantLocal.headerHitters}
           data={data}
+          loading={data.length == 0}
         />
     </>
   )

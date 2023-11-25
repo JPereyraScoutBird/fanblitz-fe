@@ -60,7 +60,7 @@ function Menu(props) {
       <Navbar id="primary_navbar" light expand="md" className='d-flex justify-content-end'>
         <NavbarBrand href={`/${sport}`} style={{flexGrow: 1}}><img src={Images.Logo} height="50px" /></NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        {sport == "mlb" || sport == "cbb"? (
+        {sport == "mlb" || sport == "cbb" || sport == "nba"? (
           <Col xs={12} md={2}>
             <SearchComponent/>
           </Col>
@@ -75,7 +75,7 @@ function Menu(props) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.HOME}`, "Home")}
             </NavItem>
-            {sport == "mlb" || sport == "cbb"? (
+            {sport == "mlb" || sport == "cbb" || sport == "nba"? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.LIVE}`, "Score")}
             </NavItem>
@@ -86,12 +86,12 @@ function Menu(props) {
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.NEWS}`, "News")}
             </NavItem>
-            {sport == "mlb" || sport == "cbb" ? (
+            {sport == "mlb" || sport == "cbb" || sport == "nba" ? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.TEAM}`, "Team")}
             </NavItem>
             ): null}
-            {sport == "tennis" || sport == "mlb" || sport == "cbb" ? (
+            {sport == "tennis" || sport == "mlb" || sport == "cbb" || sport == "nba" ? (
             <NavItem>
                 {renderNavLink(`/${sport}${PATH_LIST.STANDING}`, "Standing")}
             </NavItem>

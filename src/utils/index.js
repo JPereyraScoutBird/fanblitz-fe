@@ -35,12 +35,14 @@ const getPaid = (value) => {
 const getTodayItems = (dateTimeStamp, day = null) => {
 
     let today = new Date();
+    // console.log(typeof dateTimeStamp, dateTimeStamp)
+    // let todaygames = new Date(dateTimeStamp);
     if (day != null){
         today = new Date(day);
     }
     
     today.setHours(0,0,0,0);
-    const tomorrow = new Date(today)
+    let tomorrow = new Date(today)
     tomorrow.setDate(today.getDate() + 1)
     // console.log(`Date: ${today}, tomorrow: ${tomorrow}`)
     // console.log("dateTimeStamp >= getDate(today)", dateTimeStamp >= getDate(today), dateTimeStamp, getDate(today))

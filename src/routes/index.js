@@ -118,8 +118,49 @@ const routeListCBB = (sport) => [
     },
   ]
 
+  const routeListNBA = (sport) => [
+    {
+      path: `/${sport}${PATH_LIST.PLAYER}`,
+      element: <Pages.nba.Players />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.TEAM}`,
+      element: <Pages.nba.Team />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.TEAM_DETAIL}`,
+      element: <Pages.nba.TeamDetail />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.NEWS}`,
+      element: <Pages.nba.News />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.FORECAST}`,
+      element: <Pages.nba.Forecasts />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.FORECAST_DETAIL}/:teams/:date`,
+      element: <Pages.nba.ForecastDetail />,
+      loader: newsLoader
+    },
+    // {
+    //   path: `/${sport}${PATH_LIST.SOCIAL_BETS}`,
+    //   element: <Pages.cbb.SocialBets />,
+    // },
+    {
+      path: `/${sport}${PATH_LIST.TUTORIAL}`,
+      element: <Pages.nba.Tutorial />,
+    },
+    {
+      path: `/${sport}${PATH_LIST.STANDING}`,
+      element: <Pages.nba.Standing />,
+    }
+  ]
+
 export default {
   MLB: routeList('mlb'),
   TENNIS: routeListTennis('tennis'),
-  CBB: routeListCBB('cbb')
+  CBB: routeListCBB('cbb'),
+  NBA: routeListNBA('nba')
 }

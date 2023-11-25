@@ -76,7 +76,7 @@
     padding-right: 0.5rem; */
     display: inline-block;
     text-align: center;
-    width: 1.5rem;
+    width: 2.5rem;
     font-weight: bold;
 }
 
@@ -95,4 +95,9 @@
 
 .icon {
     margin-right: 0.5rem;
+}
+
+.containergame p {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }

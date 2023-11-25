@@ -110,7 +110,9 @@ function CardTeamLiveComponent (props) {
                 <Card className={`card_team_component_live shadow mb-5 rounded ${style}`}>
                 <div className="d-flex justify-content-between" style={{borderBottom: "1px solid #ccc", width: "100%"}}>
                     <p style={{textAlign: 'center', fontWeight: "bold", color: status == "LIVE" ? "red" : "#000"}}>{status == 'COMPLETED_PENDING_REVIEW' ? 'COMPLETED' : status != 'COMPLETED' && status != 'LIVE' ? getDateString(date) : status}</p>
-                    {status == "LIVE" ? <><p>{current_half != 0 ? (<>{current_half}</>) : ''}</p> - <p>{current_half_seconds_remaining != 0 ? (<>{current_half_seconds_remaining}</>) : ''}</p> </>: null}
+                    <div className="containergame">
+                        {status == "LIVE" ? <><p>{current_half != 0 ? (<>{current_half}</>) : ''}</p> - <p>{current_half_seconds_remaining != 0 ? (<>{current_half_seconds_remaining}</>) : ''}</p> </>: null}
+                    </div>
                 </div>
                 <CardTitle className="mt-2">
                     <div><p style={{fontWeight: "bold"}}>{footer}</p></div>
