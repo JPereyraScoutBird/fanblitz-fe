@@ -122,11 +122,9 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
     },
   },
 
-
-
   {
     path: `${PATH_LIST.HOME}`,
-    element: <Pages.cbb.Home user={user}/>,
+    element: <Pages.WhitePage user={user}/>,
     errorElement: <ErrorPage />,
   },
   {
@@ -134,13 +132,13 @@ const router = (user="", signOut=undefined) => createBrowserRouter([
     element: <Pages.cbb.Home user={user}/>,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/",
-    element: <RenderPage user={user} />,
-    errorElement: <ErrorPage />,
-    children: ROUTES.CBB,
-    loader: loader,
-  },
+  // {
+  //   path: "/",
+  //   element: <RenderPage user={user} />,
+  //   errorElement: <ErrorPage />,
+  //   children: ROUTES.CBB,
+  //   loader: loader,
+  // },
   {
     path: "/cbb",
     element: <RenderPage user={user}  />,
