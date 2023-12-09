@@ -35,6 +35,7 @@ const getPaid = (value) => {
 const getTodayItems = (dateTimeStamp, day = null) => {
 
     let today = new Date();
+    let gameDate = new Date(dateTimeStamp)
     // console.log(typeof dateTimeStamp, dateTimeStamp)
     // let todaygames = new Date(dateTimeStamp);
     if (day != null){
@@ -44,9 +45,10 @@ const getTodayItems = (dateTimeStamp, day = null) => {
     today.setHours(0,0,0,0);
     let tomorrow = new Date(today)
     tomorrow.setDate(today.getDate() + 1)
-    // console.log(`Date: ${today}, tomorrow: ${tomorrow}`)
-    // console.log("dateTimeStamp >= getDate(today)", dateTimeStamp >= getDate(today), dateTimeStamp, getDate(today))
-    return dateTimeStamp >= getDate(today) && dateTimeStamp < getDate(tomorrow)
+    // console.log(`Date: ${getDate(today)}, \ntomorrow: ${getDate(tomorrow)}`, "\n game date object", getDate(gameDate), "\n game date", dateTimeStamp)
+    // console.log((gameDate) >= (today))
+    // console.log((gameDate) < (tomorrow))
+    return (gameDate) >= (today) && (gameDate) < (tomorrow)
 }
 
 const filterByDate = (dateTimeStamp, date) => {

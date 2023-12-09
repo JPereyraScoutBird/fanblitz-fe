@@ -321,7 +321,9 @@ function Home(props) {
   const renderCards = () => {
     if (pitcherStrikeoutData != undefined && pitcherStrikeoutData.length > 0) {
       const lenTodayGame = pitcherStrikeoutData.length
-      let today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (x.venue != "Reed Arena")))
+      let today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z)))
+      // console.log("pitcherStrikeoutData", pitcherStrikeoutData)
+      // console.log("todays games card 0", today_games)
       if(today_games.length >= 30){
         today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (parseInt(x.home_pos_top_25) <= 25 || parseInt(x.away_pos_top_25) <= 25) && (x.venue != "Reed Arena")))
       }
@@ -329,6 +331,8 @@ function Home(props) {
         today_games = pitcherStrikeoutData.filter(x => (getTodayItems(x.date_z) && (x.venue != "Reed Arena")))
         today_games = today_games.slice(0, 10);
       }
+
+      // console.log("todays games card", today_games)
 
       const today_games2 = [...today_games]
       const newArr = []
