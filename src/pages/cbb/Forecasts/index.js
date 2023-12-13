@@ -73,7 +73,7 @@ function Forecasts() {
                 <Card 
                   style="card-news"
                   title={`${forecast.home_city} vs ${forecast.away_city}`}
-                  body={constants.team_detail[forecast.home_team_abb].stadium}
+                  body={forecast.home_venue}
                   // imageSrc={"https://www.jconline.com/gcdn/presto/2018/08/08/PPHX/05066907-9dfa-4cf5-aaab-fc4354e0e852-ncaabasketball.jpg"}
                   imageSrc={(geImage(forecast.home_team_abb, forecast.home_image))}
                   linkTitle={`/cbb${PATH_LIST.FORECAST_DETAIL}/${forecast.home_team_abb}-${forecast.away_team_abb}/${getDate2(forecast.date_z)}`}
